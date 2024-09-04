@@ -1,0 +1,15 @@
+export const ROUTES = {
+  LANDING_PAGE: "/",
+  DASHBOARD: "/dashboard",
+  LOGIN: "/login",
+  REGISTER: "/register",
+  HOME: "/home",
+  SEARCH: "/search",
+  PREVIEW: "/preview",
+  MY_BOOK_SHELF: "/my-book-shelf",
+  MY_BOOK_SHELF_FAVORITES: "/my-book-shelf/favorites",
+  CONTRIBUTE: "/contribute",
+  CONTRIBUTE_COMPLETE: "/contribute/complete",
+  PROFILE: "/profile",
+  CONTRIBUTE_LIST: "/contribute-list",
+};

@@ -1,0 +1,40 @@
+"use client";
+
+import {
+  Modal,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
+} from "@chakra-ui/react";
+import { Button } from "../common";
+
+interface ModalDeleteBookProps {
+  isOpen?: boolean;
+  onClose: () => void;
+  onConfirm: () => void;
+}
+
+const ModalDeleteBook = ({
+  isOpen = false,
+  onClose,
+  onConfirm,
+}: ModalDeleteBookProps) => {
+  return (
+    <Modal isOpen={isOpen} onClose={onClose} isCentered>
+      <ModalOverlay />
+      <ModalContent p="40px" minW={484} alignItems="center">
+        <ModalHeader textAlign="center">
+          Are you sure to delete this book?
+        </ModalHeader>
+
+        <ModalFooter gap="20px">
+          <Button onClick={onConfirm} text="Yes" size="md" variant="outline" />
+          <Button onClick={onClose} text="No" size="md" variant="outline" />
+        </ModalFooter>
+      </ModalContent>
+    </Modal>
+  );
+};
+
+export default ModalDeleteBook;
