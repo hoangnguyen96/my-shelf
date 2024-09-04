@@ -63,7 +63,6 @@ const FormLogin = ({ onSubmit }: LoginForm) => {
   const handleRememberMeClick = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
-    console.log("900099");
     const isChecked = event.target.checked;
     setRememberMe(isChecked);
 
@@ -81,7 +80,6 @@ const FormLogin = ({ onSubmit }: LoginForm) => {
   };
 
   const handleLogin = async (formData: Partial<User>) => {
-    console.log("data", formData);
     if (rememberMe) {
       localStorage.setItem("email", formData.email || "");
       localStorage.setItem("password", formData.password || "");

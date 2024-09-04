@@ -1,3 +1,15 @@
 {
-    "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "rewrites": [
+    {
+      "source": "/home",
+      "destination": "/login",
+      "has": [
+        {
+          "type": "cookie",
+          "key": "SjWXOBZfmAIgYmtaeITwusjSuzIE8jlcYjC0kinIChA=",
+          "value": "(?!.*)"
+        }
+      ]
+    }
+  ]
 }
