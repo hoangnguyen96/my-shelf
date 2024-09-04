@@ -10,6 +10,7 @@ import { FooterForm, FormLogin, HeadingForm } from "@app/components/common";
 const LoginPage = () => {
   const toast = useToast();
   const router = useRouter();
+  console.log("process.env.NEXTAUTH_SECRET", process.env.NEXTAUTH_SECRET);
 
   const handleLogin = async (formData: Partial<User>) => {
     const errorMessage = await authenticate(formData);
