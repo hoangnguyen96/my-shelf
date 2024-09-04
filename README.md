@@ -2,7 +2,7 @@
 
 My book shelf management is an online book reading application that helps users conveniently borrow books.
 
-Author: Hoang Nguyen Van <[hoang.nguyenvan@asnet.com.vn](hoang.nguyenvan@asnet.com.vn)>
+Author: Hoang Nguyen Van
 
 ### Design
 
@@ -11,10 +11,6 @@ Author: Hoang Nguyen Van <[hoang.nguyenvan@asnet.com.vn](hoang.nguyenvan@asnet.c
 ### APIs
 
 - Mock API: [my_book_shelf](https://66bda7bd74dfc195586d2953.mockapi.io/api/v1/user)
-
-### Requirements
-
-- Analyze requirements in this [DOC](https://docs.google.com/document/d/1LwSNOT8mT0-9S_T1idvNG6NptS4YTUrwcH0GD83MjHc/edit#heading=h.6fwacknootp1)
 
 ## HOW TO RUN
 
