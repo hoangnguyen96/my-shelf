@@ -31,7 +31,6 @@ const FormProfile = ({ user, onUpdate }: FormProfileProps) => {
   const [isReadOnly, setIsReadOnly] = useState<boolean>(true);
   const REQUIRED_FIELDS = ["username", "email", "phone"];
 
-  console.log("uerrrrrrrr", user);
   const {
     id,
     avatar,

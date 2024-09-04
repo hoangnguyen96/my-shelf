@@ -11,7 +11,7 @@ export async function middleware(req: NextRequest) {
   // Get token form cookie or header
   const token = await getToken({
     req,
-    secret: process.env.NEXTAUTH_SECRET || "",
+    secret: process.env.AUTH_SECRET || "",
   } as unknown as GetTokenParams);
 
   if (!token) {

@@ -43,21 +43,19 @@ const RegisterPage = () => {
 
     try {
       const result = await addUser(payload);
-      if (result) {
-        const authResult = await authenticate({ email, password });
-        if (authResult) {
-          toast({
-            title: "Register Successful.",
-            description: MESSAGES.REGISTER_SUCCESS,
-            status: "success",
-            duration: 9000,
-            isClosable: true,
-          });
 
-          router.push(ROUTES.HOME);
-        } else {
-          throw new Error("Authentication failed after registration.");
-        }
+      if (result) {
+        toast({
+          title: "Register Successful.",
+          description: MESSAGES.REGISTER_SUCCESS,
+          status: "success",
+          duration: 9000,
+          isClosable: true,
+        });
+
+        router.push(`${ROUTES.LOGIN}?now=true`);
+      } else {
+        throw new Error("Authentication failed after registration.");
       }
     } catch (error) {
       toast({

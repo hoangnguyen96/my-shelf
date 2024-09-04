@@ -37,7 +37,6 @@ const ImageUploadForm = ({ image, user }: ImageUploadFormProps) => {
     const data = await generateImageUpload(file);
 
     if (data.success) {
-      console.log("Image uploaded successfully:", data.data.url);
       const payload: Partial<User> = {
         ...user,
         avatar: data.data.url,

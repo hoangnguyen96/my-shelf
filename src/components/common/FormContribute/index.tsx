@@ -59,8 +59,6 @@ const FormContribute = ({
   const [imagePreview, setImagePreview] = useState<string | null>(
     selectedImage ? URL.createObjectURL(selectedImage) : imageUrl || null
   );
-  console.log("imagePreview", imagePreview);
-  console.log("=-=-=--=idvvvvvvvvvvvvvv", id);
 
   const REQUIRED_FIELDS = [
     "title",
@@ -134,7 +132,6 @@ const FormContribute = ({
       }
 
       const data = await generateImageUpload(selectedImage as File);
-      console.log("adasdasd===000", data);
 
       if (data.success) {
         onSubmit?.({

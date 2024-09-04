@@ -84,6 +84,8 @@ const FormRegister = ({ itemUpdate, onSubmit }: FormRegisterProps) => {
       }
 
       try {
+        localStorage.setItem("email", data.email || "");
+        localStorage.setItem("password", data.password || "");
         const hashedPassword = await bcrypt.hash(data.password, 10);
 
         const userWithHashedPassword = {
