@@ -33,7 +33,7 @@ const LoginPage = () => {
         duration: 5000,
         isClosable: true,
       });
-      router.push(ROUTES.HOME);
+      router.prefetch(ROUTES.HOME);
     }
   };
 
