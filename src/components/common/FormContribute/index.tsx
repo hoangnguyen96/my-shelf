@@ -32,12 +32,14 @@ import { UploadIcon } from "@app/assets/icons";
 import { Button, Input } from "..";
 
 interface FormContributeProps {
+  isLoading?: boolean;
   itemUpdate?: Partial<BookType>;
   onSubmit?: (book: Partial<BookType>) => void;
   onUpdate?: (id: string, book: Partial<BookType>) => void;
 }
 
 const FormContribute = ({
+  isLoading = false,
   itemUpdate,
   onSubmit,
   onUpdate,
@@ -83,7 +85,7 @@ const FormContribute = ({
     control,
     clearErrors,
     handleSubmit: submitForm,
-    formState: { errors, isValid, dirtyFields },
+    formState: { errors, isValid, dirtyFields, isSubmitting },
     reset,
   } = useForm<Partial<BookType>>({
     mode: "onBlur",
@@ -396,7 +398,8 @@ const FormContribute = ({
         size="xl"
         text={itemUpdate ? "Update" : "Submit"}
         my="40px"
-        isDisabled={isDisableSubmit}
+        isLoading={isLoading}
+        isDisabled={isDisableSubmit || isSubmitting}
         onClick={submitForm(handleFormSubmit)}
       />
     </Box>

@@ -20,12 +20,14 @@ exports[`SearchBar Should render correctly snapshot 1`] = `
               Select
             </option>
             <option
-              value="option1"
+              class="css-0"
+              value="title"
             >
               Title
             </option>
             <option
-              value="option2"
+              class="css-0"
+              value="author"
             >
               Author
             </option>
@@ -54,7 +56,7 @@ exports[`SearchBar Should render correctly snapshot 1`] = `
         >
           <input
             class="chakra-input css-1ufd936"
-            placeholder="Search..."
+            placeholder="search"
             value=""
           />
           <button
@@ -94,12 +96,14 @@ exports[`SearchBar Should render correctly snapshot 1`] = `
             Select
           </option>
           <option
-            value="option1"
+            class="css-0"
+            value="title"
           >
             Title
           </option>
           <option
-            value="option2"
+            class="css-0"
+            value="author"
           >
             Author
           </option>
@@ -128,7 +132,7 @@ exports[`SearchBar Should render correctly snapshot 1`] = `
       >
         <input
           class="chakra-input css-1ufd936"
-          placeholder="Search..."
+          placeholder="search"
           value=""
         />
         <button

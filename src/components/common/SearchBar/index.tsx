@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import {
   Input,
   InputGroup,
@@ -10,11 +12,14 @@ import {
   Box,
 } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { ROUTES } from "@app/constants";
+import { getFirstPath, getTwoPath } from "@app/utils";
 
 const SearchBar = ({ placeholder = "Search..." }: InputProps) => {
   const router = useRouter();
+  const pathname = usePathname();
+
+  const [prevPath, setPrevPath] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
   const [searchType, setSearchType] = useState("");
 
@@ -27,8 +32,31 @@ const SearchBar = ({ placeholder = "Search..." }: InputProps) => {
   };
 
   const handleSearch = () => {
-    router.push(`?type=${searchType}&query=${searchTerm}`);
+    let part = "";
+    if (pathname.includes(ROUTES.MY_BOOK_SHELF_FAVORITES)) {
+      part = getTwoPath(pathname);
+    } else {
+      part = getFirstPath(pathname);
+    }
+
+    if (!searchTerm && !searchType) {
+      return router.replace(part);
+    }
+
+    const newPath = `${part}${
+      searchType && searchTerm ? `/${searchType}/${searchTerm}` : ""
+    }`;
+
+    setPrevPath(part);
+    return router.replace(newPath);
   };
+
+  useEffect(() => {
+    if (!pathname.includes(prevPath)) {
+      setSearchType("");
+      setSearchTerm("");
+    }
+  }, [pathname]);
 
   return (
     <Flex
@@ -40,6 +68,7 @@ const SearchBar = ({ placeholder = "Search..." }: InputProps) => {
       <Select
         placeholder="Select"
         border="none"
+        defaultValue={searchType}
         value={searchType || ""}
         borderLeftRadius="40px"
         w="120px"
@@ -58,6 +87,7 @@ const SearchBar = ({ placeholder = "Search..." }: InputProps) => {
       <InputGroup size="md">
         <Input
           placeholder={placeholder}
+          defaultValue={searchTerm}
           value={searchTerm}
           onChange={handleSearchChange}
           pr="18px"

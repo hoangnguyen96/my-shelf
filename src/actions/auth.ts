@@ -1,7 +1,7 @@
 "use server";
 
 import { AuthError } from "next-auth";
-import { signIn, signOut } from "@app/auth";
+import { signIn, signOut } from "../auth";
 import { MESSAGES } from "@app/constants";
 import { User } from "@app/models";
 

@@ -20,14 +20,18 @@ import { useMemo, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { Button, Input } from "..";
 import { EditProfileIcon } from "@app/assets/icons";
-import { HttpClient } from "@app/services";
 
 interface FormProfileProps {
+  isLoading?: boolean;
   user: User;
   onUpdate: (id: string, user: Partial<User>) => void;
 }
 
-const FormProfile = ({ user, onUpdate }: FormProfileProps) => {
+const FormProfile = ({
+  isLoading = false,
+  user,
+  onUpdate,
+}: FormProfileProps) => {
   const [isReadOnly, setIsReadOnly] = useState<boolean>(true);
   const REQUIRED_FIELDS = ["username", "email", "phone"];
 
@@ -60,7 +64,7 @@ const FormProfile = ({ user, onUpdate }: FormProfileProps) => {
     control,
     clearErrors,
     handleSubmit: submitForm,
-    formState: { errors, isValid, dirtyFields },
+    formState: { errors, isValid, dirtyFields, isSubmitting },
     reset,
   } = useForm<Partial<User>>({
     mode: "onBlur",
@@ -327,7 +331,8 @@ const FormProfile = ({ user, onUpdate }: FormProfileProps) => {
         fontSize="18px"
         fontWeight={700}
         borderRadius="8px"
-        isDisabled={isReadOnly ? true : isDisableSubmit}
+        isLoading={isLoading}
+        isDisabled={isReadOnly ? true : isDisableSubmit || isSubmitting}
         onClick={submitForm(handleSubmitForm)}
       />
     </Box>

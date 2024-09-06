@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import {
   Box,
   FormControl,
@@ -27,19 +27,19 @@ import {
 import { Button, Checkbox, Input } from "..";
 
 interface LoginForm {
+  isLoading?: boolean;
   onSubmit: (data: Partial<User>) => Promise<void | string>;
 }
 
-const FormLogin = ({ onSubmit }: LoginForm) => {
+const FormLogin = ({ isLoading = false, onSubmit }: LoginForm) => {
   const REQUIRED_FIELDS = ["email", "password"];
   const [rememberMe, setRememberMe] = useState<boolean>(false);
 
   const {
     control,
     clearErrors,
-    getValues,
     handleSubmit: submitLogin,
-    formState: { errors, isValid, dirtyFields },
+    formState: { errors, isValid, dirtyFields, isSubmitting },
     reset,
   } = useForm<Partial<User>>({
     mode: "onBlur",
@@ -65,42 +65,15 @@ const FormLogin = ({ onSubmit }: LoginForm) => {
   ) => {
     const isChecked = event.target.checked;
     setRememberMe(isChecked);
-
-    if (isChecked) {
-      // Save email and password to localStorage
-      const email = getValues("email") || "";
-      const password = getValues("password") || "";
-      localStorage.setItem("email", email);
-      localStorage.setItem("password", password);
-    } else {
-      // Clear email and password from localStorage
-      localStorage.removeItem("email");
-      localStorage.removeItem("password");
-    }
   };
 
   const handleLogin = async (formData: Partial<User>) => {
-    if (rememberMe) {
-      localStorage.setItem("email", formData.email || "");
-      localStorage.setItem("password", formData.password || "");
-    }
     try {
       await onSubmit(formData);
     } catch (error) {
       throw new Error(MESSAGES.LOGIN_FAILED);
     }
   };
-
-  useEffect(() => {
-    // Read from localStorage on component mount
-    const savedEmail = localStorage.getItem("email") || "";
-    const savedPassword = localStorage.getItem("password") || "";
-    setRememberMe(!!savedEmail); // Check if email exists in localStorage
-    reset({
-      email: savedEmail,
-      password: savedPassword,
-    });
-  }, [reset]);
 
   return (
     <Box as="form" style={{ marginTop: "40px" }}>
@@ -188,7 +161,8 @@ const FormLogin = ({ onSubmit }: LoginForm) => {
         text="Login"
         mt="40px"
         mb="60px"
-        isDisabled={isDisableSubmit}
+        isLoading={isLoading}
+        isDisabled={isDisableSubmit || isSubmitting}
         onClick={submitLogin(handleLogin)}
       />
     </Box>

@@ -14,6 +14,7 @@ export const MESSAGES = {
   // Response Api
   LOGIN_SUCCESS: "You have successfully logged in.",
   LOGIN_FAILED: "Login failed!",
+  INVALID_LOGIN: "Invalid login!",
   NETWORK_ERROR: "Network response was not ok!",
   EMAIL_EXISTS: "Email exists!",
   EMAIL_PASSWORD_INCORRECT: "Incorrect email or password!",

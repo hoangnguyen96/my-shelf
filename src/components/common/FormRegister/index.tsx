@@ -2,7 +2,6 @@
 
 import { useCallback, useMemo } from "react";
 import { useForm, Controller } from "react-hook-form";
-import bcrypt from "bcryptjs";
 import {
   Box,
   FormControl,
@@ -30,6 +29,7 @@ import {
 import { Button, Input } from "..";
 
 interface FormRegisterProps {
+  isLoading?: boolean;
   itemUpdate?: Partial<User>;
   onSubmit: (user: Partial<User>) => void;
 }
@@ -38,7 +38,11 @@ interface FormRegisterData extends Partial<User> {
   confirmPassword: string;
 }
 
-const FormRegister = ({ itemUpdate, onSubmit }: FormRegisterProps) => {
+const FormRegister = ({
+  isLoading = false,
+  itemUpdate,
+  onSubmit,
+}: FormRegisterProps) => {
   const { username, email, password } = itemUpdate || {};
 
   const REQUIRED_FIELDS = ["username", "email", "password", "confirmPassword"];
@@ -58,7 +62,7 @@ const FormRegister = ({ itemUpdate, onSubmit }: FormRegisterProps) => {
     getValues,
     clearErrors,
     handleSubmit: submitLogin,
-    formState: { errors, isValid, dirtyFields },
+    formState: { errors, isValid, dirtyFields, isSubmitting },
     reset,
   } = useForm<FormRegisterData>({
     mode: "onBlur",
@@ -79,21 +83,10 @@ const FormRegister = ({ itemUpdate, onSubmit }: FormRegisterProps) => {
   const handleFormSubmit = useCallback(
     async (data: FormRegisterData) => {
       if (!data.password) {
-        console.error("Password is required");
         return;
       }
-
       try {
-        localStorage.setItem("email", data.email || "");
-        localStorage.setItem("password", data.password || "");
-        const hashedPassword = await bcrypt.hash(data.password, 10);
-
-        const userWithHashedPassword = {
-          ...data,
-          password: hashedPassword,
-        };
-
-        onSubmit(userWithHashedPassword);
+        onSubmit(data);
         reset();
       } catch (error) {
         console.error("Error hashing password:", error);
@@ -270,7 +263,8 @@ const FormRegister = ({ itemUpdate, onSubmit }: FormRegisterProps) => {
         variant="full"
         text="Register"
         my="40px"
-        isDisabled={isDisableSubmit}
+        isLoading={isLoading}
+        isDisabled={isDisableSubmit || isSubmitting}
         onClick={submitLogin(handleFormSubmit)}
       />
     </Box>

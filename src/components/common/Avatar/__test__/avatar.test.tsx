@@ -4,6 +4,14 @@ import Avatar from "..";
 
 describe("Avatar", () => {
   it("Should render correctly snapshot", () => {
-    expect(render(<Avatar />)).toMatchSnapshot();
+    expect(
+      render(
+        <Avatar
+          image="https://i.ibb.co/88X1WfZ/avatar-default.png"
+          width={100}
+          height={100}
+        />
+      )
+    ).toMatchSnapshot();
   });
 });

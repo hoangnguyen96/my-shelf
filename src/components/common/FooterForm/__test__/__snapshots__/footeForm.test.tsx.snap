@@ -14,7 +14,7 @@ exports[`FooterForm Should render correctly snapshot 1`] = `
           Name
            
           <a
-            href="/"
+            href=""
             style="text-decoration: underline;"
           >
             Login
@@ -33,7 +33,7 @@ exports[`FooterForm Should render correctly snapshot 1`] = `
         Name
          
         <a
-          href="/"
+          href=""
           style="text-decoration: underline;"
         >
           Login

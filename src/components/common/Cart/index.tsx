@@ -13,6 +13,7 @@ interface CartType {
   publicationYear: number;
   rating: number;
   isContribute?: boolean;
+  onUpdateFavorites?: (id: string) => void;
 }
 
 const Cart = ({
@@ -24,6 +25,7 @@ const Cart = ({
   publicationYear,
   rating,
   isContribute = false,
+  onUpdateFavorites,
 }: CartType) => {
   return (
     <Flex
@@ -39,7 +41,7 @@ const Cart = ({
       boxShadow="0 0 3px 0px #a9a9a9"
       position="relative"
     >
-      <Link key={id} href={`${ROUTES.PREVIEW}/${id}`}>
+      <Link href={`${ROUTES.PREVIEW}/${id}`}>
         <Image
           src={imageUrl}
           alt="Don't make me think"
@@ -67,6 +69,7 @@ const Cart = ({
             bottom="5px"
             id={id}
             isFavorite={isFavorite}
+            onUpdateFavorites={onUpdateFavorites}
           />
         </>
       )}

@@ -19,5 +19,6 @@ export { default as TableList } from "./TableList";
 export { default as StatusBook } from "./StatusBook";
 export { default as Pagination } from "./Pagination";
 export { default as UploadImage } from "./UploadImage";
+export { default as LoadingIndicator } from "./LoadingIndicator";
 export { default as ContributeComplete } from "./ContributeComplete";
 export { default as ModalSuccessProgress } from "./Modal/ModalSuccessProgress";

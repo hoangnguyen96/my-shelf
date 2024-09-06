@@ -3,10 +3,15 @@ import Link from "next/link";
 
 interface FooterFormProps extends StyleProps {
   text: string;
-  link: string;
+  link?: string;
   textLink: string;
 }
-const FooterForm = ({ text, link, textLink, ...rest }: FooterFormProps) => (
+const FooterForm = ({
+  text,
+  link = "",
+  textLink,
+  ...rest
+}: FooterFormProps) => (
   <Box pb="160px" {...rest}>
     <Text as="span">
       {text}{" "}

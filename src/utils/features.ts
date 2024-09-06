@@ -65,3 +65,19 @@ export const dividePaginationBooks = (list: BookType[]) => {
     return acc;
   }, []);
 };
+
+export const getTwelveItemData = (list: BookType[]) => list.slice(0, 12);
+
+export const getFirstPath = (value: string) => {
+  const parts = value.split("/");
+  const basePath = `/${parts[1]}`;
+
+  return basePath;
+};
+
+export const getTwoPath = (value: string) => {
+  const parts = value.split("/");
+  const basePath = `/${parts[1]}/${parts[2]}`;
+
+  return basePath;
+};

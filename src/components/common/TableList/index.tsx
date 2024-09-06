@@ -21,6 +21,7 @@ interface TableListProps {
   idFavorite: boolean;
   status?: boolean;
   isContribute?: boolean;
+  onUpdateFavorites?: (id: string) => void;
 }
 
 const TableList = ({
@@ -35,6 +36,7 @@ const TableList = ({
   rating,
   status = false,
   isContribute = false,
+  onUpdateFavorites,
 }: TableListProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
@@ -101,7 +103,13 @@ const TableList = ({
           maxW={179}
           w="100%"
         >
-          {!isContribute && <HeartIcon id={id} isFavorite={idFavorite} />}
+          {!isContribute && (
+            <HeartIcon
+              id={id}
+              isFavorite={idFavorite}
+              onUpdateFavorites={onUpdateFavorites}
+            />
+          )}
           <Button
             size="sm"
             variant="outline"

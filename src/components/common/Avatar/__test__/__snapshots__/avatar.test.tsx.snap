@@ -10,7 +10,9 @@ exports[`Avatar Should render correctly snapshot 1`] = `
         data-nimg="1"
         decoding="async"
         height="100"
-        src=""
+        loading="lazy"
+        src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=256&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=256&q=75 2x"
         style="color: transparent; max-width: 100%; max-height: 100%; border-radius: 50%;"
         width="100"
       />
@@ -22,7 +24,9 @@ exports[`Avatar Should render correctly snapshot 1`] = `
       data-nimg="1"
       decoding="async"
       height="100"
-      src=""
+      loading="lazy"
+      src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=256&q=75"
+      srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=256&q=75 2x"
       style="color: transparent; max-width: 100%; max-height: 100%; border-radius: 50%;"
       width="100"
     />

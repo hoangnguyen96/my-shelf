@@ -1,3 +1,5 @@
+"use client";
+
 import { IconProps } from "@chakra-ui/react";
 
 export const GiftIcon: React.FC<IconProps> = ({ color = "#8a8a8a" }) => (

@@ -1,8 +1,8 @@
 "use client";
 
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import { Box, useToast } from "@chakra-ui/react";
-import { authenticate } from "@app/actions/auth";
+import { useRouter } from "next/navigation";
 
 // Constants
 import { MESSAGES, ROUTES } from "@app/constants";
@@ -18,20 +18,25 @@ import { generateSevenDigitUUID } from "@app/utils";
 
 // Components
 import { FooterForm, FormRegister, HeadingForm } from "@app/components/common";
-import { useRouter } from "next/navigation";
+import { authenticate } from "@app/actions/auth";
+import bcrypt from "bcryptjs";
 
 const RegisterPage = () => {
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const toast = useToast();
   const router = useRouter();
 
   const handleSubmit = useCallback(async (values: Partial<User>) => {
+    setIsLoading(true);
     const uuid = generateSevenDigitUUID();
     const { username, email, password } = values;
+
+    const hashedPassword = await bcrypt.hash(password as string, 10);
 
     const payload: Partial<User> = {
       username,
       email,
-      password,
+      password: hashedPassword || "",
       isAdmin: false,
       phone: "",
       bio: "",
@@ -43,8 +48,11 @@ const RegisterPage = () => {
 
     try {
       const result = await addUser(payload);
+      setIsLoading(false);
 
-      if (result) {
+      const errorMessage = await authenticate({ email, password });
+
+      if (result && !errorMessage) {
         toast({
           title: "Register Successful.",
           description: MESSAGES.REGISTER_SUCCESS,
@@ -53,7 +61,7 @@ const RegisterPage = () => {
           isClosable: true,
         });
 
-        router.push(`${ROUTES.LOGIN}?now=true`);
+        router.push(ROUTES.HOME);
       } else {
         throw new Error("Authentication failed after registration.");
       }
@@ -87,7 +95,7 @@ const RegisterPage = () => {
         title="Registration"
         description="For Both Staff & Students"
       />
-      <FormRegister onSubmit={handleSubmit} />
+      <FormRegister isLoading={isLoading} onSubmit={handleSubmit} />
       <FooterForm
         text="Already a User?"
         textLink="Login now"

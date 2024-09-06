@@ -3,35 +3,21 @@
 import { useCallback, useMemo } from "react";
 import { IconButton, StyleProps } from "@chakra-ui/react";
 import { HeartIconFull, HeartIconOutline } from "@app/assets/icons";
-import { getUserById, updateUserById } from "@app/api";
-import { useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
-import { User } from "@app/models";
 
 interface IconHeartProps extends StyleProps {
   id: string;
   isFavorite?: boolean;
+  onUpdateFavorites?: (id: string) => void;
 }
 
-const IconHeart = ({ id, isFavorite = false, ...rest }: IconHeartProps) => {
-  const { data: session } = useSession();
-  const router = useRouter();
-
-  const handleClick = async () => {
-    const dataUserById = (await getUserById(session?.user?.id || "")) as User;
-
-    let listFavorite = dataUserById.favorites;
-    if (dataUserById.favorites.includes(id)) {
-      listFavorite = dataUserById.favorites.filter((item) => item !== id);
-    } else {
-      listFavorite = [...dataUserById.favorites, id];
-    }
-
-    updateUserById(dataUserById.id, {
-      ...dataUserById,
-      favorites: listFavorite,
-    });
-    return router.refresh();
+const IconHeart = ({
+  id,
+  isFavorite = false,
+  onUpdateFavorites,
+  ...rest
+}: IconHeartProps) => {
+  const handleClick = () => {
+    onUpdateFavorites?.(id);
   };
 
   const iconHeart = useCallback(
