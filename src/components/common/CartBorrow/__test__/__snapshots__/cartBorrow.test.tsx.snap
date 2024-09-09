@@ -6,21 +6,16 @@ exports[`CartBorrow Should render correctly snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="css-415p7i"
+        class="css-bhtta9"
       >
         <div
           class="css-n736ek"
         >
           <img
             alt="Don't make me think"
-            data-nimg="1"
-            decoding="async"
-            height="40"
-            loading="lazy"
-            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-            style="color: transparent;"
-            width="40"
+            height="170"
+            src="[object Object]"
+            width="123"
           />
           <p
             class="chakra-text css-0"
@@ -33,12 +28,13 @@ exports[`CartBorrow Should render correctly snapshot 1`] = `
             <p
               class="chakra-text css-0"
             >
-              Steve Krug,
+              Steve Krug, 
+              ,
             </p>
             <p
               class="chakra-text css-0"
             >
-              2000
+              1900
             </p>
           </div>
           <div
@@ -47,7 +43,8 @@ exports[`CartBorrow Should render correctly snapshot 1`] = `
             <p
               class="chakra-text css-0"
             >
-              4.5/
+              4.5
+              /
             </p>
             <p
               class="chakra-text css-c5z1pm"
@@ -85,21 +82,16 @@ exports[`CartBorrow Should render correctly snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="css-415p7i"
+      class="css-bhtta9"
     >
       <div
         class="css-n736ek"
       >
         <img
           alt="Don't make me think"
-          data-nimg="1"
-          decoding="async"
-          height="40"
-          loading="lazy"
-          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-          srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-          style="color: transparent;"
-          width="40"
+          height="170"
+          src="[object Object]"
+          width="123"
         />
         <p
           class="chakra-text css-0"
@@ -112,12 +104,13 @@ exports[`CartBorrow Should render correctly snapshot 1`] = `
           <p
             class="chakra-text css-0"
           >
-            Steve Krug,
+            Steve Krug, 
+            ,
           </p>
           <p
             class="chakra-text css-0"
           >
-            2000
+            1900
           </p>
         </div>
         <div
@@ -126,7 +119,8 @@ exports[`CartBorrow Should render correctly snapshot 1`] = `
           <p
             class="chakra-text css-0"
           >
-            4.5/
+            4.5
+            /
           </p>
           <p
             class="chakra-text css-c5z1pm"

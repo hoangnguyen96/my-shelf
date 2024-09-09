@@ -1,3 +1,5 @@
+"use client";
+
 import { Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import { HeartIcon } from "..";
@@ -47,6 +49,7 @@ const Cart = ({
           alt="Don't make me think"
           width={130}
           height={172}
+          priority
         />
       </Link>
       <Text size="sm">{title}</Text>

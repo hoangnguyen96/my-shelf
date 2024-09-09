@@ -35,19 +35,7 @@ const FormProfile = ({
   const [isReadOnly, setIsReadOnly] = useState<boolean>(true);
   const REQUIRED_FIELDS = ["username", "email", "phone"];
 
-  const {
-    id,
-    avatar,
-    favorites,
-    isAdmin,
-    password,
-    shelfBooks,
-    username,
-    email,
-    userId,
-    phone,
-    bio,
-  } = user;
+  const { id, username, email, userId, phone, bio } = user;
 
   const formInitData: Partial<User> = useMemo(
     () => ({

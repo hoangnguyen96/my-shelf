@@ -107,6 +107,7 @@ exports[`FormLogin Should render correctly snapshot 1`] = `
         </label>
         <button
           class="chakra-button css-urxqiv"
+          data-testid="submit-login"
           disabled=""
           type="button"
         >
@@ -218,6 +219,7 @@ exports[`FormLogin Should render correctly snapshot 1`] = `
       </label>
       <button
         class="chakra-button css-urxqiv"
+        data-testid="submit-login"
         disabled=""
         type="button"
       >

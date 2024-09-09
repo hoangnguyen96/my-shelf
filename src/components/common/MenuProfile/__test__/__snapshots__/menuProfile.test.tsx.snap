@@ -23,17 +23,17 @@ exports[`MenuProfile Should render correctly snapshot 1`] = `
               alt="Avatar user"
               data-nimg="1"
               decoding="async"
+              fetchpriority="high"
               height="45"
-              loading="lazy"
-              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+              src="/_next/image?url=https%3A%2F%2Fexample.com%2Fjohndoe.jpg&w=96&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fexample.com%2Fjohndoe.jpg&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2Fjohndoe.jpg&w=96&q=75 2x"
               style="color: transparent; max-width: 100%; max-height: 100%; border-radius: 50%; border: 2px solid white;"
               width="45"
             />
             <p
               class="chakra-text css-1rr4qq7"
             >
-              Kenson
+              John Doe
             </p>
           </div>
         </span>
@@ -73,7 +73,11 @@ exports[`MenuProfile Should render correctly snapshot 1`] = `
             tabindex="-1"
             type="button"
           >
-            Profile
+            <p
+              class="chakra-text css-60gkn2"
+            >
+              Profile
+            </p>
           </button>
           <button
             class="chakra-menu__menuitem css-1k756t9"
@@ -83,7 +87,11 @@ exports[`MenuProfile Should render correctly snapshot 1`] = `
             tabindex="-1"
             type="button"
           >
-            Favorite
+            <p
+              class="chakra-text css-60gkn2"
+            >
+              Favorite
+            </p>
           </button>
           <button
             class="chakra-menu__menuitem css-1k756t9"
@@ -93,7 +101,11 @@ exports[`MenuProfile Should render correctly snapshot 1`] = `
             tabindex="-1"
             type="button"
           >
-            Logout
+            <p
+              class="chakra-text css-60gkn2"
+            >
+              Logout
+            </p>
           </button>
         </div>
       </div>
@@ -118,17 +130,17 @@ exports[`MenuProfile Should render correctly snapshot 1`] = `
             alt="Avatar user"
             data-nimg="1"
             decoding="async"
+            fetchpriority="high"
             height="45"
-            loading="lazy"
-            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            src="/_next/image?url=https%3A%2F%2Fexample.com%2Fjohndoe.jpg&w=96&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Fexample.com%2Fjohndoe.jpg&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2Fjohndoe.jpg&w=96&q=75 2x"
             style="color: transparent; max-width: 100%; max-height: 100%; border-radius: 50%; border: 2px solid white;"
             width="45"
           />
           <p
             class="chakra-text css-1rr4qq7"
           >
-            Kenson
+            John Doe
           </p>
         </div>
       </span>
@@ -168,7 +180,11 @@ exports[`MenuProfile Should render correctly snapshot 1`] = `
           tabindex="-1"
           type="button"
         >
-          Profile
+          <p
+            class="chakra-text css-60gkn2"
+          >
+            Profile
+          </p>
         </button>
         <button
           class="chakra-menu__menuitem css-1k756t9"
@@ -178,7 +194,11 @@ exports[`MenuProfile Should render correctly snapshot 1`] = `
           tabindex="-1"
           type="button"
         >
-          Favorite
+          <p
+            class="chakra-text css-60gkn2"
+          >
+            Favorite
+          </p>
         </button>
         <button
           class="chakra-menu__menuitem css-1k756t9"
@@ -188,7 +208,11 @@ exports[`MenuProfile Should render correctly snapshot 1`] = `
           tabindex="-1"
           type="button"
         >
-          Logout
+          <p
+            class="chakra-text css-60gkn2"
+          >
+            Logout
+          </p>
         </button>
       </div>
     </div>

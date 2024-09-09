@@ -165,6 +165,7 @@ exports[`FormRegister Should render correctly snapshot 1`] = `
         </div>
         <button
           class="chakra-button css-1qhatj0"
+          data-testid="submit-register"
           disabled=""
           type="submit"
         >
@@ -334,6 +335,7 @@ exports[`FormRegister Should render correctly snapshot 1`] = `
       </div>
       <button
         class="chakra-button css-1qhatj0"
+        data-testid="submit-register"
         disabled=""
         type="submit"
       >

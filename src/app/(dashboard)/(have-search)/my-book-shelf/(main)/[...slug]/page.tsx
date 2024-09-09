@@ -13,34 +13,48 @@ import { BookType, User } from "@app/models";
 import { Flex } from "@chakra-ui/react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
-const MyBookShelfByParams = async ({
-  params,
-}: {
-  params: { slug: string[] };
-}) => {
+const MyBookShelfByParams = ({ params }: { params: { slug: string[] } }) => {
   const { data: session } = useSession();
   const router = useRouter();
-
+  const [dataByShelf, setDataByShelf] = useState<BookType[]>([]);
+  const [dataUserById, setDataUserById] = useState<User>();
   const type = params.slug[0];
   const value = params.slug[1];
 
-  const dataUserById = (await getUserById(session?.user?.id || "")) as User;
-  const dataBooks = await getAllBook();
+  const fetchData = async () => {
+    try {
+      const user = (await getUserById(session?.user?.id || "")) as User;
+      const allBooks = await getAllBook();
+      const shelfBooks = user?.shelfBooks || [];
+      const booksOnShelf = allBooks.filter((item) =>
+        shelfBooks.includes(item.id)
+      );
 
-  const shelfBooks = dataUserById?.shelfBooks || [];
-  const dataByShelf = dataBooks.filter((item) => shelfBooks.includes(item.id));
+      const filteredBooks = booksOnShelf.filter((item) =>
+        type === TYPE_SEARCH.TITLE && value
+          ? item.title.toLowerCase().includes(value.toLowerCase())
+          : type === TYPE_SEARCH.AUTHOR && value
+            ? item.author.toLowerCase().includes(value.toLowerCase())
+            : item
+      );
 
-  const dataShelfBooksFinal: BookType[] = dataByShelf.filter((item) =>
-    type === TYPE_SEARCH.TITLE && value
-      ? item.title.toLowerCase().includes(value.toLowerCase())
-      : type === TYPE_SEARCH.AUTHOR && value
-        ? item.author.toLowerCase().includes(value.toLowerCase())
-        : item
-  );
+      setDataUserById(user);
+      setDataByShelf(filteredBooks);
+    } catch (error) {
+      console.error("Failed to fetch data:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, [session?.user?.id, type, value]);
 
   const handleReturnBook = async (id: string) => {
-    const dataBookById = await getBookById(id);
+    if (!dataUserById) return;
+
+    const dataBookById = await getBookById(parseInt(id));
     const updateShelfBook = dataUserById.shelfBooks.filter(
       (item: string) => item !== id
     );
@@ -59,7 +73,7 @@ const MyBookShelfByParams = async ({
 
   return (
     <Flex gap="40px" flexWrap="wrap" overflow="hidden scroll" maxH="65vh">
-      {dataShelfBooksFinal.map((item) => {
+      {dataByShelf.map((item) => {
         const {
           id,
           title,

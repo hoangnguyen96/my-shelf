@@ -8,23 +8,42 @@ import {
   updateUserById,
 } from "@app/api";
 import { CartBorrow } from "@app/components/common";
-import { User } from "@app/models";
+import { BookType, User } from "@app/models";
 import { Flex } from "@chakra-ui/react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
-const MyBookShelfAll = async () => {
+const MyBookShelfAll = () => {
   const { data: session } = useSession();
   const router = useRouter();
+  const [dataByShelf, setDataByShelf] = useState<BookType[]>([]);
+  const [dataUserById, setDataUserById] = useState<User>();
 
-  const dataUserById = (await getUserById(session?.user?.id || "")) as User;
-  const dataBooks = await getAllBook();
+  const fetchData = async () => {
+    try {
+      const user = (await getUserById(session?.user?.id || "")) as User;
+      const allBooks = await getAllBook();
+      const shelfBooks = user?.shelfBooks || [];
+      const booksOnShelf = allBooks.filter((item) =>
+        shelfBooks.includes(item.id)
+      );
 
-  const shelfBooks = dataUserById?.shelfBooks || [];
-  const dataByShelf = dataBooks.filter((item) => shelfBooks.includes(item.id));
+      setDataUserById(user);
+      setDataByShelf(booksOnShelf);
+    } catch (error) {
+      console.error("Failed to fetch data:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, [session?.user?.id]);
 
   const handleReturnBook = async (id: string) => {
-    const dataBookById = await getBookById(id);
+    if (!dataUserById) return;
+
+    const dataBookById = await getBookById(parseInt(id));
     const updateShelfBook = dataUserById.shelfBooks.filter(
       (item: string) => item !== id
     );

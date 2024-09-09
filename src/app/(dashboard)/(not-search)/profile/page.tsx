@@ -4,13 +4,32 @@ import { useSession } from "next-auth/react";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { getUserById, updateUserById } from "@app/api";
 import { User } from "@app/models";
-import { FormProfile, UploadImage } from "@app/components/common";
-import { useState } from "react";
+import {
+  FormProfile,
+  LoadingIndicator,
+  UploadImage,
+} from "@app/components/common";
+import { useEffect, useState } from "react";
 
-const ProfilePage = async () => {
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+const ProfilePage = () => {
   const { data: session } = useSession();
-  const dataUserById = (await getUserById(session?.user?.id || "")) as User;
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [dataUserById, setDataUserById] = useState<User>();
+
+  const fetchData = async () => {
+    if (session?.user?.id) {
+      try {
+        const user = (await getUserById(session.user.id)) as User;
+        setDataUserById(user);
+      } catch (error) {
+        console.error("Failed to fetch user data:", error);
+      }
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, [session]);
 
   const handleUpdateUser = async (id: string, user: Partial<User>) => {
     setIsLoading(true);
@@ -28,6 +47,10 @@ const ProfilePage = async () => {
     setIsLoading(false);
     return;
   };
+
+  if (!dataUserById) {
+    return <LoadingIndicator />;
+  }
 
   return (
     <>
@@ -56,13 +79,13 @@ const ProfilePage = async () => {
           <Box mt="17px">
             <UploadImage
               image={session?.user?.image || ""}
-              user={dataUserById}
+              user={dataUserById as User}
             />
           </Box>
         </Flex>
         <FormProfile
           isLoading={isLoading}
-          user={dataUserById}
+          user={dataUserById as User}
           onUpdate={handleUpdateUser}
         />
       </Flex>

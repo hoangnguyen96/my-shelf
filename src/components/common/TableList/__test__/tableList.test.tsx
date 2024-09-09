@@ -2,6 +2,17 @@ import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 import TableList from "..";
 
+// Mock useRouter
+jest.mock("next/navigation", () => ({
+  useRouter: jest.fn(),
+}));
+
+// Mock Image component
+jest.mock("next/image", () => ({
+  __esModule: true,
+  default: (props: any) => <img {...props} />,
+}));
+
 describe("TableList", () => {
   it("Should render correctly snapshot", () => {
     expect(

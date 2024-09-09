@@ -7,18 +7,32 @@ import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { getAllBook, getUserById } from "@app/api";
 import { BookType, User } from "@app/models";
-import { TableList } from "@app/components/common";
+import { LoadingIndicator, TableList } from "@app/components/common";
+import { useEffect, useState } from "react";
 
-const ContributeList = async () => {
-  const router = useRouter();
+const ContributeList = () => {
+  const [dataUserById, setDataUserById] = useState<User>();
+  const [dataBooks, setDataBooks] = useState<BookType[]>([]);
   const { data: session } = useSession();
-  const dataUserById = (await getUserById(session?.user?.id || "")) as User;
-  const data = await getAllBook();
+  const router = useRouter();
 
-  if (!data || !dataUserById) {
-    return <Text>No data...</Text>;
+  const fetchData = async () => {
+    if (session?.user?.id) {
+      const user = (await getUserById(session.user.id)) as User;
+      const books = await getAllBook();
+      setDataUserById(user);
+      setDataBooks(books);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, [session]);
+
+  if (!dataBooks || !dataUserById) {
+    return <LoadingIndicator />;
   }
-  
+
   return (
     <>
       <Box p="20px 44px">
@@ -50,7 +64,7 @@ const ContributeList = async () => {
           overflow="hidden scroll"
           maxH="65vh"
         >
-          {data.map((itemBook: BookType) => {
+          {dataBooks.map((itemBook: BookType) => {
             const {
               id,
               title,

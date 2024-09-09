@@ -1,37 +1,45 @@
 "use client";
 
 import { useSession } from "next-auth/react";
-import { Box, Flex } from "@chakra-ui/react";
-import { useRouter, useSearchParams } from "next/navigation";
-import Link from "next/link";
-import { ROUTES, TYPE_SEARCH } from "@app/constants";
+import { Flex } from "@chakra-ui/react";
+import { useRouter } from "next/navigation";
 import { getAllBook, getUserById, updateUserById } from "@app/api";
 import { BookType, User } from "@app/models";
 import { TableList } from "@app/components/common";
+import { useEffect, useState } from "react";
 
-const MyBookShelfFavorites = async () => {
+const MyBookShelfFavorites = () => {
   const { data: session } = useSession();
   const router = useRouter();
-  // const searchParams = useSearchParams();
-  // const type = searchParams.get("type") || "";
-  // const value = searchParams.get("query") || "";
+  const [dataUserById, setDataUserById] = useState<User>();
+  const [dataByFavorites, setDataByFavorites] = useState<BookType[]>([]);
 
-  const dataUserById = (await getUserById(session?.user?.id || "")) as User;
-  const dataBooks = await getAllBook();
+  const fetchData = async () => {
+    try {
+      const user = (await getUserById(session?.user?.id || "")) as User;
+      const books = await getAllBook();
 
-  const favorites = dataUserById?.favorites || [];
-  const dataByFavorites = dataBooks.filter((item) =>
-    favorites.includes(item.id)
-  );
-  // const dataFavoriteBooksFinal: BookType[] = dataByFavorites.filter((item) =>
-  //   type === TYPE_SEARCH.TITLE && value
-  //     ? item.title.toLowerCase().includes(value.toLowerCase())
-  //     : type === TYPE_SEARCH.AUTHOR && value
-  //       ? item.author.toLowerCase().includes(value.toLowerCase())
-  //       : item
-  // );
+      const favorites = user?.favorites || [];
+      const booksByFavorites = books.filter((item) =>
+        favorites.includes(item.id)
+      );
+
+      setDataUserById(user);
+      setDataByFavorites(booksByFavorites);
+    } catch (error) {
+      console.error("Failed to fetch data:", error);
+    }
+  };
+
+  useEffect(() => {
+    if (session?.user?.id) {
+      fetchData();
+    }
+  }, [session?.user?.id]);
 
   const handleUpdateFavorites = async (id: string) => {
+    if (!dataUserById) return;
+
     let listFavorite = dataUserById.favorites;
     if (dataUserById.favorites.includes(id)) {
       listFavorite = dataUserById.favorites.filter((item) => item !== id);
@@ -75,12 +83,12 @@ const MyBookShelfFavorites = async () => {
             title={title}
             author={author}
             imageUrl={imageUrl}
-            status={dataUserById.shelfBooks.includes(id)}
+            status={dataUserById?.shelfBooks?.includes(id)}
             publicationYear={publicationYear}
             rating={rating}
             edition={edition}
             category={category}
-            idFavorite={dataUserById.favorites.includes(id)}
+            idFavorite={dataUserById?.favorites?.includes(id)}
             onUpdateFavorites={handleUpdateFavorites}
           />
         );

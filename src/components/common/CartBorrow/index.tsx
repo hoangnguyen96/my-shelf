@@ -46,6 +46,7 @@ const CartBorrow = ({
           alt="Don't make me think"
           width={123}
           height={170}
+          priority
         />
         <Text size="sm">{title}</Text>
         <Flex>

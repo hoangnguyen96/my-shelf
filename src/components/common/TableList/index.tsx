@@ -18,7 +18,7 @@ interface TableListProps {
   edition: string;
   publicationYear: number;
   rating: number;
-  idFavorite: boolean;
+  idFavorite?: boolean;
   status?: boolean;
   isContribute?: boolean;
   onUpdateFavorites?: (id: string) => void;
@@ -31,7 +31,7 @@ const TableList = ({
   imageUrl,
   edition,
   category,
-  idFavorite,
+  idFavorite = false,
   publicationYear,
   rating,
   status = false,
@@ -72,6 +72,7 @@ const TableList = ({
             alt="Don't make me think"
             width={75}
             height={100}
+            priority
           />
           <Flex flexDir="column">
             <Text size="xl" mb="20px">

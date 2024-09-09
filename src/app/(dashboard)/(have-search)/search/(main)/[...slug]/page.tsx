@@ -1,7 +1,7 @@
 "use client";
 
 import { useSession } from "next-auth/react";
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import {
   getAllBook,
   getBookByParams,
@@ -9,34 +9,57 @@ import {
   updateUserById,
 } from "@app/api";
 import { BookType, User } from "@app/models";
-import { Pagination, TableList } from "@app/components/common";
-import { useState } from "react";
+import {
+  LoadingIndicator,
+  Pagination,
+  TableList,
+} from "@app/components/common";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { dividePaginationBooks } from "@app/utils";
 
-const SearchPage = async ({ params }: { params: { slug: string[] } }) => {
+const SearchPage = ({ params }: { params: { slug: string[] } }) => {
   const { data: session } = useSession();
   const router = useRouter();
+  const [dataUserById, setDataUserById] = useState<User>();
+  const [listData, setListData] = useState<BookType[]>([]);
+  const [dataPagination, setDataPagination] = useState<BookType[][]>([]);
   const [pagination, setPagination] = useState<number>(0);
   const type = params.slug[0];
   const value = params.slug[1];
 
-  const dataUserById = (await getUserById(session?.user?.id || "")) as User;
-  const dataAllBook = await getAllBook();
-  const dataBook = dividePaginationBooks(dataAllBook);
+  const fetchData = async () => {
+    try {
+      const dataUserById = (await getUserById(session?.user?.id || "")) as User;
+      const dataAllBook = await getAllBook();
+      const dataBook = dividePaginationBooks(dataAllBook);
 
-  let dataBookByParams: BookType[][] = [];
-  if (type && value) {
-    const dataParams = await getBookByParams(`${type}=${value}`);
-    dataBookByParams = dividePaginationBooks(dataParams);
-  }
-  const listData: BookType[] =
-    type && value
-      ? dataBookByParams[pagination] || []
-      : dataBook[pagination] || [];
-  const dataPagination = type && value ? dataBookByParams : dataBook;
+      let dataBookByParams: BookType[][] = [];
+      if (type && value) {
+        const dataParams = await getBookByParams(`${type}=${value}`);
+        dataBookByParams = dividePaginationBooks(dataParams);
+      }
+      const listData: BookType[] =
+        type && value
+          ? dataBookByParams[pagination] || []
+          : dataBook[pagination] || [];
+      const dataPagination = type && value ? dataBookByParams : dataBook;
+
+      setDataUserById(dataUserById);
+      setDataPagination(dataPagination);
+      setListData(listData);
+    } catch (error) {
+      console.error("Failed to fetch data:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, [session?.user?.id, pagination, type, value]);
 
   const handleUpdateFavorites = async (id: string) => {
+    if (!dataUserById) return;
+
     let listFavorite = dataUserById.favorites;
     if (dataUserById.favorites.includes(id)) {
       listFavorite = dataUserById.favorites.filter((item) => item !== id);
@@ -52,8 +75,8 @@ const SearchPage = async ({ params }: { params: { slug: string[] } }) => {
     return router.refresh();
   };
 
-  if (!listData || !dataUserById) {
-    return <Text>No data...</Text>;
+  if (!dataUserById) {
+    return <LoadingIndicator />;
   }
 
   return (

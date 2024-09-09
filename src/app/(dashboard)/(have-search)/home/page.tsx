@@ -2,21 +2,41 @@
 
 import { Grid, Text } from "@chakra-ui/react";
 import { BookType, User } from "@app/models";
-import { Cart } from "@app/components/common";
+import { Cart, LoadingIndicator } from "@app/components/common";
 import { getAllBook, getUserById, updateUserById } from "@app/api";
 import { useSession } from "next-auth/react";
 import { getTwelveItemData } from "@app/utils";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
-const HomePage = async () => {
+const HomePage = () => {
   const { data: session } = useSession();
   const router = useRouter();
+  const [dataBook, setDataBook] = useState<BookType[]>([]);
+  const [dataUserById, setDataUserById] = useState<User>();
 
-  const dataAllBook = await getAllBook();
-  const dataUserById = (await getUserById(session?.user?.id || "")) as User;
-  const dataBook = getTwelveItemData(dataAllBook);
+  const fetchData = async () => {
+    try {
+      if (session?.user?.id) {
+        const dataAllBook = await getAllBook();
+        const user = await getUserById(session.user.id);
+        const books = getTwelveItemData(dataAllBook);
+
+        setDataBook(books);
+        setDataUserById(user as User);
+      }
+    } catch (error) {
+      console.error("Failed to fetch data:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, [session?.user?.id]);
 
   const handleUpdateFavorites = async (id: string) => {
+    if (!dataUserById) return;
+
     let listFavorite = dataUserById.favorites;
     if (dataUserById.favorites.includes(id)) {
       listFavorite = dataUserById.favorites.filter((item) => item !== id);
@@ -33,7 +53,7 @@ const HomePage = async () => {
   };
 
   if (!dataBook || !dataUserById) {
-    return <Text>No data...</Text>;
+    return <LoadingIndicator />;
   }
 
   return (

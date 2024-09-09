@@ -314,14 +314,19 @@ const FormContribute = ({
             fieldState: { error },
           }) => (
             <>
-              <FormLabel htmlFor="fileInput" cursor="pointer">
+              <FormLabel
+                htmlFor="fileInput"
+                cursor="pointer"
+                data-testid="fileInput"
+              >
                 {imagePreview ? (
                   <Image
-                    src={imagePreview}
+                    src={imagePreview || ""}
                     alt="Upload Image"
                     width={100}
                     height={100}
                     style={{ margin: "0 auto" }}
+                    priority
                   />
                 ) : (
                   <Flex

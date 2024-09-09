@@ -1,8 +1,9 @@
 "use client";
 
-import { Grid, Text } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 import { BookType, User } from "@app/models";
-import { Cart } from "@app/components/common";
+import { Cart, LoadingIndicator } from "@app/components/common";
 import {
   getAllBook,
   getBookByParams,
@@ -13,26 +14,42 @@ import { useSession } from "next-auth/react";
 import { getTwelveItemData } from "@app/utils";
 import { useRouter } from "next/navigation";
 
-const HomePage = async ({ params }: { params: { slug: string[] } }) => {
+const HomePage = ({ params }: { params?: { slug: string[] } }) => {
   const { data: session } = useSession();
+  const [listData, setListData] = useState<BookType[]>([]);
+  const [dataUserById, setDataUserById] = useState<User>();
   const router = useRouter();
-  const type = params.slug[0];
-  const value = params.slug[1];
+  const type = params?.slug[0];
+  const value = params?.slug[1];
 
-  const dataAllBook = await getAllBook();
-  const dataUserById = (await getUserById(session?.user?.id || "")) as User;
-  const dataBook = getTwelveItemData(dataAllBook);
+  const fetchData = async () => {
+    try {
+      const dataAllBook = await getAllBook();
+      const userData = (await getUserById(session?.user?.id || "")) as User;
+      const dataBook = getTwelveItemData(dataAllBook);
 
-  let dataBookByParams: BookType[] = [];
-  if (type && value) {
-    const dataParams = await getBookByParams(`${type}=${value}`);
-    dataBookByParams = getTwelveItemData(dataParams);
-  }
+      let dataBookByParams: BookType[] = [];
+      if (type && value) {
+        const dataParams = await getBookByParams(`${type}=${value}`);
+        dataBookByParams = getTwelveItemData(dataParams);
+      }
 
-  const listData: BookType[] =
-    type && value ? dataBookByParams || [] : dataBook || [];
+      const listData: BookType[] =
+        type && value ? dataBookByParams || [] : dataBook || [];
+
+      setListData(listData);
+      setDataUserById(userData);
+    } catch (error) {
+      console.error("Failed to fetch data:", error);
+    }
+  };
+  useEffect(() => {
+    fetchData();
+  }, [session?.user?.id, type, value]);
 
   const handleUpdateFavorites = async (id: string) => {
+    if (!dataUserById) return;
+
     let listFavorite = dataUserById.favorites;
     if (dataUserById.favorites.includes(id)) {
       listFavorite = dataUserById.favorites.filter((item) => item !== id);
@@ -49,7 +66,7 @@ const HomePage = async ({ params }: { params: { slug: string[] } }) => {
   };
 
   if (!listData || !dataUserById) {
-    return <Text>No data...</Text>;
+    return <LoadingIndicator />;
   }
 
   return (

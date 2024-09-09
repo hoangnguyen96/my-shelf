@@ -41,7 +41,7 @@ const LoginPage = () => {
   return (
     <Box
       w="100%"
-      maxW={565}
+      maxW="565px"
       pt="63px"
       px="70px"
       bgColor="white"

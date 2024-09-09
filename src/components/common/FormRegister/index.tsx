@@ -259,6 +259,7 @@ const FormRegister = ({
       </FormControl>
 
       <Button
+        data-testid="submit-register"
         type="submit"
         variant="full"
         text="Register"

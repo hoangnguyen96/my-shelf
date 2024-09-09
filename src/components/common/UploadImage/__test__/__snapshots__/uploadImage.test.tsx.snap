@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UploadImage Should render correctly snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <form
+        class="css-0"
+        enctype="multipart/form-data"
+      >
+        <div
+          class="chakra-form-control css-1itv5e3"
+          role="group"
+        >
+          <label
+            class="chakra-form__label css-wmozf8"
+            for="fileInput"
+            id="myFile-label"
+          >
+            <img
+              alt="Upload"
+              data-nimg="1"
+              decoding="async"
+              fetchpriority="high"
+              height="110"
+              src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=256&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=256&q=75 2x"
+              style="color: transparent; margin: 0px auto; border-radius: 50%; width: 110px; height: 110px;"
+              width="110"
+            />
+          </label>
+          <input
+            accept="image/*"
+            class="chakra-input css-1hyfx7x"
+            data-testid="fileInput"
+            id="fileInput"
+            type="file"
+          />
+        </div>
+        <button
+          class="chakra-button css-3bibt3"
+          type="button"
+        >
+          Upload New photo
+        </button>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <form
+      class="css-0"
+      enctype="multipart/form-data"
+    >
+      <div
+        class="chakra-form-control css-1itv5e3"
+        role="group"
+      >
+        <label
+          class="chakra-form__label css-wmozf8"
+          for="fileInput"
+          id="myFile-label"
+        >
+          <img
+            alt="Upload"
+            data-nimg="1"
+            decoding="async"
+            fetchpriority="high"
+            height="110"
+            src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=256&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=256&q=75 2x"
+            style="color: transparent; margin: 0px auto; border-radius: 50%; width: 110px; height: 110px;"
+            width="110"
+          />
+        </label>
+        <input
+          accept="image/*"
+          class="chakra-input css-1hyfx7x"
+          data-testid="fileInput"
+          id="fileInput"
+          type="file"
+        />
+      </div>
+      <button
+        class="chakra-button css-3bibt3"
+        type="button"
+      >
+        Upload New photo
+      </button>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

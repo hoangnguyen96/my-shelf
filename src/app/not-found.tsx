@@ -9,6 +9,8 @@ import { auth } from "@app/auth";
 const NotFound = async () => {
   const session = await auth();
 
+  const url = !session ? ROUTES.LOGIN : ROUTES.HOME;
+
   return (
     <Flex
       flexDir="column"
@@ -19,10 +21,7 @@ const NotFound = async () => {
     >
       <Heading>Not Found</Heading>
       <Text>Could not find requested resource</Text>
-      <Link
-        href={!session ? ROUTES.LOGIN : ROUTES.HOME}
-        style={{ textAlign: "center" }}
-      >
+      <Link href={url} style={{ textAlign: "center" }}>
         <Button colorScheme="brand" text="Return Home" />
       </Link>
     </Flex>

@@ -1,6 +1,7 @@
 import { Box, Flex } from "@chakra-ui/react";
-import { Logo, Navbar } from "@app/components/common";
+import { Logo } from "@app/components/common";
 import SessionWrapper from "../SessionWrapper";
+import NavbarBase from "../ui/navbar";
 
 const DashboardLayout = ({
   children,
@@ -17,7 +18,7 @@ const DashboardLayout = ({
           alignItems="center"
         >
           <Logo />
-          <Navbar />
+          <NavbarBase />
         </Flex>
         <Box
           w="100%"

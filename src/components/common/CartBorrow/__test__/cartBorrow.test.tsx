@@ -3,6 +3,12 @@ import { render } from "@testing-library/react";
 import CartBorrow from "..";
 import { book1 } from "@app/assets/images";
 
+// Mock Image component
+jest.mock("next/image", () => ({
+  __esModule: true,
+  default: (props: any) => <img {...props} />,
+}));
+
 describe("CartBorrow", () => {
   it("Should render correctly snapshot", () => {
     expect(

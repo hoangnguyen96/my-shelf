@@ -157,6 +157,7 @@ const FormLogin = ({ isLoading = false, onSubmit }: LoginForm) => {
 
       <Checkbox isChecked={rememberMe} onChange={handleRememberMeClick} />
       <Button
+        data-testid="submit-login"
         variant="full"
         text="Login"
         mt="40px"

@@ -1,25 +1,46 @@
 "use client";
 
 import { useSession } from "next-auth/react";
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import { getAllBook, getUserById, updateUserById } from "@app/api";
 import { BookType, User } from "@app/models";
-import { Pagination, TableList } from "@app/components/common";
-import { useState } from "react";
+import {
+  LoadingIndicator,
+  Pagination,
+  TableList,
+} from "@app/components/common";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { dividePaginationBooks } from "@app/utils";
 
-const SearchPage = async () => {
+const SearchPage = () => {
   const { data: session } = useSession();
   const router = useRouter();
+  const [listData, setListData] = useState<BookType[]>([]);
+  const [dataBook, setDataBook] = useState<BookType[][]>([]);
+  const [dataUserById, setDataUserById] = useState<User>();
   const [pagination, setPagination] = useState<number>(0);
 
-  const dataUserById = (await getUserById(session?.user?.id || "")) as User;
-  const dataAllBook = await getAllBook();
-  const dataBook = dividePaginationBooks(dataAllBook);
-  const listData: BookType[] = dataBook[pagination];
+  const fetchData = async () => {
+    try {
+      const user = (await getUserById(session?.user?.id || "")) as User;
+      const allBooks = await getAllBook();
+      const paginatedBooks = dividePaginationBooks(allBooks);
+      setDataUserById(user);
+      setDataBook(paginatedBooks);
+      setListData(paginatedBooks[pagination] || []);
+    } catch (error) {
+      console.error("Failed to fetch data:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, [session?.user?.id, pagination]);
 
   const handleUpdateFavorites = async (id: string) => {
+    if (!dataUserById) return;
+
     let listFavorite = dataUserById.favorites;
     if (dataUserById.favorites.includes(id)) {
       listFavorite = dataUserById.favorites.filter((item) => item !== id);
@@ -36,7 +57,7 @@ const SearchPage = async () => {
   };
 
   if (!listData || !dataUserById) {
-    return <Text>No data...</Text>;
+    return <LoadingIndicator />;
   }
 
   return (

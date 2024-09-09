@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { avatar } from "@app/assets/images";
 
@@ -17,7 +19,7 @@ const Avatar = ({
 }: AvatarProps) => {
   return (
     <Image
-      src={image}
+      src={image || avatar}
       width={width}
       height={height}
       alt="Avatar user"
@@ -27,6 +29,7 @@ const Avatar = ({
         borderRadius: "50%",
         border: border,
       }}
+      priority
       {...rest}
     />
   );

@@ -2,7 +2,7 @@
 
 import { useSession } from "next-auth/react";
 import { Box, Flex, Text, useDisclosure } from "@chakra-ui/react";
-import { notFound, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowBackIcon } from "@chakra-ui/icons";
@@ -15,9 +15,10 @@ import {
 import { formatDate } from "@app/utils";
 import { CheckIcon, StarFullIcon } from "@app/assets/icons";
 import { previewAuthor } from "@app/assets/images";
-import { Button, StatusBook } from "@app/components/common";
+import { Button, LoadingIndicator, StatusBook } from "@app/components/common";
 import { ModalSuccessProcess } from "@app/components";
 import { BookType, User } from "@app/models";
+import { useEffect, useState } from "react";
 
 interface PreviewBookProps {
   params: {
@@ -25,34 +26,35 @@ interface PreviewBookProps {
   };
 }
 
-const PreviewBook = async ({ params: { id } }: PreviewBookProps) => {
+const PreviewBook = ({ params: { id } }: PreviewBookProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
   const { data: session } = useSession();
-  const dataUserById = (await getUserById(session?.user?.id || "")) as User;
-  const dataBook = await getBookById(id);
+  const [dataBook, setDataBook] = useState<BookType>();
+  const [dataUserById, setDataUserById] = useState<User>();
 
-  const {
-    id: idBook,
-    title,
-    author,
-    publicationYear,
-    edition,
-    rating,
-    description,
-    imageUrl,
-  } = dataBook as BookType;
+  const fetchData = async () => {
+    const book = await getBookById(parseInt(id));
+    setDataBook(book as BookType);
+    const user = (await getUserById(session?.user?.id || "")) as User;
+    setDataUserById(user);
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, [id, session?.user?.id]);
 
   const handleAddBorrowBook = async (id: string) => {
-    if (dataUserById.shelfBooks.includes(id))
+    if (dataUserById?.shelfBooks?.includes(id))
       return console.log("You borrowed book successful!!");
 
-    dataUserById.shelfBooks.push(id);
-    await updateBookById(idBook, {
+    dataUserById?.shelfBooks.push(id);
+    await updateBookById(dataBook?.id || "", {
       ...dataBook,
       createdDate: formatDate(new Date()),
     });
-    await updateUserById(dataUserById.id, { ...dataUserById });
+    const idUpdate = dataUserById?.id || "";
+    await updateUserById(idUpdate, { ...dataUserById });
 
     return onOpen();
   };
@@ -62,7 +64,9 @@ const PreviewBook = async ({ params: { id } }: PreviewBookProps) => {
     return router.refresh();
   };
 
-  if (!dataBook) notFound();
+  if (!dataBook) {
+    return <LoadingIndicator />;
+  }
 
   return (
     <>
@@ -83,19 +87,21 @@ const PreviewBook = async ({ params: { id } }: PreviewBookProps) => {
             borderRadius="10px"
           >
             <Image
-              src={imageUrl}
+              src={dataBook.imageUrl || ""}
               alt="Preview book"
               width={210}
               height={278}
               style={{ margin: "0 auto" }}
+              priority
             />
           </Box>
           <Flex flexDir="column" w="100%" maxW={503}>
-            <Text size="xxxl">{title}</Text>
+            <Text size="xxxl">{dataBook.title}</Text>
             <Text my="10px">
-              By {author}, <Text as="span">{publicationYear}</Text>
+              By {dataBook.author},{" "}
+              <Text as="span">{dataBook.publicationYear}</Text>
             </Text>
-            <Text color="dark.60">{edition} edition</Text>
+            <Text color="dark.60">{dataBook.edition} edition</Text>
 
             <Flex my="30px" alignItems="center" gap="19px">
               <Flex gap="10px" alignItems="center">
@@ -105,7 +111,7 @@ const PreviewBook = async ({ params: { id } }: PreviewBookProps) => {
                   ))}
                 </Flex>
                 <Text size="md" fontSize="14px" fontWeight={500}>
-                  <Text as="span">{rating}</Text> Ratings
+                  <Text as="span">{dataBook.rating}</Text> Ratings
                 </Text>
               </Flex>
               <Text size="md" fontSize="14px" fontWeight={500}>
@@ -138,14 +144,14 @@ const PreviewBook = async ({ params: { id } }: PreviewBookProps) => {
                 <Text fontSize="14px" fontWeight={700}>
                   Status
                 </Text>
-                <StatusBook status={dataUserById.shelfBooks.includes(id)} />
+                <StatusBook status={dataUserById?.shelfBooks?.includes(id)} />
               </Flex>
             </Flex>
 
             <Button
               size="xl"
               text="BORROW"
-              isDisabled={dataUserById.shelfBooks.includes(id)}
+              isDisabled={dataUserById?.shelfBooks?.includes(id)}
               maxW={210}
               mt="43px"
               lineHeight="60px"
@@ -168,17 +174,18 @@ const PreviewBook = async ({ params: { id } }: PreviewBookProps) => {
               </Text>
             </Text>
             <Text size="xl" mt="22px" mb="43px">
-              {author}
+              {dataBook.author}
             </Text>
             <Text size="sm" lineHeight="16px">
-              {description}
+              {dataBook.description}
             </Text>
             <Image
-              src={previewAuthor}
+              src={previewAuthor || ""}
               alt="Preview Author"
               width={88}
               height={100}
               style={{ position: "absolute", right: "120px", top: "30px" }}
+              priority
             />
           </Box>
         </Flex>
