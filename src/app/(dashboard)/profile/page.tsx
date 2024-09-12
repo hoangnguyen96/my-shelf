@@ -14,7 +14,6 @@ const ProfilePage = () => {
   const { data: session } = useSession();
   const router = useRouter();
   const toast = useToast();
-  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [dataUserById, setDataUserById] = useState<User>();
 
   const fetchData = async () => {
@@ -34,7 +33,6 @@ const ProfilePage = () => {
 
   const handleUpdateUser = async (id: string, user: Partial<User>) => {
     try {
-      setIsLoading(true);
       const { username, email, phone, bio } = user;
 
       const payload: Partial<User> = {
@@ -53,7 +51,6 @@ const ProfilePage = () => {
         duration: 9000,
         isClosable: true,
       });
-      setIsLoading(false);
       return router.refresh();
     } catch (error) {
       toast({
@@ -102,11 +99,7 @@ const ProfilePage = () => {
             />
           </Box>
         </Flex>
-        <FormProfile
-          isLoading={isLoading}
-          user={dataUserById as User}
-          onUpdate={handleUpdateUser}
-        />
+        <FormProfile user={dataUserById as User} onUpdate={handleUpdateUser} />
       </Flex>
     </>
   );

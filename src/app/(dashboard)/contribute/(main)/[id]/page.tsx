@@ -3,13 +3,13 @@
 import { getBookById, updateBookById } from "@app/api-request";
 import { FormContribute } from "@app/components";
 import { LoadingIndicator } from "@app/components/common";
+import { ROUTES } from "@app/constants";
 import { BookType } from "@app/models";
 import { Box, Text, useToast } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const ContributeUpdate = ({ params }: { params: { id: string } }) => {
-  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [dataBookById, setDataBookById] = useState<BookType>();
   const router = useRouter();
   const toast = useToast();
@@ -28,7 +28,6 @@ const ContributeUpdate = ({ params }: { params: { id: string } }) => {
   }, [params.id]);
 
   const handleUpdate = async (id: string, values: Partial<BookType>) => {
-    setIsLoading(true);
     const {
       title,
       author,
@@ -63,12 +62,11 @@ const ContributeUpdate = ({ params }: { params: { id: string } }) => {
       duration: 5000,
       isClosable: true,
     });
-    setIsLoading(false);
 
-    return router.refresh();
+    return router.push(ROUTES.CONTRIBUTE_LIST);
   };
 
-  if (isLoading || !dataBookById) {
+  if (!dataBookById) {
     return <LoadingIndicator />;
   }
 
@@ -77,11 +75,7 @@ const ContributeUpdate = ({ params }: { params: { id: string } }) => {
       <Text size="xl" color="dark.100" mb="34px">
         Preview Book Details
       </Text>
-      <FormContribute
-        isLoading={isLoading}
-        itemUpdate={dataBookById}
-        onUpdate={handleUpdate}
-      />
+      <FormContribute itemUpdate={dataBookById} onUpdate={handleUpdate} />
     </Box>
   );
 };

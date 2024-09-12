@@ -9,11 +9,9 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const ContributePage = () => {
-  const [isLoading, setIsLoading] = useState<boolean>(false);
   const router = useRouter();
 
   const handleSubmit = async (values: Partial<BookType>) => {
-    setIsLoading(true);
     const {
       title,
       author,
@@ -42,7 +40,6 @@ const ContributePage = () => {
 
     try {
       await addBook(payload);
-      setIsLoading(false);
       return router.push(ROUTES.CONTRIBUTE_COMPLETE);
     } catch (error) {
       throw new Error("Failed to add books!");
@@ -54,7 +51,7 @@ const ContributePage = () => {
       <Text size="xl" color="dark.100" mb="34px">
         Fill up Book Details
       </Text>
-      <FormContribute isLoading={isLoading} onSubmit={handleSubmit} />
+      <FormContribute onSubmit={handleSubmit} />
     </>
   );
 };

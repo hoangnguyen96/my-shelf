@@ -1,0 +1,23 @@
+export const mockRouter = {
+  pathname: "/",
+  route: "/",
+  query: {},
+  asPath: "/",
+  basePath: "",
+  push: () => Promise.resolve(true),
+  replace: () => Promise.resolve(true),
+  reload: () => {},
+  back: () => {},
+  prefetch: () => Promise.resolve(),
+  beforePopState: () => {},
+  isFallback: false,
+  isLocaleDomain: false,
+  isReady: true,
+  isPreview: false,
+  forward: () => {},
+  events: {
+    on: () => {},
+    off: () => {},
+    emit: () => {},
+  },
+};

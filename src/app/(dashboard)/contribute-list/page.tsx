@@ -44,11 +44,11 @@ const ContributeList = () => {
           </Text>
         </Link>
 
-        <Flex gap="90px" alignItems="center" mt="66px">
+        <Flex gap="10%" alignItems="center" mt="66px">
           <Text size="xl" fontWeight={500} w="100%" maxW={352}>
             Title
           </Text>
-          <Flex gap="60px" w="100%" maxW={312}>
+          <Flex gap="10%" w="100%" maxW={312}>
             <Text size="xl" fontWeight={500}>
               Ratings
             </Text>

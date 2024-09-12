@@ -192,7 +192,7 @@ const PreviewBook = ({ params: { id } }: PreviewBookProps) => {
               alt="Preview Author"
               width={88}
               height={100}
-              style={{ position: "absolute", right: "120px", top: "30px" }}
+              style={{ position: "absolute", right: "30%", top: "10%" }}
               priority
             />
           </Box>

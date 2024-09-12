@@ -9,10 +9,169 @@ exports[`Button Should render correctly snapshot 1`] = `
         class="css-79elbk"
       >
         <div
-          class="css-92ksox"
+          class="css-197p3oi"
         >
           <div
-            class="chakra-form-control css-2d82ls"
+            class="css-akgk9g"
+          >
+            <div
+              class="chakra-form-control css-5b2hom"
+              role="group"
+            >
+              <div
+                class="chakra-input__group css-bx0blc"
+                data-group="true"
+              >
+                <input
+                  class="chakra-input css-1x36n8t"
+                  id="title"
+                  name="title"
+                  placeholder="Book name"
+                  type="text"
+                  value="Don't Make Me Think"
+                />
+              </div>
+            </div>
+            <div
+              class="chakra-form-control css-5b2hom"
+              role="group"
+            >
+              <div
+                class="chakra-input__group css-bx0blc"
+                data-group="true"
+              >
+                <input
+                  class="chakra-input css-1x36n8t"
+                  id="author"
+                  name="author"
+                  placeholder="Author Name"
+                  type="text"
+                  value="Steve Krug"
+                />
+              </div>
+            </div>
+            <div
+              class="chakra-form-control css-7m4uk4"
+              role="group"
+            >
+              <textarea
+                class="chakra-textarea css-1yn82jt"
+                id="field-:r2:"
+                name="description"
+                placeholder="Reason For Your Contribution"
+              >
+                description will update later
+              </textarea>
+            </div>
+          </div>
+          <div
+            class="css-j7qwjs"
+          >
+            <div
+              class="chakra-form-control css-106bepj"
+              role="group"
+            >
+              <div
+                class="chakra-select__wrapper css-42b2qy"
+              >
+                <select
+                  class="chakra-select css-g3rz38"
+                  data-testid="contribute-category"
+                  id="field-:r3:"
+                >
+                  <option
+                    value=""
+                  >
+                    Category
+                  </option>
+                  <option
+                    class="css-0"
+                    value="SelfHelpBook"
+                  >
+                    SelfHelpBook
+                  </option>
+                  <option
+                    class="css-0"
+                    value="TextBook"
+                  >
+                    TextBook
+                  </option>
+                </select>
+                <div
+                  class="chakra-select__icon-wrapper css-162mkon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="chakra-select__icon"
+                    focusable="false"
+                    role="presentation"
+                    style="width: 1em; height: 1em; color: currentColor;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="chakra-form-control css-1xz9bny"
+              role="group"
+            >
+              <label
+                class="chakra-form__label css-zfpjyo"
+                data-testid="fileInput"
+                for="fileInput"
+                id="field-:r4:-label"
+              >
+                <img
+                  alt="Upload Image"
+                  height="100"
+                  src="https://i.ibb.co/QbQgVtG/book1.png"
+                  style="margin: 0px auto;"
+                  width="100"
+                />
+              </label>
+              <div
+                class="chakra-input__group css-bx0blc"
+                data-group="true"
+              >
+                <input
+                  accept="image/*"
+                  class="chakra-input css-1vuqmsh"
+                  data-testid="input-file-contribute"
+                  id="fileInput"
+                  type="file"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="chakra-button css-1qhatj0"
+          data-testid="submit-contribute"
+          disabled=""
+          type="submit"
+        >
+          Update
+        </button>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <form
+      class="css-79elbk"
+    >
+      <div
+        class="css-197p3oi"
+      >
+        <div
+          class="css-akgk9g"
+        >
+          <div
+            class="chakra-form-control css-5b2hom"
             role="group"
           >
             <div
@@ -30,6 +189,41 @@ exports[`Button Should render correctly snapshot 1`] = `
             </div>
           </div>
           <div
+            class="chakra-form-control css-5b2hom"
+            role="group"
+          >
+            <div
+              class="chakra-input__group css-bx0blc"
+              data-group="true"
+            >
+              <input
+                class="chakra-input css-1x36n8t"
+                id="author"
+                name="author"
+                placeholder="Author Name"
+                type="text"
+                value="Steve Krug"
+              />
+            </div>
+          </div>
+          <div
+            class="chakra-form-control css-7m4uk4"
+            role="group"
+          >
+            <textarea
+              class="chakra-textarea css-1yn82jt"
+              id="field-:r2:"
+              name="description"
+              placeholder="Reason For Your Contribution"
+            >
+              description will update later
+            </textarea>
+          </div>
+        </div>
+        <div
+          class="css-j7qwjs"
+        >
+          <div
             class="chakra-form-control css-106bepj"
             role="group"
           >
@@ -39,7 +233,7 @@ exports[`Button Should render correctly snapshot 1`] = `
               <select
                 class="chakra-select css-g3rz38"
                 data-testid="contribute-category"
-                id="field-:r1:"
+                id="field-:r3:"
               >
                 <option
                   value=""
@@ -78,216 +272,38 @@ exports[`Button Should render correctly snapshot 1`] = `
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="chakra-form-control css-2d82ls"
-          role="group"
-        >
           <div
-            class="chakra-input__group css-bx0blc"
-            data-group="true"
+            class="chakra-form-control css-1xz9bny"
+            role="group"
           >
-            <input
-              class="chakra-input css-1x36n8t"
-              id="author"
-              name="author"
-              placeholder="Author Name"
-              type="text"
-              value="Steve Krug"
-            />
-          </div>
-        </div>
-        <div
-          class="chakra-form-control css-uzlds2"
-          role="group"
-        >
-          <label
-            class="chakra-form__label css-zfpjyo"
-            data-testid="fileInput"
-            for="fileInput"
-            id="field-:r3:-label"
-          >
-            <img
-              alt="Upload Image"
-              height="100"
-              src="https://i.ibb.co/QbQgVtG/book1.png"
-              style="margin: 0px auto;"
-              width="100"
-            />
-          </label>
-          <div
-            class="chakra-input__group css-bx0blc"
-            data-group="true"
-          >
-            <input
-              accept="image/*"
-              class="chakra-input css-1vuqmsh"
-              data-testid="input-file-contribute"
-              id="fileInput"
-              type="file"
-            />
-          </div>
-        </div>
-        <div
-          class="chakra-form-control css-8qt7d5"
-          role="group"
-        >
-          <textarea
-            class="chakra-textarea css-1yn82jt"
-            id="field-:r4:"
-            name="description"
-            placeholder="Reason For Your Contribution"
-          >
-            description will update later
-          </textarea>
-        </div>
-        <button
-          class="chakra-button css-1qhatj0"
-          data-testid="submit-contribute"
-          disabled=""
-          type="submit"
-        >
-          Update
-        </button>
-      </form>
-    </div>
-  </body>,
-  "container": <div>
-    <form
-      class="css-79elbk"
-    >
-      <div
-        class="css-92ksox"
-      >
-        <div
-          class="chakra-form-control css-2d82ls"
-          role="group"
-        >
-          <div
-            class="chakra-input__group css-bx0blc"
-            data-group="true"
-          >
-            <input
-              class="chakra-input css-1x36n8t"
-              id="title"
-              name="title"
-              placeholder="Book name"
-              type="text"
-              value="Don't Make Me Think"
-            />
-          </div>
-        </div>
-        <div
-          class="chakra-form-control css-106bepj"
-          role="group"
-        >
-          <div
-            class="chakra-select__wrapper css-42b2qy"
-          >
-            <select
-              class="chakra-select css-g3rz38"
-              data-testid="contribute-category"
-              id="field-:r1:"
+            <label
+              class="chakra-form__label css-zfpjyo"
+              data-testid="fileInput"
+              for="fileInput"
+              id="field-:r4:-label"
             >
-              <option
-                value=""
-              >
-                Category
-              </option>
-              <option
-                class="css-0"
-                value="SelfHelpBook"
-              >
-                SelfHelpBook
-              </option>
-              <option
-                class="css-0"
-                value="TextBook"
-              >
-                TextBook
-              </option>
-            </select>
+              <img
+                alt="Upload Image"
+                height="100"
+                src="https://i.ibb.co/QbQgVtG/book1.png"
+                style="margin: 0px auto;"
+                width="100"
+              />
+            </label>
             <div
-              class="chakra-select__icon-wrapper css-162mkon"
+              class="chakra-input__group css-bx0blc"
+              data-group="true"
             >
-              <svg
-                aria-hidden="true"
-                class="chakra-select__icon"
-                focusable="false"
-                role="presentation"
-                style="width: 1em; height: 1em; color: currentColor;"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                  fill="currentColor"
-                />
-              </svg>
+              <input
+                accept="image/*"
+                class="chakra-input css-1vuqmsh"
+                data-testid="input-file-contribute"
+                id="fileInput"
+                type="file"
+              />
             </div>
           </div>
         </div>
-      </div>
-      <div
-        class="chakra-form-control css-2d82ls"
-        role="group"
-      >
-        <div
-          class="chakra-input__group css-bx0blc"
-          data-group="true"
-        >
-          <input
-            class="chakra-input css-1x36n8t"
-            id="author"
-            name="author"
-            placeholder="Author Name"
-            type="text"
-            value="Steve Krug"
-          />
-        </div>
-      </div>
-      <div
-        class="chakra-form-control css-uzlds2"
-        role="group"
-      >
-        <label
-          class="chakra-form__label css-zfpjyo"
-          data-testid="fileInput"
-          for="fileInput"
-          id="field-:r3:-label"
-        >
-          <img
-            alt="Upload Image"
-            height="100"
-            src="https://i.ibb.co/QbQgVtG/book1.png"
-            style="margin: 0px auto;"
-            width="100"
-          />
-        </label>
-        <div
-          class="chakra-input__group css-bx0blc"
-          data-group="true"
-        >
-          <input
-            accept="image/*"
-            class="chakra-input css-1vuqmsh"
-            data-testid="input-file-contribute"
-            id="fileInput"
-            type="file"
-          />
-        </div>
-      </div>
-      <div
-        class="chakra-form-control css-8qt7d5"
-        role="group"
-      >
-        <textarea
-          class="chakra-textarea css-1yn82jt"
-          id="field-:r4:"
-          name="description"
-          placeholder="Reason For Your Contribution"
-        >
-          description will update later
-        </textarea>
       </div>
       <button
         class="chakra-button css-1qhatj0"

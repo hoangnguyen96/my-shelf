@@ -22,16 +22,11 @@ import { EditProfileIcon } from "@app/assets/icons";
 import { Button, Input } from "../common";
 
 interface FormProfileProps {
-  isLoading?: boolean;
   user: User;
   onUpdate: (id: string, user: Partial<User>) => void;
 }
 
-const FormProfile = ({
-  isLoading = false,
-  user,
-  onUpdate,
-}: FormProfileProps) => {
+const FormProfile = ({ user, onUpdate }: FormProfileProps) => {
   const [isReadOnly, setIsReadOnly] = useState<boolean>(true);
   const REQUIRED_FIELDS = ["username", "email", "phone"];
 
@@ -319,7 +314,7 @@ const FormProfile = ({
         fontSize="18px"
         fontWeight={700}
         borderRadius="8px"
-        isLoading={isLoading}
+        isLoading={isSubmitting}
         isDisabled={isReadOnly ? true : isDisableSubmit || isSubmitting}
         onClick={submitForm(handleSubmitForm)}
       />

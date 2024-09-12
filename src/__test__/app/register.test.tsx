@@ -74,7 +74,7 @@ describe("Register", () => {
         isAdmin: false,
         phone: "",
         bio: "",
-        avatar: "https://i.ibb.co/88X1WfZ/avatar-default.png",
+        avatar: "https://i.ibb.co/SKHPQYq/avatar-default.webp",
         favorites: [],
         shelfBooks: [],
         userId: expect.any(String), // userId generated from generateSevenDigitUUID

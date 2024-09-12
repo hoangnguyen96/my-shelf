@@ -10,7 +10,13 @@ const ContributeLayout = ({
 }: Readonly<{
   children: React.ReactNode;
 }>) => (
-  <Flex p="100px 68px" gap="56px" height={765} pos="relative">
+  <Flex
+    p="100px 68px"
+    gap="56px"
+    height={765}
+    pos="relative"
+    justifyContent="center"
+  >
     <Flex
       flex={1}
       maxW={678}

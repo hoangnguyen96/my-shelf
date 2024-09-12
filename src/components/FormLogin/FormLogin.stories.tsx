@@ -4,13 +4,17 @@ import theme from "@app/themes";
 import FormLogin from ".";
 import HeadingForm from "../HeadingForm";
 import FooterForm from "../FooterForm";
+import { RouterContext } from "next/dist/shared/lib/router-context.shared-runtime";
+import { mockRouter } from "@app/__mocks__/storybook";
 
 const meta: Meta<typeof FormLogin> = {
   component: FormLogin,
   decorators: [
     (Story: StoryFn) => (
       <ChakraProvider theme={theme}>
-        <Story />
+        <RouterContext.Provider value={mockRouter}>
+          <Story />
+        </RouterContext.Provider>
       </ChakraProvider>
     ),
   ],
@@ -32,11 +36,7 @@ const Template: StoryFn<typeof FormLogin> = () => (
       title="Welcome Back !"
       description="Sign in to continue to yourDigital Library"
     />
-    <FormLogin
-      onSubmit={async () => {
-        return Promise.resolve();
-      }}
-    />
+    <FormLogin onSubmit={async () => {}} />
     <FooterForm text="New User?" textLink="Register Here" pb="160px" link="/" />
   </Box>
 );

@@ -32,14 +32,12 @@ import { UploadIcon } from "@app/assets/icons";
 import { Button, Input } from "../common";
 
 interface FormContributeProps {
-  isLoading?: boolean;
   itemUpdate?: Partial<BookType>;
   onSubmit?: (book: Partial<BookType>) => void;
   onUpdate?: (id: string, book: Partial<BookType>) => void;
 }
 
 const FormContribute = ({
-  isLoading = false,
   itemUpdate,
   onSubmit,
   onUpdate,
@@ -173,232 +171,237 @@ const FormContribute = ({
 
   return (
     <Box as="form" pos="relative">
-      <Flex justifyContent="space-between" alignItems="center" gap="10px">
-        {/* Book name */}
-        <FormControl
+      <Flex justifyContent="space-between" gap="37px">
+        <Flex
+          flexDir="column"
+          alignItems="center"
+          gap="10px"
+          width="100%"
           maxW={360}
-          isInvalid={!!errors.title}
-          mb={errors.title?.message ? "0" : "22px"}
         >
-          <Controller
-            name="title"
-            control={control}
-            defaultValue=""
-            rules={{
-              required: MESSAGES.FIELD_REQUIRED,
-            }}
-            render={({
-              field: { value, onChange, ...rest },
-              fieldState: { error },
-            }) => (
-              <Input
-                id="title"
-                value={value}
-                placeholder="Book name"
-                isInvalid={!!error?.message}
-                onChange={(e) => {
-                  onChange(e);
-                  clearErrorOnChange("title", errors, clearErrors);
-                }}
-                {...rest}
-              />
-            )}
-          />
-          <FormErrorMessage pl="10px">
-            {errors.title?.message && errors.title.message}
-          </FormErrorMessage>
-        </FormControl>
-
-        {/* Category */}
-        <FormControl
-          maxW={170}
-          w="100%"
-          isInvalid={!!errors.category}
-          mb={errors.category?.message ? "0" : "22px"}
-        >
-          <Controller
-            name="category"
-            control={control}
-            defaultValue=""
-            rules={{
-              required: MESSAGES.FIELD_REQUIRED,
-            }}
-            render={({
-              field: { value, onChange, ...rest },
-              fieldState: { error },
-            }) => (
-              <Select
-                data-testid="contribute-category"
-                placeholder="Category"
-                border="2px"
-                borderRadius="40px"
-                value={value}
-                w="100%"
-                h="50px"
-                borderColor="borderDefault"
-                bgColor="white"
-                _focusVisible={{ borderColor: "borderDefault" }}
-                onChange={(e) => {
-                  onChange(e);
-                  clearErrorOnChange("category", errors, clearErrors);
-                }}
-              >
-                <Box as="option" value="SelfHelpBook">
-                  SelfHelpBook
-                </Box>
-                <Box as="option" value="TextBook">
-                  TextBook
-                </Box>
-              </Select>
-            )}
-          />
-          <FormErrorMessage pl="10px">
-            {errors.category?.message && errors.category.message}
-          </FormErrorMessage>
-        </FormControl>
-      </Flex>
-
-      {/* Author name */}
-      <FormControl
-        maxW={360}
-        isInvalid={!!errors.author}
-        mb={errors.author?.message ? "0" : "22px"}
-      >
-        <Controller
-          name="author"
-          control={control}
-          defaultValue=""
-          rules={{
-            required: MESSAGES.FIELD_REQUIRED,
-          }}
-          render={({
-            field: { value, onChange, ...rest },
-            fieldState: { error },
-          }) => (
-            <Input
-              id="author"
-              value={value}
-              placeholder="Author Name"
-              isInvalid={!!error?.message}
-              onChange={(e) => {
-                onChange(e);
-                clearErrorOnChange("author", errors, clearErrors);
+          {/* Book name */}
+          <FormControl
+            w="100%"
+            isInvalid={!!errors.title}
+            mb={errors.title?.message ? "0" : "22px"}
+          >
+            <Controller
+              name="title"
+              control={control}
+              defaultValue=""
+              rules={{
+                required: MESSAGES.FIELD_REQUIRED,
               }}
-              {...rest}
+              render={({
+                field: { value, onChange, ...rest },
+                fieldState: { error },
+              }) => (
+                <Input
+                  id="title"
+                  value={value}
+                  placeholder="Book name"
+                  isInvalid={!!error?.message}
+                  onChange={(e) => {
+                    onChange(e);
+                    clearErrorOnChange("title", errors, clearErrors);
+                  }}
+                  {...rest}
+                />
+              )}
             />
-          )}
-        />
-        <FormErrorMessage pl="10px">
-          {errors.author?.message && errors.author.message}
-        </FormErrorMessage>
-      </FormControl>
+            <FormErrorMessage pl="10px">
+              {errors.title?.message && errors.title.message}
+            </FormErrorMessage>
+          </FormControl>
 
-      {/* Upload Image */}
-      <FormControl
-        maxW={170}
-        w="100%"
-        isInvalid={!!errors.imageUrl}
-        mb={errors.imageUrl?.message ? "0" : "12px"}
-        pos="absolute"
-        right={0}
-        top={75}
-      >
-        <Controller
-          name="imageUrl"
-          control={control}
-          defaultValue=""
-          rules={{
-            required: MESSAGES.FIELD_REQUIRED,
-          }}
-          render={({
-            field: { value, onChange, ...rest },
-            fieldState: { error },
-          }) => (
-            <>
-              <FormLabel
-                htmlFor="fileInput"
-                cursor="pointer"
-                data-testid="fileInput"
-              >
-                {imagePreview ? (
-                  <Image
-                    src={imagePreview || ""}
-                    alt="Upload Image"
-                    width={100}
-                    height={100}
-                    style={{ margin: "0 auto" }}
-                    priority
-                  />
-                ) : (
-                  <Flex
-                    justifyContent="center"
-                    alignItems="center"
-                    w={176}
-                    h={63}
-                    bgColor="backgroundUpload"
-                    borderRadius="20px"
+          {/* Author name */}
+          <FormControl
+            w="100%"
+            isInvalid={!!errors.author}
+            mb={errors.author?.message ? "0" : "22px"}
+          >
+            <Controller
+              name="author"
+              control={control}
+              defaultValue=""
+              rules={{
+                required: MESSAGES.FIELD_REQUIRED,
+              }}
+              render={({
+                field: { value, onChange, ...rest },
+                fieldState: { error },
+              }) => (
+                <Input
+                  id="author"
+                  value={value}
+                  placeholder="Author Name"
+                  isInvalid={!!error?.message}
+                  onChange={(e) => {
+                    onChange(e);
+                    clearErrorOnChange("author", errors, clearErrors);
+                  }}
+                  {...rest}
+                />
+              )}
+            />
+            <FormErrorMessage pl="10px">
+              {errors.author?.message && errors.author.message}
+            </FormErrorMessage>
+          </FormControl>
+
+          {/* Reason */}
+          <FormControl
+            w="100%"
+            h="130px"
+            isInvalid={!!errors.description}
+            mb={errors.description?.message ? "0" : "12px"}
+          >
+            <Controller
+              name="description"
+              control={control}
+              defaultValue=""
+              render={({
+                field: { value, onChange, ...rest },
+                fieldState: { error },
+              }) => (
+                <Textarea
+                  h="100%"
+                  value={value}
+                  border="1px solid"
+                  borderColor="borderDefault"
+                  placeholder="Reason For Your Contribution"
+                  _placeholder={{ color: "dark.60" }}
+                  _focusVisible={{ boxShadow: "unset" }}
+                  onChange={(e) => {
+                    onChange(e);
+                    clearErrorOnChange("author", errors, clearErrors);
+                  }}
+                  {...rest}
+                />
+              )}
+            />
+            <FormErrorMessage pl="10px">
+              {errors.description?.message && errors.description.message}
+            </FormErrorMessage>
+          </FormControl>
+        </Flex>
+
+        <Flex flexDir="column">
+          {/* Category */}
+          <FormControl
+            maxW={170}
+            w="100%"
+            isInvalid={!!errors.category}
+            mb={errors.category?.message ? "0" : "22px"}
+          >
+            <Controller
+              name="category"
+              control={control}
+              defaultValue=""
+              rules={{
+                required: MESSAGES.FIELD_REQUIRED,
+              }}
+              render={({
+                field: { value, onChange, ...rest },
+                fieldState: { error },
+              }) => (
+                <Select
+                  data-testid="contribute-category"
+                  placeholder="Category"
+                  border="2px"
+                  borderRadius="40px"
+                  value={value}
+                  w="100%"
+                  h="50px"
+                  borderColor="borderDefault"
+                  bgColor="white"
+                  _focusVisible={{ borderColor: "borderDefault" }}
+                  onChange={(e) => {
+                    onChange(e);
+                    clearErrorOnChange("category", errors, clearErrors);
+                  }}
+                >
+                  <Box as="option" value="SelfHelpBook">
+                    SelfHelpBook
+                  </Box>
+                  <Box as="option" value="TextBook">
+                    TextBook
+                  </Box>
+                </Select>
+              )}
+            />
+            <FormErrorMessage pl="10px">
+              {errors.category?.message && errors.category.message}
+            </FormErrorMessage>
+          </FormControl>
+
+          {/* Upload Image */}
+          <FormControl
+            maxW={170}
+            w="100%"
+            isInvalid={!!errors.imageUrl}
+            mb={errors.imageUrl?.message ? "0" : "12px"}
+          >
+            <Controller
+              name="imageUrl"
+              control={control}
+              defaultValue=""
+              rules={{
+                required: MESSAGES.FIELD_REQUIRED,
+              }}
+              render={({
+                field: { value, onChange, ...rest },
+                fieldState: { error },
+              }) => (
+                <>
+                  <FormLabel
+                    htmlFor="fileInput"
+                    cursor="pointer"
+                    data-testid="fileInput"
                   >
-                    <UploadIcon />
-                  </Flex>
-                )}
-              </FormLabel>
-              <Input
-                data-testid="input-file-contribute"
-                id="fileInput"
-                type="file"
-                accept="image/*"
-                onChange={(e) => {
-                  onChange(e);
-                  handleFileChange(e);
-                  clearErrorOnChange("author", errors, clearErrors);
-                }}
-                display="none"
-              />
-            </>
-          )}
-        />
-        <FormErrorMessage pl="10px">
-          {errors.imageUrl?.message && errors.imageUrl.message}
-        </FormErrorMessage>
-      </FormControl>
-
-      {/* Reason */}
-      <FormControl
-        maxW={360}
-        maxH={150}
-        w="100%"
-        h="100%"
-        isInvalid={!!errors.description}
-        mb={errors.description?.message ? "0" : "12px"}
-      >
-        <Controller
-          name="description"
-          control={control}
-          defaultValue=""
-          render={({
-            field: { value, onChange, ...rest },
-            fieldState: { error },
-          }) => (
-            <Textarea
-              h="100%"
-              value={value}
-              border="1px solid"
-              borderColor="borderDefault"
-              placeholder="Reason For Your Contribution"
-              _placeholder={{ color: "dark.60" }}
-              _focusVisible={{ boxShadow: "unset" }}
-              onChange={(e) => {
-                onChange(e);
-                clearErrorOnChange("author", errors, clearErrors);
-              }}
-              {...rest}
+                    {imagePreview ? (
+                      <Image
+                        src={imagePreview || ""}
+                        alt="Upload Image"
+                        width={100}
+                        height={100}
+                        style={{ margin: "0 auto" }}
+                        priority
+                      />
+                    ) : (
+                      <Flex
+                        justifyContent="center"
+                        alignItems="center"
+                        w={176}
+                        h={63}
+                        bgColor="backgroundUpload"
+                        borderRadius="20px"
+                      >
+                        <UploadIcon />
+                      </Flex>
+                    )}
+                  </FormLabel>
+                  <Input
+                    data-testid="input-file-contribute"
+                    id="fileInput"
+                    type="file"
+                    accept="image/*"
+                    onChange={(e) => {
+                      onChange(e);
+                      handleFileChange(e);
+                      clearErrorOnChange("author", errors, clearErrors);
+                    }}
+                    display="none"
+                  />
+                </>
+              )}
             />
-          )}
-        />
-        <FormErrorMessage pl="10px">
-          {errors.description?.message && errors.description.message}
-        </FormErrorMessage>
-      </FormControl>
+            <FormErrorMessage pl="10px">
+              {errors.imageUrl?.message && errors.imageUrl.message}
+            </FormErrorMessage>
+          </FormControl>
+        </Flex>
+      </Flex>
 
       <Button
         data-testid="submit-contribute"
@@ -406,7 +409,7 @@ const FormContribute = ({
         size="xl"
         text={itemUpdate ? "Update" : "Submit"}
         my="40px"
-        isLoading={isLoading}
+        isLoading={isSubmitting}
         isDisabled={isDisableSubmit || isSubmitting}
         onClick={submitForm(handleFormSubmit)}
       />

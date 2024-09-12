@@ -3,51 +3,51 @@ import { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://my-shelf-nine.vercel.app/",
+      url: "https://my-shelf-theta.vercel.app/",
       lastModified: new Date(),
     },
     {
-      url: "https://my-shelf-nine.vercel.app/login",
+      url: "https://my-shelf-theta.vercel.app/login",
       lastModified: new Date(),
     },
     {
-      url: "https://my-shelf-nine.vercel.app/register",
+      url: "https://my-shelf-theta.vercel.app/register",
       lastModified: new Date(),
     },
     {
-      url: "https://my-shelf-nine.vercel.app/home",
+      url: "https://my-shelf-theta.vercel.app/home",
       lastModified: new Date(),
     },
     {
-      url: "https://my-shelf-nine.vercel.app/search",
+      url: "https://my-shelf-theta.vercel.app/search",
       lastModified: new Date(),
     },
     {
-      url: "https://my-shelf-nine.vercel.app/my-book-shelf",
+      url: "https://my-shelf-theta.vercel.app/my-book-shelf",
       lastModified: new Date(),
     },
     {
-      url: "https://my-shelf-nine.vercel.app/my-book-shelf/favorites",
+      url: "https://my-shelf-theta.vercel.app/my-book-shelf/favorites",
       lastModified: new Date(),
     },
     {
-      url: "https://my-shelf-nine.vercel.app/contribute",
+      url: "https://my-shelf-theta.vercel.app/contribute",
       lastModified: new Date(),
     },
     {
-      url: "https://my-shelf-nine.vercel.app/contribute-list",
+      url: "https://my-shelf-theta.vercel.app/contribute-list",
       lastModified: new Date(),
     },
     {
-      url: "https://my-shelf-nine.vercel.app/contribute/complete",
+      url: "https://my-shelf-theta.vercel.app/contribute/complete",
       lastModified: new Date(),
     },
     {
-      url: "https://my-shelf-nine.vercel.app/preview",
+      url: "https://my-shelf-theta.vercel.app/preview",
       lastModified: new Date(),
     },
     {
-      url: "https://my-shelf-nine.vercel.app/profile",
+      url: "https://my-shelf-theta.vercel.app/profile",
       lastModified: new Date(),
     },
   ];
