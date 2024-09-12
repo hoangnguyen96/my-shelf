@@ -1,10 +1,10 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { memo, useRef, useState } from "react";
 import { Box, Input, FormControl, FormLabel } from "@chakra-ui/react";
 import Image from "next/image";
 import { Button } from "..";
-import { generateImageUpload, updateUserById } from "@app/api";
+import { generateImageUpload, updateUserById } from "@app/api-request";
 import { User } from "@app/models";
 
 interface ImageUploadFormProps {
@@ -93,4 +93,4 @@ const ImageUploadForm = ({ image, user }: ImageUploadFormProps) => {
   );
 };
 
-export default ImageUploadForm;
+export default memo(ImageUploadForm);

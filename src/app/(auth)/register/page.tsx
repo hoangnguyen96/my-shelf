@@ -3,12 +3,13 @@
 import { useCallback, useState } from "react";
 import { Box, useToast } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
+import { authenticate } from "@app/actions/auth";
 
 // Constants
 import { MESSAGES, ROUTES } from "@app/constants";
 
 // Api
-import { addUser } from "@app/api";
+import { addUser } from "@app/api-request";
 
 // Models
 import { User } from "@app/models";
@@ -17,17 +18,14 @@ import { User } from "@app/models";
 import { generateSevenDigitUUID } from "@app/utils";
 
 // Components
-import { FooterForm, FormRegister, HeadingForm } from "@app/components/common";
-import { authenticate } from "@app/actions/auth";
+import { FooterForm, FormRegister, HeadingForm } from "@app/components";
 import bcrypt from "bcryptjs";
 
 const RegisterPage = () => {
-  const [isLoading, setIsLoading] = useState<boolean>(false);
   const toast = useToast();
   const router = useRouter();
 
   const handleSubmit = useCallback(async (values: Partial<User>) => {
-    setIsLoading(true);
     const uuid = generateSevenDigitUUID();
     const { username, email, password } = values;
 
@@ -48,8 +46,6 @@ const RegisterPage = () => {
 
     try {
       const result = await addUser(payload);
-      setIsLoading(false);
-
       const errorMessage = await authenticate({ email, password });
 
       if (result && !errorMessage) {
@@ -95,7 +91,7 @@ const RegisterPage = () => {
         title="Registration"
         description="For Both Staff & Students"
       />
-      <FormRegister isLoading={isLoading} onSubmit={handleSubmit} />
+      <FormRegister onSubmit={handleSubmit} />
       <FooterForm
         text="Already a User?"
         textLink="Login now"

@@ -1,3 +1,4 @@
+import { TYPE_SEARCH } from "@app/constants";
 import { BookType } from "@app/models";
 import {
   FieldErrors,
@@ -94,3 +95,55 @@ export const getTwoPath = (value: string) => {
 
   return basePath;
 };
+
+export const filterBooksOnShelf = (
+  allBooks: BookType[],
+  shelfBooks: string[]
+) => allBooks.filter((item) => shelfBooks.includes(item.id));
+
+export const filterBooksOnShelfByParams = (
+  booksOnShelf: BookType[],
+  type: string,
+  value: string
+) =>
+  booksOnShelf.filter((item) =>
+    type === TYPE_SEARCH.TITLE && value
+      ? item.title.toLowerCase().includes(value.toLowerCase())
+      : type === TYPE_SEARCH.AUTHOR && value
+        ? item.author.toLowerCase().includes(value.toLowerCase())
+        : item
+  );
+
+export const filterBooksFavorite = (
+  allBooks: BookType[],
+  favorites: string[]
+) => allBooks.filter((item) => favorites.includes(item.id));
+
+export const filterBooksFavoriteByParams = (
+  booksFavorites: BookType[],
+  type: string,
+  value: string
+) =>
+  booksFavorites.filter((item) =>
+    type === TYPE_SEARCH.TITLE && value
+      ? item.title.toLowerCase().includes(value.toLowerCase())
+      : type === TYPE_SEARCH.AUTHOR && value
+        ? item.author.toLowerCase().includes(value.toLowerCase())
+        : item
+  );
+
+export const getListDataByTypeAndValue = (
+  type: string,
+  value: string,
+  dataByParams: BookType[][],
+  dataAll: BookType[][],
+  pagination: number
+) =>
+  type && value ? dataByParams[pagination] || [] : dataAll[pagination] || [];
+
+export const getDataByParams = (
+  type: string,
+  value: string,
+  dataByParams: BookType[][],
+  dataAll: BookType[][]
+) => (type && value ? dataByParams : dataAll);

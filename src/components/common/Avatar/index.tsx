@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { avatar } from "@app/assets/images";
+import { memo } from "react";
 
 interface AvatarProps {
   image: string;
@@ -35,4 +36,4 @@ const Avatar = ({
   );
 };
 
-export default Avatar;
+export default memo(Avatar);

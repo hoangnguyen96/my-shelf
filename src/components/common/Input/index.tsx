@@ -1,6 +1,6 @@
 "use client";
 
-import { forwardRef, useCallback, useMemo, useState } from "react";
+import { forwardRef, memo, useCallback, useMemo, useState } from "react";
 import {
   Input,
   InputGroup,
@@ -78,4 +78,4 @@ const InputBase = forwardRef<HTMLDivElement, InputBaseProps>(
   }
 );
 
-export default InputBase;
+export default memo(InputBase);

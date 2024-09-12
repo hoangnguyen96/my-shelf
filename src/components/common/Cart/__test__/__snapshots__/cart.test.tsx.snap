@@ -61,6 +61,7 @@ exports[`Cart Should render correctly snapshot 1`] = `
         <button
           aria-label="Heart icon"
           class="chakra-button css-ujxaga"
+          data-testid="update-favorite-cart"
           type="button"
         >
           <svg
@@ -134,6 +135,7 @@ exports[`Cart Should render correctly snapshot 1`] = `
       <button
         aria-label="Heart icon"
         class="chakra-button css-ujxaga"
+        data-testid="update-favorite-cart"
         type="button"
       >
         <svg

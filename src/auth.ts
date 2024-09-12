@@ -2,22 +2,9 @@ import NextAuth from "next-auth";
 import { authConfig } from "./auth.config";
 import Credentials from "next-auth/providers/credentials";
 import { z } from "zod";
-import { HttpClient } from "./services";
 import bcrypt from "bcryptjs";
-import { User as UserModel } from "./models";
-import { API_ROUTES, MESSAGES } from "./constants";
-
-const getUser = async (email: string): Promise<UserModel[] | []> => {
-  try {
-    const user = (await HttpClient.get(
-      `${API_ROUTES.USER}?email=${email}`
-    )) as UserModel[];
-
-    return user;
-  } catch (error) {
-    return [];
-  }
-};
+import { MESSAGES } from "./constants";
+import { getUserByEmail } from "./api-request";
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   ...authConfig,
@@ -40,7 +27,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 
         if (parsedCredentials.success) {
           const { email, password } = parsedCredentials.data;
-          const user = await getUser(email);
+          const user = await getUserByEmail(email);
 
           const [foundUser, ...rest] = user;
 

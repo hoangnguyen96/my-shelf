@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Search Params Should handle fetch data failed 1`] = `<DocumentFragment />`;
+
+exports[`Home Search Params should render correctly and match snapshot 1`] = `<div />`;

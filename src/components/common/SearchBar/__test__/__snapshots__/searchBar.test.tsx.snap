@@ -57,7 +57,7 @@ exports[`SearchBar Should render correctly snapshot 1`] = `
           <input
             class="chakra-input css-1ufd936"
             placeholder="search"
-            value="on"
+            value=""
           />
           <button
             aria-label="Search"
@@ -134,7 +134,7 @@ exports[`SearchBar Should render correctly snapshot 1`] = `
         <input
           class="chakra-input css-1ufd936"
           placeholder="search"
-          value="on"
+          value=""
         />
         <button
           aria-label="Search"

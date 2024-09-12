@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { Button } from "../common";
 import { CheckIcon } from "@app/assets/icons";
+import { memo } from "react";
 
 interface ModalSuccessProcessProps {
   isOpen?: boolean;
@@ -19,23 +20,21 @@ interface ModalSuccessProcessProps {
 const ModalSuccessProcess = ({
   isOpen = false,
   onClose,
-}: ModalSuccessProcessProps) => {
-  return (
-    <Modal isOpen={isOpen} onClose={onClose} isCentered>
-      <ModalOverlay />
-      <ModalContent p="165px 120px 65px" minW={484} alignItems="center">
-        <ModalHeader textAlign="center">Process Completed</ModalHeader>
+}: ModalSuccessProcessProps) => (
+  <Modal isOpen={isOpen} onClose={onClose} isCentered>
+    <ModalOverlay />
+    <ModalContent p="165px 120px 65px" minW={484} alignItems="center">
+      <ModalHeader textAlign="center">Process Completed</ModalHeader>
 
-        <Box mt="165px" mb="200px">
-          <CheckIcon />
-        </Box>
+      <Box mt="165px" mb="200px">
+        <CheckIcon />
+      </Box>
 
-        <ModalFooter>
-          <Button onClick={onClose} text="Back" />
-        </ModalFooter>
-      </ModalContent>
-    </Modal>
-  );
-};
+      <ModalFooter>
+        <Button onClick={onClose} text="Back" />
+      </ModalFooter>
+    </ModalContent>
+  </Modal>
+);
 
-export default ModalSuccessProcess;
+export default memo(ModalSuccessProcess);

@@ -6,7 +6,7 @@ exports[`Logo Should render correctly snapshot 1`] = `
   "baseElement": <body>
     <div>
       <a
-        href="/"
+        href="/home"
       >
         <svg
           fill="none"
@@ -46,7 +46,7 @@ exports[`Logo Should render correctly snapshot 1`] = `
   </body>,
   "container": <div>
     <a
-      href="/"
+      href="/home"
     >
       <svg
         fill="none"

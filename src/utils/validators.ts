@@ -1,4 +1,4 @@
-import { getUserByEmail } from "@app/api";
+import { getUserByEmail } from "@app/api-request";
 import { MESSAGES } from "@app/constants";
 
 export const isRequired = (value: string | null | undefined): boolean =>

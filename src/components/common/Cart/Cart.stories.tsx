@@ -24,7 +24,8 @@ const Template: StoryFn<typeof Cart> = () => (
     publicationYear={2000}
     rating={4.5}
     isFavorite={true}
-    id={""}
+    id="1"
+    onUpdateFavorites={() => {}}
   />
 );
 

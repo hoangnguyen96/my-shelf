@@ -1,5 +1,6 @@
 "use client";
 
+import { memo } from "react";
 import { Button, ButtonProps } from "@chakra-ui/react";
 
 type ButtonVariant = "normal" | "outline" | "full";
@@ -24,4 +25,4 @@ const ButtonBase = ({
   );
 };
 
-export default ButtonBase;
+export default memo(ButtonBase);

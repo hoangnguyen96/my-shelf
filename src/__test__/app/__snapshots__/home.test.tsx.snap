@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage Should handle fetch data failed 1`] = `<DocumentFragment />`;
+
+exports[`HomePage Should render correctly snapshot 1`] = `<div />`;

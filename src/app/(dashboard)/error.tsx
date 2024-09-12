@@ -9,8 +9,6 @@ const Error = ({
 }: {
   error: Error & { digest?: string };
   reset: () => void;
-}) => {
-  return <ErrorBoundary error={error} reset={reset} />;
-};
+}) => <ErrorBoundary error={error} reset={reset} />;
 
 export default Error;

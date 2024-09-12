@@ -1,0 +1,188 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopContent component Should render correctly snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1s5jq5f"
+  >
+    <div
+      class="css-19jt6ar"
+    >
+      <div
+        class="chakra-select__wrapper css-18a3ys"
+      >
+        <select
+          class="chakra-select css-oea4np"
+        >
+          <option
+            value=""
+          >
+            Select
+          </option>
+          <option
+            class="css-0"
+            value="title"
+          >
+            Title
+          </option>
+          <option
+            class="css-0"
+            value="author"
+          >
+            Author
+          </option>
+        </select>
+        <div
+          class="chakra-select__icon-wrapper css-162mkon"
+        >
+          <svg
+            aria-hidden="true"
+            class="chakra-select__icon"
+            focusable="false"
+            role="presentation"
+            style="width: 1em; height: 1em; color: currentColor;"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="chakra-input__group css-bx0blc"
+        data-group="true"
+      >
+        <input
+          class="chakra-input css-1ufd936"
+          placeholder="Search..."
+          value=""
+        />
+        <button
+          aria-label="Search"
+          class="chakra-button css-xia019"
+          data-testid="submit-search"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="chakra-icon css-1k92xky"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M23.384,21.619,16.855,15.09a9.284,9.284,0,1,0-1.768,1.768l6.529,6.529a1.266,1.266,0,0,0,1.768,0A1.251,1.251,0,0,0,23.384,21.619ZM2.75,9.5a6.75,6.75,0,1,1,6.75,6.75A6.758,6.758,0,0,1,2.75,9.5Z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <button
+      aria-controls="menu-list-:r1:"
+      aria-expanded="false"
+      aria-haspopup="menu"
+      class="chakra-button chakra-menu__menu-button css-r3lmb2"
+      id="menu-button-:r1:"
+      type="button"
+    >
+      <span
+        class="css-xl71ch"
+      >
+        <div
+          class="css-1m1681d"
+        >
+          <img
+            alt="Avatar user"
+            data-nimg="1"
+            decoding="async"
+            fetchpriority="high"
+            height="45"
+            src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=96&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=96&q=75 2x"
+            style="color: transparent; max-width: 100%; max-height: 100%; border-radius: 50%; border: 2px solid white;"
+            width="45"
+          />
+          <p
+            class="chakra-text css-1rr4qq7"
+          >
+            admin
+          </p>
+        </div>
+      </span>
+      <span
+        class="chakra-button__icon css-1hzyiq5"
+      >
+        <svg
+          aria-hidden="true"
+          class="chakra-icon css-1bho5id"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            fill="currentColor"
+          />
+        </svg>
+      </span>
+    </button>
+    <div
+      class="css-0"
+      style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+    >
+      <div
+        aria-orientation="vertical"
+        class="chakra-menu__menu-list css-1r8dsm8"
+        id="menu-list-:r1:"
+        role="menu"
+        style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.8);"
+        tabindex="-1"
+      >
+        <button
+          class="chakra-menu__menuitem css-1k756t9"
+          data-index="0"
+          id="menu-list-:r1:-menuitem-:r2:"
+          role="menuitem"
+          tabindex="-1"
+          type="button"
+        >
+          <p
+            class="chakra-text css-60gkn2"
+          >
+            Profile
+          </p>
+        </button>
+        <button
+          class="chakra-menu__menuitem css-1k756t9"
+          data-index="1"
+          id="menu-list-:r1:-menuitem-:r3:"
+          role="menuitem"
+          tabindex="-1"
+          type="button"
+        >
+          <p
+            class="chakra-text css-60gkn2"
+          >
+            Favorites
+          </p>
+        </button>
+        <button
+          class="chakra-menu__menuitem css-1k756t9"
+          data-index="2"
+          id="menu-list-:r1:-menuitem-:r4:"
+          role="menuitem"
+          tabindex="-1"
+          type="button"
+        >
+          <p
+            class="chakra-text css-60gkn2"
+          >
+            Logout
+          </p>
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

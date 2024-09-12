@@ -1,22 +1,18 @@
 "use client";
 
-import { useState } from "react";
 import { Box, useToast } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
 import { authenticate } from "@app/actions/auth";
 import { MESSAGES, ROUTES } from "@app/constants";
 import { User } from "@app/models";
-import { FooterForm, FormLogin, HeadingForm } from "@app/components/common";
+import { FooterForm, FormLogin, HeadingForm } from "@app/components";
 
 const LoginPage = () => {
-  const [isLoading, setIsLoading] = useState<boolean>(false);
   const toast = useToast();
   const router = useRouter();
 
   const handleLogin = async (formData: Partial<User>) => {
-    setIsLoading(true);
     const errorMessage = await authenticate(formData);
-    setIsLoading(false);
 
     if (errorMessage) {
       toast({
@@ -56,7 +52,7 @@ const LoginPage = () => {
         title="Welcome Back !"
         description="Sign in to continue to yourDigital Library"
       />
-      <FormLogin isLoading={isLoading} onSubmit={handleLogin} />
+      <FormLogin onSubmit={handleLogin} />
       <FooterForm
         text="New User?"
         textLink="Register Here"

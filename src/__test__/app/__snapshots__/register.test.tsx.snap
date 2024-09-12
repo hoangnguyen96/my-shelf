@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register Should handle add user failed 1`] = `<DocumentFragment />`;
+
+exports[`Register Should render correctly snapshot 1`] = `<DocumentFragment />`;

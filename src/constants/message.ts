@@ -5,6 +5,7 @@ export const MESSAGES = {
   DELETE_ERROR: "Delete failed. Please try again!",
   EDIT_ERROR: "Edit failed. Please try again!",
   SUBMIT_ERROR: "Submit failed. Please try again!",
+  UPDATE_SUCCESS: "You have update successful.",
   UPDATE_ERROR: "Update failed. Please try again!",
   CREATE_ERROR: "Create data failed. Please try again!",
   ADD_USER_FAILED: "Failed to add user!",

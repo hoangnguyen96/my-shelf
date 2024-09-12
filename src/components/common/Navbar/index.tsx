@@ -13,13 +13,12 @@ import {
   HomeIcon,
   SearchIcon,
 } from "@app/assets/icons";
-import { Session } from "next-auth";
+import { useSession } from "next-auth/react";
+import { memo } from "react";
 
-interface NavbarProps {
-  user?: Session;
-}
+const Navbar = () => {
+  const { data: session } = useSession();
 
-const Navbar = ({ user }: NavbarProps) => {
   const listNavbar = [
     {
       title: NAVBAR_STEP.HOME,
@@ -37,7 +36,7 @@ const Navbar = ({ user }: NavbarProps) => {
       icon: () => <BookshelfIcon />,
     },
     {
-      ...(user?.user?.isAdmin && {
+      ...(session?.user?.isAdmin && {
         title: NAVBAR_STEP.CONTRIBUTE,
         link: ROUTES.CONTRIBUTE,
         icon: () => <GiftIcon />,
@@ -63,4 +62,4 @@ const Navbar = ({ user }: NavbarProps) => {
   );
 };
 
-export default Navbar;
+export default memo(Navbar);

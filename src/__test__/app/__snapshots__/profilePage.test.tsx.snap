@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile Page Should handle getUserById error 1`] = `<div />`;
+
+exports[`Profile Page Should render correctly snapshot 1`] = `<div />`;

@@ -2,10 +2,10 @@ import "@testing-library/jest-dom";
 import { fireEvent, render, waitFor } from "@testing-library/react";
 import { UploadImage } from "../..";
 import { User } from "@app/models";
-import * as api from "@app/api";
+import * as api from "@app/api-request";
 
 // Mock toàn bộ module
-jest.mock("@app/api", () => ({
+jest.mock("@app/api-request", () => ({
   generateImageUpload: jest.fn(), // Mock các hàm
   updateUserById: jest.fn(),
 }));

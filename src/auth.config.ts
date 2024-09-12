@@ -35,27 +35,27 @@ export const authConfig = {
         ROUTES.CONTRIBUTE_LIST
       );
       const isOnPreview = nextUrl.pathname.startsWith(ROUTES.PREVIEW);
+      const isOnProfile = nextUrl.pathname.startsWith(ROUTES.PROFILE);
 
-      if (
+      const isOnDashBoard =
         isOnHome ||
         isOnSearch ||
         isOnBookShelfAll ||
         isOnBookShelfFavorites ||
         isOnContribute ||
         isOnContributeList ||
-        isOnPreview
-      ) {
-        if (isLoggedIn) return true;
-        return false;
-      }
-      console.log("nextUrl authorized 1: ");
+        isOnPreview ||
+        isOnProfile;
 
-      if (isLoggedIn) {
-        return Response.redirect(new URL("/login", nextUrl));
+      if (isLoggedIn && isOnDashBoard) {
+        return true;
       }
 
-      console.log("nextUrl authorized 2: ");
-      return;
+      if (!isLoggedIn) {
+        return Response.redirect(new URL(ROUTES.LOGIN, nextUrl));
+      }
+
+      return true;
     },
 
     async session({ session, token }) {

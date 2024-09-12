@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contribute Complete Page Should render correctly snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <a
+        href="#"
+        style="position: absolute; top: 0px; left: 68px;"
+      >
+        <svg
+          class="chakra-icon css-1etxpkf"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+            fill="currentColor"
+          />
+        </svg>
+        <span
+          class="chakra-text css-1mf4y6e"
+        >
+          Back
+        </span>
+      </a>
+      <div
+        class="css-fg2ebx"
+      >
+        <p
+          class="chakra-text css-qbyqmg"
+        >
+          Thank you For your Submission 
+        </p>
+        <svg
+          fill="none"
+          height="140px"
+          viewBox="0 0 140 140"
+          width="140px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M70 0C31.3317 0 0 31.3317 0 70C0 108.668 31.3317 140 70 140C108.668 140 140 108.668 140 70C140 31.3317 108.668 0 70 0ZM59.1971 94.8029C58.3894 95.6106 57.2452 96.2837 56.2356 96.2837C55.226 96.2837 54.0817 95.5769 53.2404 94.7692L34.3942 75.9231L40.3846 69.9327L56.2692 85.8173L98.2692 43.5144L104.159 49.6058L59.1971 94.8029Z"
+            fill="#4AC156"
+          />
+        </svg>
+        <p
+          class="chakra-text css-qbyqmg"
+        >
+          You will be contacted shortly
+        </p>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <a
+      href="#"
+      style="position: absolute; top: 0px; left: 68px;"
+    >
+      <svg
+        class="chakra-icon css-1etxpkf"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+          fill="currentColor"
+        />
+      </svg>
+      <span
+        class="chakra-text css-1mf4y6e"
+      >
+        Back
+      </span>
+    </a>
+    <div
+      class="css-fg2ebx"
+    >
+      <p
+        class="chakra-text css-qbyqmg"
+      >
+        Thank you For your Submission 
+      </p>
+      <svg
+        fill="none"
+        height="140px"
+        viewBox="0 0 140 140"
+        width="140px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M70 0C31.3317 0 0 31.3317 0 70C0 108.668 31.3317 140 70 140C108.668 140 140 108.668 140 70C140 31.3317 108.668 0 70 0ZM59.1971 94.8029C58.3894 95.6106 57.2452 96.2837 56.2356 96.2837C55.226 96.2837 54.0817 95.5769 53.2404 94.7692L34.3942 75.9231L40.3846 69.9327L56.2692 85.8173L98.2692 43.5144L104.159 49.6058L59.1971 94.8029Z"
+          fill="#4AC156"
+        />
+      </svg>
+      <p
+        class="chakra-text css-qbyqmg"
+      >
+        You will be contacted shortly
+      </p>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
