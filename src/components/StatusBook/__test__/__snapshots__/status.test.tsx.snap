@@ -6,24 +6,24 @@ exports[`Status Should render correctly snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="css-8ji7z5"
+        class="css-1rb83ml"
       >
         <p
           class="chakra-text css-1619v3u"
         >
-          none
+          In-Shelf
         </p>
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="css-8ji7z5"
+      class="css-1rb83ml"
     >
       <p
         class="chakra-text css-1619v3u"
       >
-        none
+        In-Shelf
       </p>
     </div>
   </div>,

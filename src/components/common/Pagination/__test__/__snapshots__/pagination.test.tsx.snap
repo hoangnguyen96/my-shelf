@@ -6,7 +6,7 @@ exports[`Pagination Should render correctly snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="css-wgnqz2"
+        class="css-9d3smw"
       >
         <button
           aria-label=""
@@ -53,7 +53,7 @@ exports[`Pagination Should render correctly snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="css-wgnqz2"
+      class="css-9d3smw"
     >
       <button
         aria-label=""

@@ -1,15 +1,17 @@
 "use client";
 
+import { memo } from "react";
 import Image from "next/image";
 import { Flex, Text, useDisclosure } from "@chakra-ui/react";
 import { book1 } from "@app/assets/images";
-import { Button } from "../common";
 import { useRouter } from "next/navigation";
 import { ROUTES } from "@app/constants";
-import ModalDeleteBook from "@app/components/ModalDeleteBook";
 import { deleteBook } from "@app/api-request";
-import { HeartIcon, StatusBook } from "..";
-import { memo } from "react";
+import ModalDeleteBook from "../ModalDeleteBook";
+// import { HeartIcon, StatusBook } from "..";
+import { Button } from "../common";
+import HeartIcon from "../HeartIcon";
+import StatusBook from "../StatusBook";
 
 interface TableItemProps {
   id: string;
@@ -20,7 +22,7 @@ interface TableItemProps {
   edition: string;
   publicationYear: number;
   rating: number;
-  idFavorite?: boolean;
+  isFavorite?: boolean;
   status?: boolean;
   isContribute?: boolean;
   onUpdateFavorites?: () => void;
@@ -33,7 +35,7 @@ const TableItem = ({
   imageUrl,
   edition,
   category,
-  idFavorite = false,
+  isFavorite = false,
   publicationYear,
   rating,
   status = false,
@@ -110,7 +112,7 @@ const TableItem = ({
             <HeartIcon
               id={id}
               data-testid="handle-favorite"
-              isFavorite={idFavorite}
+              isFavorite={isFavorite}
               onUpdateFavorites={onUpdateFavorites}
             />
           )}

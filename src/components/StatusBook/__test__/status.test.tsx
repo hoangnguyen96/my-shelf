@@ -4,12 +4,12 @@ import StatusBook from "..";
 
 describe("Status", () => {
   it("Should render correctly snapshot", () => {
-    expect(render(<StatusBook />)).toMatchSnapshot();
+    expect(render(<StatusBook status={true} />)).toMatchSnapshot();
   });
 
-  it("Should render with status true", () => {
-    const { getByText } = render(<StatusBook status={true} />);
+  it("Should render with status is false", () => {
+    const { getByText } = render(<StatusBook />);
 
-    expect(getByText("In-Shelf")).toBeInTheDocument();
+    expect(getByText("None")).toBeInTheDocument();
   });
 });

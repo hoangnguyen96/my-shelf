@@ -1,5 +1,6 @@
 "use client";
 
+import { memo } from "react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import {
   Button,
@@ -10,12 +11,11 @@ import {
   MenuList,
   Text,
 } from "@chakra-ui/react";
-import Avatar from "../common/Avatar";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { ROUTES } from "@app/constants";
 import { logout } from "@app/actions/auth";
-import { memo } from "react";
+import { Avatar } from "../common";
 
 const MenuProfile = () => {
   const router = useRouter();

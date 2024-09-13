@@ -1,8 +1,8 @@
 "use client";
 
+import { memo } from "react";
 import Image from "next/image";
 import { avatar } from "@app/assets/images";
-import { memo } from "react";
 
 interface AvatarProps {
   image: string;

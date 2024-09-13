@@ -1,7 +1,7 @@
 import { Meta, StoryFn } from "@storybook/react";
 import { Box, ChakraProvider } from "@chakra-ui/react";
 import theme from "@app/themes";
-import FormLogin from ".";
+import FormLogin from "./index";
 import HeadingForm from "../HeadingForm";
 import FooterForm from "../FooterForm";
 import { RouterContext } from "next/dist/shared/lib/router-context.shared-runtime";

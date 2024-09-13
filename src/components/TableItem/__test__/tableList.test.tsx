@@ -26,7 +26,7 @@ describe("TableItem", () => {
           edition={"Test"}
           publicationYear={0}
           rating={0}
-          idFavorite={false}
+          isFavorite={false}
         />
       )
     ).toMatchSnapshot();

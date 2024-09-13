@@ -69,7 +69,7 @@ const SearchPage = () => {
         mt="23px"
         justifyContent="space-between"
         overflowY="scroll"
-        maxH="62vh"
+        maxH="75%"
       >
         {listData.map((itemBook: BookType) => {
           const {
@@ -95,7 +95,7 @@ const SearchPage = () => {
               publicationYear={publicationYear}
               rating={rating}
               edition={edition}
-              idFavorite={dataUserById?.favorites?.includes(id) || false}
+              isFavorite={dataUserById?.favorites?.includes(id) || false}
               onUpdateFavorites={() => handleUpdateFavorites(id)}
             />
           );

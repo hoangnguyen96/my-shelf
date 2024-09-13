@@ -89,7 +89,7 @@ const ContributeList = () => {
                 publicationYear={publicationYear}
                 rating={rating}
                 edition={edition}
-                idFavorite={dataUserById?.favorites?.includes(id) || false}
+                isFavorite={dataUserById?.favorites?.includes(id) || false}
               />
             );
           })}

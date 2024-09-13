@@ -5,7 +5,7 @@ import { Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import { ROUTES } from "@app/constants";
 import Link from "next/link";
-import { HeartIcon } from "@app/components";
+import HeartIcon from "../../HeartIcon";
 
 interface CartType {
   id: string;

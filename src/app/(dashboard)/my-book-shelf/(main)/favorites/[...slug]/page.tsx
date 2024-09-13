@@ -104,7 +104,7 @@ const MyBookShelfFavorites = ({ params }: { params: { slug: string[] } }) => {
             rating={rating}
             edition={edition}
             category={category}
-            idFavorite={dataUserById?.favorites?.includes(id)}
+            isFavorite={dataUserById?.favorites?.includes(id)}
             onUpdateFavorites={() => handleUpdateFavorites(id)}
           />
         );

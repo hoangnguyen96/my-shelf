@@ -3,23 +3,19 @@ import { ChakraProvider } from "@chakra-ui/react";
 import theme from "@app/themes";
 import Logo from ".";
 import { SessionProvider } from "next-auth/react";
-
-const mockSession = {
-  expires: "2024-12-31T23:59:59.999Z",
-  user: {
-    name: "John Doe",
-    email: "john.doe@example.com",
-  },
-};
+import { RouterContext } from "next/dist/shared/lib/router-context.shared-runtime";
+import { mockRouter, mockSession } from "@app/__mocks__/storybook";
 
 const meta: Meta<typeof Logo> = {
   component: Logo,
   decorators: [
     (Story: StoryFn) => (
       <ChakraProvider theme={theme}>
-        <SessionProvider session={mockSession}>
-          <Story />
-        </SessionProvider>
+        <RouterContext.Provider value={mockRouter}>
+          <SessionProvider session={mockSession}>
+            <Story />
+          </SessionProvider>
+        </RouterContext.Provider>
       </ChakraProvider>
     ),
   ],

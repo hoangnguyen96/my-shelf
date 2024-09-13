@@ -15,7 +15,7 @@ const StatusBook = ({ status = false }: StatusBookProps) => (
     borderRadius="5px"
   >
     <Text size="md" color="white" lineHeight="26px" textAlign="center">
-      {status ? "In-Shelf" : "none"}
+      {status ? "In-Shelf" : "None"}
     </Text>
   </Box>
 );

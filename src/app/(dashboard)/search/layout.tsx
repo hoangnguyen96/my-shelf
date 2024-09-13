@@ -5,7 +5,7 @@ const SearchLayout = ({
 }: Readonly<{
   children: React.ReactNode;
 }>) => (
-  <Box p="70px 44px" height="70vh">
+  <Box p="70px 44px" height="90%">
     <Flex gap="90px" alignItems="center">
       <Text size="xl" fontWeight={500} w="100%" maxW={352}>
         Title

@@ -82,7 +82,7 @@ exports[`TableItem Should render correctly snapshot 1`] = `
           <p
             class="chakra-text css-1619v3u"
           >
-            none
+            None
           </p>
         </div>
         <div
@@ -194,7 +194,7 @@ exports[`TableItem Should render correctly snapshot 1`] = `
         <p
           class="chakra-text css-1619v3u"
         >
-          none
+          None
         </p>
       </div>
       <div

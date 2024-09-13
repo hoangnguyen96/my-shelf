@@ -128,7 +128,7 @@ const SearchPage = ({ params }: { params: { slug: string[] } }) => {
               publicationYear={publicationYear}
               rating={rating}
               edition={edition}
-              idFavorite={dataUserById?.favorites?.includes(id) || false}
+              isFavorite={dataUserById?.favorites?.includes(id) || false}
               onUpdateFavorites={() => handleUpdateFavorites(id)}
             />
           );

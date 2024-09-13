@@ -78,7 +78,7 @@ const PreviewBook = ({ params: { id } }: PreviewBookProps) => {
 
   return (
     <>
-      <Box p="20px 44px" h="100%" maxHeight={420}>
+      <Box p="20px 44px" h="80%">
         <Link href="#" onClick={() => router.back()}>
           <ArrowBackIcon w={5} h={5} />
           <Text as="span" ml="9px">

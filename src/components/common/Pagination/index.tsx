@@ -20,7 +20,7 @@ const Pagination = ({ pagination, setPagination, data }: PaginationProps) => (
     position="absolute"
     left="0"
     right="0"
-    bottom="60px"
+    bottom="5%"
   >
     <IconButton
       width="30px"
