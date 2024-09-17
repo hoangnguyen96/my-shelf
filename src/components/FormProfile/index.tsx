@@ -77,6 +77,7 @@ const FormProfile = ({ user, onUpdate }: FormProfileProps) => {
   return (
     <Box as="form" pos="relative" mt="56px">
       <IconButton
+        data-testid="click-un-read-only"
         minW="48px"
         h="48px"
         pos="absolute"

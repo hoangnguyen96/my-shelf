@@ -1,7 +1,7 @@
 import type { Meta, StoryFn, StoryObj } from "@storybook/react";
 import Avatar from ".";
 import { RouterContext } from "next/dist/shared/lib/router-context.shared-runtime";
-import { mockRouter } from "@app/__mocks__/storybook";
+import { mockRouter } from "@app/mocks/storybook";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "@app/themes";
 
@@ -27,5 +27,7 @@ export default meta;
 type Story = StoryObj<typeof Avatar>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    image: "https://i.ibb.co/SKHPQYq/avatar-default.webp",
+  },
 };

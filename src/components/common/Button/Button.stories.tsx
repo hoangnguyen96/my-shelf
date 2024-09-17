@@ -3,7 +3,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import ButtonBase from ".";
 import theme from "@app/themes";
 import { RouterContext } from "next/dist/shared/lib/router-context.shared-runtime";
-import { mockRouter } from "@app/__mocks__/storybook";
+import { mockRouter } from "@app/mocks/storybook";
 
 const meta: Meta<typeof ButtonBase> = {
   component: ButtonBase,

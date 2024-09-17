@@ -75,18 +75,4 @@ describe("FormLogin", () => {
       expect(new Error(MESSAGES.LOGIN_FAILED)).toBeTruthy();
     });
   });
-
-  it("Should toggle Remember Me checkbox correctly", async () => {
-    const { getByRole } = render(<FormLogin onSubmit={mockOnSubmit} />);
-
-    const checkbox = getByRole("checkbox");
-
-    expect(checkbox).not.toBeChecked();
-
-    fireEvent.click(checkbox);
-    await waitFor(() => expect(checkbox).toBeChecked());
-
-    fireEvent.click(checkbox);
-    await waitFor(() => expect(checkbox).not.toBeChecked());
-  });
 });

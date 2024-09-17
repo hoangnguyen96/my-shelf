@@ -11,12 +11,11 @@ const TopContent = () => {
   const pathName = usePathname();
 
   const isNotSearch =
-    pathName?.includes(
-      ROUTES.CONTRIBUTE ||
-        ROUTES.CONTRIBUTE_COMPLETE ||
-        ROUTES.CONTRIBUTE_LIST ||
-        ROUTES.PREVIEW
-    ) || pathName?.includes(ROUTES.PROFILE);
+    pathName?.includes(ROUTES.CONTRIBUTE) ||
+    pathName?.includes(ROUTES.CONTRIBUTE_COMPLETE) ||
+    pathName?.includes(ROUTES.CONTRIBUTE_LIST) ||
+    pathName?.includes(ROUTES.PREVIEW) ||
+    pathName?.includes(ROUTES.PROFILE);
 
   return (
     <Flex

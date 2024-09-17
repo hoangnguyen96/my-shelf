@@ -25,7 +25,7 @@ const HomePage = ({ params }: { params?: { slug: string[] } }) => {
   const fetchData = async () => {
     try {
       const dataAllBook = await getAllBook();
-      const userData = (await getUserById(session?.user?.id || "")) as User;
+      const userData = (await getUserById(session?.user?.id as string)) as User;
       const dataBook = getTwelveItemData(dataAllBook);
 
       let dataBookByParams: BookType[] = [];
@@ -48,17 +48,15 @@ const HomePage = ({ params }: { params?: { slug: string[] } }) => {
   }, [session?.user?.id, type, value]);
 
   const handleUpdateFavorites = async (id: string) => {
-    if (!dataUserById) return;
-
     try {
-      let listFavorite = dataUserById.favorites;
-      if (dataUserById.favorites.includes(id)) {
+      let listFavorite = dataUserById?.favorites;
+      if (dataUserById?.favorites.includes(id)) {
         listFavorite = dataUserById.favorites.filter((item) => item !== id);
       } else {
-        listFavorite = [...dataUserById.favorites, id];
+        listFavorite = [...(dataUserById?.favorites as string[]), id];
       }
 
-      await updateUserById(dataUserById.id, {
+      await updateUserById(dataUserById?.id as string, {
         ...dataUserById,
         favorites: listFavorite,
       });

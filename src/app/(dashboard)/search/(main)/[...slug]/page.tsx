@@ -31,7 +31,9 @@ const SearchPage = ({ params }: { params: { slug: string[] } }) => {
 
   const fetchData = async () => {
     try {
-      const dataUserById = (await getUserById(session?.user?.id || "")) as User;
+      const dataUserById = (await getUserById(
+        session?.user?.id as string
+      )) as User;
       const dataAllBook = await getAllBook();
       const dataBook = dividePaginationBooks(dataAllBook);
 
@@ -69,17 +71,15 @@ const SearchPage = ({ params }: { params: { slug: string[] } }) => {
   }, [session?.user?.id, pagination, type, value]);
 
   const handleUpdateFavorites = async (id: string) => {
-    if (!dataUserById) return;
-
     try {
       let listFavorite = dataUserById?.favorites || [];
       if (dataUserById?.favorites?.includes(id)) {
         listFavorite = dataUserById.favorites.filter((item) => item !== id);
       } else {
-        listFavorite = [...dataUserById.favorites, id];
+        listFavorite = [...(dataUserById?.favorites as string[]), id];
       }
 
-      await updateUserById(dataUserById.id, {
+      await updateUserById(dataUserById?.id as string, {
         ...dataUserById,
         favorites: listFavorite,
       });

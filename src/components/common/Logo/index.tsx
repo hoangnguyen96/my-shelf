@@ -12,7 +12,7 @@ const Logo = () => {
   const url = session ? ROUTES.HOME : ROUTES.LOGIN;
 
   return (
-    <Link href={url}>
+    <Link href={url} aria-label="logo-book-shelf">
       <LogoMain />
     </Link>
   );

@@ -3,6 +3,7 @@ import "../styles/globals.css";
 
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { SessionProvider } from "next-auth/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,9 +26,11 @@ const RootLayout = async ({
 
       <body className={inter.className}>
         <ChakraUIProviders>
-          <main className="app" style={{ padding: "48px 35px 38px" }}>
-            {children}
-          </main>
+          <SessionProvider>
+            <main className="app" style={{ padding: "48px 35px 38px" }}>
+              {children}
+            </main>
+          </SessionProvider>
         </ChakraUIProviders>
       </body>
     </html>

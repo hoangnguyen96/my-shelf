@@ -3,12 +3,10 @@
 import { memo } from "react";
 import Image from "next/image";
 import { Flex, Text, useDisclosure } from "@chakra-ui/react";
-import { book1 } from "@app/assets/images";
 import { useRouter } from "next/navigation";
 import { ROUTES } from "@app/constants";
 import { deleteBook } from "@app/api-request";
 import ModalDeleteBook from "../ModalDeleteBook";
-// import { HeartIcon, StatusBook } from "..";
 import { Button } from "../common";
 import HeartIcon from "../HeartIcon";
 import StatusBook from "../StatusBook";
@@ -72,7 +70,7 @@ const TableItem = ({
       >
         <Flex gap="47px" alignItems="center" maxW={329} w="100%">
           <Image
-            src={imageUrl || book1}
+            src={imageUrl || ""}
             alt="Don't make me think"
             width={75}
             height={100}
@@ -117,6 +115,7 @@ const TableItem = ({
             />
           )}
           <Button
+            data-testid="redirect-preview"
             size="sm"
             variant="outline"
             text="Preview"
@@ -124,6 +123,7 @@ const TableItem = ({
           />
           {isContribute && (
             <Button
+              data-testid="delete-book"
               size="sm"
               variant="outline"
               text="Delete"

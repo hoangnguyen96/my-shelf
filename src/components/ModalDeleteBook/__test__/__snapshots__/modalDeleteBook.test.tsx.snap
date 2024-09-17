@@ -53,6 +53,7 @@ exports[`ModalDeleteBook Should render correctly snapshot 1`] = `
             >
               <button
                 class="chakra-button css-4xx2wk"
+                data-testid="confirm-delete"
                 type="button"
               >
                 Yes

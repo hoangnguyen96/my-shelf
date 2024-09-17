@@ -3,7 +3,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import theme from "@app/themes";
 import CartBorrow from ".";
 import { RouterContext } from "next/dist/shared/lib/router-context.shared-runtime";
-import { mockRouter, mockSession } from "@app/__mocks__/storybook";
+import { mockRouter, mockSession } from "@app/mocks/storybook";
 import { SessionProvider } from "next-auth/react";
 
 const meta: Meta<typeof CartBorrow> = {

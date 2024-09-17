@@ -2,7 +2,6 @@
 
 import { memo } from "react";
 import Image from "next/image";
-import { avatar } from "@app/assets/images";
 
 interface AvatarProps {
   image: string;
@@ -20,7 +19,7 @@ const Avatar = ({
 }: AvatarProps) => {
   return (
     <Image
-      src={image || avatar}
+      src={image || ""}
       width={width}
       height={height}
       alt="Avatar user"

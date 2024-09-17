@@ -24,7 +24,7 @@ const MyBookShelfAll = () => {
 
   const fetchData = async () => {
     try {
-      const user = (await getUserById(session?.user?.id || "")) as User;
+      const user = (await getUserById(session?.user?.id as string)) as User;
       const allBooks = await getAllBook();
       const shelfBooks = user?.shelfBooks || [];
       const booksOnShelf = filterBooksOnShelf(allBooks, shelfBooks);
@@ -41,15 +41,13 @@ const MyBookShelfAll = () => {
   }, [session?.user?.id]);
 
   const handleReturnBook = async (id: string) => {
-    if (!dataUserById) return;
-
     try {
       const dataBookById = await getBookById(id);
       const updateShelfBook = dataUserById?.shelfBooks.filter(
         (item: string) => item !== id
       );
 
-      await updateUserById(dataUserById.id, {
+      await updateUserById(dataUserById?.id as string, {
         ...dataUserById,
         shelfBooks: updateShelfBook,
       });

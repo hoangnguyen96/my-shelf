@@ -1,8 +1,8 @@
 import "@testing-library/jest-dom";
-import { fireEvent, render } from "@testing-library/react";
+import { fireEvent, getByTestId, render } from "@testing-library/react";
 import FormProfile from "..";
 
-describe("Button", () => {
+describe("Form Profile", () => {
   const mockOnUpdate = jest.fn();
   const props = {
     user: {
@@ -30,12 +30,12 @@ describe("Button", () => {
   });
 
   it("should call onUpdate with updated data when form is submitted", async () => {
-    const { getByRole, getByPlaceholderText, getByLabelText } = render(
+    const { getByRole, getByPlaceholderText, getByTestId } = render(
       <FormProfile {...props} />
     );
 
     // Click the 'Edit' button to make the form editable
-    const editButton = getByRole("button", { name: /Update Profile/i });
+    const editButton = getByTestId("click-un-read-only");
     fireEvent.click(editButton);
 
     // Fill out the form with new data
@@ -55,5 +55,7 @@ describe("Button", () => {
     // Click the submit button to submit the form
     const submitButton = getByRole("button", { name: /update profile/i });
     fireEvent.click(submitButton);
+
+    expect(submitButton).toBeDisabled();
   });
 });

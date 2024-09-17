@@ -24,7 +24,7 @@ import {
 } from "@app/utils";
 
 // Components
-import { Button, Checkbox, Input } from "../common";
+import { Button, Input } from "../common";
 
 interface LoginForm {
   onSubmit: (data: Partial<User>) => Promise<void | string>;
@@ -32,7 +32,6 @@ interface LoginForm {
 
 const FormLogin = ({ onSubmit }: LoginForm) => {
   const REQUIRED_FIELDS = ["email", "password"];
-  const [rememberMe, setRememberMe] = useState<boolean>(false);
 
   const {
     control,
@@ -59,19 +58,8 @@ const FormLogin = ({ onSubmit }: LoginForm) => {
 
   const isDisableSubmit = !(shouldEnable || isValid);
 
-  const handleRememberMeClick = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    const isChecked = event.target.checked;
-    setRememberMe(isChecked);
-  };
-
   const handleLogin = async (formData: Partial<User>) => {
-    try {
-      await onSubmit(formData);
-    } catch (error) {
-      throw new Error(MESSAGES.LOGIN_FAILED);
-    }
+    await onSubmit(formData);
   };
 
   return (
@@ -129,7 +117,7 @@ const FormLogin = ({ onSubmit }: LoginForm) => {
           defaultValue=""
           rules={{
             required: MESSAGES.FIELD_REQUIRED,
-            validate: (value) => validatePassword(value || ""),
+            validate: (value) => validatePassword(value as string),
           }}
           render={({
             field: { value, onChange, ...rest },
@@ -154,11 +142,6 @@ const FormLogin = ({ onSubmit }: LoginForm) => {
         </FormErrorMessage>
       </FormControl>
 
-      <Checkbox
-        data-testid="check-remember"
-        isChecked={rememberMe}
-        onChange={handleRememberMeClick}
-      />
       <Button
         data-testid="submit-login"
         variant="full"

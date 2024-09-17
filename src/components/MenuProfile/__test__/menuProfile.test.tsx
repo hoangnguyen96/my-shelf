@@ -41,10 +41,17 @@ describe("MenuProfile", () => {
     expect(render(<MenuProfile />)).toMatchSnapshot();
   });
 
+  it("Should render correctly snapshot when data empty", () => {
+    (useSession as jest.Mock).mockReturnValue({
+      data: {},
+      status: "authenticated",
+    });
+
+    expect(render(<MenuProfile />)).toMatchSnapshot();
+  });
+
   it("should call logout and redirect to login", async () => {
     const mockPush = jest.fn();
-
-    // Mock the session and router
     (useSession as jest.Mock).mockReturnValue({
       data: { user: { name: "John Doe", email: "john.doe@example.com" } },
     });
@@ -58,7 +65,6 @@ describe("MenuProfile", () => {
     const logoutButton = getByText("Logout");
     fireEvent.click(logoutButton);
 
-    // Use waitFor to ensure the async actions have been processed
     await waitFor(() => {
       expect(logout).toHaveBeenCalled();
       expect(mockPush).toHaveBeenCalledWith(ROUTES.LOGIN);
@@ -68,7 +74,6 @@ describe("MenuProfile", () => {
   it("should redirect to profile", async () => {
     const mockPush = jest.fn();
 
-    // Mock the session and router
     (useSession as jest.Mock).mockReturnValue({
       data: { user: { name: "John Doe", email: "john.doe@example.com" } },
     });
@@ -82,7 +87,6 @@ describe("MenuProfile", () => {
     const butRedirect = getByText("Profile");
     fireEvent.click(butRedirect);
 
-    // Use waitFor to ensure the async actions have been processed
     await waitFor(() => {
       expect(mockPush).toHaveBeenCalledWith(ROUTES.PROFILE);
     });

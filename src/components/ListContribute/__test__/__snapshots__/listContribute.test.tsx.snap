@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Contribute Three Top Book Should render correctly snapshot 1`] = `<div />`;
+
+exports[`Contribute Three Top Book Should render correctly snapshot when error 1`] = `<div />`;

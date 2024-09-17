@@ -2,7 +2,7 @@ import { auth } from "@app/auth";
 import { act, render } from "@testing-library/react";
 import { getAllBook, getUserById } from "@app/api-request";
 import * as utils from "@app/utils";
-import { DATA_BOOKS, DATA_USER } from "@app/__mocks__/data";
+import { DATA_BOOKS, DATA_USER } from "@app/mocks/data";
 import ListContribute from "..";
 import { useSession } from "next-auth/react";
 
@@ -33,14 +33,7 @@ describe("Contribute Three Top Book", () => {
 
   (useSession as jest.Mock).mockReturnValue({
     data: {
-      user: {
-        isAdmin: true,
-        email: "admin@gmail.com",
-        id: "3733403",
-        name: "admin",
-        image: "https://i.ibb.co/RHMqQGr/man-1.png",
-      },
-      expires: "2024-12-31T23:59:59.999Z",
+      user: DATA_USER[0]
     },
     status: "authenticated",
   });
@@ -54,6 +47,16 @@ describe("Contribute Three Top Book", () => {
   });
 
   it("Should render correctly snapshot", async () => {
+    await act(async () => {
+      const { container } = render(<ListContribute />);
+      expect(container).toMatchSnapshot();
+    });
+  });
+
+  it("Should render correctly snapshot when error", async () => {
+    (getAllBook as jest.Mock).mockRejectedValue(
+      new Error("Failed to fetch books")
+    );
     await act(async () => {
       const { container } = render(<ListContribute />);
       expect(container).toMatchSnapshot();

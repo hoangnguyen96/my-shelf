@@ -3,7 +3,7 @@ import { Box, ChakraProvider } from "@chakra-ui/react";
 import theme from "@app/themes";
 import Navbar from ".";
 import { SessionProvider } from "next-auth/react";
-import { mockSession } from "@app/__mocks__/storybook";
+import { mockSession } from "@app/mocks/storybook";
 
 const meta: Meta<typeof Navbar> = {
   component: Navbar,

@@ -34,7 +34,7 @@ const RegisterPage = () => {
     const payload: Partial<User> = {
       username,
       email,
-      password: hashedPassword || "",
+      password: hashedPassword,
       isAdmin: false,
       phone: "",
       bio: "",
@@ -45,22 +45,18 @@ const RegisterPage = () => {
     };
 
     try {
-      const result = await addUser(payload);
-      const errorMessage = await authenticate({ email, password });
+      await addUser(payload);
+      await authenticate({ email, password });
 
-      if (result && !errorMessage) {
-        toast({
-          title: "Register Successful.",
-          description: MESSAGES.REGISTER_SUCCESS,
-          status: "success",
-          duration: 9000,
-          isClosable: true,
-        });
+      toast({
+        title: "Register Successful.",
+        description: MESSAGES.REGISTER_SUCCESS,
+        status: "success",
+        duration: 9000,
+        isClosable: true,
+      });
 
-        router.push(ROUTES.HOME);
-      } else {
-        throw new Error("Authentication failed after registration.");
-      }
+      router.push(ROUTES.HOME);
     } catch (error) {
       toast({
         title: "Register Failed!",
@@ -69,7 +65,7 @@ const RegisterPage = () => {
         duration: 9000,
         isClosable: true,
       });
-      throw new Error(MESSAGES.ADD_USER_FAILED);
+      // throw new Error(MESSAGES.ADD_USER_FAILED);
     }
   }, []);
 

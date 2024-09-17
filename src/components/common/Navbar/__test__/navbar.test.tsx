@@ -23,11 +23,13 @@ describe("Navbar", () => {
   (useSession as jest.Mock).mockReturnValue({
     data: { user: { isAdmin: false } },
     status: "authenticated",
-     
-     
   });
 
   it("Should render correctly snapshot", () => {
     expect(render(<Navbar />)).toMatchSnapshot();
+  });
+
+  it("Should render correctly snapshot when is Admin", () => {
+    expect(render(<Navbar isAdmin={true} />)).toMatchSnapshot();
   });
 });

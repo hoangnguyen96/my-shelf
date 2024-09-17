@@ -42,11 +42,43 @@ describe("TopContent component", () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it("Should render path correctly with pathname", () => {
+  it("Should render path correctly with pathname contribute", () => {
     (usePathname as jest.Mock).mockReturnValue(ROUTES.CONTRIBUTE);
+
+    const { container } = render(<TopContent />);
+
+    const flexContainer = container.querySelector("div");
+    expect(flexContainer).toHaveStyle("justify-content: flex-end");
+  });
+
+  it("Should render path correctly with pathname contribute complete", () => {
     (usePathname as jest.Mock).mockReturnValue(ROUTES.CONTRIBUTE_COMPLETE);
+
+    const { container } = render(<TopContent />);
+
+    const flexContainer = container.querySelector("div");
+    expect(flexContainer).toHaveStyle("justify-content: flex-end");
+  });
+
+  it("Should render path correctly with pathname contribute list", () => {
     (usePathname as jest.Mock).mockReturnValue(ROUTES.CONTRIBUTE_LIST);
+
+    const { container } = render(<TopContent />);
+
+    const flexContainer = container.querySelector("div");
+    expect(flexContainer).toHaveStyle("justify-content: flex-end");
+  });
+
+  it("Should render path correctly with pathname preview", () => {
     (usePathname as jest.Mock).mockReturnValue(ROUTES.PREVIEW);
+
+    const { container } = render(<TopContent />);
+
+    const flexContainer = container.querySelector("div");
+    expect(flexContainer).toHaveStyle("justify-content: flex-end");
+  });
+
+  it("Should render path correctly with pathname profile", () => {
     (usePathname as jest.Mock).mockReturnValue(ROUTES.PROFILE);
 
     const { container } = render(<TopContent />);

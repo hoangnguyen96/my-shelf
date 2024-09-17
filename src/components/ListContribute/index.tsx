@@ -16,7 +16,7 @@ const ListContribute = () => {
 
   const fetchData = async () => {
     try {
-      const dataUserById = (await getUserById(session?.user?.id || "")) as User;
+      const dataUserById = (await getUserById(session?.user?.id as string)) as User;
       const dataBooks = await getAllBook();
       const dataTop = getThreeTopBook(dataBooks);
 
@@ -49,7 +49,7 @@ const ListContribute = () => {
             imageUrl={imageUrl}
             publicationYear={publicationYear}
             rating={rating}
-            isFavorite={dataUserById?.favorites?.includes(id) || false}
+            isFavorite={dataUserById?.favorites?.includes(id)}
             isContribute={true}
           />
         );

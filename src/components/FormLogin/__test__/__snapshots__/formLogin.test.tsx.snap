@@ -86,26 +86,6 @@ exports[`FormLogin Should render correctly snapshot 1`] = `
             </div>
           </div>
         </div>
-        <label
-          class="chakra-checkbox css-1elxtiq"
-          data-testid="check-remember"
-        >
-          <input
-            class="chakra-checkbox__input"
-            style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
-            type="checkbox"
-            value=""
-          />
-          <span
-            aria-hidden="true"
-            class="chakra-checkbox__control css-dnty2r"
-          />
-          <span
-            class="chakra-checkbox__label css-1oeb2oe"
-          >
-            Remember me
-          </span>
-        </label>
         <button
           class="chakra-button css-urxqiv"
           data-testid="submit-login"
@@ -199,26 +179,6 @@ exports[`FormLogin Should render correctly snapshot 1`] = `
           </div>
         </div>
       </div>
-      <label
-        class="chakra-checkbox css-1elxtiq"
-        data-testid="check-remember"
-      >
-        <input
-          class="chakra-checkbox__input"
-          style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
-          type="checkbox"
-          value=""
-        />
-        <span
-          aria-hidden="true"
-          class="chakra-checkbox__control css-dnty2r"
-        />
-        <span
-          class="chakra-checkbox__label css-1oeb2oe"
-        >
-          Remember me
-        </span>
-      </label>
       <button
         class="chakra-button css-urxqiv"
         data-testid="submit-login"

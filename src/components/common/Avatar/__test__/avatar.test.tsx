@@ -14,4 +14,10 @@ describe("Avatar", () => {
       )
     ).toMatchSnapshot();
   });
+
+  it("Should render correctly snapshot when image empty", () => {
+    expect(
+      render(<Avatar image="" width={100} height={100} />)
+    ).toMatchSnapshot();
+  });
 });

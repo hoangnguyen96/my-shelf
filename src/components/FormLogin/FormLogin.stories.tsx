@@ -5,7 +5,7 @@ import FormLogin from "./index";
 import HeadingForm from "../HeadingForm";
 import FooterForm from "../FooterForm";
 import { RouterContext } from "next/dist/shared/lib/router-context.shared-runtime";
-import { mockRouter } from "@app/__mocks__/storybook";
+import { mockRouter } from "@app/mocks/storybook";
 
 const meta: Meta<typeof FormLogin> = {
   component: FormLogin,

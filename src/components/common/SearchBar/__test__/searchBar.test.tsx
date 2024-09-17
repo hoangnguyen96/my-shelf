@@ -1,7 +1,9 @@
 import { fireEvent, render, waitFor } from "@testing-library/react";
 import { useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import SearchBar from "..";
+import { ROUTES } from "@app/constants";
+import React from 'react';
 
 jest.mock("next-auth/react", () => ({
   useSession: jest.fn(),
@@ -11,6 +13,7 @@ jest.mock("next/navigation", () => ({
   useRouter: jest.fn(),
   usePathname: jest.fn(),
 }));
+
 
 describe("SearchBar", () => {
   (useSession as jest.Mock).mockReturnValue({
@@ -25,6 +28,13 @@ describe("SearchBar", () => {
       expires: "2024-12-31T23:59:59.999Z",
     },
     status: "authenticated",
+  });
+
+  beforeEach(() => {
+    (useRouter as jest.Mock).mockReturnValue({
+      replace: jest.fn(),
+    });
+    (usePathname as jest.Mock).mockReturnValue(ROUTES.MY_BOOK_SHELF_FAVORITES);
   });
 
   it("Should render correctly snapshot", () => {
@@ -81,6 +91,68 @@ describe("SearchBar", () => {
     });
     fireEvent.change(combobox, {
       target: { value: "title" },
+    });
+
+    fireEvent.click(searchButton);
+  });
+
+  it("Should handle on submit search when empty", () => {
+    const mockReplace = jest.fn();
+    (useRouter as jest.Mock).mockReturnValue({ replace: mockReplace });
+    const { getByPlaceholderText, getByRole, getByTestId } = render(
+      <SearchBar />
+    );
+    const inputElement = getByPlaceholderText("Search...");
+    const combobox = getByRole("combobox");
+    const searchButton = getByTestId("submit-search");
+
+    fireEvent.change(inputElement, {
+      target: { value: "" },
+    });
+    fireEvent.change(combobox, {
+      target: { value: "" },
+    });
+
+    fireEvent.click(searchButton);
+  });
+
+  it("Should handle on submit search when empty", () => {
+    (usePathname as jest.Mock).mockReturnValue("");
+    const mockReplace = jest.fn();
+    (useRouter as jest.Mock).mockReturnValue({ replace: mockReplace });
+    const { getByPlaceholderText, getByRole, getByTestId } = render(
+      <SearchBar />
+    );
+    const inputElement = getByPlaceholderText("Search...");
+    const combobox = getByRole("combobox");
+    const searchButton = getByTestId("submit-search");
+
+    fireEvent.change(inputElement, {
+      target: { value: "" },
+    });
+    fireEvent.change(combobox, {
+      target: { value: "" },
+    });
+
+    fireEvent.click(searchButton);
+  });
+
+  it("Should handle on submit search when empty", () => {
+    (usePathname as jest.Mock).mockReturnValue("");
+    const mockReplace = jest.fn();
+    (useRouter as jest.Mock).mockReturnValue({ replace: mockReplace });
+    const { getByPlaceholderText, getByRole, getByTestId } = render(
+      <SearchBar />
+    );
+    const inputElement = getByPlaceholderText("Search...");
+    const combobox = getByRole("combobox");
+    const searchButton = getByTestId("submit-search");
+
+    fireEvent.change(inputElement, {
+      target: { value: "Book" },
+    });
+    fireEvent.change(combobox, {
+      target: { value: "" },
     });
 
     fireEvent.click(searchButton);

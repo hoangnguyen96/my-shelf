@@ -37,7 +37,7 @@ const PreviewBook = ({ params: { id } }: PreviewBookProps) => {
   const fetchData = async () => {
     const book = await getBookById(id);
     setDataBook(book as BookType);
-    const user = (await getUserById(session?.user?.id || "")) as User;
+    const user = (await getUserById(session?.user?.id as string)) as User;
     setDataUserById(user);
   };
 
@@ -188,7 +188,7 @@ const PreviewBook = ({ params: { id } }: PreviewBookProps) => {
               {dataBook.description}
             </Text>
             <Image
-              src={previewAuthor || ""}
+              src={previewAuthor}
               alt="Preview Author"
               width={88}
               height={100}

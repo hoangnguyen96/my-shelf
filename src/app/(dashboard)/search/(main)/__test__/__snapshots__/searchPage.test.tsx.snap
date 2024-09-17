@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Page Should handle fetch data failed 1`] = `<DocumentFragment />`;
+
+exports[`Search Page Should render correctly snapshot 1`] = `<div />`;
+
+exports[`Search Page Should render correctly snapshot when is shelfBook 1`] = `<DocumentFragment />`;

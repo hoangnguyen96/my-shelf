@@ -3,8 +3,9 @@ import { ChakraProvider } from "@chakra-ui/react";
 import theme from "@app/themes";
 import TableItem from ".";
 import { RouterContext } from "next/dist/shared/lib/router-context.shared-runtime";
-import { mockRouter, mockSession } from "@app/__mocks__/storybook";
+import { mockRouter, mockSession } from "@app/mocks/storybook";
 import { SessionProvider } from "next-auth/react";
+import { book1 } from "@app/assets/images";
 
 const meta: Meta<typeof TableItem> = {
   component: TableItem,
@@ -30,6 +31,7 @@ Default.args = {
   title: "Test",
   author: "Test",
   category: "Test",
+  imageUrl: "https://i.ibb.co/JQXzv5q/book2.webp",
   edition: "First",
   publicationYear: 2000,
   rating: 4.5,

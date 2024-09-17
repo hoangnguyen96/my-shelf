@@ -35,17 +35,15 @@ const HomePage = () => {
   }, [session?.user?.id]);
 
   const handleUpdateFavorites = async (id: string) => {
-    if (!dataUserById) return;
-
     try {
-      let listFavorite = dataUserById?.favorites || [];
+      let listFavorite = dataUserById?.favorites;
       if (dataUserById?.favorites.includes(id)) {
         listFavorite = dataUserById?.favorites.filter((item) => item !== id);
       } else {
-        listFavorite = [...dataUserById?.favorites, id];
+        listFavorite = [...(dataUserById?.favorites as string[]), id];
       }
 
-      await updateUserById(dataUserById.id, {
+      await updateUserById(dataUserById?.id as string, {
         ...dataUserById,
         favorites: listFavorite,
       });
