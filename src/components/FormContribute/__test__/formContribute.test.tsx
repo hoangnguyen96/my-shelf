@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import { act, fireEvent, render, waitFor } from "@testing-library/react";
 import FormContribute from "..";
-import { generateImageUpload } from "@app/api-request";
+import { generateImageUpload } from "@app/features/dashboard/actions";
 
 // Mock Image component
 jest.mock("next/image", () => ({
@@ -9,14 +9,14 @@ jest.mock("next/image", () => ({
   default: (props: any) => <img {...props} />,
 }));
 
-jest.mock("@app/api-request", () => ({
+jest.mock("@app/features/dashboard/actions", () => ({
   generateImageUpload: jest.fn().mockResolvedValue({
     success: true,
     url: "https://example.com/image.jpg",
   }),
 }));
 
-describe("Button", () => {
+describe("Form Contribute", () => {
   const mockOnUpdate = jest.fn();
   const mockOnSubmit = jest.fn();
   const props = {
@@ -39,6 +39,35 @@ describe("Button", () => {
 
   it("Should render correctly snapshot", () => {
     expect(render(<FormContribute {...props} />)).toMatchSnapshot();
+  });
+
+  it("should render the form correctly with initial data", () => {
+    const { getByPlaceholderText, getByTestId } = render(
+      <FormContribute {...props} />
+    );
+
+    expect(getByPlaceholderText("Book name")).toHaveValue(
+      "Don't Make Me Think"
+    );
+    expect(getByPlaceholderText("Author Name")).toHaveValue("Steve Krug");
+    expect(getByPlaceholderText("Reason For Your Contribution")).toHaveValue(
+      "description will update later"
+    );
+    expect(getByTestId("contribute-category")).toHaveValue("SelfHelpBook");
+  });
+
+  it("should update form fields on input change", () => {
+    const { getByPlaceholderText, getByTestId } = render(
+      <FormContribute {...props} />
+    );
+
+    const titleInput = getByPlaceholderText("Book name");
+    fireEvent.change(titleInput, { target: { value: "Updated Book Title" } });
+    expect(titleInput).toHaveValue("Updated Book Title");
+
+    const authorInput = getByPlaceholderText("Author Name");
+    fireEvent.change(authorInput, { target: { value: "Updated Author" } });
+    expect(authorInput).toHaveValue("Updated Author");
   });
 
   it("should handle file input changes", async () => {
@@ -128,6 +157,45 @@ describe("Button", () => {
   });
 
   it("Should handle add book successful", async () => {
+    const { getByPlaceholderText, getByTestId, getByRole } = render(
+      <FormContribute />
+    );
+
+    await act(async () => {
+      fireEvent.change(getByPlaceholderText("Book name"), {
+        target: { value: "Test Book" },
+      });
+      fireEvent.change(getByPlaceholderText("Author Name"), {
+        target: { value: "Test Author" },
+      });
+      fireEvent.change(getByPlaceholderText("Reason For Your Contribution"), {
+        target: { value: "Test Description" },
+      });
+      const categorySelect = getByTestId("contribute-category");
+
+      fireEvent.change(categorySelect, { target: { value: "SelfHelpBook" } });
+      (generateImageUpload as jest.Mock).mockResolvedValueOnce({
+        success: true,
+        data: {
+          url: "http://mocked-image-url.com",
+        },
+      });
+      // const mockURL = "https://i.ibb.co/QbQgVtG/book1.png";
+      // URL.createObjectURL = jest.fn(() => mockURL);
+      // const input = getByTestId("input-file-contribute");
+      // fireEvent.change(input, {
+      //   target: {
+      //     files: [new File(["image"], "image.png", { type: "image/png" })],
+      //   },
+      // });
+    });
+
+    fireEvent.click(getByTestId("submit-contribute"));
+    // await act(async () => {
+    // });
+  });
+
+  it("Should handle add book failed", async () => {
     const { getByPlaceholderText, getByTestId, getByRole } = render(
       <FormContribute />
     );

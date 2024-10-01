@@ -1,4 +1,3 @@
-import { memo } from "react";
 import { Box, Spinner } from "@chakra-ui/react";
 
 const LoadingIndicator = () => (
@@ -13,4 +12,4 @@ const LoadingIndicator = () => (
   </Box>
 );
 
-export default memo(LoadingIndicator);
+export default LoadingIndicator;

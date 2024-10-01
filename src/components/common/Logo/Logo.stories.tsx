@@ -5,6 +5,7 @@ import Logo from ".";
 import { SessionProvider } from "next-auth/react";
 import { RouterContext } from "next/dist/shared/lib/router-context.shared-runtime";
 import { mockRouter, mockSession } from "@app/mocks/storybook";
+import { User } from "@app/models";
 
 const meta: Meta<typeof Logo> = {
   component: Logo,
@@ -23,7 +24,19 @@ const meta: Meta<typeof Logo> = {
 
 export default meta;
 
-const Template: StoryFn<typeof Logo> = () => <Logo />;
+const Template: StoryFn<typeof Logo> = () => (
+  <Logo
+    user={
+      {
+        isAdmin: true,
+        email: "admin@gmail.com",
+        id: "3733403",
+        name: "admin",
+        image: "https://i.ibb.co/RHMqQGr/man-1.png",
+      } as unknown as User
+    }
+  />
+);
 
 export const Default = Template.bind({});
 Default.args = {};

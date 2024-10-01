@@ -1,12 +1,11 @@
 import "@testing-library/jest-dom";
-import { fireEvent, render, waitFor } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 import { UploadImage } from "../..";
 import { User } from "@app/models";
-import * as api from "@app/api-request";
+import * as api from "@app/features/dashboard/actions";
 
-// Mock toàn bộ module
-jest.mock("@app/api-request", () => ({
-  generateImageUpload: jest.fn(), // Mock các hàm
+jest.mock("@app/features/dashboard/actions", () => ({
+  generateImageUpload: jest.fn(),
   updateUserById: jest.fn(),
 }));
 
@@ -26,7 +25,6 @@ describe("UploadImage", () => {
   };
 
   beforeEach(() => {
-    // Mock lại giá trị trả về trong mỗi test
     (api.generateImageUpload as jest.Mock).mockResolvedValue({
       success: true,
       data: {

@@ -19,7 +19,7 @@ const Avatar = ({
 }: AvatarProps) => {
   return (
     <Image
-      src={image || ""}
+      src={image || "https://i.ibb.co/SKHPQYq/avatar-default.webp"}
       width={width}
       height={height}
       alt="Avatar user"

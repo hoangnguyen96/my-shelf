@@ -7,6 +7,7 @@ import { SessionProvider } from "next-auth/react";
 import { Logo, Navbar } from "@app/components/common";
 import { TopContent } from "@app/components";
 import PreviewBook from "./[id]/page";
+import { User } from "@app/models";
 
 const meta: Meta<typeof PreviewBook> = {
   component: PreviewBook,
@@ -28,7 +29,17 @@ export default meta;
 const Template: StoryFn<typeof PreviewBook> = () => (
   <Flex bgColor="white" borderRadius="10px" height="100%">
     <Flex flexDir="column" gap="100px" padding="38px 66px" alignItems="center">
-      <Logo />
+      <Logo
+        user={
+          {
+            isAdmin: true,
+            email: "admin@gmail.com",
+            id: "3733403",
+            name: "admin",
+            image: "https://i.ibb.co/RHMqQGr/man-1.png",
+          } as unknown as User
+        }
+      />
       <Navbar />
     </Flex>
     <Box

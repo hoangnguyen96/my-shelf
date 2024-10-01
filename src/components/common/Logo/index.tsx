@@ -1,15 +1,15 @@
-"use client";
-
 import { memo } from "react";
-import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { LogoMain } from "@app/assets/icons";
 import { ROUTES } from "@app/constants";
+import { User } from "@app/models";
 
-const Logo = () => {
-  const { data: session } = useSession();
+interface LogoProps {
+  user: Partial<User>;
+}
 
-  const url = session ? ROUTES.HOME : ROUTES.LOGIN;
+const Logo = ({ user }: LogoProps) => {
+  const url = Object.keys(user).length > 0 ? ROUTES.HOME : ROUTES.LOGIN;
 
   return (
     <Link href={url} aria-label="logo-book-shelf">

@@ -31,7 +31,7 @@ const ModalSuccessProcess = ({
       </Box>
 
       <ModalFooter>
-        <Button onClick={onClose} text="Back" />
+        <Button data-testid="close-modal" onClick={onClose} text="Back" />
       </ModalFooter>
     </ModalContent>
   </Modal>

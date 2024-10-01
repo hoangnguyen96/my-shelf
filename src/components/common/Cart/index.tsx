@@ -45,7 +45,7 @@ const Cart = ({
   >
     <Link href={`${ROUTES.PREVIEW}/${id}`}>
       <Image
-        src={imageUrl}
+        src={imageUrl || "https://i.ibb.co/Lt7GmF2/place-holder.webp"}
         alt="Don't make me think"
         width={130}
         height={172}

@@ -143,7 +143,7 @@ const FormRegister = ({ itemUpdate, onSubmit }: FormRegisterProps) => {
                 return formatError;
               }
 
-              return await checkEmailExists(value || "");
+              return await checkEmailExists(value as string);
             },
           }}
           render={({
@@ -180,7 +180,7 @@ const FormRegister = ({ itemUpdate, onSubmit }: FormRegisterProps) => {
           defaultValue=""
           rules={{
             required: MESSAGES.FIELD_REQUIRED,
-            validate: (value) => validatePassword(value || ""),
+            validate: (value) => validatePassword(value as string),
           }}
           render={({
             field: { value, onChange, ...rest },
@@ -220,7 +220,7 @@ const FormRegister = ({ itemUpdate, onSubmit }: FormRegisterProps) => {
             validate: (value) =>
               validateConfirmPassword(
                 value as string,
-                getValues("password") || ""
+                getValues("password") as string
               ),
           }}
           render={({

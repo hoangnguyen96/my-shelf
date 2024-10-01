@@ -20,7 +20,7 @@ import { MESSAGES } from "@app/constants";
 import { BookType } from "@app/models";
 
 // Api
-import { generateImageUpload } from "@app/api-request";
+import { generateImageUpload } from "@app/features/dashboard/actions";
 
 // Utils
 import {
@@ -101,11 +101,6 @@ const FormContribute = ({
   const isDisableSubmit = !(shouldEnable || isValid);
 
   const handleFormSubmit = async (dataBook: Partial<BookType>) => {
-    if (!selectedImage && !imageUrl) {
-      console.error("No image selected");
-      return;
-    }
-
     try {
       if (itemUpdate) {
         let finalImageUrl = imageUrl;

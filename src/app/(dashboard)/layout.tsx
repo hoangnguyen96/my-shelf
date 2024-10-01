@@ -1,16 +1,15 @@
-"use client";
-
+import { auth } from "@app/auth";
 import { Box, Flex } from "@chakra-ui/react";
 import { Logo, Navbar } from "@app/components/common";
 import { TopContent } from "@app/components";
-import { useSession } from "next-auth/react";
+import { User } from "@app/models";
 
-const DashboardLayout = ({
+const DashboardLayout = async ({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
-  const { data: session } = useSession();
+  const session = await auth();
 
   return (
     <Flex bgColor="white" borderRadius="10px" height="100%">
@@ -20,7 +19,7 @@ const DashboardLayout = ({
         padding="38px 66px"
         alignItems="center"
       >
-        <Logo />
+        <Logo user={session?.user as User} />
         <Navbar isAdmin={session?.user?.isAdmin} />
       </Flex>
       <Box

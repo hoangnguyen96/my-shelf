@@ -6,7 +6,8 @@ import { mockRouter, mockSession } from "@app/mocks/storybook";
 import { SessionProvider } from "next-auth/react";
 import { Logo, Navbar } from "@app/components/common";
 import { TopContent } from "@app/components";
-import SearchPage from "./(main)/page";
+import { User } from "@app/models";
+import SearchPage from "./page";
 
 const meta: Meta<typeof SearchPage> = {
   component: SearchPage,
@@ -28,7 +29,17 @@ export default meta;
 const Template: StoryFn<typeof SearchPage> = () => (
   <Flex bgColor="white" borderRadius="10px" height="100%">
     <Flex flexDir="column" gap="100px" padding="38px 66px" alignItems="center">
-      <Logo />
+      <Logo
+        user={
+          {
+            isAdmin: true,
+            email: "admin@gmail.com",
+            id: "3733403",
+            name: "admin",
+            image: "https://i.ibb.co/RHMqQGr/man-1.png",
+          } as unknown as User
+        }
+      />
       <Navbar />
     </Flex>
     <Box

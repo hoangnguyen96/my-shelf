@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button Should render correctly snapshot 1`] = `
+exports[`Form Contribute Should render correctly snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>

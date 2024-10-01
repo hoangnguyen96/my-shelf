@@ -4,7 +4,8 @@ import Credentials from "next-auth/providers/credentials";
 import { z } from "zod";
 import bcrypt from "bcryptjs";
 import { MESSAGES } from "./constants";
-import { getUserByEmail } from "./api-request";
+import { getUserByEmail } from "@app/features/dashboard/actions";
+import { User } from "./models";
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   ...authConfig,
@@ -29,7 +30,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           const { email, password } = parsedCredentials.data;
           const user = await getUserByEmail(email);
 
-          const [foundUser, ...rest] = user;
+          const [foundUser, ...rest] = user as User[];
 
           if (!foundUser || !foundUser.password) {
             throw new Error(MESSAGES.LOGIN_NOTFOUND);

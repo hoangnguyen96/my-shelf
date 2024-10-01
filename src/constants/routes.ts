@@ -7,7 +7,7 @@ export const ROUTES = {
   SEARCH: "/search",
   PREVIEW: "/preview",
   MY_BOOK_SHELF: "/my-book-shelf",
-  MY_BOOK_SHELF_FAVORITES: "/my-book-shelf/favorites",
+  MY_BOOK_SHELF_FAVORITES: "/favorites",
   CONTRIBUTE: "/contribute",
   CONTRIBUTE_COMPLETE: "/contribute/complete",
   PROFILE: "/profile",

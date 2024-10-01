@@ -15,7 +15,7 @@ exports[`My Book Shelf Favorites Should render correctly snapshot 1`] = `
           All Books
         </a>
         <a
-          href="/my-book-shelf/favorites"
+          href="/favorites"
           style="text-decoration: none;"
         >
           Favorites
@@ -34,7 +34,7 @@ exports[`My Book Shelf Favorites Should render correctly snapshot 1`] = `
         All Books
       </a>
       <a
-        href="/my-book-shelf/favorites"
+        href="/favorites"
         style="text-decoration: none;"
       >
         Favorites

@@ -4,7 +4,7 @@ import StatusBook from "..";
 
 describe("Status", () => {
   it("Should render correctly snapshot", () => {
-    expect(render(<StatusBook status={false} />)).toMatchSnapshot();
+    expect(render(<StatusBook />)).toMatchSnapshot();
   });
 
   it("Should render correctly snapshot when true", () => {

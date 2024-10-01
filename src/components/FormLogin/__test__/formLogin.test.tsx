@@ -1,31 +1,57 @@
 import "@testing-library/jest-dom";
 import { act, fireEvent, render, waitFor } from "@testing-library/react";
-import { User } from "@app/models";
 import FormLogin from "..";
 import { MESSAGES } from "@app/constants";
 
 describe("FormLogin", () => {
-  const mockOnSubmit = jest.fn((data: Partial<User>) => Promise.resolve());
+  const mockOnSubmit = jest.fn();
 
   it("Should render correctly snapshot", () => {
     expect(render(<FormLogin onSubmit={mockOnSubmit} />)).toMatchSnapshot();
   });
 
   it("Should display validation error when email is empty", async () => {
-    const { getByTestId, getByText, getByPlaceholderText } = render(
+    jest.mock("react-hook-form", () => ({
+      ...jest.requireActual("react-hook-form"),
+      Controller: () => <></>,
+      useForm: () => ({
+        control: () => ({}),
+        handleSubmit: () => jest.fn(),
+        formState: {
+          errors: {
+            email: {
+              type: "required",
+              message: "Email is required",
+            },
+            password: {
+              type: "required",
+              message: "Password is required",
+            },
+          },
+          isValid: false,
+          dirtyFields: {},
+          isSubmitting: false,
+        },
+        clearErrors: jest.fn(),
+        reset: jest.fn(),
+      }),
+    }));
+    const { getByPlaceholderText, getAllByText } = render(
       <FormLogin onSubmit={mockOnSubmit} />
     );
 
     fireEvent.change(getByPlaceholderText(/email.../i), {
       target: { value: "" },
     });
+    fireEvent.blur(getByPlaceholderText(/email.../i));
 
     fireEvent.change(getByPlaceholderText(/password.../i), {
       target: { value: "" },
     });
+    fireEvent.blur(getByPlaceholderText(/password.../i));
 
-    act(() => {
-      fireEvent.click(getByTestId("submit-login"));
+    await waitFor(() => {
+      expect(getAllByText("This field is required.")[0]).toBeInTheDocument();
     });
   });
 

@@ -11,6 +11,7 @@ exports[`Pagination Should render correctly snapshot 1`] = `
         <button
           aria-label=""
           class="chakra-button css-7baeyj"
+          data-testid="prev-pagination"
           type="button"
         >
           <svg
@@ -27,13 +28,24 @@ exports[`Pagination Should render correctly snapshot 1`] = `
         </button>
         <button
           class="chakra-button css-klz9de"
+          data-testid="click-pagination"
           type="button"
         >
           1
         </button>
         <button
+          class="chakra-button css-klz9de"
+          data-active=""
+          data-testid="click-pagination"
+          type="button"
+        >
+          2
+        </button>
+        <button
           aria-label=""
           class="chakra-button css-7baeyj"
+          data-testid="next-pagination"
+          disabled=""
           type="button"
         >
           <svg
@@ -58,6 +70,7 @@ exports[`Pagination Should render correctly snapshot 1`] = `
       <button
         aria-label=""
         class="chakra-button css-7baeyj"
+        data-testid="prev-pagination"
         type="button"
       >
         <svg
@@ -74,13 +87,24 @@ exports[`Pagination Should render correctly snapshot 1`] = `
       </button>
       <button
         class="chakra-button css-klz9de"
+        data-testid="click-pagination"
         type="button"
       >
         1
       </button>
       <button
+        class="chakra-button css-klz9de"
+        data-active=""
+        data-testid="click-pagination"
+        type="button"
+      >
+        2
+      </button>
+      <button
         aria-label=""
         class="chakra-button css-7baeyj"
+        data-testid="next-pagination"
+        disabled=""
         type="button"
       >
         <svg

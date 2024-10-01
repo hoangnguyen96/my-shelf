@@ -139,7 +139,7 @@ exports[`Logo Should render correctly snapshot 1`] = `
 }
 `;
 
-exports[`Logo Should render correctly snapshot when no session 1`] = `
+exports[`Logo Should render correctly snapshot when no data 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>

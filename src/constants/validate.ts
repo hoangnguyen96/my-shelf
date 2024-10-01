@@ -6,4 +6,6 @@ const REGEX_PATTERN = {
   EMAIL: REGEX_EMAIL,
 };
 
-export { REGEX_PATTERN };
+const DEFAULT_LIMIT = 12;
+
+export { REGEX_PATTERN, DEFAULT_LIMIT };

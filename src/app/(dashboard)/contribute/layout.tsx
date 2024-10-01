@@ -1,18 +1,21 @@
-"use client";
-
-import { ListContribute } from "@app/components";
-import { ROUTES } from "@app/constants";
+import { Suspense } from "react";
+import { auth } from "@app/auth";
 import { Flex, Text } from "@chakra-ui/react";
-import { useSession } from "next-auth/react";
+import { ROUTES } from "@app/constants";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ListTopContribute } from "@app/features/dashboard/components";
+import {
+  SkeletonFormContribute,
+  SkeletonListTopContribute,
+} from "@app/components";
 
-const ContributeLayout = ({
+const ContributeLayout = async ({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
-  const { data: session } = useSession();
+  const session = await auth();
 
   if (!session?.user?.isAdmin) {
     return notFound();
@@ -34,7 +37,7 @@ const ContributeLayout = ({
         borderRadius="10px"
         p="28px 45px 45px 60px"
       >
-        {children}
+        <Suspense fallback={<SkeletonFormContribute />}>{children}</Suspense>
       </Flex>
       <Flex maxW={582} flexDir="column" w="100%">
         <Text fontSize="50px" lineHeight="64px" fontWeight={700}>
@@ -65,7 +68,9 @@ const ContributeLayout = ({
             </Text>
           </Link>
         </Flex>
-        <ListContribute />
+        <Suspense fallback={<SkeletonListTopContribute />}>
+          <ListTopContribute />
+        </Suspense>
       </Flex>
     </Flex>
   );

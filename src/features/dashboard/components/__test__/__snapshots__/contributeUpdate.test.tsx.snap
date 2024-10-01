@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contribute Update Should render correctly snapshot 1`] = `
+<div>
+  <div
+    class="css-0"
+  >
+    <p
+      class="chakra-text css-1jr2z3f"
+    >
+      Preview Book Details
+    </p>
+    <form
+      class="css-79elbk"
+    >
+      <div
+        class="css-197p3oi"
+      >
+        <div
+          class="css-akgk9g"
+        >
+          <div
+            class="chakra-form-control css-5b2hom"
+            role="group"
+          >
+            <div
+              class="chakra-input__group css-bx0blc"
+              data-group="true"
+            >
+              <input
+                class="chakra-input css-1x36n8t"
+                id="title"
+                name="title"
+                placeholder="Book name"
+                type="text"
+                value="Don't Make Me Think"
+              />
+            </div>
+          </div>
+          <div
+            class="chakra-form-control css-5b2hom"
+            role="group"
+          >
+            <div
+              class="chakra-input__group css-bx0blc"
+              data-group="true"
+            >
+              <input
+                class="chakra-input css-1x36n8t"
+                id="author"
+                name="author"
+                placeholder="Author Name"
+                type="text"
+                value="Steve Krug"
+              />
+            </div>
+          </div>
+          <div
+            class="chakra-form-control css-7m4uk4"
+            role="group"
+          >
+            <textarea
+              class="chakra-textarea css-1yn82jt"
+              id="field-:r2:"
+              name="description"
+              placeholder="Reason For Your Contribution"
+            >
+              description will update later
+            </textarea>
+          </div>
+        </div>
+        <div
+          class="css-j7qwjs"
+        >
+          <div
+            class="chakra-form-control css-106bepj"
+            role="group"
+          >
+            <div
+              class="chakra-select__wrapper css-42b2qy"
+            >
+              <select
+                class="chakra-select css-g3rz38"
+                data-testid="contribute-category"
+                id="field-:r3:"
+              >
+                <option
+                  value=""
+                >
+                  Category
+                </option>
+                <option
+                  class="css-0"
+                  value="SelfHelpBook"
+                >
+                  SelfHelpBook
+                </option>
+                <option
+                  class="css-0"
+                  value="TextBook"
+                >
+                  TextBook
+                </option>
+              </select>
+              <div
+                class="chakra-select__icon-wrapper css-162mkon"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="chakra-select__icon"
+                  focusable="false"
+                  role="presentation"
+                  style="width: 1em; height: 1em; color: currentColor;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="chakra-form-control css-1xz9bny"
+            role="group"
+          >
+            <label
+              class="chakra-form__label css-zfpjyo"
+              data-testid="fileInput"
+              for="fileInput"
+              id="field-:r4:-label"
+            >
+              <img
+                alt="Upload Image"
+                data-nimg="1"
+                decoding="async"
+                fetchpriority="high"
+                height="100"
+                src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQbQgVtG%2Fbook1.png&w=256&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQbQgVtG%2Fbook1.png&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FQbQgVtG%2Fbook1.png&w=256&q=75 2x"
+                style="color: transparent; margin: 0px auto;"
+                width="100"
+              />
+            </label>
+            <div
+              class="chakra-input__group css-bx0blc"
+              data-group="true"
+            >
+              <input
+                accept="image/*"
+                class="chakra-input css-1vuqmsh"
+                data-testid="input-file-contribute"
+                id="fileInput"
+                type="file"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="chakra-button css-1qhatj0"
+        data-testid="submit-contribute"
+        disabled=""
+        type="submit"
+      >
+        Update
+      </button>
+    </form>
+  </div>
+</div>
+`;

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Flex, Text, useDisclosure } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
 import { ROUTES } from "@app/constants";
-import { deleteBook } from "@app/api-request";
+import { deleteBook } from "@app/features/dashboard/actions";
 import ModalDeleteBook from "../ModalDeleteBook";
 import { Button } from "../common";
 import HeartIcon from "../HeartIcon";

@@ -14,7 +14,7 @@ import {
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { ROUTES } from "@app/constants";
-import { logout } from "@app/actions/auth";
+import { logout } from "@app/features/auth/actions";
 import { Avatar } from "../common";
 
 const MenuProfile = () => {

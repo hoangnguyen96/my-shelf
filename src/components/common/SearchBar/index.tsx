@@ -12,8 +12,7 @@ import {
   Box,
 } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
-import { ROUTES } from "@app/constants";
-import { getFirstPath, getTwoPath } from "@app/utils";
+import { getFirstPath } from "@app/utils";
 
 const SearchBar = ({ placeholder = "Search...", ...rest }: InputProps) => {
   const [prevPath, setPrevPath] = useState("");
@@ -31,12 +30,7 @@ const SearchBar = ({ placeholder = "Search...", ...rest }: InputProps) => {
   };
 
   const handleSearch = () => {
-    let part = "";
-    if (pathname?.includes(ROUTES.MY_BOOK_SHELF_FAVORITES)) {
-      part = getTwoPath(pathname);
-    } else {
-      part = getFirstPath(pathname);
-    }
+    let part = getFirstPath(pathname);
 
     if (!searchTerm && !searchType) {
       return router.replace(part);

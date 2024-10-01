@@ -1,4 +1,6 @@
+import { SkeletonSearchList } from "@app/components";
 import { Box, Flex, Text } from "@chakra-ui/react";
+import { Suspense } from "react";
 
 const SearchLayout = ({
   children,
@@ -22,7 +24,7 @@ const SearchLayout = ({
         Status
       </Text>
     </Flex>
-    {children}
+    <Suspense fallback={<SkeletonSearchList />}>{children}</Suspense>
   </Box>
 );
 

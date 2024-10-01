@@ -1,0 +1,310 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Preview Book Should render correctly snapshot 1`] = `
+<div>
+  <div
+    class="css-1ghqoze"
+  >
+    <a
+      data-testid="click-back"
+      href="#"
+    >
+      <svg
+        class="chakra-icon css-1etxpkf"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+          fill="currentColor"
+        />
+      </svg>
+      <span
+        class="chakra-text css-1mf4y6e"
+      >
+        Back to results
+      </span>
+    </a>
+    <div
+      class="css-199bpaw"
+    >
+      <div
+        class="css-jxzlid"
+      >
+        <img
+          alt="Preview book"
+          data-nimg="1"
+          decoding="async"
+          fetchpriority="high"
+          height="278"
+          src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQbQgVtG%2Fbook1.png&w=640&q=75"
+          srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQbQgVtG%2Fbook1.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FQbQgVtG%2Fbook1.png&w=640&q=75 2x"
+          style="color: transparent; margin: 0px auto;"
+          width="210"
+        />
+      </div>
+      <div
+        class="css-2j4sc6"
+      >
+        <p
+          class="chakra-text css-0"
+        >
+          Don't Make Me Think
+        </p>
+        <p
+          class="chakra-text css-1xo3mso"
+        >
+          By 
+          Steve Krug
+          , 
+          <span
+            class="chakra-text css-0"
+          >
+            2000
+          </span>
+        </p>
+        <p
+          class="chakra-text css-qxv1n8"
+        >
+          first
+           edition
+        </p>
+        <div
+          class="css-1q1ptzx"
+        >
+          <div
+            class="css-15zum9u"
+          >
+            <div
+              class="css-k008qs"
+            >
+              <svg
+                fill="#dfb300"
+                height="18px"
+                viewBox="0 0 24 24"
+                width="18px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.54 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                fill="#dfb300"
+                height="18px"
+                viewBox="0 0 24 24"
+                width="18px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.54 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                fill="#dfb300"
+                height="18px"
+                viewBox="0 0 24 24"
+                width="18px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.54 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                fill="#dfb300"
+                height="18px"
+                viewBox="0 0 24 24"
+                width="18px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.54 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                fill="#dfb300"
+                height="18px"
+                viewBox="0 0 24 24"
+                width="18px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.54 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+            <p
+              class="chakra-text css-bg3st0"
+            >
+              <span
+                class="chakra-text css-0"
+              >
+                4.5
+              </span>
+               Ratings
+            </p>
+          </div>
+          <p
+            class="chakra-text css-bg3st0"
+          >
+            <span
+              class="chakra-text css-0"
+            >
+              25
+            </span>
+             Currently reading
+          </p>
+          <p
+            class="chakra-text css-bg3st0"
+          >
+            <span
+              class="chakra-text css-0"
+            >
+              119
+            </span>
+             Have read
+          </p>
+        </div>
+        <div
+          class="css-3jpwsf"
+        >
+          <div
+            class="css-xbd6ua"
+          >
+            <p
+              class="chakra-text css-182kmv3"
+            >
+              Availability
+            </p>
+            <div
+              class="css-1c1kq07"
+            >
+              <svg
+                fill="none"
+                height="15px"
+                viewBox="0 0 140 140"
+                width="15px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M70 0C31.3317 0 0 31.3317 0 70C0 108.668 31.3317 140 70 140C108.668 140 140 108.668 140 70C140 31.3317 108.668 0 70 0ZM59.1971 94.8029C58.3894 95.6106 57.2452 96.2837 56.2356 96.2837C55.226 96.2837 54.0817 95.5769 53.2404 94.7692L34.3942 75.9231L40.3846 69.9327L56.2692 85.8173L98.2692 43.5144L104.159 49.6058L59.1971 94.8029Z"
+                  fill="#4AC156"
+                />
+              </svg>
+              <p
+                class="chakra-text css-0"
+              >
+                Hard Copy
+              </p>
+            </div>
+            <div
+              class="css-1c1kq07"
+            >
+              <svg
+                fill="none"
+                height="15px"
+                viewBox="0 0 140 140"
+                width="15px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M70 0C31.3317 0 0 31.3317 0 70C0 108.668 31.3317 140 70 140C108.668 140 140 108.668 140 70C140 31.3317 108.668 0 70 0ZM59.1971 94.8029C58.3894 95.6106 57.2452 96.2837 56.2356 96.2837C55.226 96.2837 54.0817 95.5769 53.2404 94.7692L34.3942 75.9231L40.3846 69.9327L56.2692 85.8173L98.2692 43.5144L104.159 49.6058L59.1971 94.8029Z"
+                  fill="#4AC156"
+                />
+              </svg>
+              <p
+                class="chakra-text css-0"
+              >
+                E - Book
+              </p>
+            </div>
+            <div
+              class="css-1c1kq07"
+            >
+              <svg
+                fill="none"
+                height="15px"
+                viewBox="0 0 140 140"
+                width="15px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M70 0C31.3317 0 0 31.3317 0 70C0 108.668 31.3317 140 70 140C108.668 140 140 108.668 140 70C140 31.3317 108.668 0 70 0ZM59.1971 94.8029C58.3894 95.6106 57.2452 96.2837 56.2356 96.2837C55.226 96.2837 54.0817 95.5769 53.2404 94.7692L34.3942 75.9231L40.3846 69.9327L56.2692 85.8173L98.2692 43.5144L104.159 49.6058L59.1971 94.8029Z"
+                  fill="#4AC156"
+                />
+              </svg>
+              <p
+                class="chakra-text css-0"
+              >
+                Audio book
+              </p>
+            </div>
+          </div>
+          <div
+            class="css-me0tyz"
+          >
+            <p
+              class="chakra-text css-182kmv3"
+            >
+              Status
+            </p>
+            <div
+              class="css-1rb83ml"
+            >
+              <p
+                class="chakra-text css-1619v3u"
+              >
+                In-Shelf
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="chakra-button css-6vsr6c"
+          disabled=""
+          type="button"
+        >
+          BORROW
+        </button>
+      </div>
+      <div
+        class="css-9wnjo"
+      >
+        <p
+          class="chakra-text css-14m0qtd"
+        >
+          About
+           
+          <span
+            class="chakra-text css-ohxvsz"
+          >
+            Author
+          </span>
+        </p>
+        <p
+          class="chakra-text css-1uze92q"
+        >
+          Steve Krug
+        </p>
+        <p
+          class="chakra-text css-13pzcpe"
+        >
+          description will update later
+        </p>
+        <img
+          alt="Preview Author"
+          data-nimg="1"
+          decoding="async"
+          fetchpriority="high"
+          height="100"
+          src="/_next/image?url=%2Fimg.jpg&w=256&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=96&q=75 1x, /_next/image?url=%2Fimg.jpg&w=256&q=75 2x"
+          style="color: transparent; position: absolute; right: 30%; top: 10%;"
+          width="88"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

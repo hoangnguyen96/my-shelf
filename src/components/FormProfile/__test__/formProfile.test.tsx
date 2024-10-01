@@ -1,5 +1,5 @@
 import "@testing-library/jest-dom";
-import { fireEvent, getByTestId, render } from "@testing-library/react";
+import { fireEvent, render, waitFor } from "@testing-library/react";
 import FormProfile from "..";
 
 describe("Form Profile", () => {
@@ -29,6 +29,63 @@ describe("Form Profile", () => {
     expect(render(<FormProfile {...props} />)).toMatchSnapshot();
   });
 
+  it("Should display validation error when data is empty", async () => {
+    jest.mock("react-hook-form", () => ({
+      ...jest.requireActual("react-hook-form"),
+      Controller: () => <></>,
+      useForm: () => ({
+        control: () => ({}),
+        handleSubmit: () => jest.fn(),
+        formState: {
+          errors: {
+            username: {
+              type: "required",
+              message: "Email is required",
+            },
+            email: {
+              type: "required",
+              message: "Email is required",
+            },
+            phone: {
+              type: "required",
+              message: "Password is required",
+            },
+          },
+          isValid: false,
+          dirtyFields: {},
+          isSubmitting: false,
+        },
+        clearErrors: jest.fn(),
+        reset: jest.fn(),
+      }),
+    }));
+    const { getByPlaceholderText, getAllByText, getByTestId } = render(
+      <FormProfile {...props} />
+    );
+
+    const editButton = getByTestId("click-un-read-only");
+    fireEvent.click(editButton);
+
+    fireEvent.change(getByPlaceholderText("Full name"), {
+      target: { value: "" },
+    });
+    fireEvent.blur(getByPlaceholderText("Full name"));
+
+    fireEvent.change(getByPlaceholderText("Email..."), {
+      target: { value: "" },
+    });
+    fireEvent.blur(getByPlaceholderText("Email..."));
+
+    fireEvent.change(getByPlaceholderText("Phone"), {
+      target: { value: "" },
+    });
+    fireEvent.blur(getByPlaceholderText("Phone"));
+
+    await waitFor(() => {
+      expect(getAllByText("This field is required.")[0]).toBeInTheDocument();
+    });
+  });
+
   it("should call onUpdate with updated data when form is submitted", async () => {
     const { getByRole, getByPlaceholderText, getByTestId } = render(
       <FormProfile {...props} />
@@ -55,7 +112,16 @@ describe("Form Profile", () => {
     // Click the submit button to submit the form
     const submitButton = getByRole("button", { name: /update profile/i });
     fireEvent.click(submitButton);
+    await new Promise((resolve) => setTimeout(resolve, 0));
 
+    // Check that onUpdate was called with the expected data
+    expect(mockOnUpdate).toHaveBeenCalledWith(props.user.id, {
+      username: "Jane Doe",
+      email: "jane.doe@example.com",
+      phone: "0987654321",
+      userId: "3733403",
+      bio: "Junior Developer",
+    });
     expect(submitButton).toBeDisabled();
   });
 });

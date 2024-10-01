@@ -69,4 +69,17 @@ export const DATA_USER = [
     userId: "8857134",
     id: "2",
   },
+  {
+    username: "hum",
+    email: "hum@gmail.com",
+    password: "$2a$10$Mt6ruwOzt3nzX1.HpSt.OOzut.teXmLE74WclmkP.Nn.gzVQrlqri",
+    isAdmin: false,
+    phone: "",
+    bio: "",
+    avatar: "https://i.ibb.co/88X1WfZ/avatar-default.png",
+    favorites: [],
+    shelfBooks: [],
+    userId: "8857864",
+    id: "3",
+  },
 ];

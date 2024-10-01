@@ -9,9 +9,12 @@ import { memo } from "react";
 const HeadingFavorites = () => {
   const pathname = usePathname();
 
-  const textMyShelf = pathname === ROUTES.MY_BOOK_SHELF ? "underline" : "none";
-  const textFavorite =
-    pathname === ROUTES.MY_BOOK_SHELF_FAVORITES ? "underline" : "none";
+  const textMyShelf = pathname?.includes(ROUTES.MY_BOOK_SHELF)
+    ? "underline"
+    : "none";
+  const textFavorite = pathname?.includes(ROUTES.MY_BOOK_SHELF_FAVORITES)
+    ? "underline"
+    : "none";
 
   return (
     <Flex gap="50px">

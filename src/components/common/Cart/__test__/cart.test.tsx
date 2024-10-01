@@ -18,4 +18,20 @@ describe("Cart", () => {
       )
     ).toMatchSnapshot();
   });
+
+  it("Should render correctly snapshot with empty image url", () => {
+    expect(
+      render(
+        <Cart
+          title="Don't Make Me Think"
+          author="Steve Krug"
+          imageUrl=""
+          publicationYear={2000}
+          rating={4.5}
+          isFavorite={true}
+          id={""}
+        />
+      )
+    ).toMatchSnapshot();
+  });
 });

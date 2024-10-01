@@ -67,13 +67,6 @@ export const dividePaginationBooks = (list: BookType[]) => {
   }, []);
 };
 
-export const getTwelveItemData = (list: BookType[] | undefined): BookType[] => {
-  if (!Array.isArray(list)) {
-    return [];
-  }
-  return list.slice(0, 12);
-};
-
 export const getFirstPath = (value: string) => {
   if (!value) {
     return "";

@@ -2,9 +2,9 @@ import "@testing-library/jest-dom";
 import { fireEvent, render, waitFor } from "@testing-library/react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import { logout } from "@app/actions/auth";
-import MenuProfile from "..";
 import { ROUTES } from "@app/constants";
+import { logout } from "@app/features/auth/actions";
+import MenuProfile from "..";
 
 jest.mock("next-auth/react", () => ({
   useSession: jest.fn(),

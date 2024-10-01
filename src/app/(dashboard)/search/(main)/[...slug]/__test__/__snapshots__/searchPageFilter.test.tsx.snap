@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Search Page Params Should handle fetch data failed 1`] = `<DocumentFragment />`;
-
-exports[`Search Page Params Should render correctly snapshot 1`] = `<DocumentFragment />`;
-
-exports[`Search Page Params Should render correctly snapshot when have shelfBook 1`] = `<DocumentFragment />`;
