@@ -48,13 +48,16 @@ export const Register = () => {
 
       router.push(ROUTES.HOME);
     } catch (error) {
-      toast({
-        title: "Register Failed!",
-        description: MESSAGES.CREATE_FAILED,
-        status: "error",
-        duration: 9000,
-        isClosable: true,
-      });
+      if (error instanceof Error) {
+        return toast({
+          title: "Register Failed!",
+          description: error.message,
+          status: "error",
+          duration: 9000,
+          isClosable: true,
+        });
+      }
+      return MESSAGES.RESPONSE_ERROR;
     }
   }, []);
 

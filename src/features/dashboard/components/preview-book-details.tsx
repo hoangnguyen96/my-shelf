@@ -94,9 +94,12 @@ export const PreviewBookDetails = memo(
             <Flex flexDir="column" w="100%" maxW={503}>
               <Text size="xxxl">{title}</Text>
               <Text my="10px">
-                By {author}, <Text as="span">{publicationYear}</Text>
+                By {author},{" "}
+                <Text as="span" color="colorDescription">
+                  {publicationYear}
+                </Text>
               </Text>
-              <Text color="dark.60">{edition} edition</Text>
+              <Text color="colorDescription">{edition} edition</Text>
 
               <Flex my="30px" alignItems="center" gap="19px">
                 <Flex gap="10px" alignItems="center">
@@ -162,7 +165,7 @@ export const PreviewBookDetails = memo(
               borderRadius="10px"
               pos="relative"
             >
-              <Text size="xl" fontWeight={600} color="brand.90">
+              <Text size="xl" fontWeight={600} color="colorButton">
                 About{" "}
                 <Text as="span" size="xl" fontWeight={600} color="dark.90">
                   Author

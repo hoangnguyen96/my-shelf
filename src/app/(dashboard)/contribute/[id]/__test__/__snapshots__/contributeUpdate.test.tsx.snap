@@ -80,6 +80,7 @@ exports[`Contribute Update Should render correctly snapshot 1`] = `
               class="chakra-select__wrapper css-42b2qy"
             >
               <select
+                aria-label="select-category"
                 class="chakra-select css-g3rz38"
                 data-testid="contribute-category"
                 id="field-:r3:"

@@ -123,8 +123,6 @@ const TableItem = ({
             data-testid="redirect-preview"
             size="sm"
             variant="outline"
-            color="colorButton"
-            borderColor="colorButton"
             text="Preview"
             onClick={handleRedirectPreview}
           />
@@ -133,8 +131,6 @@ const TableItem = ({
               data-testid="delete-book"
               size="sm"
               variant="outline"
-              color="colorButton"
-              borderColor="colorButton"
               text="Delete"
               onClick={handleDeleteBook}
             />

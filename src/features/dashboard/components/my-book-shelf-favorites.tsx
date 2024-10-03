@@ -3,6 +3,7 @@
 import { memo } from "react";
 import { Flex } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
+import { MESSAGES } from "@app/constants";
 import { BookType, User } from "@app/models";
 import { updateUserById } from "../actions";
 import { TableItem } from "@app/components";
@@ -32,7 +33,10 @@ export const MyBookShelfFavorites = memo(
 
         return router.refresh();
       } catch (error) {
-        console.error("Failed to favorite book:", error);
+        if (error instanceof Error) {
+          return error.message;
+        }
+        return MESSAGES.RESPONSE_ERROR;
       }
     };
 

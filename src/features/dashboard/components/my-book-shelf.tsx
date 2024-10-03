@@ -6,6 +6,7 @@ import { Flex } from "@chakra-ui/react";
 import { BookType, User } from "@app/models";
 import { getBookById, updateBookById, updateUserById } from "../actions";
 import { CartBorrow } from "@app/components";
+import { MESSAGES } from "@app/constants";
 
 interface MyBookShelfProps {
   user: User;
@@ -33,7 +34,10 @@ export const MyBookShelf = memo(({ list, user }: MyBookShelfProps) => {
       });
       return router.refresh();
     } catch (error) {
-      console.error("Failed to return book:", error);
+      if (error instanceof Error) {
+        return error.message;
+      }
+      return MESSAGES.RESPONSE_ERROR;
     }
   };
 

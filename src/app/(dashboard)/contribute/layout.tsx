@@ -63,7 +63,7 @@ const ContributeLayout = async ({
             Your Previous Contributions
           </Text>
           <Link href={ROUTES.CONTRIBUTE_LIST}>
-            <Text as="span" ml="9px" color="dark.60">
+            <Text as="span" ml="9px" color="colorDescription">
               Show All
             </Text>
           </Link>

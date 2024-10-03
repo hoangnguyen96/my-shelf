@@ -47,7 +47,10 @@ export const ProfileUpdate = memo(({ imageUrl, user }: ProfileUpdateProps) => {
         duration: 9000,
         isClosable: true,
       });
-      console.error("Failed to update user!", error);
+      if (error instanceof Error) {
+        return error.message;
+      }
+      return MESSAGES.RESPONSE_ERROR;
     }
   };
 

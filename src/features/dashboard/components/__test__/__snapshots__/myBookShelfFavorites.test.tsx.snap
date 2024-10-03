@@ -119,7 +119,7 @@ exports[`My Book Shelf Favorites Should render correctly snapshot 1`] = `
           </svg>
         </button>
         <button
-          class="chakra-button css-1ch7te7"
+          class="chakra-button css-4xx2wk"
           data-testid="redirect-preview"
           type="button"
         >
@@ -233,7 +233,7 @@ exports[`My Book Shelf Favorites Should render correctly snapshot 1`] = `
           </svg>
         </button>
         <button
-          class="chakra-button css-1ch7te7"
+          class="chakra-button css-4xx2wk"
           data-testid="redirect-preview"
           type="button"
         >
@@ -347,7 +347,7 @@ exports[`My Book Shelf Favorites Should render correctly snapshot 1`] = `
           </svg>
         </button>
         <button
-          class="chakra-button css-1ch7te7"
+          class="chakra-button css-4xx2wk"
           data-testid="redirect-preview"
           type="button"
         >

@@ -7,6 +7,7 @@ import { BookType, User } from "@app/models";
 import { updateUserById } from "../actions";
 import { Pagination } from "@app/components/common";
 import { TableItem } from "@app/components";
+import { MESSAGES } from "@app/constants";
 
 interface SearchListProps {
   user: User;
@@ -37,7 +38,10 @@ export const SearchList = memo(
 
         return router.refresh();
       } catch (error) {
-        console.error("Failed to update favorite book:", error);
+        if (error instanceof Error) {
+          return error.message;
+        }
+        return MESSAGES.RESPONSE_ERROR;
       }
     };
 

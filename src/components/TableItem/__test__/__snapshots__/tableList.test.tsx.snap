@@ -107,7 +107,7 @@ exports[`TableItem Should render correctly snapshot 1`] = `
             </svg>
           </button>
           <button
-            class="chakra-button css-1ch7te7"
+            class="chakra-button css-4xx2wk"
             data-testid="redirect-preview"
             type="button"
           >
@@ -220,7 +220,7 @@ exports[`TableItem Should render correctly snapshot 1`] = `
           </svg>
         </button>
         <button
-          class="chakra-button css-1ch7te7"
+          class="chakra-button css-4xx2wk"
           data-testid="redirect-preview"
           type="button"
         >
@@ -384,7 +384,7 @@ exports[`TableItem Should render correctly snapshot when imageUrl is empty 1`] =
             </svg>
           </button>
           <button
-            class="chakra-button css-1ch7te7"
+            class="chakra-button css-4xx2wk"
             data-testid="redirect-preview"
             type="button"
           >
@@ -491,7 +491,7 @@ exports[`TableItem Should render correctly snapshot when imageUrl is empty 1`] =
           </svg>
         </button>
         <button
-          class="chakra-button css-1ch7te7"
+          class="chakra-button css-4xx2wk"
           data-testid="redirect-preview"
           type="button"
         >
@@ -634,14 +634,14 @@ exports[`TableItem Should render correctly snapshot when is contribute 1`] = `
           class="css-a71o49"
         >
           <button
-            class="chakra-button css-1ch7te7"
+            class="chakra-button css-4xx2wk"
             data-testid="redirect-preview"
             type="button"
           >
             Preview
           </button>
           <button
-            class="chakra-button css-1ch7te7"
+            class="chakra-button css-4xx2wk"
             data-testid="delete-book"
             type="button"
           >
@@ -727,14 +727,14 @@ exports[`TableItem Should render correctly snapshot when is contribute 1`] = `
         class="css-a71o49"
       >
         <button
-          class="chakra-button css-1ch7te7"
+          class="chakra-button css-4xx2wk"
           data-testid="redirect-preview"
           type="button"
         >
           Preview
         </button>
         <button
-          class="chakra-button css-1ch7te7"
+          class="chakra-button css-4xx2wk"
           data-testid="delete-book"
           type="button"
         >

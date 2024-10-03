@@ -143,12 +143,13 @@ const FormContribute = ({
         setImagePreview(null);
         return;
       } else {
-        console.error("Upload failed:", data.error.message);
-        return;
+        throw new Error("Error add book!");
       }
     } catch (error) {
-      console.error("Error add book!", error);
-      return;
+      if (error instanceof Error) {
+        return error.message;
+      }
+      return MESSAGES.RESPONSE_ERROR;
     }
   };
 
@@ -310,6 +311,7 @@ const FormContribute = ({
                   h="50px"
                   borderColor="borderDefault"
                   bgColor="white"
+                  aria-label="select-category"
                   _focusVisible={{ borderColor: "borderDefault" }}
                   onChange={(e) => {
                     onChange(e);

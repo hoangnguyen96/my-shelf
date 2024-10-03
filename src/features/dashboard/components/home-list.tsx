@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { BookType, User } from "@app/models";
 import { Cart } from "@app/components/common";
 import { updateUserById } from "../actions";
+import { MESSAGES } from "@app/constants";
 
 interface ListCartProps {
   user: User;
@@ -31,7 +32,10 @@ export const ListCart = memo(({ list, user }: ListCartProps) => {
 
       return router.refresh();
     } catch (error) {
-      console.error("Failed to fetch data:", error);
+      if (error instanceof Error) {
+        return error.message;
+      }
+      return MESSAGES.RESPONSE_ERROR;
     }
   };
 
