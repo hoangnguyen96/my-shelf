@@ -88,7 +88,8 @@ export const PreviewBookDetails = memo(
                 width={210}
                 height={278}
                 style={{ margin: "0 auto" }}
-                priority
+                priority={true}
+                fetchPriority="high"
               />
             </Box>
             <Flex flexDir="column" w="100%" maxW={503}>
@@ -183,7 +184,8 @@ export const PreviewBookDetails = memo(
                 width={88}
                 height={100}
                 style={{ position: "absolute", right: "30%", top: "10%" }}
-                priority
+                priority={true}
+                fetchPriority="high"
               />
             </Box>
           </Flex>

@@ -4,11 +4,13 @@ import { Flex, Text } from "@chakra-ui/react";
 import { ROUTES } from "@app/constants";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ListTopContribute } from "@app/features/dashboard/components";
 import {
+  ListContribute,
   SkeletonFormContribute,
   SkeletonListTopContribute,
 } from "@app/components";
+import { getTopThreeBook, getUserById } from "@app/features/dashboard/actions";
+import { BookType, User } from "@app/models";
 
 const ContributeLayout = async ({
   children,
@@ -16,6 +18,8 @@ const ContributeLayout = async ({
   children: React.ReactNode;
 }>) => {
   const session = await auth();
+  const dataUserById = (await getUserById(session?.user?.id as string)) as User;
+  const dataBooks = (await getTopThreeBook()) as BookType[];
 
   if (!session?.user?.isAdmin) {
     return notFound();
@@ -69,7 +73,7 @@ const ContributeLayout = async ({
           </Link>
         </Flex>
         <Suspense fallback={<SkeletonListTopContribute />}>
-          <ListTopContribute />
+          <ListContribute list={dataBooks} user={dataUserById} />
         </Suspense>
       </Flex>
     </Flex>

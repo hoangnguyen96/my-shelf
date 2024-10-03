@@ -19,7 +19,7 @@ export const getAllBook = async () => {
 export const getTopThreeBook = async () => {
   try {
     const data = await api.get<BookType[]>(API_ROUTES.BOOKS, {
-      next: { revalidate: 3600 },
+      next: { revalidate: 60 },
     });
     const result = getThreeTopBook(data);
 

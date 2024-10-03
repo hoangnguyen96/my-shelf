@@ -29,7 +29,8 @@ const Avatar = ({
         borderRadius: "50%",
         border: border,
       }}
-      priority
+      priority={true}
+      fetchPriority="high"
       {...rest}
     />
   );

@@ -38,7 +38,7 @@ const Pagination = ({
       icon={<ChevronLeftIcon />}
       minW="auto"
       aria-label="prev-pagination"
-      _focusVisible="none"
+      _focusVisible={{ outline: "none" }}
       _hover={{ bgColor: "transparent" }}
     />
 
@@ -70,7 +70,7 @@ const Pagination = ({
       isDisabled={pagination === totalPages - 1}
       icon={<ChevronRightIcon />}
       aria-label="next-pagination"
-      _focusVisible="none"
+      _focusVisible={{ outline: "none" }}
       _hover={{ bgColor: "transparent" }}
     />
   </Flex>

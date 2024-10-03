@@ -76,10 +76,11 @@ const TableItem = ({
         <Flex gap="47px" alignItems="center" maxW={329} w="100%">
           <Image
             src={imageUrl || ""}
-            alt="Don't make me think"
+            alt={title || "Table item book!"}
             width={75}
             height={100}
-            priority
+            priority={true}
+            fetchPriority="high"
           />
           <Flex flexDir="column">
             <Text size="xl" mb="20px">

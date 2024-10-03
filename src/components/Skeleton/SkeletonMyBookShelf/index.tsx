@@ -1,3 +1,5 @@
+"use client";
+
 import { Flex, Skeleton } from "@chakra-ui/react";
 
 const SkeletonMyBookShelf = () => (

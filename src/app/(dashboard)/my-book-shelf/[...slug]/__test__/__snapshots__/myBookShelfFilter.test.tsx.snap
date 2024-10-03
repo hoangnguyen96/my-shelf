@@ -12,7 +12,7 @@ exports[`My Book Shelf All Search Should render correctly snapshot 1`] = `
         class="css-n736ek"
       >
         <img
-          alt="Don't make me think"
+          alt="Don't Make Me Think"
           data-nimg="1"
           decoding="async"
           fetchpriority="high"

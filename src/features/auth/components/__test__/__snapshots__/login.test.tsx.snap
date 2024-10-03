@@ -113,7 +113,7 @@ exports[`Login Should render correctly snapshot 1`] = `
           >
             <button
               aria-label="Show password"
-              class="chakra-button css-1pb9nfo"
+              class="chakra-button css-1rwczf8"
               type="button"
             >
               <svg

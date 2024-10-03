@@ -129,6 +129,7 @@ exports[`Form Contribute Should render correctly snapshot 1`] = `
               >
                 <img
                   alt="Upload Image"
+                  fetchpriority="high"
                   height="100"
                   src="https://i.ibb.co/QbQgVtG/book1.png"
                   style="margin: 0px auto;"
@@ -286,6 +287,7 @@ exports[`Form Contribute Should render correctly snapshot 1`] = `
             >
               <img
                 alt="Upload Image"
+                fetchpriority="high"
                 height="100"
                 src="https://i.ibb.co/QbQgVtG/book1.png"
                 style="margin: 0px auto;"

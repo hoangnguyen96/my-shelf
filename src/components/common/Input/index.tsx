@@ -68,7 +68,7 @@ const InputBase = forwardRef<HTMLDivElement, InputBaseProps>(
               onClick={handleToggleShowPassword}
               icon={iconShowPassword()}
               aria-label={textShowPassword}
-              _focusVisible="none"
+              _focusVisible={{ outline: "none" }}
               _hover={{ bgColor: "transparent" }}
             />
           </InputRightElement>

@@ -12,7 +12,8 @@ exports[`TableItem Should render correctly snapshot 1`] = `
           class="css-1jxcnq9"
         >
           <img
-            alt="Don't make me think"
+            alt="Test"
+            fetchpriority="high"
             height="100"
             src="Test"
             width="75"
@@ -125,7 +126,8 @@ exports[`TableItem Should render correctly snapshot 1`] = `
         class="css-1jxcnq9"
       >
         <img
-          alt="Don't make me think"
+          alt="Test"
+          fetchpriority="high"
           height="100"
           src="Test"
           width="75"
@@ -295,7 +297,8 @@ exports[`TableItem Should render correctly snapshot when imageUrl is empty 1`] =
           class="css-1jxcnq9"
         >
           <img
-            alt="Don't make me think"
+            alt="Table item book!"
+            fetchpriority="high"
             height="100"
             src=""
             width="75"
@@ -402,7 +405,8 @@ exports[`TableItem Should render correctly snapshot when imageUrl is empty 1`] =
         class="css-1jxcnq9"
       >
         <img
-          alt="Don't make me think"
+          alt="Table item book!"
+          fetchpriority="high"
           height="100"
           src=""
           width="75"
@@ -566,7 +570,8 @@ exports[`TableItem Should render correctly snapshot when is contribute 1`] = `
           class="css-1jxcnq9"
         >
           <img
-            alt="Don't make me think"
+            alt="Test"
+            fetchpriority="high"
             height="100"
             src=""
             width="75"
@@ -659,7 +664,8 @@ exports[`TableItem Should render correctly snapshot when is contribute 1`] = `
         class="css-1jxcnq9"
       >
         <img
-          alt="Don't make me think"
+          alt="Test"
+          fetchpriority="high"
           height="100"
           src=""
           width="75"

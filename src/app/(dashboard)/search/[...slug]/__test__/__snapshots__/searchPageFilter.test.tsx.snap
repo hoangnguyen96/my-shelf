@@ -12,7 +12,7 @@ exports[`Search Page Params Should handle filter empty of search books 1`] = `
         class="css-1jxcnq9"
       >
         <img
-          alt="Don't make me think"
+          alt="Don't Make Me Think"
           data-nimg="1"
           decoding="async"
           fetchpriority="high"
@@ -126,7 +126,7 @@ exports[`Search Page Params Should handle filter empty of search books 1`] = `
         class="css-1jxcnq9"
       >
         <img
-          alt="Don't make me think"
+          alt="Rich Dad Poor Dad"
           data-nimg="1"
           decoding="async"
           fetchpriority="high"
@@ -240,7 +240,7 @@ exports[`Search Page Params Should handle filter empty of search books 1`] = `
         class="css-1jxcnq9"
       >
         <img
-          alt="Don't make me think"
+          alt="The Design of Everyday Things"
           data-nimg="1"
           decoding="async"
           fetchpriority="high"
@@ -353,7 +353,7 @@ exports[`Search Page Params Should handle filter empty of search books 1`] = `
   >
     <button
       aria-label="prev-pagination"
-      class="chakra-button css-7baeyj"
+      class="chakra-button css-11lblke"
       data-testid="prev-pagination"
       disabled=""
       type="button"
@@ -380,7 +380,7 @@ exports[`Search Page Params Should handle filter empty of search books 1`] = `
     </button>
     <button
       aria-label="next-pagination"
-      class="chakra-button css-7baeyj"
+      class="chakra-button css-11lblke"
       data-testid="next-pagination"
       disabled=""
       type="button"
@@ -413,7 +413,7 @@ exports[`Search Page Params Should render correctly snapshot 1`] = `
         class="css-1jxcnq9"
       >
         <img
-          alt="Don't make me think"
+          alt="Don't Make Me Think"
           data-nimg="1"
           decoding="async"
           fetchpriority="high"
@@ -527,7 +527,7 @@ exports[`Search Page Params Should render correctly snapshot 1`] = `
         class="css-1jxcnq9"
       >
         <img
-          alt="Don't make me think"
+          alt="Rich Dad Poor Dad"
           data-nimg="1"
           decoding="async"
           fetchpriority="high"
@@ -641,7 +641,7 @@ exports[`Search Page Params Should render correctly snapshot 1`] = `
         class="css-1jxcnq9"
       >
         <img
-          alt="Don't make me think"
+          alt="The Design of Everyday Things"
           data-nimg="1"
           decoding="async"
           fetchpriority="high"
@@ -754,7 +754,7 @@ exports[`Search Page Params Should render correctly snapshot 1`] = `
   >
     <button
       aria-label="prev-pagination"
-      class="chakra-button css-7baeyj"
+      class="chakra-button css-11lblke"
       data-testid="prev-pagination"
       disabled=""
       type="button"
@@ -781,7 +781,7 @@ exports[`Search Page Params Should render correctly snapshot 1`] = `
     </button>
     <button
       aria-label="next-pagination"
-      class="chakra-button css-7baeyj"
+      class="chakra-button css-11lblke"
       data-testid="next-pagination"
       disabled=""
       type="button"

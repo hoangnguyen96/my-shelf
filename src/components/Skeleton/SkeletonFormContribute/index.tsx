@@ -1,3 +1,5 @@
+"use client";
+
 import { Skeleton } from "@chakra-ui/react";
 
 const SkeletonListFormContribute = () => (

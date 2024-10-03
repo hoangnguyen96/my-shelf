@@ -20,7 +20,7 @@ export const SearchList = memo(
     const [pagination, setPagination] = useState<number>(0);
     const router = useRouter();
 
-    const listPagination = useMemo(() => list[pagination], [pagination]);
+    const listPagination = list[pagination];
 
     const handleUpdateFavorites = async (id: string) => {
       try {

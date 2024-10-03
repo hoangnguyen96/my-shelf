@@ -12,7 +12,7 @@ exports[`My Book Shelf Favorites Should render correctly snapshot 1`] = `
         class="css-1jxcnq9"
       >
         <img
-          alt="Don't make me think"
+          alt="Don't Make Me Think"
           data-nimg="1"
           decoding="async"
           fetchpriority="high"
@@ -127,7 +127,7 @@ exports[`My Book Shelf Favorites Should render correctly snapshot 1`] = `
         class="css-1jxcnq9"
       >
         <img
-          alt="Don't make me think"
+          alt="Rich Dad Poor Dad"
           data-nimg="1"
           decoding="async"
           fetchpriority="high"
@@ -242,7 +242,7 @@ exports[`My Book Shelf Favorites Should render correctly snapshot 1`] = `
         class="css-1jxcnq9"
       >
         <img
-          alt="Don't make me think"
+          alt="The Design of Everyday Things"
           data-nimg="1"
           decoding="async"
           fetchpriority="high"

@@ -49,7 +49,8 @@ const Cart = ({
         alt="Don't make me think"
         width={130}
         height={172}
-        priority
+        priority={true}
+        fetchPriority="high"
       />
     </Link>
     <Text size="sm">{title}</Text>

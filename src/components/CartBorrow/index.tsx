@@ -44,10 +44,11 @@ const CartBorrow = ({
       <Flex flexDirection="column" gap="5px" w={123}>
         <Image
           src={imgUrl}
-          alt="Don't make me think"
+          alt={title || "Image Cart borrowed!"}
           width={123}
           height={170}
-          priority
+          priority={true}
+          fetchPriority="high"
         />
         <Text size="sm">{title}</Text>
         <Flex>
