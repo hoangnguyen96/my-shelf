@@ -51,7 +51,7 @@ exports[`HeadingForm Should render correctly snapshot 1`] = `
           Login
         </p>
         <p
-          class="chakra-text css-qxv1n8"
+          class="chakra-text css-1xibt3d"
         >
           Test Login
         </p>
@@ -105,7 +105,7 @@ exports[`HeadingForm Should render correctly snapshot 1`] = `
         Login
       </p>
       <p
-        class="chakra-text css-qxv1n8"
+        class="chakra-text css-1xibt3d"
       >
         Test Login
       </p>

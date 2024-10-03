@@ -9,7 +9,7 @@ exports[`Pagination Should render correctly snapshot 1`] = `
         class="css-9d3smw"
       >
         <button
-          aria-label=""
+          aria-label="prev-pagination"
           class="chakra-button css-7baeyj"
           data-testid="prev-pagination"
           type="button"
@@ -42,7 +42,7 @@ exports[`Pagination Should render correctly snapshot 1`] = `
           2
         </button>
         <button
-          aria-label=""
+          aria-label="next-pagination"
           class="chakra-button css-7baeyj"
           data-testid="next-pagination"
           disabled=""
@@ -68,7 +68,7 @@ exports[`Pagination Should render correctly snapshot 1`] = `
       class="css-9d3smw"
     >
       <button
-        aria-label=""
+        aria-label="prev-pagination"
         class="chakra-button css-7baeyj"
         data-testid="prev-pagination"
         type="button"
@@ -101,7 +101,7 @@ exports[`Pagination Should render correctly snapshot 1`] = `
         2
       </button>
       <button
-        aria-label=""
+        aria-label="next-pagination"
         class="chakra-button css-7baeyj"
         data-testid="next-pagination"
         disabled=""

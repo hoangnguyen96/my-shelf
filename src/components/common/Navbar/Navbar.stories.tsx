@@ -20,11 +20,11 @@ const meta: Meta<typeof Navbar> = {
 
 export default meta;
 
-const Template: StoryFn<typeof Navbar> = () => (
+const Template: StoryFn<typeof Navbar> = (args) => (
   <Box w={400}>
-    <Navbar />
+    <Navbar {...args} />
   </Box>
 );
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = { isAdmin: true };

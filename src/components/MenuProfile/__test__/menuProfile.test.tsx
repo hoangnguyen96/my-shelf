@@ -6,10 +6,6 @@ import { ROUTES } from "@app/constants";
 import { logout } from "@app/features/auth/actions";
 import MenuProfile from "..";
 
-jest.mock("next-auth/react", () => ({
-  useSession: jest.fn(),
-}));
-
 jest.mock("next/navigation", () => ({
   useRouter: jest.fn(),
 }));
@@ -19,48 +15,36 @@ jest.mock("@app/actions/auth", () => ({
 }));
 
 describe("MenuProfile", () => {
-  (useSession as jest.Mock).mockReturnValue({
-    data: {
-      user: {
-        isAdmin: true,
-        email: "admin@gmail.com",
-        id: "3733403",
-        name: "admin",
-        image: "https://i.ibb.co/RHMqQGr/man-1.png",
-      },
-      expires: "2024-12-31T23:59:59.999Z",
+  const propsSession = {
+    user: {
+      isAdmin: true,
+      email: "admin@gmail.com",
+      id: "3733403",
+      name: "admin",
+      image: "https://i.ibb.co/RHMqQGr/man-1.png",
     },
-    status: "authenticated",
-  });
+    expires: "2024-12-31T23:59:59.999Z",
+  };
 
   afterEach(() => {
     jest.clearAllMocks();
   });
 
   it("Should render correctly snapshot", () => {
-    expect(render(<MenuProfile />)).toMatchSnapshot();
+    expect(render(<MenuProfile session={propsSession} />)).toMatchSnapshot();
   });
 
   it("Should render correctly snapshot when data empty", () => {
-    (useSession as jest.Mock).mockReturnValue({
-      data: {},
-      status: "authenticated",
-    });
-
-    expect(render(<MenuProfile />)).toMatchSnapshot();
+    expect(render(<MenuProfile session={undefined} />)).toMatchSnapshot();
   });
 
   it("should call logout and redirect to login", async () => {
     const mockPush = jest.fn();
-    (useSession as jest.Mock).mockReturnValue({
-      data: { user: { name: "John Doe", email: "john.doe@example.com" } },
-    });
-
     (useRouter as jest.Mock).mockReturnValue({
       push: mockPush,
     });
 
-    const { getByText } = render(<MenuProfile />);
+    const { getByText } = render(<MenuProfile session={propsSession} />);
 
     const logoutButton = getByText("Logout");
     fireEvent.click(logoutButton);
@@ -73,16 +57,11 @@ describe("MenuProfile", () => {
 
   it("should redirect to profile", async () => {
     const mockPush = jest.fn();
-
-    (useSession as jest.Mock).mockReturnValue({
-      data: { user: { name: "John Doe", email: "john.doe@example.com" } },
-    });
-
     (useRouter as jest.Mock).mockReturnValue({
       push: mockPush,
     });
 
-    const { getByText } = render(<MenuProfile />);
+    const { getByText } = render(<MenuProfile session={propsSession} />);
 
     const butRedirect = getByText("Profile");
     fireEvent.click(butRedirect);
@@ -94,17 +73,11 @@ describe("MenuProfile", () => {
 
   it("should redirect to profile", async () => {
     const mockPush = jest.fn();
-
-    // Mock the session and router
-    (useSession as jest.Mock).mockReturnValue({
-      data: { user: { name: "", email: "john.doe@example.com" } },
-    });
-
     (useRouter as jest.Mock).mockReturnValue({
       push: mockPush,
     });
 
-    const { getByText } = render(<MenuProfile />);
+    const { getByText } = render(<MenuProfile session={propsSession} />);
 
     const butRedirect = getByText("Favorites");
     fireEvent.click(butRedirect);

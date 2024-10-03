@@ -54,7 +54,7 @@ exports[`RegisterPage Should render correctly snapshot 1`] = `
             Registration
           </p>
           <p
-            class="chakra-text css-qxv1n8"
+            class="chakra-text css-1xibt3d"
           >
             For Both Staff & Students
           </p>
@@ -295,7 +295,7 @@ exports[`RegisterPage Should render correctly snapshot 1`] = `
           Registration
         </p>
         <p
-          class="chakra-text css-qxv1n8"
+          class="chakra-text css-1xibt3d"
         >
           For Both Staff & Students
         </p>

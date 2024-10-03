@@ -4,13 +4,12 @@ import theme from "@app/themes";
 import { RouterContext } from "next/dist/shared/lib/router-context.shared-runtime";
 import { mockRouter, mockSession } from "@app/mocks/storybook";
 import { SessionProvider } from "next-auth/react";
-import { Logo, Navbar } from "@app/components/common";
-import { TopContent } from "@app/components";
-import { User } from "@app/models";
-import SearchPage from "./page";
+import { SearchList } from "@app/features/dashboard/components";
+import { DATA_BOOKS, DATA_USER } from "@app/mocks/data";
+import { MainLayout } from "@app/layouts";
 
-const meta: Meta<typeof SearchPage> = {
-  component: SearchPage,
+const meta: Meta<typeof SearchList> = {
+  component: SearchList,
   decorators: [
     (Story: StoryFn) => (
       <ChakraProvider theme={theme}>
@@ -26,51 +25,28 @@ const meta: Meta<typeof SearchPage> = {
 
 export default meta;
 
-const Template: StoryFn<typeof SearchPage> = () => (
-  <Flex bgColor="white" borderRadius="10px" height="100%">
-    <Flex flexDir="column" gap="100px" padding="38px 66px" alignItems="center">
-      <Logo
-        user={
-          {
-            isAdmin: true,
-            email: "admin@gmail.com",
-            id: "3733403",
-            name: "admin",
-            image: "https://i.ibb.co/RHMqQGr/man-1.png",
-          } as unknown as User
-        }
-      />
-      <Navbar />
-    </Flex>
-    <Box
-      w="100%"
-      h="100%"
-      bgColor="backgroundContent"
-      borderRightRadius="10px"
-      pos="relative"
-    >
-      <TopContent />
-      <Box p="70px 44px" height="70vh">
-        <Flex gap="90px" alignItems="center">
-          <Text size="xl" fontWeight={500} w="100%" maxW={352}>
-            Title
-          </Text>
-          <Flex gap="60px" w="100%" maxW={312}>
-            <Text size="xl" fontWeight={500}>
-              Ratings
-            </Text>
-            <Text size="xl" fontWeight={500}>
-              Category
-            </Text>
-          </Flex>
+const Template: StoryFn<typeof SearchList> = () => (
+  <MainLayout>
+    <Box p="70px 44px" height="70vh">
+      <Flex gap="10%" alignItems="center">
+        <Text size="xl" fontWeight={500} w="100%" maxW={345}>
+          Title
+        </Text>
+        <Flex gap="20%" w="100%" maxW={300}>
           <Text size="xl" fontWeight={500}>
-            Status
+            Ratings
+          </Text>
+          <Text size="xl" fontWeight={500}>
+            Category
           </Text>
         </Flex>
-        <SearchPage />
-      </Box>
+        <Text size="xl" fontWeight={500}>
+          Status
+        </Text>
+      </Flex>
+      <SearchList totalPages={1} list={[DATA_BOOKS]} user={DATA_USER[0]} />
     </Box>
-  </Flex>
+  </MainLayout>
 );
 
 export const Default = Template.bind({});

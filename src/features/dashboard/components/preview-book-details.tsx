@@ -12,7 +12,15 @@ import { useRouter } from "next/navigation";
 import { CheckIcon, StarFullIcon } from "@app/assets/icons";
 import { previewAuthor } from "@app/assets/images";
 import { Button } from "@app/components/common";
-import { ModalSuccessProcess, StatusBook } from "@app/components";
+import { StatusBook } from "@app/components";
+import dynamic from "next/dynamic";
+
+const ModalSuccessProcess = dynamic(
+  () => import("@app/components").then((mod) => mod.ModalSuccessProcess),
+  {
+    ssr: false,
+  }
+);
 
 interface PreviewBookDetailsProps {
   user: User;

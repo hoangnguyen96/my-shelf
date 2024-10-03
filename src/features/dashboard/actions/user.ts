@@ -30,9 +30,10 @@ export const getUserById = async (id: string) => {
 
 export const getUserByEmail = async (email: string) => {
   try {
-    const user = (await api.get(`${API_ROUTES.USER}?email=${email}`)) as User[];
+    const data = (await api.get(`${API_ROUTES.USER}`)) as User[];
+    const result = data.find((user) => user.email === email);
 
-    return user;
+    return result || {};
   } catch (error) {
     if (error instanceof Error) {
       return error.message;

@@ -33,7 +33,7 @@ export const ContributeList = memo(({ user, list }: ContributeListProps) => {
         <Text size="xl" fontWeight={500} w="100%" maxW={352}>
           Title
         </Text>
-        <Flex gap="10%" w="100%" maxW={312}>
+        <Flex gap="15%" w="100%" maxW={312}>
           <Text size="xl" fontWeight={500}>
             Ratings
           </Text>

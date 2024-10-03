@@ -23,7 +23,20 @@ const meta: Meta<typeof MenuProfile> = {
 
 export default meta;
 
-const Template: StoryFn<typeof MenuProfile> = (args) => <MenuProfile />;
+const Template: StoryFn<typeof MenuProfile> = (args) => (
+  <MenuProfile
+    session={{
+      user: {
+        isAdmin: true,
+        email: "admin@gmail.com",
+        id: "3733403",
+        name: "admin",
+        image: "https://i.ibb.co/RHMqQGr/man-1.png",
+      },
+      expires: "2024-12-31T23:59:59.999Z",
+    }}
+  />
+);
 
 export const Default = Template.bind({});
 Default.args = {};

@@ -1,5 +1,5 @@
 import { Meta, StoryFn } from "@storybook/react";
-import { ChakraProvider } from "@chakra-ui/react";
+import { Box, ChakraProvider } from "@chakra-ui/react";
 import theme from "@app/themes";
 import CartBorrow from ".";
 import { RouterContext } from "next/dist/shared/lib/router-context.shared-runtime";

@@ -87,7 +87,7 @@ const FormProfile = ({ user, onUpdate }: FormProfileProps) => {
         bgColor="white"
         boxShadow="0 0 5px 1px rgb(0 0 0 / 10%)"
         icon={<EditProfileIcon />}
-        aria-label={""}
+        aria-label="edit-profile"
         onClick={handleUnReadOnly}
       />
       <Flex

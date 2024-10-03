@@ -1,6 +1,7 @@
 "use client";
 
 import { memo } from "react";
+import { Session } from "next-auth";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import {
   Button,
@@ -12,14 +13,12 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
-import { useSession } from "next-auth/react";
 import { ROUTES } from "@app/constants";
 import { logout } from "@app/features/auth/actions";
 import { Avatar } from "../common";
 
-const MenuProfile = () => {
+const MenuProfile = ({ session }: { session?: Session }) => {
   const router = useRouter();
-  const { data: session } = useSession();
 
   const handleLogout = async () => {
     await logout();

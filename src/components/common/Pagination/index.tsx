@@ -37,7 +37,7 @@ const Pagination = ({
       isDisabled={pagination === 0}
       icon={<ChevronLeftIcon />}
       minW="auto"
-      aria-label={""}
+      aria-label="prev-pagination"
       _focusVisible="none"
       _hover={{ bgColor: "transparent" }}
     />
@@ -69,7 +69,7 @@ const Pagination = ({
       onClick={() => setPagination(pagination + 1)}
       isDisabled={pagination === totalPages - 1}
       icon={<ChevronRightIcon />}
-      aria-label={""}
+      aria-label="next-pagination"
       _focusVisible="none"
       _hover={{ bgColor: "transparent" }}
     />

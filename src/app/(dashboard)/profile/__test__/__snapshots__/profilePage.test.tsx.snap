@@ -58,7 +58,7 @@ exports[`Profile Page Should render correctly snapshot 1`] = `
               />
             </div>
             <button
-              class="chakra-button css-3bibt3"
+              class="chakra-button css-ycuso6"
               type="button"
             >
               Upload New photo
@@ -70,7 +70,7 @@ exports[`Profile Page Should render correctly snapshot 1`] = `
         class="css-1nf2hbv"
       >
         <button
-          aria-label=""
+          aria-label="edit-profile"
           class="chakra-button css-xr2den"
           data-testid="click-un-read-only"
           type="button"

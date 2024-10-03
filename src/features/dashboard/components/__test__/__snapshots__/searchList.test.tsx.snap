@@ -6,7 +6,7 @@ exports[`Search List Should render correctly snapshot 1`] = `
     class="css-2vc4m5"
   >
     <div
-      class="css-i20yi3"
+      class="css-uxib3o"
     >
       <div
         class="css-1jxcnq9"
@@ -61,7 +61,7 @@ exports[`Search List Should render correctly snapshot 1`] = `
         >
           4.5
           <span
-            class="chakra-text css-c5z1pm"
+            class="chakra-text css-1xibt3d"
           >
             /5
           </span>
@@ -82,7 +82,7 @@ exports[`Search List Should render correctly snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-1rb83ml"
+        class="css-a2s0kz"
       >
         <p
           class="chakra-text css-1619v3u"
@@ -111,7 +111,7 @@ exports[`Search List Should render correctly snapshot 1`] = `
           </svg>
         </button>
         <button
-          class="chakra-button css-4xx2wk"
+          class="chakra-button css-1ch7te7"
           data-testid="redirect-preview"
           type="button"
         >
@@ -120,7 +120,7 @@ exports[`Search List Should render correctly snapshot 1`] = `
       </div>
     </div>
     <div
-      class="css-i20yi3"
+      class="css-uxib3o"
     >
       <div
         class="css-1jxcnq9"
@@ -175,7 +175,7 @@ exports[`Search List Should render correctly snapshot 1`] = `
         >
           4.5
           <span
-            class="chakra-text css-c5z1pm"
+            class="chakra-text css-1xibt3d"
           >
             /5
           </span>
@@ -196,7 +196,7 @@ exports[`Search List Should render correctly snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-8ji7z5"
+        class="css-n0c263"
       >
         <p
           class="chakra-text css-1619v3u"
@@ -225,7 +225,7 @@ exports[`Search List Should render correctly snapshot 1`] = `
           </svg>
         </button>
         <button
-          class="chakra-button css-4xx2wk"
+          class="chakra-button css-1ch7te7"
           data-testid="redirect-preview"
           type="button"
         >
@@ -234,7 +234,7 @@ exports[`Search List Should render correctly snapshot 1`] = `
       </div>
     </div>
     <div
-      class="css-i20yi3"
+      class="css-uxib3o"
     >
       <div
         class="css-1jxcnq9"
@@ -289,7 +289,7 @@ exports[`Search List Should render correctly snapshot 1`] = `
         >
           4.5
           <span
-            class="chakra-text css-c5z1pm"
+            class="chakra-text css-1xibt3d"
           >
             /5
           </span>
@@ -310,7 +310,7 @@ exports[`Search List Should render correctly snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-8ji7z5"
+        class="css-n0c263"
       >
         <p
           class="chakra-text css-1619v3u"
@@ -339,7 +339,7 @@ exports[`Search List Should render correctly snapshot 1`] = `
           </svg>
         </button>
         <button
-          class="chakra-button css-4xx2wk"
+          class="chakra-button css-1ch7te7"
           data-testid="redirect-preview"
           type="button"
         >
@@ -352,7 +352,7 @@ exports[`Search List Should render correctly snapshot 1`] = `
     class="css-9d3smw"
   >
     <button
-      aria-label=""
+      aria-label="prev-pagination"
       class="chakra-button css-7baeyj"
       data-testid="prev-pagination"
       disabled=""
@@ -386,7 +386,7 @@ exports[`Search List Should render correctly snapshot 1`] = `
       2
     </button>
     <button
-      aria-label=""
+      aria-label="next-pagination"
       class="chakra-button css-7baeyj"
       data-testid="next-pagination"
       type="button"

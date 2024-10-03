@@ -6,8 +6,9 @@ import { ROUTES } from "@app/constants";
 import { SearchBar } from "../common";
 import MenuProfile from "../MenuProfile";
 import { memo } from "react";
+import { Session } from "next-auth";
 
-const TopContent = () => {
+const TopContent = ({ session }: { session?: Session }) => {
   const pathName = usePathname();
 
   const isNotSearch =
@@ -24,7 +25,7 @@ const TopContent = () => {
       p="32px 48px"
     >
       {!isNotSearch && <SearchBar />}
-      <MenuProfile />
+      <MenuProfile session={session} />
     </Flex>
   );
 };

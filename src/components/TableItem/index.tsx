@@ -6,10 +6,14 @@ import { Flex, Text, useDisclosure } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
 import { ROUTES } from "@app/constants";
 import { deleteBook } from "@app/features/dashboard/actions";
-import ModalDeleteBook from "../ModalDeleteBook";
 import { Button } from "../common";
 import HeartIcon from "../HeartIcon";
 import StatusBook from "../StatusBook";
+import dynamic from "next/dynamic";
+
+const ModalDeleteBook = dynamic(() => import("../ModalDeleteBook"), {
+  ssr: false,
+});
 
 interface TableItemProps {
   id: string;
@@ -64,8 +68,9 @@ const TableItem = ({
         borderRadius="10px"
         boxShadow="0 0 5px 0px rgb(0 0 0 / 10%)"
         py="12px"
-        px="24px"
-        gap="90px"
+        pl="24px"
+        pr="48px"
+        gap="10%"
         alignItems="center"
       >
         <Flex gap="47px" alignItems="center" maxW={329} w="100%">
@@ -90,7 +95,7 @@ const TableItem = ({
         <Flex gap="72px" alignItems="center" maxW={312} w="100%">
           <Text size="xl" w="60px">
             {rating}
-            <Text as="span" size="md" color="dark.70">
+            <Text as="span" size="md" color="colorDescription">
               /5
             </Text>
           </Text>
@@ -118,6 +123,8 @@ const TableItem = ({
             data-testid="redirect-preview"
             size="sm"
             variant="outline"
+            color="colorButton"
+            borderColor="colorButton"
             text="Preview"
             onClick={handleRedirectPreview}
           />
@@ -126,6 +133,8 @@ const TableItem = ({
               data-testid="delete-book"
               size="sm"
               variant="outline"
+              color="colorButton"
+              borderColor="colorButton"
               text="Delete"
               onClick={handleDeleteBook}
             />

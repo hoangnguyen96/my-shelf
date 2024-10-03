@@ -34,7 +34,7 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
         Title
       </p>
       <div
-        class="css-eetujx"
+        class="css-11e68w1"
       >
         <p
           class="chakra-text css-10rvbm3"
@@ -52,7 +52,7 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
       class="css-1pavchb"
     >
       <div
-        class="css-i20yi3"
+        class="css-uxib3o"
       >
         <div
           class="css-1jxcnq9"
@@ -107,7 +107,7 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
           >
             4.5
             <span
-              class="chakra-text css-c5z1pm"
+              class="chakra-text css-1xibt3d"
             >
               /5
             </span>
@@ -131,14 +131,14 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
           class="css-a71o49"
         >
           <button
-            class="chakra-button css-4xx2wk"
+            class="chakra-button css-1ch7te7"
             data-testid="redirect-preview"
             type="button"
           >
             Preview
           </button>
           <button
-            class="chakra-button css-4xx2wk"
+            class="chakra-button css-1ch7te7"
             data-testid="delete-book"
             type="button"
           >
@@ -147,7 +147,7 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-i20yi3"
+        class="css-uxib3o"
       >
         <div
           class="css-1jxcnq9"
@@ -202,7 +202,7 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
           >
             4.5
             <span
-              class="chakra-text css-c5z1pm"
+              class="chakra-text css-1xibt3d"
             >
               /5
             </span>
@@ -226,14 +226,14 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
           class="css-a71o49"
         >
           <button
-            class="chakra-button css-4xx2wk"
+            class="chakra-button css-1ch7te7"
             data-testid="redirect-preview"
             type="button"
           >
             Preview
           </button>
           <button
-            class="chakra-button css-4xx2wk"
+            class="chakra-button css-1ch7te7"
             data-testid="delete-book"
             type="button"
           >
@@ -242,7 +242,7 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-i20yi3"
+        class="css-uxib3o"
       >
         <div
           class="css-1jxcnq9"
@@ -297,7 +297,7 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
           >
             4.5
             <span
-              class="chakra-text css-c5z1pm"
+              class="chakra-text css-1xibt3d"
             >
               /5
             </span>
@@ -321,14 +321,14 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
           class="css-a71o49"
         >
           <button
-            class="chakra-button css-4xx2wk"
+            class="chakra-button css-1ch7te7"
             data-testid="redirect-preview"
             type="button"
           >
             Preview
           </button>
           <button
-            class="chakra-button css-4xx2wk"
+            class="chakra-button css-1ch7te7"
             data-testid="delete-book"
             type="button"
           >

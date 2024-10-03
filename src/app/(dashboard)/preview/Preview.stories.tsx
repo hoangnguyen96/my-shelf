@@ -1,16 +1,15 @@
 import { Meta, StoryFn } from "@storybook/react";
-import { Box, ChakraProvider, Flex } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import theme from "@app/themes";
 import { RouterContext } from "next/dist/shared/lib/router-context.shared-runtime";
 import { mockRouter, mockSession } from "@app/mocks/storybook";
 import { SessionProvider } from "next-auth/react";
-import { Logo, Navbar } from "@app/components/common";
-import { TopContent } from "@app/components";
-import PreviewBook from "./[id]/page";
-import { User } from "@app/models";
+import { PreviewBookDetails } from "@app/features/dashboard/components";
+import { DATA_BOOKS, DATA_USER } from "@app/mocks/data";
+import { MainLayout } from "@app/layouts";
 
-const meta: Meta<typeof PreviewBook> = {
-  component: PreviewBook,
+const meta: Meta<typeof PreviewBookDetails> = {
+  component: PreviewBookDetails,
   decorators: [
     (Story: StoryFn) => (
       <ChakraProvider theme={theme}>
@@ -26,37 +25,10 @@ const meta: Meta<typeof PreviewBook> = {
 
 export default meta;
 
-const Template: StoryFn<typeof PreviewBook> = () => (
-  <Flex bgColor="white" borderRadius="10px" height="100%">
-    <Flex flexDir="column" gap="100px" padding="38px 66px" alignItems="center">
-      <Logo
-        user={
-          {
-            isAdmin: true,
-            email: "admin@gmail.com",
-            id: "3733403",
-            name: "admin",
-            image: "https://i.ibb.co/RHMqQGr/man-1.png",
-          } as unknown as User
-        }
-      />
-      <Navbar />
-    </Flex>
-    <Box
-      w="100%"
-      h="100%"
-      bgColor="backgroundContent"
-      borderRightRadius="10px"
-      pos="relative"
-    >
-      <TopContent />
-      <PreviewBook
-        params={{
-          id: "1",
-        }}
-      />
-    </Box>
-  </Flex>
+const Template: StoryFn<typeof PreviewBookDetails> = () => (
+  <MainLayout>
+    <PreviewBookDetails book={DATA_BOOKS[0]} user={DATA_USER[0]} />
+  </MainLayout>
 );
 
 export const Default = Template.bind({});

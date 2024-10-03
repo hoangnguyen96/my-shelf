@@ -28,26 +28,21 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 
         if (parsedCredentials.success) {
           const { email, password } = parsedCredentials.data;
-          const user = await getUserByEmail(email);
+          const user = (await getUserByEmail(email)) as User;
 
-          const [foundUser, ...rest] = user as User[];
-
-          if (!foundUser || !foundUser.password) {
+          if (!user || !user.password) {
             throw new Error(MESSAGES.LOGIN_NOTFOUND);
           }
 
-          const passwordsMatch = await bcrypt.compare(
-            password,
-            foundUser.password
-          );
+          const passwordsMatch = await bcrypt.compare(password, user.password);
 
           if (passwordsMatch)
             return {
-              id: foundUser.userId,
-              name: foundUser.username,
-              isAdmin: foundUser.isAdmin,
-              image: foundUser.avatar,
-              email: foundUser.email,
+              id: user.userId,
+              name: user.username,
+              isAdmin: user.isAdmin,
+              image: user.avatar,
+              email: user.email,
             };
         }
 

@@ -5,12 +5,14 @@ import { RouterContext } from "next/dist/shared/lib/router-context.shared-runtim
 import { mockRouter, mockSession } from "@app/mocks/storybook";
 import { SessionProvider } from "next-auth/react";
 import { Logo, Navbar } from "@app/components/common";
-import { MenuProfile, TopContent } from "@app/components";
-import ProfilePage from "./page";
+import { MenuProfile } from "@app/components";
 import { User } from "@app/models";
+import { ProfileUpdate } from "@app/features/dashboard/components";
+import { DATA_USER } from "@app/mocks/data";
+import { MainLayout } from "@app/layouts";
 
-const meta: Meta<typeof ProfilePage> = {
-  component: ProfilePage,
+const meta: Meta<typeof ProfileUpdate> = {
+  component: ProfileUpdate,
   decorators: [
     (Story: StoryFn) => (
       <ChakraProvider theme={theme}>
@@ -26,35 +28,13 @@ const meta: Meta<typeof ProfilePage> = {
 
 export default meta;
 
-const Template: StoryFn<typeof ProfilePage> = () => (
-  <Flex bgColor="white" borderRadius="10px" height="100%">
-    <Flex flexDir="column" gap="100px" padding="38px 66px" alignItems="center">
-      <Logo
-        user={
-          {
-            isAdmin: true,
-            email: "admin@gmail.com",
-            id: "3733403",
-            name: "admin",
-            image: "https://i.ibb.co/RHMqQGr/man-1.png",
-          } as unknown as User
-        }
-      />
-      <Navbar />
-    </Flex>
-    <Box
-      w="100%"
-      h="100%"
-      bgColor="backgroundContent"
-      borderRightRadius="10px"
-      pos="relative"
-    >
-      <Flex alignItems="center" justifyContent="flex-end" p="32px 48px">
-        <MenuProfile />
-      </Flex>
-      <ProfilePage />
-    </Box>
-  </Flex>
+const Template: StoryFn<typeof ProfileUpdate> = () => (
+  <MainLayout isNotSearch={true} isProfile={true}>
+    <ProfileUpdate
+      imageUrl="https://i.ibb.co/RHMqQGr/man-1.png"
+      user={DATA_USER[0]}
+    />
+  </MainLayout>
 );
 
 export const Default = Template.bind({});

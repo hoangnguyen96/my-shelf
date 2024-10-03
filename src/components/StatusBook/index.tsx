@@ -9,9 +9,10 @@ interface StatusBookProps {
 
 const StatusBook = ({ status = false }: StatusBookProps) => (
   <Box
-    w={85}
+    w="100%"
+    maxW={85}
     height={26}
-    bgColor={status ? "green.100" : "gray.400"}
+    bgColor={status ? "green.600" : "gray.600"}
     borderRadius="5px"
   >
     <Text size="md" color="white" lineHeight="26px" textAlign="center">

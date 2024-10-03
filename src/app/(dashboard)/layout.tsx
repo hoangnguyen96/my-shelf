@@ -3,6 +3,7 @@ import { Box, Flex } from "@chakra-ui/react";
 import { Logo, Navbar } from "@app/components/common";
 import { TopContent } from "@app/components";
 import { User } from "@app/models";
+import { Session } from "next-auth";
 
 const DashboardLayout = async ({
   children,
@@ -29,7 +30,7 @@ const DashboardLayout = async ({
         borderRightRadius="10px"
         pos="relative"
       >
-        <TopContent />
+        <TopContent session={session as Session} />
         {children}
       </Box>
     </Flex>

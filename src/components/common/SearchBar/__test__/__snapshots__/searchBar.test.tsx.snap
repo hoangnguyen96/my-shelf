@@ -12,6 +12,7 @@ exports[`SearchBar Should render correctly snapshot 1`] = `
           class="chakra-select__wrapper css-18a3ys"
         >
           <select
+            aria-label="select-label"
             class="chakra-select css-oea4np"
           >
             <option
@@ -89,6 +90,7 @@ exports[`SearchBar Should render correctly snapshot 1`] = `
         class="chakra-select__wrapper css-18a3ys"
       >
         <select
+          aria-label="select-label"
           class="chakra-select css-oea4np"
         >
           <option

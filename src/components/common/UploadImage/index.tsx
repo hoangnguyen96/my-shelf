@@ -87,7 +87,7 @@ const ImageUploadForm = ({ image, user }: ImageUploadFormProps) => {
         border="none"
         boxShadow="unset"
         textDecor="underline"
-        color="buttonUpload"
+        color="colorDescription"
         textUnderlineOffset="2px"
         _hover={{ bgColor: "transparent" }}
         onClick={handleButtonClick}

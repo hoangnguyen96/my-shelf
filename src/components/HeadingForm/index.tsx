@@ -15,7 +15,7 @@ const HeadingForm = ({ title, description }: HeadingFormProps) => (
     <Text size="xl" mb="15px">
       {title}
     </Text>
-    <Text size="md" color="dark.60">
+    <Text size="md" color="colorDescription">
       {description}
     </Text>
   </Flex>

@@ -59,6 +59,7 @@ const SearchBar = ({ placeholder = "Search...", ...rest }: InputProps) => {
       maxW={540}
     >
       <Select
+        aria-label="select-label"
         placeholder="Select"
         border="none"
         value={searchType}

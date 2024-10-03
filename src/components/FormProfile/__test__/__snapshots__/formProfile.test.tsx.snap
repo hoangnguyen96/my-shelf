@@ -9,7 +9,7 @@ exports[`Form Profile Should render correctly snapshot 1`] = `
         class="css-1nf2hbv"
       >
         <button
-          aria-label=""
+          aria-label="edit-profile"
           class="chakra-button css-xr2den"
           data-testid="click-un-read-only"
           type="button"
@@ -197,7 +197,7 @@ exports[`Form Profile Should render correctly snapshot 1`] = `
       class="css-1nf2hbv"
     >
       <button
-        aria-label=""
+        aria-label="edit-profile"
         class="chakra-button css-xr2den"
         data-testid="click-un-read-only"
         type="button"

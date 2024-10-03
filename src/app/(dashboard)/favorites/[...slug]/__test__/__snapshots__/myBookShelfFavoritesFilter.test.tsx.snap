@@ -6,7 +6,7 @@ exports[`My Book Shelf Favorites Search Should render correctly snapshot 1`] = `
     class="css-1pavchb"
   >
     <div
-      class="css-i20yi3"
+      class="css-uxib3o"
     >
       <div
         class="css-1jxcnq9"
@@ -61,7 +61,7 @@ exports[`My Book Shelf Favorites Search Should render correctly snapshot 1`] = `
         >
           4.5
           <span
-            class="chakra-text css-c5z1pm"
+            class="chakra-text css-1xibt3d"
           >
             /5
           </span>
@@ -82,7 +82,7 @@ exports[`My Book Shelf Favorites Search Should render correctly snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-8ji7z5"
+        class="css-n0c263"
       >
         <p
           class="chakra-text css-1619v3u"
@@ -112,7 +112,7 @@ exports[`My Book Shelf Favorites Search Should render correctly snapshot 1`] = `
           </svg>
         </button>
         <button
-          class="chakra-button css-4xx2wk"
+          class="chakra-button css-1ch7te7"
           data-testid="redirect-preview"
           type="button"
         >

@@ -4,10 +4,11 @@ import theme from "@app/themes";
 import { RouterContext } from "next/dist/shared/lib/router-context.shared-runtime";
 import { mockRouter, mockSession } from "@app/mocks/storybook";
 import { SessionProvider } from "next-auth/react";
-import { Logo, Navbar } from "@app/components/common";
-import { HeadingFavorites, TopContent } from "@app/components";
-import MyBookShelf from "./page";
-import { User } from "@app/models";
+import { MyBookShelf } from "@app/features/dashboard/components";
+import { DATA_BOOKS, DATA_USER } from "@app/mocks/data";
+import { filterBooksOnShelf } from "@app/utils";
+import { MainLayout } from "@app/layouts";
+import Link from "next/link";
 
 const meta: Meta<typeof MyBookShelf> = {
   component: MyBookShelf,
@@ -26,30 +27,11 @@ const meta: Meta<typeof MyBookShelf> = {
 
 export default meta;
 
-const Template: StoryFn<typeof MyBookShelf> = () => (
-  <Flex bgColor="white" borderRadius="10px" height="100%">
-    <Flex flexDir="column" gap="100px" padding="38px 66px" alignItems="center">
-      <Logo
-        user={
-          {
-            isAdmin: true,
-            email: "admin@gmail.com",
-            id: "3733403",
-            name: "admin",
-            image: "https://i.ibb.co/RHMqQGr/man-1.png",
-          } as unknown as User
-        }
-      />
-      <Navbar />
-    </Flex>
-    <Box
-      w="100%"
-      h="100%"
-      bgColor="backgroundContent"
-      borderRightRadius="10px"
-      pos="relative"
-    >
-      <TopContent />
+const Template: StoryFn<typeof MyBookShelf> = () => {
+  const booksOnShelf = filterBooksOnShelf(DATA_BOOKS, DATA_USER[0].shelfBooks);
+
+  return (
+    <MainLayout>
       <Flex p="18px 44px" flexDir="column" height="80%">
         <Text size="xxl">
           Your{" "}
@@ -58,15 +40,23 @@ const Template: StoryFn<typeof MyBookShelf> = () => (
           </Text>
         </Text>
         <Flex flexDir="column" mt="37px" height="100%">
-          <HeadingFavorites />
+          <Flex gap="50px">
+            <Link href="#" style={{ textDecoration: "underline" }}>
+              All Books
+            </Link>
+
+            <Link href="#" style={{ textDecoration: "none" }}>
+              Favorites
+            </Link>
+          </Flex>
           <Box mt="34px" height="100%">
-            <MyBookShelf />
+            <MyBookShelf user={DATA_USER[0]} list={booksOnShelf} />
           </Box>
         </Flex>
       </Flex>
-    </Box>
-  </Flex>
-);
+    </MainLayout>
+  );
+};
 
 export const Default = Template.bind({});
 Default.args = {};
