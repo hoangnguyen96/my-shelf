@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { SessionProvider } from "next-auth/react";
 import ChakraUIProviders from "@app/layouts/ChakraProvider";
 import "../styles/globals.css";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +20,9 @@ const RootLayout = async ({
 }>) => {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <head>
+      <Head>
         <link rel="icon" href="/favicon.webp" />
-      </head>
+      </Head>
 
       <body className={inter.className}>
         <ChakraUIProviders>
