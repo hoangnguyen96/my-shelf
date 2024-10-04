@@ -2,6 +2,13 @@ import { auth } from "@app/auth";
 import { BookType, User } from "@app/models";
 import { getPaginatedBook, getUserById } from "@app/features/dashboard/actions";
 import { SearchList } from "@app/features/dashboard/components";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Search By Params",
+  description:
+    "My book shelf management is an online book reading application that helps users conveniently borrow books.",
+};
 
 interface SearchPageProps {
   params: { slug: string[] };

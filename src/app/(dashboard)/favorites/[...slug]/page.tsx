@@ -3,6 +3,13 @@ import { BookType, User } from "@app/models";
 import { filterBooksFavorite, filterBooksFavoriteByParams } from "@app/utils";
 import { getAllBook, getUserById } from "@app/features/dashboard/actions";
 import { MyBookShelfFavorites } from "@app/features/dashboard/components";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Favorites Search Params",
+  description:
+    "My book shelf management is an online book reading application that helps users conveniently borrow books.",
+};
 
 const MyBookShelfFavoritesPage = async ({
   params,

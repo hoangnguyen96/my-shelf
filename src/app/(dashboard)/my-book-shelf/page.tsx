@@ -3,6 +3,13 @@ import { BookType, User } from "@app/models";
 import { filterBooksOnShelf } from "@app/utils";
 import { getAllBook, getUserById } from "@app/features/dashboard/actions";
 import { MyBookShelf } from "@app/features/dashboard/components";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "MyBookShelf",
+  description:
+    "My book shelf management is an online book reading application that helps users conveniently borrow books.",
+};
 
 const MyBookShelfPage = async () => {
   const session = await auth();

@@ -3,6 +3,13 @@ import { BookType, User } from "@app/models";
 import { getBookById, getUserById } from "@app/features/dashboard/actions";
 import { PreviewBookDetails } from "@app/features/dashboard/components";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Preview Book",
+  description:
+    "My book shelf management is an online book reading application that helps users conveniently borrow books.",
+};
 
 interface PreviewBookProps {
   params: {
