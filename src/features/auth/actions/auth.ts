@@ -10,12 +10,7 @@ export const authenticate = async (formData: Partial<User>) => {
     await signIn("credentials", formData);
   } catch (error) {
     if (error instanceof AuthError) {
-      switch (error.type) {
-        case "CredentialsSignin":
-          return MESSAGES.EMAIL_PASSWORD_INCORRECT;
-        default:
-          return MESSAGES.EMAIL_PASSWORD_INVALID;
-      }
+      return MESSAGES.EMAIL_PASSWORD_INVALID;
     }
     throw error;
   }

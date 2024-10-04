@@ -96,7 +96,7 @@ const FormRegister = ({ itemUpdate, onSubmit }: FormRegisterProps) => {
           control={control}
           defaultValue=""
           rules={{
-            required: MESSAGES.FIELD_REQUIRED,
+            required: MESSAGES.NAME_REQUIRED,
           }}
           render={({
             field: { value, onChange, ...rest },

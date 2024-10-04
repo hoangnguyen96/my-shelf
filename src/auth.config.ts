@@ -1,19 +1,5 @@
-import type {
-  NextAuthConfig,
-  Session as NextAuthSession,
-  User as NextAuthUser,
-} from "next-auth";
+import type { NextAuthConfig } from "next-auth";
 import { ROUTES } from "./constants";
-
-export interface CustomUser extends NextAuthUser {
-  id: string;
-  isAdmin: boolean;
-}
-
-export interface CustomSession extends NextAuthSession {
-  user: CustomUser;
-  accessToken: string;
-}
 
 export const authConfig = {
   pages: {
@@ -22,37 +8,17 @@ export const authConfig = {
   callbacks: {
     authorized({ auth, request: { nextUrl } }) {
       const isLoggedIn = !!auth?.user;
-      const isOnHome = nextUrl.pathname.startsWith(ROUTES.HOME);
-      const isOnSearch = nextUrl.pathname.startsWith(ROUTES.SEARCH);
-      const isOnBookShelfAll = nextUrl.pathname.startsWith(
-        ROUTES.MY_BOOK_SHELF
-      );
-      const isOnBookShelfFavorites = nextUrl.pathname.startsWith(
-        ROUTES.MY_BOOK_SHELF_FAVORITES
-      );
-      const isOnContribute = nextUrl.pathname.startsWith(ROUTES.CONTRIBUTE);
-      const isOnContributeList = nextUrl.pathname.startsWith(
-        ROUTES.CONTRIBUTE_LIST
-      );
-      const isOnPreview = nextUrl.pathname.startsWith(ROUTES.PREVIEW);
-      const isOnProfile = nextUrl.pathname.startsWith(ROUTES.PROFILE);
+      const isPublicPage =
+        nextUrl.pathname === ROUTES.LOGIN ||
+        nextUrl.pathname === ROUTES.REGISTER;
+      const isRootRoute = nextUrl.pathname === "/";
 
-      const isOnDashBoard =
-        isOnHome ||
-        isOnSearch ||
-        isOnBookShelfAll ||
-        isOnBookShelfFavorites ||
-        isOnContribute ||
-        isOnContributeList ||
-        isOnPreview ||
-        isOnProfile;
-
-      if (isLoggedIn && isOnDashBoard) {
-        return true;
+      if (!isLoggedIn && !isPublicPage) {
+        return Response.redirect(new URL(ROUTES.LOGIN, nextUrl));
       }
 
-      if (!isLoggedIn) {
-        return Response.redirect(new URL(ROUTES.LOGIN, nextUrl));
+      if (isLoggedIn && (isPublicPage || isRootRoute)) {
+        return Response.redirect(new URL(ROUTES.HOME, nextUrl));
       }
 
       return true;
@@ -70,7 +36,7 @@ export const authConfig = {
   },
   session: {
     strategy: "jwt",
-    maxAge: 60 * 60 * 24, // 1d
+    maxAge: 60 * 60 * 24,
   },
 
   trustHost: true,

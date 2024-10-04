@@ -118,7 +118,7 @@ describe("FormRegister Component", () => {
     await waitFor(() => {
       expect(
         getByText(
-          /Password must have minimum 8 characters, at least one uppercase letter, one lowercase letter, one number, and one symbol/i
+          /Password must have minimum 8 characters and at least one uppercase letters, lowercase letters, numbers, and symbols/i
         )
       ).toBeInTheDocument();
     });

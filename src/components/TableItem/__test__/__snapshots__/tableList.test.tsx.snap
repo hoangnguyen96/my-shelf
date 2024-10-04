@@ -78,7 +78,7 @@ exports[`TableItem Should render correctly snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-n0c263"
+          class="css-yjxbuh"
         >
           <p
             class="chakra-text css-1619v3u"
@@ -192,7 +192,7 @@ exports[`TableItem Should render correctly snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-n0c263"
+        class="css-yjxbuh"
       >
         <p
           class="chakra-text css-1619v3u"
@@ -357,7 +357,7 @@ exports[`TableItem Should render correctly snapshot when imageUrl is empty 1`] =
           </div>
         </div>
         <div
-          class="css-n0c263"
+          class="css-yjxbuh"
         >
           <p
             class="chakra-text css-1619v3u"
@@ -465,7 +465,7 @@ exports[`TableItem Should render correctly snapshot when imageUrl is empty 1`] =
         </div>
       </div>
       <div
-        class="css-n0c263"
+        class="css-yjxbuh"
       >
         <p
           class="chakra-text css-1619v3u"

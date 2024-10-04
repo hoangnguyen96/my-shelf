@@ -9,7 +9,7 @@ interface LogoProps {
 }
 
 const Logo = ({ user }: LogoProps) => {
-  const url = Object.keys(user).length > 0 ? ROUTES.HOME : ROUTES.LOGIN;
+  const url = Object.keys(user || {}).length > 0 ? ROUTES.HOME : ROUTES.LOGIN;
 
   return (
     <Link href={url} aria-label="logo-book-shelf">

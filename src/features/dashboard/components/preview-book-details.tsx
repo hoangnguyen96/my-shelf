@@ -1,6 +1,6 @@
 "use client";
 
-import { memo } from "react";
+import { memo, useState } from "react";
 import { Box, Flex, Text, useDisclosure } from "@chakra-ui/react";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import Image from "next/image";
@@ -14,6 +14,7 @@ import { previewAuthor } from "@app/assets/images";
 import { Button } from "@app/components/common";
 import { StatusBook } from "@app/components";
 import dynamic from "next/dynamic";
+import { MESSAGES } from "@app/constants";
 
 const ModalSuccessProcess = dynamic(
   () => import("@app/components").then((mod) => mod.ModalSuccessProcess),
@@ -30,18 +31,29 @@ interface PreviewBookDetailsProps {
 export const PreviewBookDetails = memo(
   ({ user, book }: PreviewBookDetailsProps) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
+    const [isLoading, setIsLoading] = useState<boolean>(false);
     const router = useRouter();
 
     const handleAddBorrowBook = async (id: string) => {
-      user?.shelfBooks.push(id);
-      await updateBookById(book?.id, {
-        ...book,
-        createdDate: formatDate(new Date()),
-      });
-      const idUpdate = user?.id;
-      await updateUserById(idUpdate, { ...user });
+      try {
+        setIsLoading(true);
+        user?.shelfBooks.push(id);
+        await updateBookById(book?.id, {
+          ...book,
+          createdDate: formatDate(new Date()),
+        });
+        const idUpdate = user?.id;
+        await updateUserById(idUpdate, { ...user });
 
-      return onOpen();
+        return onOpen();
+      } catch (error) {
+        if (error instanceof Error) {
+          return error.message;
+        }
+        return MESSAGES.RESPONSE_ERROR;
+      } finally {
+        setIsLoading(false);
+      }
     };
 
     const handleClickBack = () => {
@@ -150,6 +162,7 @@ export const PreviewBookDetails = memo(
               <Button
                 size="xl"
                 text="BORROW"
+                isLoading={isLoading}
                 isDisabled={user?.shelfBooks?.includes(id)}
                 maxW={210}
                 mt="43px"

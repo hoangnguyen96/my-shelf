@@ -58,7 +58,7 @@ export const ListCart = memo(({ list, user }: ListCartProps) => {
             imageUrl={imageUrl}
             publicationYear={publicationYear}
             rating={rating}
-            isFavorite={user?.favorites.includes(id)}
+            isFavorite={user?.favorites?.includes(id)}
             onUpdateFavorites={() => handleUpdateFavorites(id)}
           />
         );

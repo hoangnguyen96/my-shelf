@@ -69,5 +69,5 @@ export const validatePassword = (password: string): true | string => {
 
   return regex.test(password)
     ? true
-    : "Password must have minimum 8 characters, at least one uppercase letter, one lowercase letter, one number, and one symbol";
+    : "Password must have minimum 8 characters and at least one uppercase letters, lowercase letters, numbers, and symbols";
 };

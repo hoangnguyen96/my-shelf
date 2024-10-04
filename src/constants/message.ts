@@ -17,9 +17,10 @@ export const MESSAGES = {
   LOGIN_FAILED: "Login failed!",
   INVALID_LOGIN: "Invalid login!",
   NETWORK_ERROR: "Network response was not ok!",
-  EMAIL_EXISTS: "Email exists!",
+  EMAIL_EXISTS:
+    "An account has been created with this email address. Please choose another one.",
   EMAIL_PASSWORD_INCORRECT: "Incorrect email or password!",
-  EMAIL_PASSWORD_INVALID: "Email or password invalid.Please help to try again!",
+  EMAIL_PASSWORD_INVALID: "Email or Password is invalid!",
   UPLOAD_FAILED: "Failed to upload image!",
   ERROR_UPLOAD: "Error uploading image!",
 
@@ -29,9 +30,10 @@ export const MESSAGES = {
 
   // Validation
   FIELD_REQUIRED: "This field is required.",
+  NAME_REQUIRED: "Name is required.",
 
   // Dynamic error messages
-  FORMAT: (ariaLabel: string) => `${ariaLabel} does not follow format.`,
+  FORMAT: (ariaLabel: string) => `${ariaLabel} must be in correct format.`,
 
   // ConfirmPassword
   CONFIRM_PASSWORD: "Passwords do not match!",

@@ -5,10 +5,10 @@ export const Button = defineStyleConfig({
     fontWeight: "normal",
     borderRadius: "5px",
     color: "white",
-    bgColor: "colorButton",
+    bgColor: "brand.80",
     _hover: {
       _disabled: {
-        bgColor: "colorButton",
+        bgColor: "brand.80",
       },
     },
   },
@@ -59,8 +59,8 @@ export const Button = defineStyleConfig({
     },
     outline: {
       bgColor: "white",
-      color: "colorButton",
-      borderColor: "colorButton",
+      color: "brand.70",
+      borderColor: "brand.70",
       boxShadow: "0 0 5px 1px #efdfde",
     },
     full: {
