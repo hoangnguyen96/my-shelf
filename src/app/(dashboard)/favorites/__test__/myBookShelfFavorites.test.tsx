@@ -56,4 +56,16 @@ describe("My Book Shelf Favorites", () => {
       expect(container).toMatchSnapshot();
     });
   });
+
+  it("Should render correctly snapshot when user has no favorites", async () => {
+    (getUserById as jest.Mock).mockResolvedValue({
+      data: { ...DATA_USER[0], favorites: null },
+    });
+
+    const { container } = render(await MyBookShelfFavorites());
+
+    await waitFor(() => {
+      expect(container).toMatchSnapshot();
+    });
+  });
 });

@@ -1,9 +1,5 @@
 import { auth } from "@app/auth";
-import { BookType, User } from "@app/models";
-import {
-  getTwelveItemBook,
-  getUserById,
-} from "@app/features/dashboard/actions";
+import { getBooksByLimit, getUserById } from "@app/features/dashboard/actions";
 import { ListCart } from "@app/features/dashboard/components";
 import { Metadata } from "next";
 
@@ -18,8 +14,8 @@ const HomePage = async ({ params }: { params?: { slug: string[] } }) => {
   const value = params?.slug[1];
   const searchParams = type && value ? `${type}=${value}&` : "";
   const session = await auth();
-  const dataUserById = (await getUserById(session?.user?.id as string)) as User;
-  const books = (await getTwelveItemBook(searchParams)) as BookType[];
+  const { data: dataUserById } = await getUserById(session?.user?.id as string);
+  const { data: books } = await getBooksByLimit(searchParams);
 
   return <ListCart user={dataUserById} list={books} />;
 };

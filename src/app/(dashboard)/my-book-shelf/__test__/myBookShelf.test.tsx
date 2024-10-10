@@ -61,4 +61,16 @@ describe("My Book Shelf", () => {
       expect(container).toMatchSnapshot();
     });
   });
+
+  it("Should render correctly snapshot when user has no shelfBooks", async () => {
+    (getUserById as jest.Mock).mockResolvedValue({
+      data: { ...DATA_USER[0], shelfBooks: null },
+    });
+
+    const { container } = render(await MyBookShelfPage());
+
+    await waitFor(() => {
+      expect(container).toMatchSnapshot();
+    });
+  });
 });

@@ -31,7 +31,7 @@ describe("Profile Page", () => {
     jest.clearAllMocks();
     (auth as jest.Mock).mockResolvedValue(mockSession);
     (getUserById as jest.Mock).mockReturnValue({
-      dataUserById: DATA_USER[0],
+      data: DATA_USER[0],
     });
   });
 

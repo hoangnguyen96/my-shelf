@@ -28,7 +28,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 
         if (parsedCredentials.success) {
           const { email, password } = parsedCredentials.data;
-          const user = (await getUserByEmail(email)) as User;
+          const { data: user } = await getUserByEmail(email);
 
           if (!user || !user.password) {
             throw new Error(MESSAGES.LOGIN_NOTFOUND);

@@ -1,4 +1,4 @@
-import { TYPE_SEARCH } from "@app/constants";
+import { DEFAULT_LIMIT, TYPE_SEARCH } from "@app/constants";
 import { BookType } from "@app/models";
 import {
   FieldErrors,
@@ -24,14 +24,13 @@ export const generateSevenDigitUUID = () => {
   return uuid.slice(0, 7);
 };
 
-export const getThreeTopBook = (data: BookType[]) =>
+export const getTopBook = (data: BookType[], limit?: number) =>
   data
-    .sort((a, b) => {
-      return (
+    .sort(
+      (a, b) =>
         new Date(b.createdDate).getTime() - new Date(a.createdDate).getTime()
-      );
-    })
-    .slice(0, 3);
+    )
+    .slice(0, limit || DEFAULT_LIMIT);
 
 export const formatDate = (date: Date) => {
   const months = [

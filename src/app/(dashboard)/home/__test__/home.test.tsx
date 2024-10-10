@@ -1,8 +1,5 @@
 import { render, waitFor } from "@testing-library/react";
-import {
-  getTwelveItemBook,
-  getUserById,
-} from "@app/features/dashboard/actions";
+import { getBooksByLimit, getUserById } from "@app/features/dashboard/actions";
 import { DATA_BOOKS, DATA_USER } from "@app/mocks/data";
 import HomePage from "../page";
 import { auth } from "@app/auth";
@@ -16,7 +13,7 @@ jest.mock("next/navigation", () => ({
 }));
 
 jest.mock("@app/features/dashboard/actions", () => ({
-  getTwelveItemBook: jest.fn(),
+  getBooksByLimit: jest.fn(),
   getUserById: jest.fn(),
 }));
 
@@ -35,8 +32,8 @@ describe("HomePage", () => {
   beforeEach(() => {
     jest.clearAllMocks();
     (auth as jest.Mock).mockResolvedValue(mockSession);
-    (getUserById as jest.Mock).mockResolvedValue(DATA_USER[0]);
-    (getTwelveItemBook as jest.Mock).mockResolvedValue(mockBooks);
+    (getUserById as jest.Mock).mockResolvedValue({ data: DATA_USER[0] });
+    (getBooksByLimit as jest.Mock).mockResolvedValue({ data: mockBooks });
   });
 
   it("Should render correctly snapshot", async () => {

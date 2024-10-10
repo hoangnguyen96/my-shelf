@@ -37,8 +37,8 @@ exports[`Preview book Page Should render correctly snapshot 1`] = `
           decoding="async"
           fetchpriority="high"
           height="278"
-          src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FLt7GmF2%2Fplace-holder.webp&w=640&q=75"
-          srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FLt7GmF2%2Fplace-holder.webp&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FLt7GmF2%2Fplace-holder.webp&w=640&q=75 2x"
+          src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQbQgVtG%2Fbook1.png&w=640&q=75"
+          srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQbQgVtG%2Fbook1.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FQbQgVtG%2Fbook1.png&w=640&q=75 2x"
           style="color: transparent; margin: 0px auto;"
           width="210"
         />
@@ -48,20 +48,26 @@ exports[`Preview book Page Should render correctly snapshot 1`] = `
       >
         <p
           class="chakra-text css-0"
-        />
+        >
+          Don't Make Me Think
+        </p>
         <p
           class="chakra-text css-1xo3mso"
         >
           By 
+          Steve Krug
           ,
            
           <span
             class="chakra-text css-1xibt3d"
-          />
+          >
+            2000
+          </span>
         </p>
         <p
           class="chakra-text css-1xibt3d"
         >
+          first
            edition
         </p>
         <div
@@ -134,7 +140,9 @@ exports[`Preview book Page Should render correctly snapshot 1`] = `
             >
               <span
                 class="chakra-text css-0"
-              />
+              >
+                4.5
+              </span>
                Ratings
             </p>
           </div>
@@ -243,18 +251,19 @@ exports[`Preview book Page Should render correctly snapshot 1`] = `
               Status
             </p>
             <div
-              class="css-yjxbuh"
+              class="css-1sv0o68"
             >
               <p
                 class="chakra-text css-1619v3u"
               >
-                None
+                In-Shelf
               </p>
             </div>
           </div>
         </div>
         <button
           class="chakra-button css-6vsr6c"
+          disabled=""
           type="button"
         >
           BORROW
@@ -276,10 +285,14 @@ exports[`Preview book Page Should render correctly snapshot 1`] = `
         </p>
         <p
           class="chakra-text css-1uze92q"
-        />
+        >
+          Steve Krug
+        </p>
         <p
           class="chakra-text css-13pzcpe"
-        />
+        >
+          description will update later
+        </p>
         <img
           alt="Preview Author"
           data-nimg="1"

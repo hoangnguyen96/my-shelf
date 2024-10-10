@@ -9,7 +9,7 @@ exports[`MenuProfile Should render correctly snapshot 1`] = `
         aria-controls="menu-list-:r1:"
         aria-expanded="false"
         aria-haspopup="menu"
-        class="chakra-button chakra-menu__menu-button css-r3lmb2"
+        class="chakra-button chakra-menu__menu-button css-115zmqy"
         id="menu-button-:r1:"
         type="button"
       >
@@ -17,7 +17,7 @@ exports[`MenuProfile Should render correctly snapshot 1`] = `
           class="css-xl71ch"
         >
           <div
-            class="css-1m1681d"
+            class="css-yvf3fq"
           >
             <img
               alt="Avatar user"
@@ -27,7 +27,7 @@ exports[`MenuProfile Should render correctly snapshot 1`] = `
               height="45"
               src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=96&q=75"
               srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=96&q=75 2x"
-              style="color: transparent; max-width: 100%; max-height: 100%; border-radius: 50%; border: 2px solid white;"
+              style="color: transparent; max-width: 100%; border-radius: 50%; border: 2px solid white; height: 100%;"
               width="45"
             />
             <p
@@ -116,7 +116,7 @@ exports[`MenuProfile Should render correctly snapshot 1`] = `
       aria-controls="menu-list-:r1:"
       aria-expanded="false"
       aria-haspopup="menu"
-      class="chakra-button chakra-menu__menu-button css-r3lmb2"
+      class="chakra-button chakra-menu__menu-button css-115zmqy"
       id="menu-button-:r1:"
       type="button"
     >
@@ -124,7 +124,7 @@ exports[`MenuProfile Should render correctly snapshot 1`] = `
         class="css-xl71ch"
       >
         <div
-          class="css-1m1681d"
+          class="css-yvf3fq"
         >
           <img
             alt="Avatar user"
@@ -134,7 +134,7 @@ exports[`MenuProfile Should render correctly snapshot 1`] = `
             height="45"
             src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=96&q=75"
             srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=96&q=75 2x"
-            style="color: transparent; max-width: 100%; max-height: 100%; border-radius: 50%; border: 2px solid white;"
+            style="color: transparent; max-width: 100%; border-radius: 50%; border: 2px solid white; height: 100%;"
             width="45"
           />
           <p
@@ -280,7 +280,7 @@ exports[`MenuProfile Should render correctly snapshot when data empty 1`] = `
         aria-controls="menu-list-:r6:"
         aria-expanded="false"
         aria-haspopup="menu"
-        class="chakra-button chakra-menu__menu-button css-r3lmb2"
+        class="chakra-button chakra-menu__menu-button css-115zmqy"
         id="menu-button-:r6:"
         type="button"
       >
@@ -288,7 +288,7 @@ exports[`MenuProfile Should render correctly snapshot when data empty 1`] = `
           class="css-xl71ch"
         >
           <div
-            class="css-1m1681d"
+            class="css-yvf3fq"
           >
             <img
               alt="Avatar user"
@@ -298,7 +298,7 @@ exports[`MenuProfile Should render correctly snapshot when data empty 1`] = `
               height="45"
               src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=96&q=75"
               srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=96&q=75 2x"
-              style="color: transparent; max-width: 100%; max-height: 100%; border-radius: 50%; border: 2px solid white;"
+              style="color: transparent; max-width: 100%; border-radius: 50%; border: 2px solid white; height: 100%;"
               width="45"
             />
             <p
@@ -385,7 +385,7 @@ exports[`MenuProfile Should render correctly snapshot when data empty 1`] = `
       aria-controls="menu-list-:r6:"
       aria-expanded="false"
       aria-haspopup="menu"
-      class="chakra-button chakra-menu__menu-button css-r3lmb2"
+      class="chakra-button chakra-menu__menu-button css-115zmqy"
       id="menu-button-:r6:"
       type="button"
     >
@@ -393,7 +393,7 @@ exports[`MenuProfile Should render correctly snapshot when data empty 1`] = `
         class="css-xl71ch"
       >
         <div
-          class="css-1m1681d"
+          class="css-yvf3fq"
         >
           <img
             alt="Avatar user"
@@ -403,7 +403,7 @@ exports[`MenuProfile Should render correctly snapshot when data empty 1`] = `
             height="45"
             src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=96&q=75"
             srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=96&q=75 2x"
-            style="color: transparent; max-width: 100%; max-height: 100%; border-radius: 50%; border: 2px solid white;"
+            style="color: transparent; max-width: 100%; border-radius: 50%; border: 2px solid white; height: 100%;"
             width="45"
           />
           <p

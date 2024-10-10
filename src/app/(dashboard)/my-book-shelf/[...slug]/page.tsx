@@ -1,5 +1,4 @@
 import { auth } from "@app/auth";
-import { BookType, User } from "@app/models";
 import { getAllBook, getUserById } from "@app/features/dashboard/actions";
 import { filterBooksOnShelf, filterBooksOnShelfByParams } from "@app/utils";
 import { MyBookShelf } from "@app/features/dashboard/components";
@@ -19,8 +18,8 @@ const MyBookShelfByParamsPage = async ({
   const session = await auth();
   const type = params.slug[0];
   const value = params.slug[1];
-  const user = (await getUserById(session?.user?.id as string)) as User;
-  const allBooks = (await getAllBook()) as BookType[];
+  const { data: user } = await getUserById(session?.user?.id as string);
+  const { data: allBooks } = await getAllBook();
   const shelfBooks = user?.shelfBooks || [];
   const booksOnShelf = filterBooksOnShelf(allBooks, shelfBooks);
   const filteredBooks = filterBooksOnShelfByParams(booksOnShelf, type, value);

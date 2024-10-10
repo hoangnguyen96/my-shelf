@@ -1,4 +1,3 @@
-import { BookType } from "@app/models";
 import { getBookById } from "@app/features/dashboard/actions";
 import { ContributeUpdate } from "@app/features/dashboard/components";
 import { Metadata } from "next";
@@ -10,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const ContributeUpdatePage = async ({ params }: { params: { id: string } }) => {
-  const book = (await getBookById(params.id)) as BookType;
+  const { data: book } = await getBookById(params.id);
 
   return <ContributeUpdate book={book} />;
 };

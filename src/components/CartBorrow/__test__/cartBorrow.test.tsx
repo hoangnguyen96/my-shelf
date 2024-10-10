@@ -25,7 +25,7 @@ describe("CartBorrow", () => {
   });
 
   it("Should handle return book", () => {
-    const { getByTestId } = render(<CartBorrow {...props} />);
+    const { getByTestId } = render(<CartBorrow {...props} title="" />);
 
     const buttons = getByTestId("return-book");
 

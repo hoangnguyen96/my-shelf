@@ -95,14 +95,15 @@ exports[`Search Page Should render correctly snapshot 1`] = `
       >
         <button
           aria-label="Heart icon"
-          class="chakra-button css-1oer8ip"
+          class="chakra-button css-38t1hi"
           data-testid="handle-favorite"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="chakra-icon css-iz364c"
+            class="chakra-icon css-1k8v1e7"
             focusable="false"
+            stroke-width="2"
             viewBox="0 0 24 24"
           >
             <path
@@ -209,14 +210,15 @@ exports[`Search Page Should render correctly snapshot 1`] = `
       >
         <button
           aria-label="Heart icon"
-          class="chakra-button css-1oer8ip"
+          class="chakra-button css-38t1hi"
           data-testid="handle-favorite"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="chakra-icon css-iz364c"
+            class="chakra-icon css-1k8v1e7"
             focusable="false"
+            stroke-width="2"
             viewBox="0 0 24 24"
           >
             <path
@@ -323,14 +325,15 @@ exports[`Search Page Should render correctly snapshot 1`] = `
       >
         <button
           aria-label="Heart icon"
-          class="chakra-button css-1oer8ip"
+          class="chakra-button css-38t1hi"
           data-testid="handle-favorite"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="chakra-icon css-iz364c"
+            class="chakra-icon css-1k8v1e7"
             focusable="false"
+            stroke-width="2"
             viewBox="0 0 24 24"
           >
             <path

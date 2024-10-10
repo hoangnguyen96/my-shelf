@@ -33,9 +33,11 @@ describe("Search Page", () => {
     jest.clearAllMocks();
     (auth as jest.Mock).mockResolvedValue(mockSession);
     (getUserById as jest.Mock).mockReturnValue({
-      favorites: DATA_USER[0].favorites,
+      data: DATA_USER[0].favorites,
     });
-    (getPaginatedBook as jest.Mock).mockResolvedValue(mockBooksPagination);
+    (getPaginatedBook as jest.Mock).mockResolvedValue({
+      data: mockBooksPagination,
+    });
   });
 
   it("Should render correctly snapshot", async () => {

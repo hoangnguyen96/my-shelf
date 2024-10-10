@@ -39,7 +39,7 @@ export const validateRegExpFormat = (
   isValidFormat(value.trim(), pattern) || MESSAGES.FORMAT(ariaLabel);
 
 export const checkEmailExists = async (email: string) => {
-  const data = await getUserByEmail(email);
+  const { data } = await getUserByEmail(email);
 
   if (Object.keys(data).length > 0) {
     return MESSAGES.EMAIL_EXISTS;

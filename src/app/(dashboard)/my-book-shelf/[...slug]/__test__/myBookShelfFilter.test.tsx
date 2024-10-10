@@ -40,6 +40,7 @@ describe("My Book Shelf All Search", () => {
       image: "https://i.ibb.co/RHMqQGr/man-1.png",
     },
   };
+  const params = { slug: ["title", "on"] };
 
   beforeEach(() => {
     jest.clearAllMocks();
@@ -57,7 +58,17 @@ describe("My Book Shelf All Search", () => {
   });
 
   it("Should render correctly snapshot", async () => {
-    const params = { slug: ["title", "on"] };
+    const { container } = render(await MyBookShelfByParamsPage({ params }));
+
+    await waitFor(() => {
+      expect(container).toMatchSnapshot();
+    });
+  });
+
+  it("Should render correctly snapshot when user has no shelfBooks", async () => {
+    (getUserById as jest.Mock).mockResolvedValue({
+      data: { ...DATA_USER[0], shelfBooks: null },
+    });
     const { container } = render(await MyBookShelfByParamsPage({ params }));
 
     await waitFor(() => {

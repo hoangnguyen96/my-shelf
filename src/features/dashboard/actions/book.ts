@@ -1,96 +1,55 @@
 import { BookType } from "@app/models";
-import { API_ROUTES, MESSAGES } from "@app/constants";
+import { API_ROUTES } from "@app/constants";
 import { api } from "@app/services";
-import { dividePaginationBooks, getThreeTopBook } from "@app/utils";
+import { dividePaginationBooks, getTopBook } from "@app/utils";
 
 export const getAllBook = async () => {
-  try {
-    const data = await api.get<BookType[]>(API_ROUTES.BOOKS);
+  const { data, ...rest } = await api.get<BookType[]>(API_ROUTES.BOOKS);
 
-    return data;
-  } catch (error) {
-    if (error instanceof Error) {
-      return error.message;
-    }
-    return MESSAGES.RESPONSE_ERROR;
-  }
-};
-
-export const getTopThreeBook = async () => {
-  try {
-    const data = await api.get<BookType[]>(API_ROUTES.BOOKS, {
-      next: { revalidate: 60 },
-    });
-    const result = getThreeTopBook(data);
-
-    return result;
-  } catch (error) {
-    if (error instanceof Error) {
-      return error.message;
-    }
-    return MESSAGES.RESPONSE_ERROR;
-  }
+  return {
+    data: data || [],
+    ...rest,
+  };
 };
 
 export const getPaginatedBook = async (params?: string) => {
-  try {
-    const data = await api.get<BookType[]>(
-      `${API_ROUTES.BOOKS}?${params || ""}`,
-      {
-        cache: "no-store",
-      }
-    );
-    const result = dividePaginationBooks(data);
-
-    return result;
-  } catch (error) {
-    if (error instanceof Error) {
-      return error.message;
+  const { data, ...rest } = await api.get<BookType[]>(
+    `${API_ROUTES.BOOKS}?${params || ""}`,
+    {
+      cache: "no-store",
     }
-    return MESSAGES.RESPONSE_ERROR;
-  }
+  );
+  const result = dividePaginationBooks(data || []);
+
+  return {
+    data: result || [],
+    ...rest,
+  };
 };
 
-export const getTwelveItemBook = async (params?: string) => {
-  try {
-    const data = await api.get<BookType[]>(
-      `${API_ROUTES.BOOKS}?${params || ""}page=1&limit=12`,
-      { next: { revalidate: 3600 } }
-    );
+export const getBooksByLimit = async (params?: string, limit?: number) => {
+  const { data, ...rest } = await api.get<BookType[]>(
+    `${API_ROUTES.BOOKS}?${params || ""}page=1`,
+    { next: { revalidate: 60 } }
+  );
 
-    return data;
-  } catch (error) {
-    if (error instanceof Error) {
-      return error.message;
-    }
-    return MESSAGES.RESPONSE_ERROR;
-  }
-};
+  const result = getTopBook(data || [], limit);
 
-export const getBookByParams = async (params: string) => {
-  try {
-    const data = await api.get<BookType[]>(`${API_ROUTES.BOOKS}?${params}`);
-
-    return data;
-  } catch (error) {
-    if (error instanceof Error) {
-      return error.message;
-    }
-    return MESSAGES.RESPONSE_ERROR;
-  }
+  return {
+    data: result || [],
+    ...rest,
+  };
 };
 
 export const getBookById = async (id: string) => {
-  try {
-    const data = await api.get<BookType>(`${API_ROUTES.BOOKS}/${parseInt(id)}`);
+  const { data, ...rest } = await api.get<BookType>(
+    `${API_ROUTES.BOOKS}/${parseInt(id)}`
+  );
 
-    return data;
-  } catch (error) {
-    if (error instanceof Error) {
-      return error.message;
-    }
-    return MESSAGES.RESPONSE_ERROR;
-  }
+  return {
+    data: (data as BookType) || {},
+    ...rest,
+  };
 };
 
 export const addBook = async (payload: Partial<BookType>) => {

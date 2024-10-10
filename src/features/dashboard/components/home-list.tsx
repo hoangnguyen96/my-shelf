@@ -1,7 +1,7 @@
 "use client";
 
 import { memo } from "react";
-import { Grid } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
 import { BookType, User } from "@app/models";
 import { Cart } from "@app/components/common";
@@ -40,11 +40,12 @@ export const ListCart = memo(({ list, user }: ListCartProps) => {
   };
 
   return (
-    <Grid
+    <Flex
       p="70px 44px"
-      gridTemplateRows="auto auto"
-      gridTemplateColumns="repeat(6, 1fr)"
-      gap="40px 10px"
+      gap="40px"
+      flexWrap="wrap"
+      maxH="70vh"
+      overflowY={{ base: "scroll", xl: "hidden" }}
     >
       {list.map((item: BookType) => {
         const { id, title, author, imageUrl, publicationYear, rating } = item;
@@ -63,6 +64,6 @@ export const ListCart = memo(({ list, user }: ListCartProps) => {
           />
         );
       })}
-    </Grid>
+    </Flex>
   );
 });

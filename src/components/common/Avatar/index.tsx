@@ -25,9 +25,9 @@ const Avatar = ({
       alt="Avatar user"
       style={{
         maxWidth: "100%",
-        maxHeight: "100%",
         borderRadius: "50%",
         border: border,
+        height: "100%",
       }}
       priority={true}
       fetchPriority="high"

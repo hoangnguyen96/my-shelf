@@ -37,7 +37,7 @@ describe("Preview book Page", () => {
       data: DATA_BOOKS[0],
     });
     (getUserById as jest.Mock).mockReturnValue({
-      user: DATA_USER[0],
+      data: DATA_USER[0],
     });
   });
 
@@ -51,7 +51,7 @@ describe("Preview book Page", () => {
   });
 
   it("Should call notFound when book is not found", async () => {
-    (getBookById as jest.Mock).mockResolvedValue(null);
+    (getBookById as jest.Mock).mockResolvedValue({ data: null });
     const params = { id: "" };
 
     render(await PreviewBook({ params }));

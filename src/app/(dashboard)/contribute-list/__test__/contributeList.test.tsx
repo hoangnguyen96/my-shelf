@@ -31,8 +31,8 @@ describe("Contribute List Page", () => {
   beforeEach(() => {
     jest.clearAllMocks();
     (auth as jest.Mock).mockResolvedValue(mockSession);
-    (getAllBook as jest.Mock).mockResolvedValue(DATA_BOOKS);
-    (getUserById as jest.Mock).mockResolvedValue(DATA_USER[0]);
+    (getAllBook as jest.Mock).mockResolvedValue({ data: DATA_BOOKS });
+    (getUserById as jest.Mock).mockResolvedValue({ data: DATA_USER[0] });
   });
 
   it("Should render correctly snapshot", async () => {

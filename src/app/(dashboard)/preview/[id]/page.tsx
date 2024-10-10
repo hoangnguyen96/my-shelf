@@ -1,5 +1,4 @@
 import { auth } from "@app/auth";
-import { BookType, User } from "@app/models";
 import { getBookById, getUserById } from "@app/features/dashboard/actions";
 import { PreviewBookDetails } from "@app/features/dashboard/components";
 import { notFound } from "next/navigation";
@@ -19,8 +18,8 @@ interface PreviewBookProps {
 
 const PreviewBook = async ({ params: { id } }: PreviewBookProps) => {
   const session = await auth();
-  const user = (await getUserById(session?.user?.id as string)) as User;
-  const book = (await getBookById(id)) as BookType;
+  const { data: user } = await getUserById(session?.user?.id as string);
+  const { data: book } = await getBookById(id);
 
   if (!book) return notFound();
 

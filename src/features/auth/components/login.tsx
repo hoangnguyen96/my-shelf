@@ -23,6 +23,7 @@ export const Login = () => {
         isClosable: true,
       });
     } else {
+      router.push(ROUTES.HOME);
       toast({
         title: "Login successful",
         description: MESSAGES.LOGIN_SUCCESS,
@@ -30,7 +31,6 @@ export const Login = () => {
         duration: 5000,
         isClosable: true,
       });
-      router.push(ROUTES.HOME);
     }
   };
   return (

@@ -14,7 +14,7 @@ class ApiService {
     url: string,
     body?: any,
     options?: RequestInit
-  ): Promise<T> {
+  ) {
     const response = await fetch(`${this._apiName}${url}`, {
       method: method,
       headers: { "content-type": "application/json" },
@@ -22,14 +22,22 @@ class ApiService {
       ...options,
     });
 
+    const data = await response.json();
+
     if (!response.ok) {
-      throw new Error(MESSAGES.NETWORK_ERROR);
+      return {
+        data: undefined,
+        error: new Error(MESSAGES.NETWORK_ERROR),
+      };
     }
 
-    return response.json();
+    return {
+      data: data as T,
+      error: undefined,
+    };
   }
 
-  async get<T>(url: string, options?: RequestInit): Promise<T> {
+  async get<T>(url: string, options?: RequestInit) {
     try {
       return await this.request<T>("GET", url, null, options);
     } catch (error) {
@@ -37,7 +45,7 @@ class ApiService {
     }
   }
 
-  async post<T>(url: string, body: any, options?: RequestInit): Promise<T> {
+  async post<T>(url: string, body: any, options?: RequestInit) {
     try {
       return await this.request<T>("POST", url, body, options);
     } catch (error) {
@@ -45,7 +53,7 @@ class ApiService {
     }
   }
 
-  async put<T>(url: string, body: any, options?: RequestInit): Promise<T> {
+  async put<T>(url: string, body: any, options?: RequestInit) {
     try {
       return await this.request<T>("PUT", url, body, options);
     } catch (error) {
@@ -53,7 +61,7 @@ class ApiService {
     }
   }
 
-  async delete<T>(url: string, options?: RequestInit): Promise<T> {
+  async delete<T>(url: string, options?: RequestInit) {
     try {
       return await this.request<T>("DELETE", url, null, options);
     } catch (error) {

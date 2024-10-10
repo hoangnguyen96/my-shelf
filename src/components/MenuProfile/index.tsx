@@ -45,8 +45,15 @@ const MenuProfile = ({ session }: { session?: Session }) => {
         pl="2px"
         pr="30px"
         boxShadow="0 0 4px -1px #a9a9a9"
+        justifyContent="space-between"
+        sx={{ "& span": { display: "contents" } }}
       >
-        <Flex justifyContent="flex-start" alignItems="center" gap={4}>
+        <Flex
+          justifyContent="flex-start"
+          alignItems="center"
+          gap={4}
+          height="100%"
+        >
           <Avatar
             image={session?.user?.image || ""}
             width={45}
