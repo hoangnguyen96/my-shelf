@@ -2,6 +2,7 @@
 
 import { memo } from "react";
 import Image from "next/image";
+import { Box } from "@chakra-ui/react";
 
 interface AvatarProps {
   image: string;
@@ -18,21 +19,24 @@ const Avatar = ({
   ...rest
 }: AvatarProps) => {
   return (
-    <Image
-      src={image || "https://i.ibb.co/SKHPQYq/avatar-default.webp"}
-      width={width}
-      height={height}
-      alt="Avatar user"
-      style={{
-        maxWidth: "100%",
-        borderRadius: "50%",
-        border: border,
-        height: "100%",
-      }}
-      priority={true}
-      fetchPriority="high"
-      {...rest}
-    />
+    <Box
+      position="relative"
+      width={`${width}px`}
+      height={`${height}px`}
+      borderRadius="50%"
+      overflow="hidden"
+      border={border}
+    >
+      <Image
+        src={image || "https://i.ibb.co/SKHPQYq/avatar-default.webp"}
+        layout="fill"
+        objectFit="cover"
+        alt="Avatar user"
+        fetchPriority="high"
+        loading="lazy"
+        {...rest}
+      />
+    </Box>
   );
 };
 

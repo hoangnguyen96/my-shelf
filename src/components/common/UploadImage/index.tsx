@@ -47,8 +47,7 @@ const ImageUploadForm = ({ image, user }: ImageUploadFormProps) => {
 
       return await updateUserById(user.id as string, payload);
     } else {
-      console.error("Upload failed:", data.error.message);
-      return;
+      throw new Error("Upload failed:", data.error.message);
     }
   };
 

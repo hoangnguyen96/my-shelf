@@ -19,17 +19,21 @@ exports[`MenuProfile Should render correctly snapshot 1`] = `
           <div
             class="css-yvf3fq"
           >
-            <img
-              alt="Avatar user"
-              data-nimg="1"
-              decoding="async"
-              fetchpriority="high"
-              height="45"
-              src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=96&q=75"
-              srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=96&q=75 2x"
-              style="color: transparent; max-width: 100%; border-radius: 50%; border: 2px solid white; height: 100%;"
-              width="45"
-            />
+            <div
+              class="css-bgqooo"
+            >
+              <img
+                alt="Avatar user"
+                data-nimg="fill"
+                decoding="async"
+                fetchpriority="high"
+                loading="lazy"
+                sizes="100vw"
+                src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=3840&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=3840&q=75 3840w"
+                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+              />
+            </div>
             <p
               class="chakra-text css-1rr4qq7"
             >
@@ -126,17 +130,21 @@ exports[`MenuProfile Should render correctly snapshot 1`] = `
         <div
           class="css-yvf3fq"
         >
-          <img
-            alt="Avatar user"
-            data-nimg="1"
-            decoding="async"
-            fetchpriority="high"
-            height="45"
-            src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=96&q=75"
-            srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=96&q=75 2x"
-            style="color: transparent; max-width: 100%; border-radius: 50%; border: 2px solid white; height: 100%;"
-            width="45"
-          />
+          <div
+            class="css-bgqooo"
+          >
+            <img
+              alt="Avatar user"
+              data-nimg="fill"
+              decoding="async"
+              fetchpriority="high"
+              loading="lazy"
+              sizes="100vw"
+              src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=3840&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FRHMqQGr%2Fman-1.png&w=3840&q=75 3840w"
+              style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+            />
+          </div>
           <p
             class="chakra-text css-1rr4qq7"
           >
@@ -290,17 +298,21 @@ exports[`MenuProfile Should render correctly snapshot when data empty 1`] = `
           <div
             class="css-yvf3fq"
           >
-            <img
-              alt="Avatar user"
-              data-nimg="1"
-              decoding="async"
-              fetchpriority="high"
-              height="45"
-              src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=96&q=75"
-              srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=96&q=75 2x"
-              style="color: transparent; max-width: 100%; border-radius: 50%; border: 2px solid white; height: 100%;"
-              width="45"
-            />
+            <div
+              class="css-bgqooo"
+            >
+              <img
+                alt="Avatar user"
+                data-nimg="fill"
+                decoding="async"
+                fetchpriority="high"
+                loading="lazy"
+                sizes="100vw"
+                src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=3840&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=3840&q=75 3840w"
+                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+              />
+            </div>
             <p
               class="chakra-text css-1rr4qq7"
             />
@@ -395,17 +407,21 @@ exports[`MenuProfile Should render correctly snapshot when data empty 1`] = `
         <div
           class="css-yvf3fq"
         >
-          <img
-            alt="Avatar user"
-            data-nimg="1"
-            decoding="async"
-            fetchpriority="high"
-            height="45"
-            src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=96&q=75"
-            srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=96&q=75 2x"
-            style="color: transparent; max-width: 100%; border-radius: 50%; border: 2px solid white; height: 100%;"
-            width="45"
-          />
+          <div
+            class="css-bgqooo"
+          >
+            <img
+              alt="Avatar user"
+              data-nimg="fill"
+              decoding="async"
+              fetchpriority="high"
+              loading="lazy"
+              sizes="100vw"
+              src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=3840&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=3840&q=75 3840w"
+              style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+            />
+          </div>
           <p
             class="chakra-text css-1rr4qq7"
           />

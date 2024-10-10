@@ -5,31 +5,39 @@ exports[`Avatar Should render correctly snapshot 1`] = `
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <img
-        alt="Avatar user"
-        data-nimg="1"
-        decoding="async"
-        fetchpriority="high"
-        height="100"
-        src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=256&q=75"
-        srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=256&q=75 2x"
-        style="color: transparent; max-width: 100%; border-radius: 50%; height: 100%;"
-        width="100"
-      />
+      <div
+        class="css-1ysb445"
+      >
+        <img
+          alt="Avatar user"
+          data-nimg="fill"
+          decoding="async"
+          fetchpriority="high"
+          loading="lazy"
+          sizes="100vw"
+          src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=3840&q=75"
+          srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=3840&q=75 3840w"
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+        />
+      </div>
     </div>
   </body>,
   "container": <div>
-    <img
-      alt="Avatar user"
-      data-nimg="1"
-      decoding="async"
-      fetchpriority="high"
-      height="100"
-      src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=256&q=75"
-      srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=256&q=75 2x"
-      style="color: transparent; max-width: 100%; border-radius: 50%; height: 100%;"
-      width="100"
-    />
+    <div
+      class="css-1ysb445"
+    >
+      <img
+        alt="Avatar user"
+        data-nimg="fill"
+        decoding="async"
+        fetchpriority="high"
+        loading="lazy"
+        sizes="100vw"
+        src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=3840&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F88X1WfZ%2Favatar-default.png&w=3840&q=75 3840w"
+        style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+      />
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
@@ -90,31 +98,39 @@ exports[`Avatar Should render correctly snapshot when image empty 1`] = `
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <img
-        alt="Avatar user"
-        data-nimg="1"
-        decoding="async"
-        fetchpriority="high"
-        height="100"
-        src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=256&q=75"
-        srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=256&q=75 2x"
-        style="color: transparent; max-width: 100%; border-radius: 50%; height: 100%;"
-        width="100"
-      />
+      <div
+        class="css-1ysb445"
+      >
+        <img
+          alt="Avatar user"
+          data-nimg="fill"
+          decoding="async"
+          fetchpriority="high"
+          loading="lazy"
+          sizes="100vw"
+          src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=3840&q=75"
+          srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=3840&q=75 3840w"
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+        />
+      </div>
     </div>
   </body>,
   "container": <div>
-    <img
-      alt="Avatar user"
-      data-nimg="1"
-      decoding="async"
-      fetchpriority="high"
-      height="100"
-      src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=256&q=75"
-      srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=256&q=75 2x"
-      style="color: transparent; max-width: 100%; border-radius: 50%; height: 100%;"
-      width="100"
-    />
+    <div
+      class="css-1ysb445"
+    >
+      <img
+        alt="Avatar user"
+        data-nimg="fill"
+        decoding="async"
+        fetchpriority="high"
+        loading="lazy"
+        sizes="100vw"
+        src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=3840&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKHPQYq%2Favatar-default.webp&w=3840&q=75 3840w"
+        style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+      />
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

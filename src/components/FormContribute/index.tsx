@@ -109,8 +109,7 @@ const FormContribute = ({
           if (data.success) {
             finalImageUrl = data.data.url;
           } else {
-            console.error("Upload failed:", data.error.message);
-            return;
+            throw new Error("Upload failed:", data.error.message);
           }
         }
         onUpdate?.(id as string, {
