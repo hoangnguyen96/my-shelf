@@ -4,12 +4,12 @@ import theme from "@app/themes";
 import { RouterContext } from "next/dist/shared/lib/router-context.shared-runtime";
 import { mockRouter, mockSession } from "@app/mocks/storybook";
 import { SessionProvider } from "next-auth/react";
-import { ListCart } from "@app/features/dashboard/components";
+import { HomeList } from "@app/features/dashboard/components";
 import { DATA_BOOKS, DATA_USER } from "@app/mocks/data";
 import { MainLayout } from "@app/layouts";
 
-const meta: Meta<typeof ListCart> = {
-  component: ListCart,
+const meta: Meta<typeof HomeList> = {
+  component: HomeList,
   decorators: [
     (Story: StoryFn) => (
       <ChakraProvider theme={theme}>
@@ -25,9 +25,9 @@ const meta: Meta<typeof ListCart> = {
 
 export default meta;
 
-const Template: StoryFn<typeof ListCart> = () => (
+const Template: StoryFn<typeof HomeList> = () => (
   <MainLayout>
-    <ListCart user={DATA_USER[0]} list={DATA_BOOKS} />
+    <HomeList user={DATA_USER[0]} list={DATA_BOOKS} />
   </MainLayout>
 );
 

@@ -5,7 +5,6 @@ import { z } from "zod";
 import bcrypt from "bcryptjs";
 import { MESSAGES } from "./constants";
 import { getUserByEmail } from "@app/features/dashboard/actions";
-import { User } from "./models";
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   ...authConfig,
