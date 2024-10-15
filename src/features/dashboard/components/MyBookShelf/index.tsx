@@ -3,7 +3,7 @@
 import { memo } from "react";
 import { useRouter } from "next/navigation";
 import { Flex } from "@chakra-ui/react";
-import { BookType, User } from "@app/models";
+import { BookType, User } from "@app/interface";
 import { getBookById, updateBookById, updateUserById } from "../../actions";
 import { CartBorrow } from "@app/components";
 import { MESSAGES } from "@app/constants";

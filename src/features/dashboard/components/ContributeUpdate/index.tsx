@@ -4,7 +4,7 @@ import { memo } from "react";
 import { useRouter } from "next/navigation";
 import { Box, Text, useToast } from "@chakra-ui/react";
 import { ROUTES } from "@app/constants";
-import { BookType } from "@app/models";
+import { BookType } from "@app/interface";
 import { updateBookById } from "../../actions";
 import { FormContribute } from "@app/components";
 

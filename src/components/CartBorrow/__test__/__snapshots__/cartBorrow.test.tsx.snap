@@ -68,7 +68,7 @@ exports[`CartBorrow Should render correctly snapshot 1`] = `
             <p
               class="chakra-text css-0"
             >
-              11 Mar 2023 09:00 AM
+              15 Oct 2024 3:32 PM
             </p>
           </div>
           <button
@@ -146,7 +146,7 @@ exports[`CartBorrow Should render correctly snapshot 1`] = `
           <p
             class="chakra-text css-0"
           >
-            11 Mar 2023 09:00 AM
+            15 Oct 2024 3:32 PM
           </p>
         </div>
         <button

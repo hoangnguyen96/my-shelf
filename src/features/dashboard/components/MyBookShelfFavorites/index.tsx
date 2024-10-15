@@ -4,7 +4,7 @@ import { memo } from "react";
 import { Flex } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
 import { MESSAGES } from "@app/constants";
-import { BookType, User } from "@app/models";
+import { BookType, User } from "@app/interface";
 import { updateUserById } from "../../actions";
 import { TableItem } from "@app/components";
 

@@ -30,7 +30,7 @@ const Template: StoryFn<typeof CartBorrow> = () => (
     publicationYear={1900}
     rating={4.5}
     imgUrl="https://i.ibb.co/2Kn2kW2/book1.webp"
-    createDate={"11 Mar 2023 09:00 AM"}
+    createDate={"2024-10-15T08:32:57.347Z"}
     id={""}
     onReturnBook={() => {}}
   />

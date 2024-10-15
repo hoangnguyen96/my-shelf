@@ -3,6 +3,7 @@
 import { memo } from "react";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
+import { formatDate } from "@app/utils";
 import { Button } from "../common";
 
 interface CartBorrowProps {
@@ -67,7 +68,7 @@ const CartBorrow = ({
           <Text size="md" mb="10px">
             Borrowed on
           </Text>
-          <Text size="xs">{createDate}</Text>
+          <Text size="xs">{formatDate(new Date(createDate))}</Text>
         </Box>
         <Button
           data-testid="return-book"

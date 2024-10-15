@@ -2,7 +2,7 @@
 
 import { memo } from "react";
 import { TableItem } from "@app/components";
-import { BookType, User } from "@app/models";
+import { BookType, User } from "@app/interface";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import Link from "next/link";

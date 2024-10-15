@@ -17,17 +17,13 @@ import {
 import { MESSAGES } from "@app/constants";
 
 // Models
-import { BookType } from "@app/models";
+import { BookType } from "@app/interface";
 
 // Api
 import { generateImageUpload } from "@app/features/dashboard/actions";
 
 // Utils
-import {
-  clearErrorOnChange,
-  formatDate,
-  isEnableSubmitButton,
-} from "@app/utils";
+import { clearErrorOnChange, isEnableSubmitButton } from "@app/utils";
 import { UploadIcon } from "@app/assets/icons";
 import { Button, Input } from "../common";
 
@@ -133,7 +129,7 @@ const FormContribute = ({
           status: false,
           publicationYear: new Date().getFullYear(),
           rating: 0,
-          createdDate: formatDate(new Date()),
+          createdDate: new Date().toISOString(),
           edition: "first",
           imageUrl: data.data.url,
         });

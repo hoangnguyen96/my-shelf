@@ -1,8 +1,5 @@
 import { getUserByEmail } from "@app/features/dashboard/actions";
-import { MESSAGES } from "@app/constants";
-
-export const isRequired = (value: string | null | undefined): boolean =>
-  !!value;
+import { MESSAGES, REGEX_PATTERN } from "@app/constants";
 
 export const isValidFormat = (value = "", pattern: RegExp): boolean =>
   pattern.test(value);
@@ -27,9 +24,6 @@ export const isEnableSubmitButton = (
 
   return isMatchAllRequiredFields && errors && !Object.keys(errors).length;
 };
-
-export const validateRequired = (value: string | null): string | true =>
-  isRequired(value?.trim()) || MESSAGES.FIELD_REQUIRED;
 
 export const validateRegExpFormat = (
   value: string,
@@ -64,10 +58,5 @@ export const validateConfirmPassword = (
  * @param password - The password string to validate
  * @returns A string with the error message if invalid, or true if valid
  */
-export const validatePassword = (password: string): true | string => {
-  const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
-
-  return regex.test(password)
-    ? true
-    : "Password must have minimum 8 characters and at least one uppercase letters, lowercase letters, numbers, and symbols";
-};
+export const validatePassword = (password: string): true | string =>
+  REGEX_PATTERN.PASSWORD.test(password) ? true : MESSAGES.FORMAT_PASSWORD;

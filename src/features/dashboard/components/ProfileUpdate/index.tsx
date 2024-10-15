@@ -4,7 +4,7 @@ import { memo } from "react";
 import { Box, Flex, Text, useToast } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
 import { MESSAGES } from "@app/constants";
-import { User } from "@app/models";
+import { User } from "@app/interface";
 import { updateUserById } from "../../actions";
 import { FormProfile } from "@app/components";
 import { UploadImage } from "@app/components/common";

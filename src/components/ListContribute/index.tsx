@@ -2,7 +2,7 @@
 
 import { memo } from "react";
 import { Flex } from "@chakra-ui/react";
-import { BookType, User } from "@app/models";
+import { BookType, User } from "@app/interface";
 import { Cart } from "@app/components/common";
 
 interface ListContributeProps {

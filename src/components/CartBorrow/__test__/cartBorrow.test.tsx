@@ -16,7 +16,7 @@ describe("CartBorrow", () => {
     publicationYear: 1900,
     rating: 4.5,
     imgUrl: `${book1}`,
-    createDate: "11 Mar 2023 09:00 AM",
+    createDate: "2024-10-15T08:32:57.347Z",
     id: "",
     onReturnBook: jest.fn(),
   };

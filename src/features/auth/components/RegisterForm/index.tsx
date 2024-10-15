@@ -5,7 +5,7 @@ import { useToast } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
 import bcrypt from "bcryptjs";
 import { MESSAGES, ROUTES } from "@app/constants";
-import { User } from "@app/models";
+import { User } from "@app/interface";
 import { generateSevenDigitUUID } from "@app/utils";
 import { authenticate } from "../../actions";
 import { addUser } from "../../../dashboard/actions";

@@ -2,7 +2,7 @@ import { memo } from "react";
 import Link from "next/link";
 import { LogoMain } from "@app/assets/icons";
 import { ROUTES } from "@app/constants";
-import { User } from "@app/models";
+import { User } from "@app/interface";
 
 interface LogoProps {
   user: Partial<User>;

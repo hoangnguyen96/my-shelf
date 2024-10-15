@@ -1,7 +1,7 @@
 "use client";
 
 import { MESSAGES, ROUTES } from "@app/constants";
-import { User } from "@app/models";
+import { User } from "@app/interface";
 import { useToast } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
 import { authenticate } from "../../actions";

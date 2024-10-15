@@ -5,7 +5,7 @@ import Logo from ".";
 import { SessionProvider } from "next-auth/react";
 import { RouterContext } from "next/dist/shared/lib/router-context.shared-runtime";
 import { mockRouter, mockSession } from "@app/mocks/storybook";
-import { User } from "@app/models";
+import { User } from "@app/interface";
 
 const meta: Meta<typeof Logo> = {
   component: Logo,

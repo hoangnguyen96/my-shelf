@@ -3,7 +3,7 @@
 import { Text } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
 import { ROUTES } from "@app/constants";
-import { BookType } from "@app/models";
+import { BookType } from "@app/interface";
 import { addBook } from "../../actions";
 import { FormContribute } from "@app/components";
 

@@ -5,9 +5,8 @@ import { Box, Flex, Text, useDisclosure } from "@chakra-ui/react";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import Image from "next/image";
 import Link from "next/link";
-import { BookType, User } from "@app/models";
+import { BookType, User } from "@app/interface";
 import { updateBookById, updateUserById } from "../../actions";
-import { formatDate } from "@app/utils";
 import { useRouter } from "next/navigation";
 import { CheckIcon, StarFullIcon } from "@app/assets/icons";
 import { previewAuthor } from "@app/assets/images";
@@ -40,7 +39,7 @@ export const PreviewBookDetails = memo(
         user?.shelfBooks.push(id);
         await updateBookById(book?.id, {
           ...book,
-          createdDate: formatDate(new Date()),
+          createdDate: new Date().toISOString(),
         });
         const idUpdate = user?.id;
         await updateUserById(idUpdate, { ...user });

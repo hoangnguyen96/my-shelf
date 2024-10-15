@@ -1,5 +1,5 @@
 import { API_ROUTES } from "@app/constants";
-import { User } from "@app/models";
+import { User } from "@app/interface";
 import { api } from "@app/services";
 
 export const getAllUser = async () => {

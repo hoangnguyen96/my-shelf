@@ -13,7 +13,7 @@ import { useForm, Controller } from "react-hook-form";
 import { MESSAGES, REGEX_PATTERN } from "@app/constants";
 
 // Models
-import { User } from "@app/models";
+import { User } from "@app/interface";
 
 // Utils
 import {

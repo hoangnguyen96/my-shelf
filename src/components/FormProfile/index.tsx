@@ -1,7 +1,7 @@
 "use client";
 
 import { MESSAGES, REGEX_PATTERN } from "@app/constants";
-import { User } from "@app/models";
+import { User } from "@app/interface";
 import {
   clearErrorOnChange,
   isEnableSubmitButton,

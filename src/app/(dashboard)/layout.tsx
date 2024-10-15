@@ -2,7 +2,7 @@ import { auth } from "@app/auth";
 import { Box, Flex } from "@chakra-ui/react";
 import { Logo, Navbar } from "@app/components/common";
 import { TopContent } from "@app/components";
-import { User } from "@app/models";
+import { User } from "@app/interface";
 import { Session } from "next-auth";
 
 const DashboardLayout = async ({

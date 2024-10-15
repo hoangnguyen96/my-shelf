@@ -8,7 +8,7 @@ import { Logo, Navbar } from "@app/components/common";
 import { ListContribute, MenuProfile } from "@app/components";
 import Link from "next/link";
 import { ROUTES } from "@app/constants";
-import { User } from "@app/models";
+import { User } from "@app/interface";
 import { DATA_BOOKS, DATA_USER } from "@app/mocks/data";
 import ContributePage from "./page";
 import { MainLayout } from "@app/layouts";

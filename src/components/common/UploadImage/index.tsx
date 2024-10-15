@@ -4,7 +4,7 @@ import { memo, useRef, useState } from "react";
 import { Box, Input, FormControl, FormLabel } from "@chakra-ui/react";
 import Image from "next/image";
 import { Button } from "..";
-import { User } from "@app/models";
+import { User } from "@app/interface";
 import {
   generateImageUpload,
   updateUserById,

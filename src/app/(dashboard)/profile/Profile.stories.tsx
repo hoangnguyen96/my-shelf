@@ -6,7 +6,7 @@ import { mockRouter, mockSession } from "@app/mocks/storybook";
 import { SessionProvider } from "next-auth/react";
 import { Logo, Navbar } from "@app/components/common";
 import { MenuProfile } from "@app/components";
-import { User } from "@app/models";
+import { User } from "@app/interface";
 import { ProfileUpdate } from "@app/features/dashboard/components";
 import { DATA_USER } from "@app/mocks/data";
 import { MainLayout } from "@app/layouts";

@@ -21,7 +21,7 @@
       "@app/*": ["./src/*"],
       "@app/components/*": ["./src/components/*"],
       "@app/constants/*": ["./src/constants/*"],
-      "@app/models/*": ["./src/models/*"],
+      "@app/interface/*": ["./src/interface/*"],
       "@app/utils/*": ["./src/utils/*"]
       
     }

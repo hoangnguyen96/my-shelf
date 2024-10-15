@@ -2,7 +2,7 @@
 
 import { AuthError } from "next-auth";
 import { MESSAGES } from "@app/constants";
-import { User } from "@app/models";
+import { User } from "@app/interface";
 import { signIn, signOut } from "@app/auth";
 
 export const authenticate = async (formData: Partial<User>) => {

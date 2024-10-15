@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import { fireEvent, render } from "@testing-library/react";
 import { UploadImage } from "../..";
-import { User } from "@app/models";
+import { User } from "@app/interface";
 import * as api from "@app/features/dashboard/actions";
 
 jest.mock("@app/features/dashboard/actions", () => ({
