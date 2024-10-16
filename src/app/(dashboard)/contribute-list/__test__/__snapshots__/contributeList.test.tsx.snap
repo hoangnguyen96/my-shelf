@@ -26,15 +26,15 @@ exports[`Contribute List Page Should render correctly snapshot 1`] = `
       </span>
     </a>
     <div
-      class="css-hqjrpa"
+      class="css-1ogw1ur"
     >
       <p
-        class="chakra-text css-1r6j0nc"
+        class="chakra-text css-shoc3n"
       >
         Title
       </p>
       <div
-        class="css-11e68w1"
+        class="css-13tqc0q"
       >
         <p
           class="chakra-text css-10rvbm3"
@@ -52,10 +52,10 @@ exports[`Contribute List Page Should render correctly snapshot 1`] = `
       class="css-1pavchb"
     >
       <div
-        class="css-uxib3o"
+        class="css-1q7xe83"
       >
         <div
-          class="css-1jxcnq9"
+          class="css-18s564a"
         >
           <img
             alt="Don't Make Me Think"
@@ -100,10 +100,10 @@ exports[`Contribute List Page Should render correctly snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-gsip0b"
+          class="css-4ff7a7"
         >
           <p
-            class="chakra-text css-q2ms4q"
+            class="chakra-text css-16scppb"
           >
             4.5
             <span
@@ -113,7 +113,7 @@ exports[`Contribute List Page Should render correctly snapshot 1`] = `
             </span>
           </p>
           <div
-            class="css-iqbc30"
+            class="css-16ol3ha"
           >
             <p
               class="chakra-text css-0"
@@ -128,7 +128,7 @@ exports[`Contribute List Page Should render correctly snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-a71o49"
+          class="css-nxsmp4"
         >
           <button
             class="chakra-button css-4xx2wk"
@@ -147,10 +147,10 @@ exports[`Contribute List Page Should render correctly snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-uxib3o"
+        class="css-1q7xe83"
       >
         <div
-          class="css-1jxcnq9"
+          class="css-18s564a"
         >
           <img
             alt="Rich Dad Poor Dad"
@@ -195,10 +195,10 @@ exports[`Contribute List Page Should render correctly snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-gsip0b"
+          class="css-4ff7a7"
         >
           <p
-            class="chakra-text css-q2ms4q"
+            class="chakra-text css-16scppb"
           >
             4.5
             <span
@@ -208,7 +208,7 @@ exports[`Contribute List Page Should render correctly snapshot 1`] = `
             </span>
           </p>
           <div
-            class="css-iqbc30"
+            class="css-16ol3ha"
           >
             <p
               class="chakra-text css-0"
@@ -223,7 +223,7 @@ exports[`Contribute List Page Should render correctly snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-a71o49"
+          class="css-nxsmp4"
         >
           <button
             class="chakra-button css-4xx2wk"
@@ -242,10 +242,10 @@ exports[`Contribute List Page Should render correctly snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-uxib3o"
+        class="css-1q7xe83"
       >
         <div
-          class="css-1jxcnq9"
+          class="css-18s564a"
         >
           <img
             alt="The Design of Everyday Things"
@@ -290,10 +290,10 @@ exports[`Contribute List Page Should render correctly snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-gsip0b"
+          class="css-4ff7a7"
         >
           <p
-            class="chakra-text css-q2ms4q"
+            class="chakra-text css-16scppb"
           >
             4.5
             <span
@@ -303,7 +303,7 @@ exports[`Contribute List Page Should render correctly snapshot 1`] = `
             </span>
           </p>
           <div
-            class="css-iqbc30"
+            class="css-16ol3ha"
           >
             <p
               class="chakra-text css-0"
@@ -318,7 +318,7 @@ exports[`Contribute List Page Should render correctly snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-a71o49"
+          class="css-nxsmp4"
         >
           <button
             class="chakra-button css-4xx2wk"

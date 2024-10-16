@@ -6,7 +6,7 @@ exports[`Status Should render correctly snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="css-yjxbuh"
+        class="css-8ji7z5"
       >
         <p
           class="chakra-text css-1619v3u"
@@ -18,7 +18,7 @@ exports[`Status Should render correctly snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="css-yjxbuh"
+      class="css-8ji7z5"
     >
       <p
         class="chakra-text css-1619v3u"
@@ -87,7 +87,7 @@ exports[`Status Should render correctly snapshot when true 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="css-1sv0o68"
+        class="css-1rb83ml"
       >
         <p
           class="chakra-text css-1619v3u"
@@ -99,7 +99,7 @@ exports[`Status Should render correctly snapshot when true 1`] = `
   </body>,
   "container": <div>
     <div
-      class="css-1sv0o68"
+      class="css-1rb83ml"
     >
       <p
         class="chakra-text css-1619v3u"

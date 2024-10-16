@@ -29,11 +29,28 @@ export const ContributeList = memo(({ user, list }: ContributeListProps) => {
         </Text>
       </Link>
 
-      <Flex gap="10%" alignItems="center" mt="66px">
-        <Text size="xl" fontWeight={500} w="100%" maxW={352}>
+      <Flex
+        mt="66px"
+        alignItems="center"
+        gap={{ base: "2%", xl: "5%", "2xl": "6%" }}
+      >
+        <Text
+          size="xl"
+          w="100%"
+          fontWeight={500}
+          minW={{ base: 235, "2xl": 320 }}
+          maxW={{ base: "24%", "2xl": "22%" }}
+          gap={{ base: "20px", "2xl": "47px" }}
+        >
           Title
         </Text>
-        <Flex gap="15%" w="100%" maxW={312}>
+        <Flex
+          w="100%"
+          alignItems="center"
+          maxW={{ base: "18%" }}
+          gap={{ base: "10px", xl: "20px", "2xl": "60px" }}
+          minW={{ base: 205, xl: "22%", "2xl": 225 }}
+        >
           <Text size="xl" fontWeight={500}>
             Ratings
           </Text>

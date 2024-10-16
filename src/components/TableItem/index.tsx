@@ -70,10 +70,17 @@ const TableItem = ({
         py="12px"
         pl="24px"
         pr="48px"
-        gap="10%"
+        minW="min-content"
+        gap={{ base: "2%", xl: "5%", "2xl": "6%" }}
         alignItems="center"
       >
-        <Flex gap="47px" alignItems="center" maxW={329} w="100%">
+        <Flex
+          alignItems="center"
+          minW={{ base: 220, "2xl": 310 }}
+          maxW={{ base: "27%", "2xl": "23%" }}
+          w="100%"
+          gap={{ base: "20px", "2xl": "47px" }}
+        >
           <Image
             src={imageUrl || ""}
             alt={title || "Table item book!"}
@@ -93,23 +100,36 @@ const TableItem = ({
             <Text size="xs">{edition} Edition</Text>
           </Flex>
         </Flex>
-        <Flex gap="72px" alignItems="center" maxW={312} w="100%">
-          <Text size="xl" w="60px">
+        <Flex
+          gap={{ base: "10px", xl: "20px", "2xl": "60px" }}
+          alignItems="center"
+          minW={{ base: 205, xl: "22%", "2xl": 225 }}
+          maxW={{ base: "18%" }}
+          w="100%"
+        >
+          <Text size="xl" minW="48px">
             {rating}
             <Text as="span" size="md" color="colorDescription">
               /5
             </Text>
           </Text>
-          <Flex flexDir="column" gap="11px">
+          <Flex flexDir="column" gap="11px" flex={1}>
             <Text size="xl">{category}</Text>
             <Text size="md">UX Design</Text>
           </Flex>
         </Flex>
-        {!isContribute && <StatusBook status={status} />}
+        {!isContribute && (
+          <Flex maxW={{ base: 100, "2xl": 200 }} w="100%">
+            <StatusBook status={status} />
+          </Flex>
+        )}
         <Flex
-          gap={isContribute ? "36px" : "64px"}
+          gap={{
+            base: "20px",
+            "2xl": isContribute ? "36px" : "64px",
+          }}
           alignItems="center"
-          maxW={179}
+          minW={140}
           w="100%"
         >
           {!isContribute && (

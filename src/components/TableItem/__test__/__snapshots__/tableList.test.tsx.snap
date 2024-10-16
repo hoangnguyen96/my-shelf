@@ -6,10 +6,10 @@ exports[`TableItem Should render correctly snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="css-uxib3o"
+        class="css-1q7xe83"
       >
         <div
-          class="css-1jxcnq9"
+          class="css-18s564a"
         >
           <img
             alt="Test"
@@ -50,10 +50,10 @@ exports[`TableItem Should render correctly snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-gsip0b"
+          class="css-4ff7a7"
         >
           <p
-            class="chakra-text css-q2ms4q"
+            class="chakra-text css-16scppb"
           >
             0
             <span
@@ -63,7 +63,7 @@ exports[`TableItem Should render correctly snapshot 1`] = `
             </span>
           </p>
           <div
-            class="css-iqbc30"
+            class="css-16ol3ha"
           >
             <p
               class="chakra-text css-0"
@@ -78,16 +78,20 @@ exports[`TableItem Should render correctly snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-yjxbuh"
+          class="css-pelxgl"
         >
-          <p
-            class="chakra-text css-1619v3u"
+          <div
+            class="css-8ji7z5"
           >
-            None
-          </p>
+            <p
+              class="chakra-text css-1619v3u"
+            >
+              None
+            </p>
+          </div>
         </div>
         <div
-          class="css-1l4iwxf"
+          class="css-1ta51pi"
         >
           <button
             aria-label="Heart icon"
@@ -120,10 +124,10 @@ exports[`TableItem Should render correctly snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="css-uxib3o"
+      class="css-1q7xe83"
     >
       <div
-        class="css-1jxcnq9"
+        class="css-18s564a"
       >
         <img
           alt="Test"
@@ -164,10 +168,10 @@ exports[`TableItem Should render correctly snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-gsip0b"
+        class="css-4ff7a7"
       >
         <p
-          class="chakra-text css-q2ms4q"
+          class="chakra-text css-16scppb"
         >
           0
           <span
@@ -177,7 +181,7 @@ exports[`TableItem Should render correctly snapshot 1`] = `
           </span>
         </p>
         <div
-          class="css-iqbc30"
+          class="css-16ol3ha"
         >
           <p
             class="chakra-text css-0"
@@ -192,16 +196,20 @@ exports[`TableItem Should render correctly snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-yjxbuh"
+        class="css-pelxgl"
       >
-        <p
-          class="chakra-text css-1619v3u"
+        <div
+          class="css-8ji7z5"
         >
-          None
-        </p>
+          <p
+            class="chakra-text css-1619v3u"
+          >
+            None
+          </p>
+        </div>
       </div>
       <div
-        class="css-1l4iwxf"
+        class="css-1ta51pi"
       >
         <button
           aria-label="Heart icon"
@@ -291,10 +299,10 @@ exports[`TableItem Should render correctly snapshot when imageUrl is empty 1`] =
   "baseElement": <body>
     <div>
       <div
-        class="css-uxib3o"
+        class="css-1q7xe83"
       >
         <div
-          class="css-1jxcnq9"
+          class="css-18s564a"
         >
           <img
             alt="Table item book!"
@@ -331,10 +339,10 @@ exports[`TableItem Should render correctly snapshot when imageUrl is empty 1`] =
           </div>
         </div>
         <div
-          class="css-gsip0b"
+          class="css-4ff7a7"
         >
           <p
-            class="chakra-text css-q2ms4q"
+            class="chakra-text css-16scppb"
           >
             0
             <span
@@ -344,7 +352,7 @@ exports[`TableItem Should render correctly snapshot when imageUrl is empty 1`] =
             </span>
           </p>
           <div
-            class="css-iqbc30"
+            class="css-16ol3ha"
           >
             <p
               class="chakra-text css-0"
@@ -357,16 +365,20 @@ exports[`TableItem Should render correctly snapshot when imageUrl is empty 1`] =
           </div>
         </div>
         <div
-          class="css-yjxbuh"
+          class="css-pelxgl"
         >
-          <p
-            class="chakra-text css-1619v3u"
+          <div
+            class="css-8ji7z5"
           >
-            None
-          </p>
+            <p
+              class="chakra-text css-1619v3u"
+            >
+              None
+            </p>
+          </div>
         </div>
         <div
-          class="css-1l4iwxf"
+          class="css-1ta51pi"
         >
           <button
             aria-label="Heart icon"
@@ -399,10 +411,10 @@ exports[`TableItem Should render correctly snapshot when imageUrl is empty 1`] =
   </body>,
   "container": <div>
     <div
-      class="css-uxib3o"
+      class="css-1q7xe83"
     >
       <div
-        class="css-1jxcnq9"
+        class="css-18s564a"
       >
         <img
           alt="Table item book!"
@@ -439,10 +451,10 @@ exports[`TableItem Should render correctly snapshot when imageUrl is empty 1`] =
         </div>
       </div>
       <div
-        class="css-gsip0b"
+        class="css-4ff7a7"
       >
         <p
-          class="chakra-text css-q2ms4q"
+          class="chakra-text css-16scppb"
         >
           0
           <span
@@ -452,7 +464,7 @@ exports[`TableItem Should render correctly snapshot when imageUrl is empty 1`] =
           </span>
         </p>
         <div
-          class="css-iqbc30"
+          class="css-16ol3ha"
         >
           <p
             class="chakra-text css-0"
@@ -465,16 +477,20 @@ exports[`TableItem Should render correctly snapshot when imageUrl is empty 1`] =
         </div>
       </div>
       <div
-        class="css-yjxbuh"
+        class="css-pelxgl"
       >
-        <p
-          class="chakra-text css-1619v3u"
+        <div
+          class="css-8ji7z5"
         >
-          None
-        </p>
+          <p
+            class="chakra-text css-1619v3u"
+          >
+            None
+          </p>
+        </div>
       </div>
       <div
-        class="css-1l4iwxf"
+        class="css-1ta51pi"
       >
         <button
           aria-label="Heart icon"
@@ -564,10 +580,10 @@ exports[`TableItem Should render correctly snapshot when is contribute 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="css-uxib3o"
+        class="css-1q7xe83"
       >
         <div
-          class="css-1jxcnq9"
+          class="css-18s564a"
         >
           <img
             alt="Test"
@@ -608,10 +624,10 @@ exports[`TableItem Should render correctly snapshot when is contribute 1`] = `
           </div>
         </div>
         <div
-          class="css-gsip0b"
+          class="css-4ff7a7"
         >
           <p
-            class="chakra-text css-q2ms4q"
+            class="chakra-text css-16scppb"
           >
             0
             <span
@@ -621,7 +637,7 @@ exports[`TableItem Should render correctly snapshot when is contribute 1`] = `
             </span>
           </p>
           <div
-            class="css-iqbc30"
+            class="css-16ol3ha"
           >
             <p
               class="chakra-text css-0"
@@ -636,7 +652,7 @@ exports[`TableItem Should render correctly snapshot when is contribute 1`] = `
           </div>
         </div>
         <div
-          class="css-a71o49"
+          class="css-nxsmp4"
         >
           <button
             class="chakra-button css-4xx2wk"
@@ -658,10 +674,10 @@ exports[`TableItem Should render correctly snapshot when is contribute 1`] = `
   </body>,
   "container": <div>
     <div
-      class="css-uxib3o"
+      class="css-1q7xe83"
     >
       <div
-        class="css-1jxcnq9"
+        class="css-18s564a"
       >
         <img
           alt="Test"
@@ -702,10 +718,10 @@ exports[`TableItem Should render correctly snapshot when is contribute 1`] = `
         </div>
       </div>
       <div
-        class="css-gsip0b"
+        class="css-4ff7a7"
       >
         <p
-          class="chakra-text css-q2ms4q"
+          class="chakra-text css-16scppb"
         >
           0
           <span
@@ -715,7 +731,7 @@ exports[`TableItem Should render correctly snapshot when is contribute 1`] = `
           </span>
         </p>
         <div
-          class="css-iqbc30"
+          class="css-16ol3ha"
         >
           <p
             class="chakra-text css-0"
@@ -730,7 +746,7 @@ exports[`TableItem Should render correctly snapshot when is contribute 1`] = `
         </div>
       </div>
       <div
-        class="css-a71o49"
+        class="css-nxsmp4"
       >
         <button
           class="chakra-button css-4xx2wk"

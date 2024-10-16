@@ -6,10 +6,10 @@ exports[`Search List Should render correctly snapshot 1`] = `
     class="css-2vc4m5"
   >
     <div
-      class="css-uxib3o"
+      class="css-1q7xe83"
     >
       <div
-        class="css-1jxcnq9"
+        class="css-18s564a"
       >
         <img
           alt="Don't Make Me Think"
@@ -54,10 +54,10 @@ exports[`Search List Should render correctly snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-gsip0b"
+        class="css-4ff7a7"
       >
         <p
-          class="chakra-text css-q2ms4q"
+          class="chakra-text css-16scppb"
         >
           4.5
           <span
@@ -67,7 +67,7 @@ exports[`Search List Should render correctly snapshot 1`] = `
           </span>
         </p>
         <div
-          class="css-iqbc30"
+          class="css-16ol3ha"
         >
           <p
             class="chakra-text css-0"
@@ -82,16 +82,20 @@ exports[`Search List Should render correctly snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-1sv0o68"
+        class="css-pelxgl"
       >
-        <p
-          class="chakra-text css-1619v3u"
+        <div
+          class="css-1rb83ml"
         >
-          In-Shelf
-        </p>
+          <p
+            class="chakra-text css-1619v3u"
+          >
+            In-Shelf
+          </p>
+        </div>
       </div>
       <div
-        class="css-1l4iwxf"
+        class="css-1ta51pi"
       >
         <button
           aria-label="Heart icon"
@@ -120,10 +124,10 @@ exports[`Search List Should render correctly snapshot 1`] = `
       </div>
     </div>
     <div
-      class="css-uxib3o"
+      class="css-1q7xe83"
     >
       <div
-        class="css-1jxcnq9"
+        class="css-18s564a"
       >
         <img
           alt="Rich Dad Poor Dad"
@@ -168,10 +172,10 @@ exports[`Search List Should render correctly snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-gsip0b"
+        class="css-4ff7a7"
       >
         <p
-          class="chakra-text css-q2ms4q"
+          class="chakra-text css-16scppb"
         >
           4.5
           <span
@@ -181,7 +185,7 @@ exports[`Search List Should render correctly snapshot 1`] = `
           </span>
         </p>
         <div
-          class="css-iqbc30"
+          class="css-16ol3ha"
         >
           <p
             class="chakra-text css-0"
@@ -196,16 +200,20 @@ exports[`Search List Should render correctly snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-yjxbuh"
+        class="css-pelxgl"
       >
-        <p
-          class="chakra-text css-1619v3u"
+        <div
+          class="css-8ji7z5"
         >
-          None
-        </p>
+          <p
+            class="chakra-text css-1619v3u"
+          >
+            None
+          </p>
+        </div>
       </div>
       <div
-        class="css-1l4iwxf"
+        class="css-1ta51pi"
       >
         <button
           aria-label="Heart icon"
@@ -234,10 +242,10 @@ exports[`Search List Should render correctly snapshot 1`] = `
       </div>
     </div>
     <div
-      class="css-uxib3o"
+      class="css-1q7xe83"
     >
       <div
-        class="css-1jxcnq9"
+        class="css-18s564a"
       >
         <img
           alt="The Design of Everyday Things"
@@ -282,10 +290,10 @@ exports[`Search List Should render correctly snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-gsip0b"
+        class="css-4ff7a7"
       >
         <p
-          class="chakra-text css-q2ms4q"
+          class="chakra-text css-16scppb"
         >
           4.5
           <span
@@ -295,7 +303,7 @@ exports[`Search List Should render correctly snapshot 1`] = `
           </span>
         </p>
         <div
-          class="css-iqbc30"
+          class="css-16ol3ha"
         >
           <p
             class="chakra-text css-0"
@@ -310,16 +318,20 @@ exports[`Search List Should render correctly snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-yjxbuh"
+        class="css-pelxgl"
       >
-        <p
-          class="chakra-text css-1619v3u"
+        <div
+          class="css-8ji7z5"
         >
-          None
-        </p>
+          <p
+            class="chakra-text css-1619v3u"
+          >
+            None
+          </p>
+        </div>
       </div>
       <div
-        class="css-1l4iwxf"
+        class="css-1ta51pi"
       >
         <button
           aria-label="Heart icon"
