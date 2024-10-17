@@ -55,7 +55,7 @@ export const ProfileUpdate = memo(({ imageUrl, user }: ProfileUpdateProps) => {
   };
 
   return (
-    <Box p="5px 44px 20px">
+    <Box p="5px 44px 20px" height="80%" overflow="hidden scroll">
       <Flex
         flexDir="column"
         bgColor="white"

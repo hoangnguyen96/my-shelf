@@ -76,9 +76,8 @@ const TableItem = ({
       >
         <Flex
           alignItems="center"
-          minW={{ base: 220, "2xl": 310 }}
-          maxW={{ base: "27%", "2xl": "23%" }}
-          w="100%"
+          minW={{ base: 205, xl: 240, "2xl": 300 }}
+          maxW={{ base: 205, xl: 240, "2xl": 300 }}
           gap={{ base: "20px", "2xl": "47px" }}
         >
           <Image
@@ -90,7 +89,19 @@ const TableItem = ({
             fetchPriority="high"
           />
           <Flex flexDir="column">
-            <Text size="xl" mb="20px">
+            <Text
+              size="xl"
+              mb="20px"
+              textOverflow="ellipsis"
+              style={{
+                WebkitLineClamp: 2,
+                WebkitBoxOrient: "vertical",
+              }}
+              overflow="hidden"
+              max-width={180}
+              display="-webkit-box"
+              word-wrap="break-word"
+            >
               {title}
             </Text>
             <Flex mb="10px">
@@ -101,13 +112,12 @@ const TableItem = ({
           </Flex>
         </Flex>
         <Flex
-          gap={{ base: "10px", xl: "20px", "2xl": "60px" }}
           alignItems="center"
-          minW={{ base: 205, xl: "22%", "2xl": 225 }}
-          maxW={{ base: "18%" }}
-          w="100%"
+          minW={{ base: 230, "2xl": 300 }}
+          maxW={{ base: 230, "2xl": 300 }}
+          gap={{ base: "10px", xl: "20px", "2xl": "60px" }}
         >
-          <Text size="xl" minW="48px">
+          <Text size="xl" minW="71px">
             {rating}
             <Text as="span" size="md" color="colorDescription">
               /5
@@ -119,7 +129,7 @@ const TableItem = ({
           </Flex>
         </Flex>
         {!isContribute && (
-          <Flex maxW={{ base: 100, "2xl": 200 }} w="100%">
+          <Flex w="96px">
             <StatusBook status={status} />
           </Flex>
         )}
@@ -129,8 +139,8 @@ const TableItem = ({
             "2xl": isContribute ? "36px" : "64px",
           }}
           alignItems="center"
-          minW={140}
-          w="100%"
+          maxW={220}
+          w={{ base: "unset", "2xl": "100%" }}
         >
           {!isContribute && (
             <HeartIcon

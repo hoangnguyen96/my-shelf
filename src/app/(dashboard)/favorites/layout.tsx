@@ -9,23 +9,25 @@ const Layout = ({
   children: React.ReactNode;
 }>) => (
   <MyBookShelfLayout>
-    <Flex gap={{ base: "2%", xl: "5%", "2xl": "6%" }} alignItems="center">
+    <Flex
+      gap={{ base: "2%", xl: "5%", "2xl": "6%" }}
+      alignItems="center"
+      overflow="hidden"
+    >
       <Text
         size="xl"
-        w="100%"
+        minW={{ base: 227, xl: 260, "2xl": 318 }}
+        maxW={{ base: 227, xl: 260, "2xl": 318 }}
         fontWeight={500}
-        minW={{ base: 235, "2xl": 320 }}
-        maxW={{ base: "24%", "2xl": "22%" }}
         gap={{ base: "20px", "2xl": "47px" }}
       >
         Title
       </Text>
       <Flex
-        w="100%"
         alignItems="center"
-        maxW={{ base: "18%" }}
+        minW={{ base: 228, "2xl": 296 }}
+        maxW={{ base: 228, "2xl": 296 }}
         gap={{ base: "10px", xl: "20px", "2xl": "60px" }}
-        minW={{ base: 205, xl: "22%", "2xl": 225 }}
       >
         <Text size="xl" fontWeight={500}>
           Ratings

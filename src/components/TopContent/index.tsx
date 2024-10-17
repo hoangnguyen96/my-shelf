@@ -23,6 +23,7 @@ const TopContent = ({ session }: { session?: Session }) => {
       alignItems="center"
       justifyContent={!isNotSearch ? "space-between" : "flex-end"}
       p="32px 48px"
+      gap="10px"
     >
       {!isNotSearch && <SearchBar />}
       <MenuProfile session={session} />

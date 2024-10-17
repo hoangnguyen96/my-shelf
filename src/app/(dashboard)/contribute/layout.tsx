@@ -26,15 +26,18 @@ const ContributeLayout = async ({
 
   return (
     <Flex
-      p="100px 68px"
       gap="56px"
-      height={765}
       pos="relative"
       justifyContent="flex-start"
+      height={{ base: "80%", "2xl": 765 }}
+      overflowY={{ base: "scroll", "2xl": "hidden" }}
+      flexDir={{ base: "column", "2xl": "row" }}
+      p={{ base: "0 48px 60px", "2xl": "100px 68px" }}
     >
       <Flex
         flex={1}
-        maxW={678}
+        maxW={{ base: "unset", "2xl": 678 }}
+        maxH={590}
         flexDir="column"
         bgColor="white"
         borderRadius="10px"
@@ -42,14 +45,18 @@ const ContributeLayout = async ({
       >
         <Suspense fallback={<SkeletonFormContribute />}>{children}</Suspense>
       </Flex>
-      <Flex maxW={582} flexDir="column" w="100%">
-        <Text fontSize="50px" lineHeight="64px" fontWeight={700}>
+      <Flex maxW={{ base: "unset", "2xl": 582 }} flexDir="column" w="100%">
+        <Text
+          fontSize={{ base: "xxxl", "2xl": "50px" }}
+          lineHeight={{ base: "36px", "2xl": "64px" }}
+          fontWeight={700}
+        >
           Your{" "}
           <Text
             as="span"
             color="brand.90"
-            fontSize="50px"
-            lineHeight="64px"
+            fontSize={{ base: "xxxl", "2xl": "50px" }}
+            lineHeight={{ base: "36px", "2xl": "64px" }}
             fontWeight={700}
           >
             Contribution
@@ -57,10 +64,10 @@ const ContributeLayout = async ({
           Helps Other to Learn
         </Text>
         <Flex
-          mt="75px"
           mb="30px"
-          justifyContent="space-between"
           alignItems="center"
+          justifyContent="space-between"
+          mt={{ base: "30px", "2xl": "75px" }}
         >
           <Text size="xxl" fontWeight={400}>
             Your Previous Contributions

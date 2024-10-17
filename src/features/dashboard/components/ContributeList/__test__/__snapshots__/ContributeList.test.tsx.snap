@@ -26,15 +26,15 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
       </span>
     </a>
     <div
-      class="css-1ogw1ur"
+      class="css-1ts1izg"
     >
       <p
-        class="chakra-text css-shoc3n"
+        class="chakra-text css-1l4rx3f"
       >
         Title
       </p>
       <div
-        class="css-13tqc0q"
+        class="css-bxl9jb"
       >
         <p
           class="chakra-text css-10rvbm3"
@@ -49,13 +49,13 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
       </div>
     </div>
     <div
-      class="css-1pavchb"
+      class="css-z2nr1u"
     >
       <div
         class="css-1q7xe83"
       >
         <div
-          class="css-18s564a"
+          class="css-dk70ac"
         >
           <img
             alt="Don't Make Me Think"
@@ -72,7 +72,9 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
             class="css-j7qwjs"
           >
             <p
-              class="chakra-text css-uewl2b"
+              class="chakra-text css-m26pul"
+              max-width="180"
+              word-wrap="break-word"
             >
               Don't Make Me Think
             </p>
@@ -100,10 +102,10 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-4ff7a7"
+          class="css-109g2ia"
         >
           <p
-            class="chakra-text css-16scppb"
+            class="chakra-text css-blrpya"
           >
             4.5
             <span
@@ -128,7 +130,7 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-nxsmp4"
+          class="css-1urk6qq"
         >
           <button
             class="chakra-button css-4xx2wk"
@@ -150,7 +152,7 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
         class="css-1q7xe83"
       >
         <div
-          class="css-18s564a"
+          class="css-dk70ac"
         >
           <img
             alt="Rich Dad Poor Dad"
@@ -167,7 +169,9 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
             class="css-j7qwjs"
           >
             <p
-              class="chakra-text css-uewl2b"
+              class="chakra-text css-m26pul"
+              max-width="180"
+              word-wrap="break-word"
             >
               Rich Dad Poor Dad
             </p>
@@ -195,10 +199,10 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-4ff7a7"
+          class="css-109g2ia"
         >
           <p
-            class="chakra-text css-16scppb"
+            class="chakra-text css-blrpya"
           >
             4.5
             <span
@@ -223,7 +227,7 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-nxsmp4"
+          class="css-1urk6qq"
         >
           <button
             class="chakra-button css-4xx2wk"
@@ -245,7 +249,7 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
         class="css-1q7xe83"
       >
         <div
-          class="css-18s564a"
+          class="css-dk70ac"
         >
           <img
             alt="The Design of Everyday Things"
@@ -262,7 +266,9 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
             class="css-j7qwjs"
           >
             <p
-              class="chakra-text css-uewl2b"
+              class="chakra-text css-m26pul"
+              max-width="180"
+              word-wrap="break-word"
             >
               The Design of Everyday Things
             </p>
@@ -290,10 +296,10 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-4ff7a7"
+          class="css-109g2ia"
         >
           <p
-            class="chakra-text css-16scppb"
+            class="chakra-text css-blrpya"
           >
             4.5
             <span
@@ -318,7 +324,7 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-nxsmp4"
+          class="css-1urk6qq"
         >
           <button
             class="chakra-button css-4xx2wk"

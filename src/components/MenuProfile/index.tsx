@@ -38,7 +38,7 @@ const MenuProfile = ({ session }: { session?: Session }) => {
         variant="outline"
         borderColor="borderDefault"
         bgColor="white"
-        minW={205}
+        minW={{ base: 180, "2xl": 205 }}
         h={50}
         borderRadius="33px"
         py="3px"

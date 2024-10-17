@@ -11,7 +11,13 @@ interface ListContributeProps {
 }
 
 const ListContribute = ({ user, list }: ListContributeProps) => (
-  <Flex flexDir="row" gap="39px" justifyContent="space-between">
+  <Flex
+    flexDir="row"
+    gap="40px"
+    margin="0 auto"
+    maxW="100%"
+    justifyContent="space-between"
+  >
     {list.map((item: BookType) => {
       const { id, title, author, imageUrl, publicationYear, rating } = item;
 

@@ -44,12 +44,12 @@ export const HomeList = memo(({ list, user }: HomeListProps) => {
       gridTemplateColumns="repeat(6, 1fr)"
       margin="0 auto"
       maxW={{
-        base: 335,
-        lg: 600,
-        xl: 900,
+        base: "80%",
+        lg: "85%",
+        xl: "90%",
         "2xl": 1260,
       }}
-      gap={{ base: "40px 20px", "2xl": "40px" }}
+      gap="40px 20px"
       p={{ base: "70px 0", "2xl": "70px 44px" }}
       overflowX={{ base: "scroll", "2xl": "hidden" }}
     >

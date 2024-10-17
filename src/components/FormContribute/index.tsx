@@ -168,7 +168,7 @@ const FormContribute = ({
           alignItems="center"
           gap="10px"
           width="100%"
-          maxW={360}
+          maxW={{ base: "unset", "2xl": 360 }}
         >
           {/* Book name */}
           <FormControl

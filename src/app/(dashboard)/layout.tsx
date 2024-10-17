@@ -26,6 +26,7 @@ const DashboardLayout = async ({
       <Box
         w="100%"
         h="100%"
+        minW={450}
         bgColor="backgroundContent"
         borderRightRadius="10px"
         pos="relative"

@@ -3,7 +3,7 @@
 exports[`TopContent component Should render correctly snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="css-1s5jq5f"
+    class="css-1tpullb"
   >
     <div
       class="css-19jt6ar"
@@ -84,7 +84,7 @@ exports[`TopContent component Should render correctly snapshot 1`] = `
       aria-controls="menu-list-:r1:"
       aria-expanded="false"
       aria-haspopup="menu"
-      class="chakra-button chakra-menu__menu-button css-115zmqy"
+      class="chakra-button chakra-menu__menu-button css-kxleh0"
       id="menu-button-:r1:"
       type="button"
     >

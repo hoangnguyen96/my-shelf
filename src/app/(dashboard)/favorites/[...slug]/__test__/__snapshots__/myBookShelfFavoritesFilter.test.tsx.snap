@@ -3,13 +3,13 @@
 exports[`My Book Shelf Favorites Search Should render correctly snapshot 1`] = `
 <div>
   <div
-    class="css-1pavchb"
+    class="css-6q2x0w"
   >
     <div
       class="css-1q7xe83"
     >
       <div
-        class="css-18s564a"
+        class="css-dk70ac"
       >
         <img
           alt="Don't Make Me Think"
@@ -26,7 +26,9 @@ exports[`My Book Shelf Favorites Search Should render correctly snapshot 1`] = `
           class="css-j7qwjs"
         >
           <p
-            class="chakra-text css-uewl2b"
+            class="chakra-text css-m26pul"
+            max-width="180"
+            word-wrap="break-word"
           >
             Don't Make Me Think
           </p>
@@ -54,10 +56,10 @@ exports[`My Book Shelf Favorites Search Should render correctly snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-4ff7a7"
+        class="css-109g2ia"
       >
         <p
-          class="chakra-text css-16scppb"
+          class="chakra-text css-blrpya"
         >
           4.5
           <span
@@ -82,7 +84,7 @@ exports[`My Book Shelf Favorites Search Should render correctly snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-pelxgl"
+        class="css-1s14tyk"
       >
         <div
           class="css-1rb83ml"
@@ -95,7 +97,7 @@ exports[`My Book Shelf Favorites Search Should render correctly snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-1ta51pi"
+        class="css-1s3ybnq"
       >
         <button
           aria-label="Heart icon"
@@ -130,13 +132,13 @@ exports[`My Book Shelf Favorites Search Should render correctly snapshot 1`] = `
 exports[`My Book Shelf Favorites Search Should render correctly snapshot when user has no favorites 1`] = `
 <div>
   <div
-    class="css-1pavchb"
+    class="css-6q2x0w"
   >
     <div
       class="css-1q7xe83"
     >
       <div
-        class="css-18s564a"
+        class="css-dk70ac"
       >
         <img
           alt="Don't Make Me Think"
@@ -153,7 +155,9 @@ exports[`My Book Shelf Favorites Search Should render correctly snapshot when us
           class="css-j7qwjs"
         >
           <p
-            class="chakra-text css-uewl2b"
+            class="chakra-text css-m26pul"
+            max-width="180"
+            word-wrap="break-word"
           >
             Don't Make Me Think
           </p>
@@ -181,10 +185,10 @@ exports[`My Book Shelf Favorites Search Should render correctly snapshot when us
         </div>
       </div>
       <div
-        class="css-4ff7a7"
+        class="css-109g2ia"
       >
         <p
-          class="chakra-text css-16scppb"
+          class="chakra-text css-blrpya"
         >
           4.5
           <span
@@ -209,7 +213,7 @@ exports[`My Book Shelf Favorites Search Should render correctly snapshot when us
         </div>
       </div>
       <div
-        class="css-pelxgl"
+        class="css-1s14tyk"
       >
         <div
           class="css-1rb83ml"
@@ -222,7 +226,7 @@ exports[`My Book Shelf Favorites Search Should render correctly snapshot when us
         </div>
       </div>
       <div
-        class="css-1ta51pi"
+        class="css-1s3ybnq"
       >
         <button
           aria-label="Heart icon"

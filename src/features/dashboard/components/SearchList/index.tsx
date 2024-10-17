@@ -52,7 +52,7 @@ export const SearchList = memo(
           gap="23px"
           mt="23px"
           justifyContent="space-between"
-          overflowY="scroll"
+          overflow="hidden scroll"
           maxH="75%"
         >
           {listPagination.map((itemBook: BookType) => {

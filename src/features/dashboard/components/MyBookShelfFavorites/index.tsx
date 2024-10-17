@@ -45,9 +45,9 @@ export const MyBookShelfFavorites = memo(
         flexDir="column"
         gap="23px"
         mt="23px"
+        maxH="70%"
         justifyContent="space-between"
         overflow="hidden scroll"
-        maxH="65vh"
       >
         {list.map((itemBook: BookType) => {
           const {
