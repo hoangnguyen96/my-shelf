@@ -3,7 +3,7 @@
 exports[`My Book Shelf Favorites Should render correctly snapshot 1`] = `
 <div>
   <div
-    class="css-6q2x0w"
+    class="css-1o9ca4y"
   >
     <div
       class="css-1q7xe83"
@@ -372,7 +372,7 @@ exports[`My Book Shelf Favorites Should render correctly snapshot 1`] = `
 exports[`My Book Shelf Favorites Should render correctly snapshot when user has no favorites 1`] = `
 <div>
   <div
-    class="css-6q2x0w"
+    class="css-1o9ca4y"
   >
     <div
       class="css-1q7xe83"

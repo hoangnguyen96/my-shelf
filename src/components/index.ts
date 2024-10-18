@@ -6,6 +6,7 @@ export { default as ListContribute } from "./ListContribute";
 export { default as CartBorrow } from "./CartBorrow";
 export { default as FooterForm } from "./FooterForm";
 export { default as HeadingForm } from "./HeadingForm";
+export { default as HeadingTable } from "./HeadingTable";
 export { default as FormLogin } from "./FormLogin";
 export { default as FormContribute } from "./FormContribute";
 export { default as FormProfile } from "./FormProfile";

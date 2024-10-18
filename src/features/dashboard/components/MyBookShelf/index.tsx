@@ -42,7 +42,7 @@ export const MyBookShelf = memo(({ list, user }: MyBookShelfProps) => {
   };
 
   return (
-    <Flex gap="40px" flexWrap="wrap" overflow="hidden scroll" maxH="65vh">
+    <Flex gap="40px" flexWrap="wrap" overflow="hidden scroll" h="85%">
       {list.map((item) => {
         const {
           id,

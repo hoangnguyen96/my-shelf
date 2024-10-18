@@ -26,320 +26,324 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
       </span>
     </a>
     <div
-      class="css-1ts1izg"
-    >
-      <p
-        class="chakra-text css-1l4rx3f"
-      >
-        Title
-      </p>
-      <div
-        class="css-bxl9jb"
-      >
-        <p
-          class="chakra-text css-10rvbm3"
-        >
-          Ratings
-        </p>
-        <p
-          class="chakra-text css-10rvbm3"
-        >
-          Category
-        </p>
-      </div>
-    </div>
-    <div
-      class="css-z2nr1u"
+      class="css-idangh"
     >
       <div
-        class="css-1q7xe83"
+        class="css-hj8stb"
       >
-        <div
-          class="css-dk70ac"
+        <p
+          class="chakra-text css-1l4rx3f"
         >
-          <img
-            alt="Don't Make Me Think"
-            data-nimg="1"
-            decoding="async"
-            fetchpriority="high"
-            height="100"
-            src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQbQgVtG%2Fbook1.png&w=256&q=75"
-            srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQbQgVtG%2Fbook1.png&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FQbQgVtG%2Fbook1.png&w=256&q=75 2x"
-            style="color: transparent;"
-            width="75"
-          />
-          <div
-            class="css-j7qwjs"
-          >
-            <p
-              class="chakra-text css-m26pul"
-              max-width="180"
-              word-wrap="break-word"
-            >
-              Don't Make Me Think
-            </p>
-            <div
-              class="css-1709kwd"
-            >
-              <p
-                class="chakra-text css-0"
-              >
-                Steve Krug
-                ,
-              </p>
-              <p
-                class="chakra-text css-0"
-              >
-                2000
-              </p>
-            </div>
-            <p
-              class="chakra-text css-0"
-            >
-              first
-               Edition
-            </p>
-          </div>
-        </div>
+          Title
+        </p>
         <div
-          class="css-109g2ia"
+          class="css-bxl9jb"
         >
           <p
-            class="chakra-text css-blrpya"
+            class="chakra-text css-10rvbm3"
           >
-            4.5
-            <span
-              class="chakra-text css-1xibt3d"
-            >
-              /5
-            </span>
+            Ratings
           </p>
-          <div
-            class="css-16ol3ha"
+          <p
+            class="chakra-text css-10rvbm3"
           >
-            <p
-              class="chakra-text css-0"
-            >
-              SelfHelpBook
-            </p>
-            <p
-              class="chakra-text css-0"
-            >
-              UX Design
-            </p>
-          </div>
-        </div>
-        <div
-          class="css-1urk6qq"
-        >
-          <button
-            class="chakra-button css-4xx2wk"
-            data-testid="redirect-preview"
-            type="button"
-          >
-            Preview
-          </button>
-          <button
-            class="chakra-button css-4xx2wk"
-            data-testid="delete-book"
-            type="button"
-          >
-            Delete
-          </button>
+            Category
+          </p>
         </div>
       </div>
       <div
-        class="css-1q7xe83"
+        class="css-1o9ca4y"
       >
         <div
-          class="css-dk70ac"
+          class="css-1q7xe83"
         >
-          <img
-            alt="Rich Dad Poor Dad"
-            data-nimg="1"
-            decoding="async"
-            fetchpriority="high"
-            height="100"
-            src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F9qHTtQF%2Fbook2.png&w=256&q=75"
-            srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F9qHTtQF%2Fbook2.png&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F9qHTtQF%2Fbook2.png&w=256&q=75 2x"
-            style="color: transparent;"
-            width="75"
-          />
           <div
-            class="css-j7qwjs"
+            class="css-dk70ac"
           >
-            <p
-              class="chakra-text css-m26pul"
-              max-width="180"
-              word-wrap="break-word"
-            >
-              Rich Dad Poor Dad
-            </p>
+            <img
+              alt="Don't Make Me Think"
+              data-nimg="1"
+              decoding="async"
+              fetchpriority="high"
+              height="100"
+              src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQbQgVtG%2Fbook1.png&w=256&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQbQgVtG%2Fbook1.png&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FQbQgVtG%2Fbook1.png&w=256&q=75 2x"
+              style="color: transparent;"
+              width="75"
+            />
             <div
-              class="css-1709kwd"
+              class="css-j7qwjs"
             >
               <p
-                class="chakra-text css-0"
+                class="chakra-text css-m26pul"
+                max-width="180"
+                word-wrap="break-word"
               >
-                Robert T. Kiyosaki
-                ,
+                Don't Make Me Think
               </p>
+              <div
+                class="css-1709kwd"
+              >
+                <p
+                  class="chakra-text css-0"
+                >
+                  Steve Krug
+                  ,
+                </p>
+                <p
+                  class="chakra-text css-0"
+                >
+                  2000
+                </p>
+              </div>
               <p
                 class="chakra-text css-0"
               >
-                1997
+                first
+                 Edition
               </p>
             </div>
-            <p
-              class="chakra-text css-0"
-            >
-              second
-               Edition
-            </p>
           </div>
-        </div>
-        <div
-          class="css-109g2ia"
-        >
-          <p
-            class="chakra-text css-blrpya"
-          >
-            4.5
-            <span
-              class="chakra-text css-1xibt3d"
-            >
-              /5
-            </span>
-          </p>
           <div
-            class="css-16ol3ha"
+            class="css-109g2ia"
           >
             <p
-              class="chakra-text css-0"
+              class="chakra-text css-blrpya"
             >
-              SelfHelpBook
-            </p>
-            <p
-              class="chakra-text css-0"
-            >
-              UX Design
-            </p>
-          </div>
-        </div>
-        <div
-          class="css-1urk6qq"
-        >
-          <button
-            class="chakra-button css-4xx2wk"
-            data-testid="redirect-preview"
-            type="button"
-          >
-            Preview
-          </button>
-          <button
-            class="chakra-button css-4xx2wk"
-            data-testid="delete-book"
-            type="button"
-          >
-            Delete
-          </button>
-        </div>
-      </div>
-      <div
-        class="css-1q7xe83"
-      >
-        <div
-          class="css-dk70ac"
-        >
-          <img
-            alt="The Design of Everyday Things"
-            data-nimg="1"
-            decoding="async"
-            fetchpriority="high"
-            height="100"
-            src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FLnSBcCM%2Fbook5.png&w=256&q=75"
-            srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FLnSBcCM%2Fbook5.png&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FLnSBcCM%2Fbook5.png&w=256&q=75 2x"
-            style="color: transparent;"
-            width="75"
-          />
-          <div
-            class="css-j7qwjs"
-          >
-            <p
-              class="chakra-text css-m26pul"
-              max-width="180"
-              word-wrap="break-word"
-            >
-              The Design of Everyday Things
+              4.5
+              <span
+                class="chakra-text css-1xibt3d"
+              >
+                /5
+              </span>
             </p>
             <div
-              class="css-1709kwd"
+              class="css-16ol3ha"
             >
               <p
                 class="chakra-text css-0"
               >
-                Don Norman
-                ,
+                SelfHelpBook
               </p>
               <p
                 class="chakra-text css-0"
               >
-                1988
+                UX Design
               </p>
             </div>
-            <p
-              class="chakra-text css-0"
-            >
-              fourth
-               Edition
-            </p>
           </div>
-        </div>
-        <div
-          class="css-109g2ia"
-        >
-          <p
-            class="chakra-text css-blrpya"
-          >
-            4.5
-            <span
-              class="chakra-text css-1xibt3d"
-            >
-              /5
-            </span>
-          </p>
           <div
-            class="css-16ol3ha"
+            class="css-1urk6qq"
           >
-            <p
-              class="chakra-text css-0"
+            <button
+              class="chakra-button css-4xx2wk"
+              data-testid="redirect-preview"
+              type="button"
             >
-              TextBook
-            </p>
-            <p
-              class="chakra-text css-0"
+              Preview
+            </button>
+            <button
+              class="chakra-button css-4xx2wk"
+              data-testid="delete-book"
+              type="button"
             >
-              UX Design
-            </p>
+              Delete
+            </button>
           </div>
         </div>
         <div
-          class="css-1urk6qq"
+          class="css-1q7xe83"
         >
-          <button
-            class="chakra-button css-4xx2wk"
-            data-testid="redirect-preview"
-            type="button"
+          <div
+            class="css-dk70ac"
           >
-            Preview
-          </button>
-          <button
-            class="chakra-button css-4xx2wk"
-            data-testid="delete-book"
-            type="button"
+            <img
+              alt="Rich Dad Poor Dad"
+              data-nimg="1"
+              decoding="async"
+              fetchpriority="high"
+              height="100"
+              src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F9qHTtQF%2Fbook2.png&w=256&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F9qHTtQF%2Fbook2.png&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F9qHTtQF%2Fbook2.png&w=256&q=75 2x"
+              style="color: transparent;"
+              width="75"
+            />
+            <div
+              class="css-j7qwjs"
+            >
+              <p
+                class="chakra-text css-m26pul"
+                max-width="180"
+                word-wrap="break-word"
+              >
+                Rich Dad Poor Dad
+              </p>
+              <div
+                class="css-1709kwd"
+              >
+                <p
+                  class="chakra-text css-0"
+                >
+                  Robert T. Kiyosaki
+                  ,
+                </p>
+                <p
+                  class="chakra-text css-0"
+                >
+                  1997
+                </p>
+              </div>
+              <p
+                class="chakra-text css-0"
+              >
+                second
+                 Edition
+              </p>
+            </div>
+          </div>
+          <div
+            class="css-109g2ia"
           >
-            Delete
-          </button>
+            <p
+              class="chakra-text css-blrpya"
+            >
+              4.5
+              <span
+                class="chakra-text css-1xibt3d"
+              >
+                /5
+              </span>
+            </p>
+            <div
+              class="css-16ol3ha"
+            >
+              <p
+                class="chakra-text css-0"
+              >
+                SelfHelpBook
+              </p>
+              <p
+                class="chakra-text css-0"
+              >
+                UX Design
+              </p>
+            </div>
+          </div>
+          <div
+            class="css-1urk6qq"
+          >
+            <button
+              class="chakra-button css-4xx2wk"
+              data-testid="redirect-preview"
+              type="button"
+            >
+              Preview
+            </button>
+            <button
+              class="chakra-button css-4xx2wk"
+              data-testid="delete-book"
+              type="button"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+        <div
+          class="css-1q7xe83"
+        >
+          <div
+            class="css-dk70ac"
+          >
+            <img
+              alt="The Design of Everyday Things"
+              data-nimg="1"
+              decoding="async"
+              fetchpriority="high"
+              height="100"
+              src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FLnSBcCM%2Fbook5.png&w=256&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FLnSBcCM%2Fbook5.png&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FLnSBcCM%2Fbook5.png&w=256&q=75 2x"
+              style="color: transparent;"
+              width="75"
+            />
+            <div
+              class="css-j7qwjs"
+            >
+              <p
+                class="chakra-text css-m26pul"
+                max-width="180"
+                word-wrap="break-word"
+              >
+                The Design of Everyday Things
+              </p>
+              <div
+                class="css-1709kwd"
+              >
+                <p
+                  class="chakra-text css-0"
+                >
+                  Don Norman
+                  ,
+                </p>
+                <p
+                  class="chakra-text css-0"
+                >
+                  1988
+                </p>
+              </div>
+              <p
+                class="chakra-text css-0"
+              >
+                fourth
+                 Edition
+              </p>
+            </div>
+          </div>
+          <div
+            class="css-109g2ia"
+          >
+            <p
+              class="chakra-text css-blrpya"
+            >
+              4.5
+              <span
+                class="chakra-text css-1xibt3d"
+              >
+                /5
+              </span>
+            </p>
+            <div
+              class="css-16ol3ha"
+            >
+              <p
+                class="chakra-text css-0"
+              >
+                TextBook
+              </p>
+              <p
+                class="chakra-text css-0"
+              >
+                UX Design
+              </p>
+            </div>
+          </div>
+          <div
+            class="css-1urk6qq"
+          >
+            <button
+              class="chakra-button css-4xx2wk"
+              data-testid="redirect-preview"
+              type="button"
+            >
+              Preview
+            </button>
+            <button
+              class="chakra-button css-4xx2wk"
+              data-testid="delete-book"
+              type="button"
+            >
+              Delete
+            </button>
+          </div>
         </div>
       </div>
     </div>

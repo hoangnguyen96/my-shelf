@@ -3,7 +3,7 @@
 exports[`Home Search Params Should handle filter empty of books 1`] = `
 <div>
   <div
-    class="css-1yo445j"
+    class="css-1i1dato"
   >
     <div
       class="css-583j2r"
@@ -225,7 +225,7 @@ exports[`Home Search Params Should handle filter empty of books 1`] = `
 exports[`Home Search Params should render correctly and match snapshot 1`] = `
 <div>
   <div
-    class="css-1yo445j"
+    class="css-1i1dato"
   >
     <div
       class="css-583j2r"

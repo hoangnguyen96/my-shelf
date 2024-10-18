@@ -3,10 +3,10 @@
 exports[`My Book Shelf All Search Should render correctly snapshot 1`] = `
 <div>
   <div
-    class="css-gh8r07"
+    class="css-crjobl"
   >
     <div
-      class="css-bhtta9"
+      class="css-1qjeir"
     >
       <div
         class="css-n736ek"
@@ -91,10 +91,10 @@ exports[`My Book Shelf All Search Should render correctly snapshot 1`] = `
 exports[`My Book Shelf All Search Should render correctly snapshot when user has no shelfBooks 1`] = `
 <div>
   <div
-    class="css-gh8r07"
+    class="css-crjobl"
   >
     <div
-      class="css-bhtta9"
+      class="css-1qjeir"
     >
       <div
         class="css-n736ek"

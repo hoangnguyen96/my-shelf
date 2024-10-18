@@ -22,7 +22,7 @@ const TopContent = ({ session }: { session?: Session }) => {
     <Flex
       alignItems="center"
       justifyContent={!isNotSearch ? "space-between" : "flex-end"}
-      p="32px 48px"
+      p="32px 44px"
       gap="10px"
     >
       {!isNotSearch && <SearchBar />}

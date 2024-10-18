@@ -1,44 +1,76 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SkeletonMyBookShelf Should render correctly snapshot 1`] = `
+exports[`HeadingTable Should render correctly snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="css-crjobl"
+        class="css-10erws7"
       >
+        <p
+          class="chakra-text css-1l4rx3f"
+        >
+          Title
+        </p>
         <div
-          class="chakra-skeleton css-1pgvz5i"
-        />
+          class="css-bxl9jb"
+        >
+          <p
+            class="chakra-text css-10rvbm3"
+          >
+            Ratings
+          </p>
+          <p
+            class="chakra-text css-10rvbm3"
+          >
+            Category
+          </p>
+        </div>
         <div
-          class="chakra-skeleton css-1pgvz5i"
-        />
-        <div
-          class="chakra-skeleton css-1pgvz5i"
-        />
-        <div
-          class="chakra-skeleton css-1pgvz5i"
-        />
+          class="css-pelxgl"
+        >
+          <p
+            class="chakra-text css-10rvbm3"
+          >
+            Status
+          </p>
+        </div>
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="css-crjobl"
+      class="css-10erws7"
     >
+      <p
+        class="chakra-text css-1l4rx3f"
+      >
+        Title
+      </p>
       <div
-        class="chakra-skeleton css-1pgvz5i"
-      />
+        class="css-bxl9jb"
+      >
+        <p
+          class="chakra-text css-10rvbm3"
+        >
+          Ratings
+        </p>
+        <p
+          class="chakra-text css-10rvbm3"
+        >
+          Category
+        </p>
+      </div>
       <div
-        class="chakra-skeleton css-1pgvz5i"
-      />
-      <div
-        class="chakra-skeleton css-1pgvz5i"
-      />
-      <div
-        class="chakra-skeleton css-1pgvz5i"
-      />
+        class="css-pelxgl"
+      >
+        <p
+          class="chakra-text css-10rvbm3"
+        >
+          Status
+        </p>
+      </div>
     </div>
   </div>,
   "debug": [Function],

@@ -42,15 +42,11 @@ export const HomeList = memo(({ list, user }: HomeListProps) => {
   return (
     <Grid
       gridTemplateColumns="repeat(6, 1fr)"
-      margin="0 auto"
-      maxW={{
-        base: "80%",
-        lg: "85%",
-        xl: "90%",
-        "2xl": 1260,
-      }}
       gap="40px 20px"
-      p={{ base: "70px 0", "2xl": "70px 44px" }}
+      p="70px 2px"
+      ml="42px"
+      mr="44px"
+      maxW={{ base: "100%", "2xl": 1260 }}
       overflowX={{ base: "scroll", "2xl": "hidden" }}
     >
       {list.map((item: BookType) => {

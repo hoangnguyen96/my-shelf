@@ -3,7 +3,7 @@
 exports[`Search Page Params Should handle filter empty of search books 1`] = `
 <div>
   <div
-    class="css-1y4ygfn"
+    class="css-1o9ca4y"
   >
     <div
       class="css-1q7xe83"
@@ -425,7 +425,7 @@ exports[`Search Page Params Should handle filter empty of search books 1`] = `
 exports[`Search Page Params Should render correctly snapshot 1`] = `
 <div>
   <div
-    class="css-1y4ygfn"
+    class="css-1o9ca4y"
   >
     <div
       class="css-1q7xe83"

@@ -35,7 +35,7 @@ const CartBorrow = ({
     <Flex
       gap="25px"
       w={308}
-      h="auto"
+      maxH={290}
       py="15px"
       pl="15px"
       pr="20px"

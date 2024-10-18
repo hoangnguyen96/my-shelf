@@ -6,7 +6,7 @@ exports[`CartBorrow Should render correctly snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="css-bhtta9"
+        class="css-1qjeir"
       >
         <div
           class="css-n736ek"
@@ -84,7 +84,7 @@ exports[`CartBorrow Should render correctly snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="css-bhtta9"
+      class="css-1qjeir"
     >
       <div
         class="css-n736ek"

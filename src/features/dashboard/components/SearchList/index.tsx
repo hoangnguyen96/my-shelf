@@ -47,14 +47,7 @@ export const SearchList = memo(
 
     return (
       <>
-        <Flex
-          flexDir="column"
-          gap="23px"
-          mt="23px"
-          justifyContent="space-between"
-          overflow="hidden scroll"
-          maxH="75%"
-        >
+        <Flex flexDir="column" gap="23px" justifyContent="space-between">
           {listPagination.map((itemBook: BookType) => {
             const {
               id,
