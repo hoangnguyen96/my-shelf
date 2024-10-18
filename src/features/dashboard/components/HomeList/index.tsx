@@ -46,8 +46,9 @@ export const HomeList = memo(({ list, user }: HomeListProps) => {
       p="70px 2px"
       ml="42px"
       mr="44px"
+      maxH="76%"
+      overflow="auto"
       maxW={{ base: "100%", "2xl": 1260 }}
-      overflowX={{ base: "scroll", "2xl": "hidden" }}
     >
       {list.map((item: BookType) => {
         const { id, title, author, imageUrl, publicationYear, rating } = item;
