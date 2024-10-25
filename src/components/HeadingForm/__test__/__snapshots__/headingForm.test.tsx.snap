@@ -46,12 +46,12 @@ exports[`HeadingForm Should render correctly snapshot 1`] = `
           </svg>
         </div>
         <p
-          class="chakra-text css-15poin4"
+          class="chakra-text css-sz8m35"
         >
           Login
         </p>
         <p
-          class="chakra-text css-1xibt3d"
+          class="chakra-text css-1e1mwpv"
         >
           Test Login
         </p>
@@ -100,12 +100,12 @@ exports[`HeadingForm Should render correctly snapshot 1`] = `
         </svg>
       </div>
       <p
-        class="chakra-text css-15poin4"
+        class="chakra-text css-sz8m35"
       >
         Login
       </p>
       <p
-        class="chakra-text css-1xibt3d"
+        class="chakra-text css-1e1mwpv"
       >
         Test Login
       </p>

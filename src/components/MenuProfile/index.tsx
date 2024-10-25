@@ -37,7 +37,7 @@ const MenuProfile = ({ session }: { session?: Session }) => {
         rightIcon={<ChevronDownIcon color="dark.90" />}
         variant="outline"
         borderColor="borderDefault"
-        bgColor="white"
+        bgColor="var(--chakra-colors-chakra-body-bg)"
         minW={{ base: 180, "2xl": 205 }}
         h={50}
         borderRadius="33px"
@@ -58,14 +58,19 @@ const MenuProfile = ({ session }: { session?: Session }) => {
             image={session?.user?.image || ""}
             width={45}
             height={45}
-            border="2px solid white"
+            border="2px solid var(--chakra-colors-chakra-body-bg)"
           />
           <Text size="xl" flex={1}>
             {session?.user?.name || ""}
           </Text>
         </Flex>
       </MenuButton>
-      <MenuList minW={205} borderRadius="10px" boxShadow="0 0 3px 0px #a9a9a9">
+      <MenuList
+        minW={205}
+        borderRadius="10px"
+        boxShadow="0 0 3px 0px #a9a9a9"
+        zIndex={15}
+      >
         <MenuItem onClick={handleRedirectProfile}>
           <Text lineHeight="30px" w="100%">
             Profile

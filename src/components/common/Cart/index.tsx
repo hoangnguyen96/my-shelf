@@ -1,5 +1,3 @@
-"use client";
-
 import { memo } from "react";
 import { Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
@@ -38,7 +36,7 @@ const Cart = ({
     px="15px"
     pt="15px"
     pb="13px"
-    bgColor="white"
+    bgColor="var(--chakra-colors-chakra-body-bg)"
     borderRadius="10px"
     boxShadow="0 0 3px 0px #a9a9a9"
     position="relative"
@@ -51,6 +49,7 @@ const Cart = ({
         height={172}
         priority={true}
         fetchPriority="high"
+        style={{ borderRadius: "5px", minHeight: 172, maxHeight: 172 }}
       />
     </Link>
     <Text size="sm">{title}</Text>

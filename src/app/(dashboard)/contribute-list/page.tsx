@@ -1,6 +1,7 @@
 import { auth } from "@app/auth";
 import { getAllBook, getUserById } from "@app/features/dashboard/actions";
 import { ContributeList } from "@app/features/dashboard/components";
+import { BookType, User } from "@app/interface";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,8 +12,19 @@ export const metadata: Metadata = {
 
 const ContributeListPage = async () => {
   const session = await auth();
-  const { data: user } = await getUserById(session?.user?.id as string);
-  const { data: books } = await getAllBook();
+  let user = null;
+  let books = [];
+
+  try {
+    const { data: userData } = await getUserById(session?.user?.id as string);
+    const { data: booksData } = await getAllBook();
+
+    user = userData;
+    books = booksData;
+  } catch (error) {
+    user = {} as User;
+    books = [] as BookType[];
+  }
 
   return <ContributeList list={books} user={user} />;
 };

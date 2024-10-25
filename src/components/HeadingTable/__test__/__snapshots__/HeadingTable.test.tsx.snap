@@ -6,7 +6,7 @@ exports[`HeadingTable Should render correctly snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="css-10erws7"
+        class="css-1x4hc03"
       >
         <p
           class="chakra-text css-1l4rx3f"
@@ -41,7 +41,7 @@ exports[`HeadingTable Should render correctly snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="css-10erws7"
+      class="css-1x4hc03"
     >
       <p
         class="chakra-text css-1l4rx3f"

@@ -12,9 +12,8 @@ const Layout = ({
     <Flex
       flexDir="column"
       gap="12px"
-      justifyContent="space-between"
       overflow="auto"
-      maxH="75%"
+      height="75%"
       sx={{
         "::-webkit-scrollbar-track": {
           marginTop: "60px",

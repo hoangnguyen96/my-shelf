@@ -5,7 +5,7 @@ const MyBookShelfLayout = ({ children }: { children: React.ReactNode }) => (
   <Flex p="18px 44px" flexDir="column" height="80%">
     <Text size="xxl">
       Your{" "}
-      <Text as="span" size="xxl" color="brand.70">
+      <Text as="span" size="xxl" color="brand.60">
         Shelf
       </Text>
     </Text>

@@ -1,6 +1,7 @@
 import { auth } from "@app/auth";
 import { getUserById } from "@app/features/dashboard/actions";
 import { ProfileUpdate } from "@app/features/dashboard/components";
+import { User } from "@app/interface";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,7 +12,14 @@ export const metadata: Metadata = {
 
 const ProfilePage = async () => {
   const session = await auth();
-  const { data: user } = await getUserById(session?.user?.id as string);
+  let user = null;
+
+  try {
+    const { data: userData } = await getUserById(session?.user?.id as string);
+    user = userData;
+  } catch (error) {
+    user = {} as User;
+  }
 
   return (
     <ProfileUpdate imageUrl={session?.user?.image as string} user={user} />

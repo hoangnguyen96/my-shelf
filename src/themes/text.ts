@@ -2,7 +2,7 @@ import { defineStyleConfig } from "@chakra-ui/react";
 
 export const Text = defineStyleConfig({
   baseStyle: {
-    color: "dark.90",
+    color: "var(--chakra-colors-chakra-subtle-text)",
   },
 
   sizes: {

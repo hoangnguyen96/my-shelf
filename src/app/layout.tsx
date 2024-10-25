@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import { SessionProvider } from "next-auth/react";
 import ChakraUIProviders from "@app/layouts/ChakraProvider";
 import "../styles/globals.css";
+import { ColorModeScript } from "@chakra-ui/react";
+import theme from "@app/themes";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +26,7 @@ const RootLayout = async ({
       </head>
 
       <body className={inter.className}>
+        <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         <ChakraUIProviders>
           <SessionProvider>
             <main className="app" style={{ padding: "48px 35px 38px" }}>

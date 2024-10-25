@@ -299,13 +299,13 @@ const FormContribute = ({
                 <Select
                   data-testid="contribute-category"
                   placeholder="Category"
-                  border="2px"
+                  border="1px"
                   borderRadius="40px"
                   value={value}
                   w="100%"
                   h="50px"
                   borderColor="borderDefault"
-                  bgColor="white"
+                  bgColor="var(--chakra-colors-chakra-body-bg)"
                   aria-label="select-category"
                   _focusVisible={{ borderColor: "borderDefault" }}
                   onChange={(e) => {

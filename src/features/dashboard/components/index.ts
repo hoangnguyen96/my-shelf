@@ -5,6 +5,6 @@ export * from "./MyBookShelfFavorites";
 export * from "./PreviewBookDetails";
 export * from "./ProfileUpdate";
 export * from "./Contribute";
-export * from "./ContributeUpdate";
+export * from "./EditContribution";
 export * from "./ContributeComplete";
 export * from "./ContributeList";

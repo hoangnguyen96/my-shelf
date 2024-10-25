@@ -1,5 +1,3 @@
-"use client";
-
 import { memo } from "react";
 import { Flex } from "@chakra-ui/react";
 import { BookType, User } from "@app/interface";
@@ -18,7 +16,8 @@ const ListContribute = ({ user, list }: ListContributeProps) => (
     justifyContent={{ base: "flex-start", "2xl": "space-between" }}
   >
     {list.map((item: BookType) => {
-      const { id, title, author, imageUrl, publicationYear, rating } = item;
+      const { id, title, author, imageUrl, publicationYear, rating } =
+        item || {};
 
       return (
         <Cart

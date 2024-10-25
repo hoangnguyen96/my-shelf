@@ -6,7 +6,7 @@ exports[`Home List Should render correctly snapshot 1`] = `
     class="css-kwjzu5"
   >
     <div
-      class="css-583j2r"
+      class="css-5ow6k3"
     >
       <a
         href="/preview/1"
@@ -19,7 +19,7 @@ exports[`Home List Should render correctly snapshot 1`] = `
           height="172"
           src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQbQgVtG%2Fbook1.png&w=384&q=75"
           srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQbQgVtG%2Fbook1.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FQbQgVtG%2Fbook1.png&w=384&q=75 2x"
-          style="color: transparent;"
+          style="color: transparent; border-radius: 5px; min-height: 172px; max-height: 172px;"
           width="130"
         />
       </a>
@@ -77,7 +77,7 @@ exports[`Home List Should render correctly snapshot 1`] = `
       </button>
     </div>
     <div
-      class="css-583j2r"
+      class="css-5ow6k3"
     >
       <a
         href="/preview/2"
@@ -90,7 +90,7 @@ exports[`Home List Should render correctly snapshot 1`] = `
           height="172"
           src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F9qHTtQF%2Fbook2.png&w=384&q=75"
           srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F9qHTtQF%2Fbook2.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F9qHTtQF%2Fbook2.png&w=384&q=75 2x"
-          style="color: transparent;"
+          style="color: transparent; border-radius: 5px; min-height: 172px; max-height: 172px;"
           width="130"
         />
       </a>
@@ -148,7 +148,7 @@ exports[`Home List Should render correctly snapshot 1`] = `
       </button>
     </div>
     <div
-      class="css-583j2r"
+      class="css-5ow6k3"
     >
       <a
         href="/preview/3"
@@ -161,7 +161,7 @@ exports[`Home List Should render correctly snapshot 1`] = `
           height="172"
           src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FLnSBcCM%2Fbook5.png&w=384&q=75"
           srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FLnSBcCM%2Fbook5.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FLnSBcCM%2Fbook5.png&w=384&q=75 2x"
-          style="color: transparent;"
+          style="color: transparent; border-radius: 5px; min-height: 172px; max-height: 172px;"
           width="130"
         />
       </a>

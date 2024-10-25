@@ -6,7 +6,7 @@ exports[`LoginPage Should render correctly snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="css-13maizt"
+        class="css-3bbeam"
       >
         <div
           class="css-dvxtzn"
@@ -49,12 +49,12 @@ exports[`LoginPage Should render correctly snapshot 1`] = `
             </svg>
           </div>
           <p
-            class="chakra-text css-15poin4"
+            class="chakra-text css-sz8m35"
           >
             Welcome Back !
           </p>
           <p
-            class="chakra-text css-1xibt3d"
+            class="chakra-text css-1e1mwpv"
           >
             Sign in to continue to yourDigital Library
           </p>
@@ -170,7 +170,7 @@ exports[`LoginPage Should render correctly snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="css-13maizt"
+      class="css-3bbeam"
     >
       <div
         class="css-dvxtzn"
@@ -213,12 +213,12 @@ exports[`LoginPage Should render correctly snapshot 1`] = `
           </svg>
         </div>
         <p
-          class="chakra-text css-15poin4"
+          class="chakra-text css-sz8m35"
         >
           Welcome Back !
         </p>
         <p
-          class="chakra-text css-1xibt3d"
+          class="chakra-text css-1e1mwpv"
         >
           Sign in to continue to yourDigital Library
         </p>

@@ -16,7 +16,7 @@ const RegisterPage = () => (
     maxW={565}
     pt="63px"
     px="70px"
-    bgColor="white"
+    bgColor="var(--chakra-colors-chakra-body-bg)"
     borderRadius="10px"
     boxShadow="0 0 5px 1px rgb(0 0 0 / 25%)"
     position="absolute"

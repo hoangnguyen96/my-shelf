@@ -41,12 +41,7 @@ export const MyBookShelfFavorites = memo(
     };
 
     return (
-      <Flex
-        flexDir="column"
-        gap="23px"
-        // maxH="70%"
-        justifyContent="space-between"
-      >
+      <Flex flexDir="column" gap="23px" justifyContent="space-between">
         {list.map((itemBook: BookType) => {
           const {
             id,
@@ -57,7 +52,7 @@ export const MyBookShelfFavorites = memo(
             rating,
             edition,
             category,
-          } = itemBook;
+          } = itemBook || {};
 
           return (
             <TableItem

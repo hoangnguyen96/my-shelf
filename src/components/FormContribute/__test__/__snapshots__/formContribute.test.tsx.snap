@@ -76,7 +76,7 @@ exports[`Form Contribute Should render correctly snapshot 1`] = `
               >
                 <select
                   aria-label="select-category"
-                  class="chakra-select css-g3rz38"
+                  class="chakra-select css-np2fqy"
                   data-testid="contribute-category"
                   id="field-:r3:"
                 >
@@ -234,7 +234,7 @@ exports[`Form Contribute Should render correctly snapshot 1`] = `
             >
               <select
                 aria-label="select-category"
-                class="chakra-select css-g3rz38"
+                class="chakra-select css-np2fqy"
                 data-testid="contribute-category"
                 id="field-:r3:"
               >

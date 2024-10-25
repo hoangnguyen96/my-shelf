@@ -13,7 +13,7 @@ exports[`SearchBar Should render correctly snapshot 1`] = `
         >
           <select
             aria-label="select-label"
-            class="chakra-select css-oea4np"
+            class="chakra-select css-17ht5zg"
           >
             <option
               value=""
@@ -91,7 +91,7 @@ exports[`SearchBar Should render correctly snapshot 1`] = `
       >
         <select
           aria-label="select-label"
-          class="chakra-select css-oea4np"
+          class="chakra-select css-17ht5zg"
         >
           <option
             value=""

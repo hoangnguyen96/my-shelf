@@ -20,7 +20,7 @@ export const ProfileUpdate = memo(({ imageUrl, user }: ProfileUpdateProps) => {
 
   const handleUpdateUser = async (id: string, user: Partial<User>) => {
     try {
-      const { username, email, phone, bio } = user;
+      const { username, email, phone, bio } = user || {};
 
       const payload: Partial<User> = {
         ...user,
@@ -58,7 +58,7 @@ export const ProfileUpdate = memo(({ imageUrl, user }: ProfileUpdateProps) => {
     <Box p="5px 44px 20px" height="80%" overflow="hidden scroll">
       <Flex
         flexDir="column"
-        bgColor="white"
+        bgColor="var(--chakra-colors-chakra-body-bg)"
         borderRadius="10px"
         width="100%"
         maxW={1136}

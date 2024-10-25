@@ -6,7 +6,7 @@ exports[`My Book Shelf Should render correctly snapshot 1`] = `
     class="css-crjobl"
   >
     <div
-      class="css-1qjeir"
+      class="css-wi6er"
     >
       <div
         class="css-n736ek"
@@ -94,7 +94,7 @@ exports[`My Book Shelf Should render correctly snapshot when user has no shelfBo
     class="css-crjobl"
   >
     <div
-      class="css-1qjeir"
+      class="css-wi6er"
     >
       <div
         class="css-n736ek"

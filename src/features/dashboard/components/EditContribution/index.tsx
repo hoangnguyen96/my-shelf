@@ -8,11 +8,11 @@ import { BookType } from "@app/interface";
 import { updateBookById } from "../../actions";
 import { FormContribute } from "@app/components";
 
-interface ContributeUpdateProps {
+interface EditContributionProps {
   book: BookType;
 }
 
-export const ContributeUpdate = memo(({ book }: ContributeUpdateProps) => {
+export const EditContribution = memo(({ book }: EditContributionProps) => {
   const router = useRouter();
   const toast = useToast();
 
@@ -28,7 +28,7 @@ export const ContributeUpdate = memo(({ book }: ContributeUpdateProps) => {
       rating,
       createdDate,
       edition,
-    } = values;
+    } = values || {};
 
     const payload: Partial<BookType> = {
       title,
@@ -57,7 +57,7 @@ export const ContributeUpdate = memo(({ book }: ContributeUpdateProps) => {
 
   return (
     <Box>
-      <Text size="xl" color="dark.100" mb="34px">
+      <Text size="xl" color="var(--chakra-colors-chakra-body-text)" mb="34px">
         Preview Book Details
       </Text>
       <FormContribute itemUpdate={book} onUpdate={handleUpdate} />

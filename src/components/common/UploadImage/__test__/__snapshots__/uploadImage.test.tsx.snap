@@ -39,7 +39,7 @@ exports[`UploadImage Should render correctly snapshot 1`] = `
           />
         </div>
         <button
-          class="chakra-button css-ycuso6"
+          class="chakra-button css-117l7en"
           type="button"
         >
           Upload New photo
@@ -82,7 +82,7 @@ exports[`UploadImage Should render correctly snapshot 1`] = `
         />
       </div>
       <button
-        class="chakra-button css-ycuso6"
+        class="chakra-button css-117l7en"
         type="button"
       >
         Upload New photo

@@ -28,16 +28,20 @@ export const ContributeComplete = () => {
       </Link>
       <Flex
         flexDirection="column"
-        bgColor="white"
+        bgColor="var(--chakra-colors-chakra-body-bg)"
         p="105px"
         gap="55px"
         maxW={678}
         borderRadius="10px"
         alignItems="center"
       >
-        <Text color="dark.100">Thank you For your Submission </Text>
+        <Text color="var(--chakra-colors-chakra-body-text)">
+          Thank you For your Submission{" "}
+        </Text>
         <CheckIcon />
-        <Text color="dark.100">You will be contacted shortly</Text>
+        <Text color="var(--chakra-colors-chakra-body-text)">
+          You will be contacted shortly
+        </Text>
       </Flex>
     </>
   );

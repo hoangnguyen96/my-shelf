@@ -9,7 +9,7 @@ const HeadingTable = ({ isStatus = true }: HeadingTableProps) => (
   <Flex
     gap={{ base: "2%", xl: "5%", "2xl": "6%" }}
     alignItems="center"
-    bgColor="backgroundContent"
+    bgColor="var(--chakra-colors-chakra-subtle-bg)"
     pos="sticky"
     w="100%"
     minH="48px"

@@ -54,7 +54,7 @@ exports[`Form Profile Should render correctly snapshot 1`] = `
             role="group"
           >
             <label
-              class="chakra-form__label css-kem3nv"
+              class="chakra-form__label css-1v2ykga"
               for="username"
               id="field-:r0:-label"
             >
@@ -66,7 +66,7 @@ exports[`Form Profile Should render correctly snapshot 1`] = `
             >
               <input
                 aria-readonly="true"
-                class="chakra-input css-1edxw6"
+                class="chakra-input css-14wg6qc"
                 id="username"
                 name="username"
                 placeholder="Full name"
@@ -81,7 +81,7 @@ exports[`Form Profile Should render correctly snapshot 1`] = `
             role="group"
           >
             <label
-              class="chakra-form__label css-kem3nv"
+              class="chakra-form__label css-1v2ykga"
               for="email"
               id="field-:r1:-label"
             >
@@ -93,7 +93,7 @@ exports[`Form Profile Should render correctly snapshot 1`] = `
             >
               <input
                 aria-readonly="true"
-                class="chakra-input css-1edxw6"
+                class="chakra-input css-14wg6qc"
                 id="email"
                 name="email"
                 placeholder="Email..."
@@ -112,7 +112,7 @@ exports[`Form Profile Should render correctly snapshot 1`] = `
             role="group"
           >
             <label
-              class="chakra-form__label css-kem3nv"
+              class="chakra-form__label css-1v2ykga"
               for="userId"
               id="field-:r2:-label"
             >
@@ -124,7 +124,7 @@ exports[`Form Profile Should render correctly snapshot 1`] = `
             >
               <input
                 aria-readonly="true"
-                class="chakra-input css-1edxw6"
+                class="chakra-input css-14wg6qc"
                 id="userId"
                 name="userId"
                 placeholder="UserId"
@@ -139,7 +139,7 @@ exports[`Form Profile Should render correctly snapshot 1`] = `
             role="group"
           >
             <label
-              class="chakra-form__label css-kem3nv"
+              class="chakra-form__label css-1v2ykga"
               for="phone"
               id="field-:r3:-label"
             >
@@ -151,7 +151,7 @@ exports[`Form Profile Should render correctly snapshot 1`] = `
             >
               <input
                 aria-readonly="true"
-                class="chakra-input css-1edxw6"
+                class="chakra-input css-14wg6qc"
                 id="phone"
                 name="phone"
                 placeholder="Phone"
@@ -167,7 +167,7 @@ exports[`Form Profile Should render correctly snapshot 1`] = `
           role="group"
         >
           <label
-            class="chakra-form__label css-kem3nv"
+            class="chakra-form__label css-1v2ykga"
             for="phone"
             id="field-:r4:-label"
           >
@@ -175,7 +175,7 @@ exports[`Form Profile Should render correctly snapshot 1`] = `
           </label>
           <textarea
             aria-readonly="true"
-            class="chakra-textarea css-i0ehjx"
+            class="chakra-textarea css-avcao3"
             id="field-:r4:"
             name="bio"
             placeholder="Reason For Your Contribution"
@@ -242,7 +242,7 @@ exports[`Form Profile Should render correctly snapshot 1`] = `
           role="group"
         >
           <label
-            class="chakra-form__label css-kem3nv"
+            class="chakra-form__label css-1v2ykga"
             for="username"
             id="field-:r0:-label"
           >
@@ -254,7 +254,7 @@ exports[`Form Profile Should render correctly snapshot 1`] = `
           >
             <input
               aria-readonly="true"
-              class="chakra-input css-1edxw6"
+              class="chakra-input css-14wg6qc"
               id="username"
               name="username"
               placeholder="Full name"
@@ -269,7 +269,7 @@ exports[`Form Profile Should render correctly snapshot 1`] = `
           role="group"
         >
           <label
-            class="chakra-form__label css-kem3nv"
+            class="chakra-form__label css-1v2ykga"
             for="email"
             id="field-:r1:-label"
           >
@@ -281,7 +281,7 @@ exports[`Form Profile Should render correctly snapshot 1`] = `
           >
             <input
               aria-readonly="true"
-              class="chakra-input css-1edxw6"
+              class="chakra-input css-14wg6qc"
               id="email"
               name="email"
               placeholder="Email..."
@@ -300,7 +300,7 @@ exports[`Form Profile Should render correctly snapshot 1`] = `
           role="group"
         >
           <label
-            class="chakra-form__label css-kem3nv"
+            class="chakra-form__label css-1v2ykga"
             for="userId"
             id="field-:r2:-label"
           >
@@ -312,7 +312,7 @@ exports[`Form Profile Should render correctly snapshot 1`] = `
           >
             <input
               aria-readonly="true"
-              class="chakra-input css-1edxw6"
+              class="chakra-input css-14wg6qc"
               id="userId"
               name="userId"
               placeholder="UserId"
@@ -327,7 +327,7 @@ exports[`Form Profile Should render correctly snapshot 1`] = `
           role="group"
         >
           <label
-            class="chakra-form__label css-kem3nv"
+            class="chakra-form__label css-1v2ykga"
             for="phone"
             id="field-:r3:-label"
           >
@@ -339,7 +339,7 @@ exports[`Form Profile Should render correctly snapshot 1`] = `
           >
             <input
               aria-readonly="true"
-              class="chakra-input css-1edxw6"
+              class="chakra-input css-14wg6qc"
               id="phone"
               name="phone"
               placeholder="Phone"
@@ -355,7 +355,7 @@ exports[`Form Profile Should render correctly snapshot 1`] = `
         role="group"
       >
         <label
-          class="chakra-form__label css-kem3nv"
+          class="chakra-form__label css-1v2ykga"
           for="phone"
           id="field-:r4:-label"
         >
@@ -363,7 +363,7 @@ exports[`Form Profile Should render correctly snapshot 1`] = `
         </label>
         <textarea
           aria-readonly="true"
-          class="chakra-textarea css-i0ehjx"
+          class="chakra-textarea css-avcao3"
           id="field-:r4:"
           name="bio"
           placeholder="Reason For Your Contribution"

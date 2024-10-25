@@ -51,7 +51,8 @@ export const HomeList = memo(({ list, user }: HomeListProps) => {
       maxW={{ base: "100%", "2xl": 1260 }}
     >
       {list.map((item: BookType) => {
-        const { id, title, author, imageUrl, publicationYear, rating } = item;
+        const { id, title, author, imageUrl, publicationYear, rating } =
+          item || {};
 
         return (
           <Cart

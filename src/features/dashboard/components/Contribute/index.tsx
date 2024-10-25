@@ -22,7 +22,7 @@ export const Contribute = () => {
       rating,
       createdDate,
       edition,
-    } = values;
+    } = values || {};
 
     const payload: Partial<BookType> = {
       title,
@@ -47,7 +47,7 @@ export const Contribute = () => {
 
   return (
     <>
-      <Text size="xl" color="dark.100" mb="34px">
+      <Text size="xl" color="var(--chakra-colors-chakra-body-text)" mb="34px">
         Fill up Book Details
       </Text>
       <FormContribute onSubmit={handleSubmit} />

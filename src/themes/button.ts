@@ -5,7 +5,6 @@ export const Button = defineStyleConfig({
     fontWeight: "normal",
     borderRadius: "5px",
     color: "white",
-    bgColor: "brand.80",
     _hover: {
       _disabled: {
         bgColor: "brand.80",
@@ -37,6 +36,7 @@ export const Button = defineStyleConfig({
       py: "10px",
     },
     lg: {
+      minW: "125px",
       h: "48px",
       fontSize: "lg",
       fontWeight: 700,
@@ -53,20 +53,17 @@ export const Button = defineStyleConfig({
 
   variants: {
     normal: {
-      minW: "200px",
-      boxShadow: "0 0 5px 1px #efdfde",
+      bgColor: "brand.80",
       _hover: { bgColor: "brand.70" },
     },
     outline: {
-      bgColor: "white",
       color: "brand.70",
       borderColor: "brand.70",
-      boxShadow: "0 0 5px 1px #efdfde",
     },
     full: {
       width: "100%",
       fontWeight: 600,
-      boxShadow: "0 0 5px 1px #efdfde",
+      bgColor: "brand.80",
       _hover: { bgColor: "brand.70" },
     },
   },

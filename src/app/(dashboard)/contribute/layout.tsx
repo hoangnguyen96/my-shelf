@@ -39,7 +39,7 @@ const ContributeLayout = async ({
         maxW={678}
         h={560}
         flexDir="column"
-        bgColor="white"
+        bgColor="var(--chakra-colors-chakra-body-bg)"
         borderRadius="10px"
         p="28px 45px 45px 60px"
       >
@@ -69,7 +69,11 @@ const ContributeLayout = async ({
             Your Previous Contributions
           </Text>
           <Link href={ROUTES.CONTRIBUTE_LIST}>
-            <Text as="span" ml="9px" color="colorDescription">
+            <Text
+              as="span"
+              ml="9px"
+              color="var(--chakra-colors-chakra-subtle-text)"
+            >
               Show All
             </Text>
           </Link>

@@ -6,7 +6,7 @@ exports[`TableItem Should render correctly snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="css-1q7xe83"
+        class="css-1xi27q6"
       >
         <div
           class="css-dk70ac"
@@ -16,6 +16,7 @@ exports[`TableItem Should render correctly snapshot 1`] = `
             fetchpriority="high"
             height="100"
             src="Test"
+            style="border-radius: 5px; min-height: 100px;"
             width="75"
           />
           <div
@@ -59,7 +60,7 @@ exports[`TableItem Should render correctly snapshot 1`] = `
           >
             0
             <span
-              class="chakra-text css-1xibt3d"
+              class="chakra-text css-0"
             >
               /5
             </span>
@@ -126,7 +127,7 @@ exports[`TableItem Should render correctly snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="css-1q7xe83"
+      class="css-1xi27q6"
     >
       <div
         class="css-dk70ac"
@@ -136,6 +137,7 @@ exports[`TableItem Should render correctly snapshot 1`] = `
           fetchpriority="high"
           height="100"
           src="Test"
+          style="border-radius: 5px; min-height: 100px;"
           width="75"
         />
         <div
@@ -179,7 +181,7 @@ exports[`TableItem Should render correctly snapshot 1`] = `
         >
           0
           <span
-            class="chakra-text css-1xibt3d"
+            class="chakra-text css-0"
           >
             /5
           </span>
@@ -303,7 +305,7 @@ exports[`TableItem Should render correctly snapshot when imageUrl is empty 1`] =
   "baseElement": <body>
     <div>
       <div
-        class="css-1q7xe83"
+        class="css-1xi27q6"
       >
         <div
           class="css-dk70ac"
@@ -313,6 +315,7 @@ exports[`TableItem Should render correctly snapshot when imageUrl is empty 1`] =
             fetchpriority="high"
             height="100"
             src=""
+            style="border-radius: 5px; min-height: 100px;"
             width="75"
           />
           <div
@@ -352,7 +355,7 @@ exports[`TableItem Should render correctly snapshot when imageUrl is empty 1`] =
           >
             0
             <span
-              class="chakra-text css-1xibt3d"
+              class="chakra-text css-0"
             >
               /5
             </span>
@@ -417,7 +420,7 @@ exports[`TableItem Should render correctly snapshot when imageUrl is empty 1`] =
   </body>,
   "container": <div>
     <div
-      class="css-1q7xe83"
+      class="css-1xi27q6"
     >
       <div
         class="css-dk70ac"
@@ -427,6 +430,7 @@ exports[`TableItem Should render correctly snapshot when imageUrl is empty 1`] =
           fetchpriority="high"
           height="100"
           src=""
+          style="border-radius: 5px; min-height: 100px;"
           width="75"
         />
         <div
@@ -466,7 +470,7 @@ exports[`TableItem Should render correctly snapshot when imageUrl is empty 1`] =
         >
           0
           <span
-            class="chakra-text css-1xibt3d"
+            class="chakra-text css-0"
           >
             /5
           </span>
@@ -588,7 +592,7 @@ exports[`TableItem Should render correctly snapshot when is contribute 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="css-1q7xe83"
+        class="css-1xi27q6"
       >
         <div
           class="css-dk70ac"
@@ -598,6 +602,7 @@ exports[`TableItem Should render correctly snapshot when is contribute 1`] = `
             fetchpriority="high"
             height="100"
             src=""
+            style="border-radius: 5px; min-height: 100px;"
             width="75"
           />
           <div
@@ -641,7 +646,7 @@ exports[`TableItem Should render correctly snapshot when is contribute 1`] = `
           >
             0
             <span
-              class="chakra-text css-1xibt3d"
+              class="chakra-text css-0"
             >
               /5
             </span>
@@ -684,7 +689,7 @@ exports[`TableItem Should render correctly snapshot when is contribute 1`] = `
   </body>,
   "container": <div>
     <div
-      class="css-1q7xe83"
+      class="css-1xi27q6"
     >
       <div
         class="css-dk70ac"
@@ -694,6 +699,7 @@ exports[`TableItem Should render correctly snapshot when is contribute 1`] = `
           fetchpriority="high"
           height="100"
           src=""
+          style="border-radius: 5px; min-height: 100px;"
           width="75"
         />
         <div
@@ -737,7 +743,7 @@ exports[`TableItem Should render correctly snapshot when is contribute 1`] = `
         >
           0
           <span
-            class="chakra-text css-1xibt3d"
+            class="chakra-text css-0"
           >
             /5
           </span>

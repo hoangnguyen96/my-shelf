@@ -3,6 +3,7 @@ import { getAllBook, getUserById } from "@app/features/dashboard/actions";
 import { filterBooksOnShelf, filterBooksOnShelfByParams } from "@app/utils";
 import { MyBookShelf } from "@app/features/dashboard/components";
 import { Metadata } from "next";
+import { BookType, User } from "@app/interface";
 
 export const metadata: Metadata = {
   title: "MyBookShelf Search Params",
@@ -18,10 +19,22 @@ const MyBookShelfByParamsPage = async ({
   const session = await auth();
   const type = params.slug[0];
   const value = params.slug[1];
-  const { data: user } = await getUserById(session?.user?.id as string);
-  const { data: allBooks } = await getAllBook();
+  let user = null;
+  let books = [];
+
+  try {
+    const { data: userData } = await getUserById(session?.user?.id as string);
+    const { data: booksData } = await getAllBook();
+
+    user = userData;
+    books = booksData;
+  } catch (error) {
+    user = {} as User;
+    books = [] as BookType[];
+  }
+
   const shelfBooks = user?.shelfBooks || [];
-  const booksOnShelf = filterBooksOnShelf(allBooks, shelfBooks);
+  const booksOnShelf = filterBooksOnShelf(books, shelfBooks);
   const filteredBooks = filterBooksOnShelfByParams(booksOnShelf, type, value);
 
   return <MyBookShelf list={filteredBooks} user={user} />;

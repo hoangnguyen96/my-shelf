@@ -11,9 +11,8 @@ const SearchLayout = ({
     <Flex
       flexDir="column"
       gap="12px"
-      justifyContent="space-between"
       overflow="auto"
-      maxH="80%"
+      h="80%"
       sx={{
         "::-webkit-scrollbar-track": {
           marginTop: "60px",

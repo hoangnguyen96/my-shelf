@@ -73,7 +73,7 @@ export const PreviewBookDetails = memo(
       imageUrl,
       publicationYear,
       edition,
-    } = book;
+    } = book || {};
 
     return (
       <>
@@ -89,7 +89,7 @@ export const PreviewBookDetails = memo(
               maxW={274}
               width="100%"
               height={405}
-              bgColor="white"
+              bgColor="var(--chakra-colors-chakra-body-bg)"
               p="24px 32px"
               borderRadius="10px"
             >
@@ -173,7 +173,7 @@ export const PreviewBookDetails = memo(
               maxW={445}
               width="100%"
               height={418}
-              bgColor="white"
+              bgColor="var(--chakra-colors-chakra-body-bg)"
               p="30px"
               borderRadius="10px"
               pos="relative"

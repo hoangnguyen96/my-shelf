@@ -3,7 +3,7 @@
 exports[`Contribute Should render correctly snapshot 1`] = `
 <div>
   <p
-    class="chakra-text css-1jr2z3f"
+    class="chakra-text css-1xxbm3e"
   >
     Fill up Book Details
   </p>
@@ -76,7 +76,7 @@ exports[`Contribute Should render correctly snapshot 1`] = `
           >
             <select
               aria-label="select-category"
-              class="chakra-select css-g3rz38"
+              class="chakra-select css-np2fqy"
               data-testid="contribute-category"
               id="field-:r3:"
             >

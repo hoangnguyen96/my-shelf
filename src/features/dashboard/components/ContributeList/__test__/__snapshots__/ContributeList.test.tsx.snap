@@ -29,7 +29,7 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
       class="css-idangh"
     >
       <div
-        class="css-hj8stb"
+        class="css-x4yk7m"
       >
         <p
           class="chakra-text css-1l4rx3f"
@@ -55,7 +55,7 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
         class="css-1o9ca4y"
       >
         <div
-          class="css-1q7xe83"
+          class="css-1xi27q6"
         >
           <div
             class="css-dk70ac"
@@ -68,7 +68,7 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
               height="100"
               src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQbQgVtG%2Fbook1.png&w=256&q=75"
               srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQbQgVtG%2Fbook1.png&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FQbQgVtG%2Fbook1.png&w=256&q=75 2x"
-              style="color: transparent;"
+              style="color: transparent; border-radius: 5px; min-height: 100px;"
               width="75"
             />
             <div
@@ -112,7 +112,7 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
             >
               4.5
               <span
-                class="chakra-text css-1xibt3d"
+                class="chakra-text css-0"
               >
                 /5
               </span>
@@ -152,7 +152,7 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-1q7xe83"
+          class="css-1xi27q6"
         >
           <div
             class="css-dk70ac"
@@ -165,7 +165,7 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
               height="100"
               src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F9qHTtQF%2Fbook2.png&w=256&q=75"
               srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F9qHTtQF%2Fbook2.png&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F9qHTtQF%2Fbook2.png&w=256&q=75 2x"
-              style="color: transparent;"
+              style="color: transparent; border-radius: 5px; min-height: 100px;"
               width="75"
             />
             <div
@@ -209,7 +209,7 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
             >
               4.5
               <span
-                class="chakra-text css-1xibt3d"
+                class="chakra-text css-0"
               >
                 /5
               </span>
@@ -249,7 +249,7 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-1q7xe83"
+          class="css-1xi27q6"
         >
           <div
             class="css-dk70ac"
@@ -262,7 +262,7 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
               height="100"
               src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FLnSBcCM%2Fbook5.png&w=256&q=75"
               srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FLnSBcCM%2Fbook5.png&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FLnSBcCM%2Fbook5.png&w=256&q=75 2x"
-              style="color: transparent;"
+              style="color: transparent; border-radius: 5px; min-height: 100px;"
               width="75"
             />
             <div
@@ -306,7 +306,7 @@ exports[`Contribute List Should render correctly snapshot 1`] = `
             >
               4.5
               <span
-                class="chakra-text css-1xibt3d"
+                class="chakra-text css-0"
               >
                 /5
               </span>

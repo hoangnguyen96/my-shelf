@@ -66,7 +66,6 @@ const SearchBar = ({ placeholder = "Search...", ...rest }: InputProps) => {
         borderLeftRadius="40px"
         w="120px"
         h="50px"
-        bgColor="backgroundTitle"
         _focusVisible={{ borderColor: "transparent" }}
         onChange={handleTypeChange}
       >

@@ -101,7 +101,10 @@ const FormProfile = ({ user, onUpdate }: FormProfileProps) => {
           isInvalid={!!errors.username}
           mb={errors.username?.message ? "2px" : "24px"}
         >
-          <FormLabel color="dark.90" htmlFor="username">
+          <FormLabel
+            color="var(--chakra-colors-chakra-body-text)"
+            htmlFor="username"
+          >
             Full name
           </FormLabel>
           <Controller
@@ -118,14 +121,18 @@ const FormProfile = ({ user, onUpdate }: FormProfileProps) => {
                 id="username"
                 value={value}
                 placeholder="Full name"
-                color={isReadOnly ? "dark.60" : "dark.90"}
+                color={
+                  isReadOnly
+                    ? "dark.60"
+                    : "var(--chakra-colors-chakra-body-text)"
+                }
                 isInvalid={!!error?.message}
                 isReadOnly={isReadOnly}
                 onChange={(e) => {
                   onChange(e);
                   clearErrorOnChange("username", errors, clearErrors);
                 }}
-                _readOnly={{ bgColor: "backgroundReadOnly" }}
+                _readOnly={{ bgColor: "var(--chakra-colors-chakra-subtle-bg)" }}
                 {...rest}
               />
             )}
@@ -140,7 +147,10 @@ const FormProfile = ({ user, onUpdate }: FormProfileProps) => {
           isInvalid={!!errors.email}
           mb={errors.email?.message ? "2px" : "24px"}
         >
-          <FormLabel color="dark.90" htmlFor="email">
+          <FormLabel
+            color="var(--chakra-colors-chakra-body-text)"
+            htmlFor="email"
+          >
             College Email ID
           </FormLabel>
           <Controller
@@ -165,13 +175,17 @@ const FormProfile = ({ user, onUpdate }: FormProfileProps) => {
                 value={value}
                 placeholder="Email..."
                 isReadOnly={isReadOnly}
-                color={isReadOnly ? "dark.60" : "dark.90"}
+                color={
+                  isReadOnly
+                    ? "dark.60"
+                    : "var(--chakra-colors-chakra-body-text)"
+                }
                 isInvalid={!!error?.message}
                 onChange={(e) => {
                   onChange(e);
                   clearErrorOnChange("email", errors, clearErrors);
                 }}
-                _readOnly={{ bgColor: "backgroundReadOnly" }}
+                _readOnly={{ bgColor: "var(--chakra-colors-chakra-subtle-bg)" }}
                 {...rest}
               />
             )}
@@ -193,7 +207,10 @@ const FormProfile = ({ user, onUpdate }: FormProfileProps) => {
           isInvalid={!!errors.userId}
           mb={errors.userId?.message ? "2px" : "24px"}
         >
-          <FormLabel color="dark.90" htmlFor="userId">
+          <FormLabel
+            color="var(--chakra-colors-chakra-body-text)"
+            htmlFor="userId"
+          >
             Register Number
           </FormLabel>
           <Controller
@@ -214,7 +231,7 @@ const FormProfile = ({ user, onUpdate }: FormProfileProps) => {
                   onChange(e);
                   clearErrorOnChange("userId", errors, clearErrors);
                 }}
-                _readOnly={{ bgColor: "backgroundReadOnly" }}
+                _readOnly={{ bgColor: "var(--chakra-colors-chakra-subtle-bg)" }}
                 {...rest}
               />
             )}
@@ -229,7 +246,10 @@ const FormProfile = ({ user, onUpdate }: FormProfileProps) => {
           isInvalid={!!errors.phone}
           mb={errors.phone?.message ? "2px" : "24px"}
         >
-          <FormLabel color="dark.90" htmlFor="phone">
+          <FormLabel
+            color="var(--chakra-colors-chakra-body-text)"
+            htmlFor="phone"
+          >
             Phone number
           </FormLabel>
           <Controller
@@ -248,13 +268,17 @@ const FormProfile = ({ user, onUpdate }: FormProfileProps) => {
                 value={value}
                 placeholder="Phone"
                 isReadOnly={isReadOnly}
-                color={isReadOnly ? "dark.60" : "dark.90"}
+                color={
+                  isReadOnly
+                    ? "dark.60"
+                    : "var(--chakra-colors-chakra-body-text)"
+                }
                 isInvalid={!!error?.message}
                 onChange={(e) => {
                   onChange(e);
                   clearErrorOnChange("phone", errors, clearErrors);
                 }}
-                _readOnly={{ bgColor: "backgroundReadOnly" }}
+                _readOnly={{ bgColor: "var(--chakra-colors-chakra-subtle-bg)" }}
                 {...rest}
               />
             )}
@@ -272,7 +296,10 @@ const FormProfile = ({ user, onUpdate }: FormProfileProps) => {
         isInvalid={!!errors.bio}
         mb={errors.bio?.message ? "0" : "12px"}
       >
-        <FormLabel color="dark.90" htmlFor="phone">
+        <FormLabel
+          color="var(--chakra-colors-chakra-body-text)"
+          htmlFor="phone"
+        >
           Bio
         </FormLabel>
         <Controller
@@ -286,14 +313,16 @@ const FormProfile = ({ user, onUpdate }: FormProfileProps) => {
               h="100%"
               minH={158}
               isReadOnly={isReadOnly}
-              color={isReadOnly ? "dark.60" : "dark.90"}
+              color={
+                isReadOnly ? "dark.60" : "var(--chakra-colors-chakra-body-text)"
+              }
               value={value}
               border="1px solid"
               borderColor="borderDefault"
               placeholder="Reason For Your Contribution"
               _placeholder={{ color: "dark.60" }}
               _focusVisible={{ boxShadow: "unset" }}
-              _readOnly={{ bgColor: "backgroundReadOnly" }}
+              _readOnly={{ bgColor: "var(--chakra-colors-chakra-subtle-bg)" }}
               onChange={(e) => {
                 onChange(e);
                 clearErrorOnChange("bio", errors, clearErrors);

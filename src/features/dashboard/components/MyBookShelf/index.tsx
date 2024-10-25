@@ -52,7 +52,7 @@ export const MyBookShelf = memo(({ list, user }: MyBookShelfProps) => {
           rating,
           imageUrl,
           createdDate,
-        } = item;
+        } = item || {};
 
         return (
           <CartBorrow

@@ -64,9 +64,8 @@ const TableItem = ({
   return (
     <>
       <Flex
-        bgColor="white"
+        bgColor="var(--chakra-colors-chakra-body-bg)"
         borderRadius="10px"
-        boxShadow="0 0 5px 0px rgb(0 0 0 / 10%)"
         py="12px"
         pl="24px"
         pr="48px"
@@ -87,6 +86,7 @@ const TableItem = ({
             height={100}
             priority={true}
             fetchPriority="high"
+            style={{ borderRadius: "5px", minHeight: 100 }}
           />
           <Flex flexDir="column">
             <Text
@@ -119,7 +119,7 @@ const TableItem = ({
         >
           <Text size="xl" minW="71px">
             {rating}
-            <Text as="span" size="md" color="colorDescription">
+            <Text as="span" size="md">
               /5
             </Text>
           </Text>

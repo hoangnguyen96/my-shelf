@@ -3,6 +3,7 @@ import { filterBooksOnShelf } from "@app/utils";
 import { getAllBook, getUserById } from "@app/features/dashboard/actions";
 import { MyBookShelf } from "@app/features/dashboard/components";
 import { Metadata } from "next";
+import { BookType, User } from "@app/interface";
 
 export const metadata: Metadata = {
   title: "MyBookShelf",
@@ -12,10 +13,22 @@ export const metadata: Metadata = {
 
 const MyBookShelfPage = async () => {
   const session = await auth();
-  const { data: user } = await getUserById(session?.user?.id as string);
-  const { data: allBooks } = await getAllBook();
+  let user = null;
+  let books = [];
+
+  try {
+    const { data: userData } = await getUserById(session?.user?.id as string);
+    const { data: booksData } = await getAllBook();
+
+    user = userData;
+    books = booksData;
+  } catch (error) {
+    user = {} as User;
+    books = [] as BookType[];
+  }
+
   const shelfBooks = user?.shelfBooks || [];
-  const booksOnShelf = filterBooksOnShelf(allBooks, shelfBooks);
+  const booksOnShelf = filterBooksOnShelf(books, shelfBooks);
 
   return <MyBookShelf list={booksOnShelf} user={user} />;
 };

@@ -29,7 +29,7 @@ exports[`Preview book Page Should render correctly snapshot 1`] = `
       class="css-199bpaw"
     >
       <div
-        class="css-jxzlid"
+        class="css-1vrsypj"
       >
         <img
           alt="Preview book"
@@ -270,7 +270,7 @@ exports[`Preview book Page Should render correctly snapshot 1`] = `
         </button>
       </div>
       <div
-        class="css-9wnjo"
+        class="css-19trwo3"
       >
         <p
           class="chakra-text css-1d8s7zd"

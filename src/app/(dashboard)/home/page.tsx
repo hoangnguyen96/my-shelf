@@ -1,6 +1,7 @@
 import { auth } from "@app/auth";
 import { getBooksByLimit, getUserById } from "@app/features/dashboard/actions";
 import { HomeList } from "@app/features/dashboard/components";
+import { BookType, User } from "@app/interface";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,10 +12,21 @@ export const metadata: Metadata = {
 
 const HomePage = async () => {
   const session = await auth();
-  const { data: dataUserById } = await getUserById(session?.user?.id as string);
-  const { data: books } = await getBooksByLimit();
+  let user = null;
+  let books = [];
 
-  return <HomeList user={dataUserById} list={books} />;
+  try {
+    const { data: userData } = await getUserById(session?.user?.id as string);
+    const { data: booksData } = await getBooksByLimit();
+
+    user = userData;
+    books = booksData;
+  } catch (error) {
+    user = {} as User;
+    books = [] as BookType[];
+  }
+
+  return <HomeList user={user} list={books} />;
 };
 
 export default HomePage;

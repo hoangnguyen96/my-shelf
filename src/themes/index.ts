@@ -8,7 +8,13 @@ import { Checkbox } from "./checkbox";
 import { fonts, fontSizes, lineHeights, radius } from "./typography";
 import { Tabs } from "./tabs";
 
+const config = {
+  initialColorMode: "light",
+  useSystemColorMode: false,
+};
+
 export const theme = extendTheme({
+  config,
   colors,
   spacing,
   fonts,

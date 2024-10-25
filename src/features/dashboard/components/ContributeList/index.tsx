@@ -55,7 +55,7 @@ export const ContributeList = memo(({ user, list }: ContributeListProps) => {
               rating,
               edition,
               category,
-            } = itemBook;
+            } = itemBook || {};
 
             return (
               <TableItem

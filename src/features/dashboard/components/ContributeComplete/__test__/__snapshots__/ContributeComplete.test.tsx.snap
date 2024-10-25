@@ -24,12 +24,13 @@ exports[`ContributeComplete Should render correctly snapshot 1`] = `
     </span>
   </a>
   <div
-    class="css-fg2ebx"
+    class="css-1abh3td"
   >
     <p
-      class="chakra-text css-qbyqmg"
+      class="chakra-text css-mf76p8"
     >
-      Thank you For your Submission 
+      Thank you For your Submission
+       
     </p>
     <svg
       fill="none"
@@ -44,7 +45,7 @@ exports[`ContributeComplete Should render correctly snapshot 1`] = `
       />
     </svg>
     <p
-      class="chakra-text css-qbyqmg"
+      class="chakra-text css-mf76p8"
     >
       You will be contacted shortly
     </p>

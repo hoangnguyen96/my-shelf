@@ -16,7 +16,7 @@ const LoginPage = () => (
     maxW="565px"
     pt="63px"
     px="70px"
-    bgColor="white"
+    bgColor="var(--chakra-colors-chakra-body-bg)"
     borderRadius="10px"
     boxShadow="0 0 5px 1px rgb(0 0 0 / 25%)"
     position="absolute"

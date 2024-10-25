@@ -13,7 +13,11 @@ const DashboardLayout = async ({
   const session = await auth();
 
   return (
-    <Flex bgColor="white" borderRadius="10px" height="100%">
+    <Flex
+      bgColor="var(--chakra-colors-chakra-body-bg)"
+      borderRadius="10px"
+      height="100%"
+    >
       <Flex
         flexDir="column"
         gap="100px"
@@ -27,7 +31,7 @@ const DashboardLayout = async ({
         w="100%"
         h="100%"
         minW={450}
-        bgColor="backgroundContent"
+        bgColor="var(--chakra-colors-chakra-subtle-bg)"
         borderRightRadius="10px"
         pos="relative"
       >

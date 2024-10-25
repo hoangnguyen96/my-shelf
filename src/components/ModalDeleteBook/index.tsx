@@ -34,7 +34,7 @@ const ModalDeleteBook = ({
           onClick={onConfirm}
           text="Yes"
           size="md"
-          variant="outline"
+          variant="normal"
         />
         <Button onClick={onClose} text="No" size="md" variant="outline" />
       </ModalFooter>

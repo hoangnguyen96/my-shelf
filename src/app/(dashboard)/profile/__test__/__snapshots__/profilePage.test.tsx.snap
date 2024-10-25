@@ -6,7 +6,7 @@ exports[`Profile Page Should render correctly snapshot 1`] = `
     class="css-h87x8w"
   >
     <div
-      class="css-1at2akz"
+      class="css-ytll3b"
     >
       <p
         class="chakra-text css-1bt3b4m"
@@ -58,7 +58,7 @@ exports[`Profile Page Should render correctly snapshot 1`] = `
               />
             </div>
             <button
-              class="chakra-button css-ycuso6"
+              class="chakra-button css-117l7en"
               type="button"
             >
               Upload New photo
@@ -115,7 +115,7 @@ exports[`Profile Page Should render correctly snapshot 1`] = `
             role="group"
           >
             <label
-              class="chakra-form__label css-kem3nv"
+              class="chakra-form__label css-1v2ykga"
               for="username"
               id="field-:r1:-label"
             >
@@ -127,7 +127,7 @@ exports[`Profile Page Should render correctly snapshot 1`] = `
             >
               <input
                 aria-readonly="true"
-                class="chakra-input css-1edxw6"
+                class="chakra-input css-14wg6qc"
                 id="username"
                 name="username"
                 placeholder="Full name"
@@ -142,7 +142,7 @@ exports[`Profile Page Should render correctly snapshot 1`] = `
             role="group"
           >
             <label
-              class="chakra-form__label css-kem3nv"
+              class="chakra-form__label css-1v2ykga"
               for="email"
               id="field-:r2:-label"
             >
@@ -154,7 +154,7 @@ exports[`Profile Page Should render correctly snapshot 1`] = `
             >
               <input
                 aria-readonly="true"
-                class="chakra-input css-1edxw6"
+                class="chakra-input css-14wg6qc"
                 id="email"
                 name="email"
                 placeholder="Email..."
@@ -173,7 +173,7 @@ exports[`Profile Page Should render correctly snapshot 1`] = `
             role="group"
           >
             <label
-              class="chakra-form__label css-kem3nv"
+              class="chakra-form__label css-1v2ykga"
               for="userId"
               id="field-:r3:-label"
             >
@@ -185,7 +185,7 @@ exports[`Profile Page Should render correctly snapshot 1`] = `
             >
               <input
                 aria-readonly="true"
-                class="chakra-input css-1edxw6"
+                class="chakra-input css-14wg6qc"
                 id="userId"
                 name="userId"
                 placeholder="UserId"
@@ -200,7 +200,7 @@ exports[`Profile Page Should render correctly snapshot 1`] = `
             role="group"
           >
             <label
-              class="chakra-form__label css-kem3nv"
+              class="chakra-form__label css-1v2ykga"
               for="phone"
               id="field-:r4:-label"
             >
@@ -212,7 +212,7 @@ exports[`Profile Page Should render correctly snapshot 1`] = `
             >
               <input
                 aria-readonly="true"
-                class="chakra-input css-1edxw6"
+                class="chakra-input css-14wg6qc"
                 id="phone"
                 name="phone"
                 placeholder="Phone"
@@ -228,7 +228,7 @@ exports[`Profile Page Should render correctly snapshot 1`] = `
           role="group"
         >
           <label
-            class="chakra-form__label css-kem3nv"
+            class="chakra-form__label css-1v2ykga"
             for="phone"
             id="field-:r5:-label"
           >
@@ -236,7 +236,7 @@ exports[`Profile Page Should render correctly snapshot 1`] = `
           </label>
           <textarea
             aria-readonly="true"
-            class="chakra-textarea css-i0ehjx"
+            class="chakra-textarea css-avcao3"
             id="field-:r5:"
             name="bio"
             placeholder="Reason For Your Contribution"

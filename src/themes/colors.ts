@@ -3,6 +3,7 @@ export const colors = {
     90: "#eb5231",
     80: "#f4683c",
     70: "#f76b56",
+    60: "#ef8361",
   },
 
   dark: {

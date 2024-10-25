@@ -3,7 +3,8 @@ import { defineStyleConfig } from "@chakra-ui/react";
 export const Input = defineStyleConfig({
   baseStyle: {
     field: {
-      color: "dark.90",
+      color: "var(--chakra-colors-chakra-body-text)",
+      backgroundColor: "var(--chakra-colors-chakra-body-bg)",
       fontSize: "lg",
       lineHeight: 18,
       height: "56px",
