@@ -11,7 +11,11 @@ const NotFound = () => (
     alignItems="center"
     justifyContent="center"
     gap={5}
-    mt={230}
+    maxW={600}
+    m="230px auto 0"
+    p="40px"
+    borderRadius="10px"
+    backgroundColor="var(--chakra-colors-chakra-body-bg)"
   >
     <Heading>Not Found</Heading>
     <Text>Could not find requested resource</Text>
