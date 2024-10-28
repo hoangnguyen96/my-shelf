@@ -55,7 +55,7 @@ describe("My Book Shelf", () => {
   });
 
   it("Should render correctly snapshot", async () => {
-    const { container } = render(await MyBookShelfPage());
+    const { container } = render(await MyBookShelfPage({ searchParams: {} }));
 
     await waitFor(() => {
       expect(container).toMatchSnapshot();
@@ -67,7 +67,9 @@ describe("My Book Shelf", () => {
       data: { ...DATA_USER[0], shelfBooks: null },
     });
 
-    const { container } = render(await MyBookShelfPage());
+    const { container } = render(
+      await MyBookShelfPage({ searchParams: { title: "on" } })
+    );
 
     await waitFor(() => {
       expect(container).toMatchSnapshot();

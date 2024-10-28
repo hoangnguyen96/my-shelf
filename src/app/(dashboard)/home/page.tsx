@@ -10,14 +10,22 @@ export const metadata: Metadata = {
     "My book shelf management is an online book reading application that helps users conveniently borrow books.",
 };
 
-const HomePage = async () => {
+const HomePage = async ({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | string[] | undefined };
+}) => {
   const session = await auth();
+  const type = Object.keys(searchParams)[0];
+  const value = Object.values(searchParams)[0];
+  const paramSearch = type && value ? `${type}=${value}&` : "";
+
   let user = null;
   let books = [];
 
   try {
     const { data: userData } = await getUserById(session?.user?.id as string);
-    const { data: booksData } = await getBooksByLimit();
+    const { data: booksData } = await getBooksByLimit(paramSearch);
 
     user = userData;
     books = booksData;

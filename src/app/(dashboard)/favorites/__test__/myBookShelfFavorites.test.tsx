@@ -21,11 +21,16 @@ jest.mock("@app/features/dashboard/actions", () => ({
 jest.mock("@app/utils", () => ({
   ...jest.requireActual("@app/utils"),
   filterBooksFavorite: jest.fn(),
+  filterBooksFavoriteByParams: jest.fn(),
 }));
 
 describe("My Book Shelf Favorites", () => {
+  const mockSearchParams = { title: "on" };
   const mockBooks = DATA_BOOKS.filter((item) =>
     DATA_USER[0].favorites.includes(item.id)
+  );
+  const mockBooksByParams = mockBooks.filter((book) =>
+    book.title.includes("on")
   );
   const mockSession = {
     user: {
@@ -47,10 +52,15 @@ describe("My Book Shelf Favorites", () => {
       data: DATA_USER[0],
     });
     jest.spyOn(utils, "filterBooksFavorite").mockReturnValue(mockBooks);
+    jest
+      .spyOn(utils, "filterBooksFavoriteByParams")
+      .mockReturnValue(mockBooksByParams);
   });
 
   it("Should render correctly snapshot", async () => {
-    const { container } = render(await MyBookShelfFavorites());
+    const { container } = render(
+      await MyBookShelfFavorites({ searchParams: mockSearchParams })
+    );
 
     await waitFor(() => {
       expect(container).toMatchSnapshot();
@@ -62,7 +72,9 @@ describe("My Book Shelf Favorites", () => {
       data: { ...DATA_USER[0], favorites: null },
     });
 
-    const { container } = render(await MyBookShelfFavorites());
+    const { container } = render(
+      await MyBookShelfFavorites({ searchParams: {} })
+    );
 
     await waitFor(() => {
       expect(container).toMatchSnapshot();

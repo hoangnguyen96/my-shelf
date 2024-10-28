@@ -11,6 +11,7 @@ jest.mock("next-auth/react", () => ({
 jest.mock("next/navigation", () => ({
   useRouter: jest.fn(),
   usePathname: jest.fn(),
+  useSearchParams: jest.fn(),
 }));
 
 jest.mock("@app/actions/auth", () => ({

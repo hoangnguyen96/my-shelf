@@ -37,7 +37,7 @@ describe("HomePage", () => {
   });
 
   it("Should render correctly snapshot", async () => {
-    const { container } = render(await HomePage());
+    const { container } = render(await HomePage({ searchParams: {} }));
 
     await waitFor(() => {
       expect(container).toMatchSnapshot();

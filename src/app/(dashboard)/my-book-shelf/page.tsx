@@ -1,5 +1,5 @@
 import { auth } from "@app/auth";
-import { filterBooksOnShelf } from "@app/utils";
+import { filterBooksOnShelf, filterBooksOnShelfByParams } from "@app/utils";
 import { getAllBook, getUserById } from "@app/features/dashboard/actions";
 import { MyBookShelf } from "@app/features/dashboard/components";
 import { Metadata } from "next";
@@ -11,8 +11,14 @@ export const metadata: Metadata = {
     "My book shelf management is an online book reading application that helps users conveniently borrow books.",
 };
 
-const MyBookShelfPage = async () => {
+const MyBookShelfPage = async ({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | string[] | undefined };
+}) => {
   const session = await auth();
+  const type = Object.keys(searchParams)[0];
+  const value = Object.values(searchParams)[0];
   let user = null;
   let books = [];
 
@@ -29,8 +35,12 @@ const MyBookShelfPage = async () => {
 
   const shelfBooks = user?.shelfBooks || [];
   const booksOnShelf = filterBooksOnShelf(books, shelfBooks);
+  const filteredBooks =
+    type && value
+      ? filterBooksOnShelfByParams(booksOnShelf, type, value as string)
+      : booksOnShelf;
 
-  return <MyBookShelf list={booksOnShelf} user={user} />;
+  return <MyBookShelf list={filteredBooks} user={user} />;
 };
 
 export default MyBookShelfPage;

@@ -41,7 +41,7 @@ describe("Search Page", () => {
   });
 
   it("Should render correctly snapshot", async () => {
-    const { container } = render(await SearchPage());
+    const { container } = render(await SearchPage({ searchParams: {} }));
 
     await waitFor(() => {
       expect(container).toMatchSnapshot();

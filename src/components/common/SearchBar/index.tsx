@@ -1,7 +1,7 @@
 "use client";
 
 import { memo, useEffect, useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import {
   Input,
   InputGroup,
@@ -12,7 +12,7 @@ import {
   Box,
 } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
-import { getFirstPath } from "@app/utils";
+import { TYPE_SEARCH } from "@app/constants";
 
 const SearchBar = ({ placeholder = "Search...", ...rest }: InputProps) => {
   const [prevPath, setPrevPath] = useState("");
@@ -20,6 +20,7 @@ const SearchBar = ({ placeholder = "Search...", ...rest }: InputProps) => {
   const [searchType, setSearchType] = useState("");
   const router = useRouter();
   const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
@@ -30,17 +31,19 @@ const SearchBar = ({ placeholder = "Search...", ...rest }: InputProps) => {
   };
 
   const handleSearch = () => {
-    let part = getFirstPath(pathname);
+    setPrevPath(pathname);
+    const params = new URLSearchParams(searchParams.toString());
+    params.delete(TYPE_SEARCH.TITLE);
+    params.delete(TYPE_SEARCH.AUTHOR);
 
-    if (!searchTerm && !searchType) {
-      return router.replace(part);
+    if (searchType && searchTerm) {
+      params.set(searchType, searchTerm);
     }
 
-    const newPath = `${part}${
-      searchType && searchTerm ? `/${searchType}/${searchTerm}` : ""
+    const newPath = `${pathname}${
+      searchType && searchTerm ? `?${params.toString()}` : ""
     }`;
 
-    setPrevPath(part);
     return router.replace(newPath);
   };
 

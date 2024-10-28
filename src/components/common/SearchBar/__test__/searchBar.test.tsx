@@ -1,9 +1,9 @@
 import { fireEvent, render, waitFor } from "@testing-library/react";
 import { useSession } from "next-auth/react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import SearchBar from "..";
 import { ROUTES } from "@app/constants";
-import React from 'react';
+import React from "react";
 
 jest.mock("next-auth/react", () => ({
   useSession: jest.fn(),
@@ -12,8 +12,8 @@ jest.mock("next-auth/react", () => ({
 jest.mock("next/navigation", () => ({
   useRouter: jest.fn(),
   usePathname: jest.fn(),
+  useSearchParams: jest.fn(),
 }));
-
 
 describe("SearchBar", () => {
   (useSession as jest.Mock).mockReturnValue({
@@ -35,6 +35,7 @@ describe("SearchBar", () => {
       replace: jest.fn(),
     });
     (usePathname as jest.Mock).mockReturnValue(ROUTES.MY_BOOK_SHELF_FAVORITES);
+    (useSearchParams as jest.Mock).mockReturnValue("title=on");
   });
 
   it("Should render correctly snapshot", () => {
