@@ -12,12 +12,17 @@ import {
   MenuList,
   Text,
 } from "@chakra-ui/react";
+import isEqual from "react-fast-compare";
 import { useRouter } from "next/navigation";
 import { ROUTES } from "@app/constants";
 import { logout } from "@app/features/auth/actions";
 import { Avatar } from "../common";
 
-const MenuProfile = ({ session }: { session?: Session }) => {
+interface MenuProfileProps {
+  session?: Session;
+}
+
+const MenuProfile = ({ session }: MenuProfileProps) => {
   const router = useRouter();
 
   const handleLogout = async () => {
@@ -91,4 +96,8 @@ const MenuProfile = ({ session }: { session?: Session }) => {
   );
 };
 
-export default memo(MenuProfile);
+const areEqual = (prevProps: MenuProfileProps, nextProps: MenuProfileProps) => {
+  return isEqual(prevProps, nextProps);
+};
+
+export default memo(MenuProfile, areEqual);

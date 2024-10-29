@@ -26,6 +26,7 @@ import { generateImageUpload } from "@app/features/dashboard/actions";
 import { clearErrorOnChange, isEnableSubmitButton } from "@app/utils";
 import { UploadIcon } from "@app/assets/icons";
 import { Button, Input } from "../common";
+import isEqual from "react-fast-compare";
 
 interface FormContributeProps {
   itemUpdate?: Partial<BookType>;
@@ -410,4 +411,11 @@ const FormContribute = ({
   );
 };
 
-export default memo(FormContribute);
+const areEqual = (
+  prevProps: FormContributeProps,
+  nextProps: FormContributeProps
+) => {
+  return isEqual(prevProps.itemUpdate, nextProps.itemUpdate);
+};
+
+export default memo(FormContribute, areEqual);

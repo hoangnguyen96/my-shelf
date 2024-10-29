@@ -7,12 +7,13 @@ import { ROUTES } from "@app/constants";
 import { BookType } from "@app/interface";
 import { updateBookById } from "../../actions";
 import { FormContribute } from "@app/components";
+import isEqual from "react-fast-compare";
 
 interface EditContributionProps {
   book: BookType;
 }
 
-export const EditContribution = memo(({ book }: EditContributionProps) => {
+const EditContributionComponent = ({ book }: EditContributionProps) => {
   const router = useRouter();
   const toast = useToast();
 
@@ -63,4 +64,13 @@ export const EditContribution = memo(({ book }: EditContributionProps) => {
       <FormContribute itemUpdate={book} onUpdate={handleUpdate} />
     </Box>
   );
-});
+};
+
+const areEqual = (
+  prevProps: EditContributionProps,
+  nextProps: EditContributionProps
+) => {
+  return isEqual(prevProps, nextProps);
+};
+
+export const EditContribution = memo(EditContributionComponent, areEqual);

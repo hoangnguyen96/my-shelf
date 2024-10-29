@@ -44,7 +44,10 @@ export const getBooksByLimit = async (
 
 export const getBookById = async (id: string) => {
   const { data, ...rest } = await api.get<BookType>(
-    `${API_ROUTES.BOOKS}/${parseInt(id)}`
+    `${API_ROUTES.BOOKS}/${parseInt(id)}`,
+    {
+      cache: "no-store",
+    }
   );
 
   return {

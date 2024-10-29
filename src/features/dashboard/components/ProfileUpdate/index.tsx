@@ -8,13 +8,14 @@ import { User } from "@app/interface";
 import { updateUserById } from "../../actions";
 import { FormProfile } from "@app/components";
 import { UploadImage } from "@app/components/common";
+import isEqual from "react-fast-compare";
 
 interface ProfileUpdateProps {
   imageUrl: string;
   user: User;
 }
 
-export const ProfileUpdate = memo(({ imageUrl, user }: ProfileUpdateProps) => {
+const ProfileUpdateComponent = ({ imageUrl, user }: ProfileUpdateProps) => {
   const router = useRouter();
   const toast = useToast();
 
@@ -83,4 +84,13 @@ export const ProfileUpdate = memo(({ imageUrl, user }: ProfileUpdateProps) => {
       </Flex>
     </Box>
   );
-});
+};
+
+const areEqual = (
+  prevProps: ProfileUpdateProps,
+  nextProps: ProfileUpdateProps
+) => {
+  return isEqual(prevProps.user, nextProps.user);
+};
+
+export const ProfileUpdate = memo(ProfileUpdateComponent, areEqual);

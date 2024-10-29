@@ -7,13 +7,14 @@ import { BookType, User } from "@app/interface";
 import { Cart } from "@app/components/common";
 import { updateUserById } from "../../actions";
 import { MESSAGES } from "@app/constants";
+import isEqual from "react-fast-compare";
 
 interface HomeListProps {
   user: User;
   list: BookType[];
 }
 
-export const HomeList = memo(({ list, user }: HomeListProps) => {
+const HomeListComponent = ({ list, user }: HomeListProps) => {
   const router = useRouter();
 
   const handleUpdateFavorites = async (id: string) => {
@@ -70,4 +71,13 @@ export const HomeList = memo(({ list, user }: HomeListProps) => {
       })}
     </Grid>
   );
-});
+};
+
+const areEqual = (prevProps: HomeListProps, nextProps: HomeListProps) => {
+  return (
+    isEqual(prevProps.user, nextProps.user) &&
+    isEqual(prevProps.list, nextProps.list)
+  );
+};
+
+export const HomeList = memo(HomeListComponent, areEqual);

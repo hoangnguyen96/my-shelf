@@ -20,6 +20,7 @@ import { memo, useMemo, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { EditProfileIcon } from "@app/assets/icons";
 import { Button, Input } from "../common";
+import isEqual from "react-fast-compare";
 
 interface FormProfileProps {
   user: User;
@@ -352,4 +353,8 @@ const FormProfile = ({ user, onUpdate }: FormProfileProps) => {
   );
 };
 
-export default memo(FormProfile);
+const areEqual = (prevProps: FormProfileProps, nextProps: FormProfileProps) => {
+  return isEqual(prevProps.user, nextProps.user);
+};
+
+export default memo(FormProfile, areEqual);

@@ -2,6 +2,7 @@ import { memo } from "react";
 import { Flex } from "@chakra-ui/react";
 import { BookType, User } from "@app/interface";
 import { Cart } from "@app/components/common";
+import isEqual from "react-fast-compare";
 
 interface ListContributeProps {
   user: User;
@@ -36,4 +37,14 @@ const ListContribute = ({ user, list }: ListContributeProps) => (
   </Flex>
 );
 
-export default memo(ListContribute);
+const areEqual = (
+  prevProps: ListContributeProps,
+  nextProps: ListContributeProps
+) => {
+  return (
+    isEqual(prevProps.user, nextProps.user) &&
+    isEqual(prevProps.list, nextProps.list)
+  );
+};
+
+export default memo(ListContribute, areEqual);

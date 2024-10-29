@@ -27,6 +27,7 @@ import {
 
 // Components
 import { Button, Input } from "../common";
+import isEqual from "react-fast-compare";
 
 interface FormRegisterProps {
   itemUpdate?: Partial<User>;
@@ -260,4 +261,11 @@ const FormRegister = ({ itemUpdate, onSubmit }: FormRegisterProps) => {
   );
 };
 
-export default memo(FormRegister);
+const areEqual = (
+  prevProps: FormRegisterProps,
+  nextProps: FormRegisterProps
+) => {
+  return isEqual(prevProps.itemUpdate, nextProps.itemUpdate);
+};
+
+export default memo(FormRegister, areEqual);

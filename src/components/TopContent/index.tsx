@@ -1,15 +1,20 @@
 "use client";
 
+import { memo } from "react";
+import isEqual from "react-fast-compare";
 import { Flex, IconButton, useColorMode } from "@chakra-ui/react";
 import { usePathname } from "next/navigation";
 import { ROUTES } from "@app/constants";
 import { SearchBar } from "../common";
 import MenuProfile from "../MenuProfile";
-import { memo } from "react";
 import { Session } from "next-auth";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
-const TopContent = ({ session }: { session?: Session }) => {
+interface TopContentProps {
+  session?: Session;
+}
+
+const TopContent = ({ session }: TopContentProps) => {
   const pathName = usePathname();
   const { colorMode, toggleColorMode } = useColorMode();
 
@@ -50,4 +55,8 @@ const TopContent = ({ session }: { session?: Session }) => {
   );
 };
 
-export default memo(TopContent);
+const areEqual = (prevProps: TopContentProps, nextProps: TopContentProps) => {
+  return isEqual(prevProps, nextProps);
+};
+
+export default memo(TopContent, areEqual);

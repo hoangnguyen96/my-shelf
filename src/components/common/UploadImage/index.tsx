@@ -9,6 +9,7 @@ import {
   generateImageUpload,
   updateUserById,
 } from "@app/features/dashboard/actions";
+import isEqual from "react-fast-compare";
 
 interface ImageUploadFormProps {
   image: string;
@@ -96,4 +97,11 @@ const ImageUploadForm = ({ image, user }: ImageUploadFormProps) => {
   );
 };
 
-export default memo(ImageUploadForm);
+const areEqual = (
+  prevProps: ImageUploadFormProps,
+  nextProps: ImageUploadFormProps
+) => {
+  return isEqual(prevProps.user, nextProps.user);
+};
+
+export default memo(ImageUploadForm, areEqual);

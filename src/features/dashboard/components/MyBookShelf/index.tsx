@@ -7,13 +7,14 @@ import { BookType, User } from "@app/interface";
 import { getBookById, updateBookById, updateUserById } from "../../actions";
 import { CartBorrow } from "@app/components";
 import { MESSAGES } from "@app/constants";
+import isEqual from "react-fast-compare";
 
 interface MyBookShelfProps {
   user: User;
   list: BookType[];
 }
 
-export const MyBookShelf = memo(({ list, user }: MyBookShelfProps) => {
+const MyBookShelfComponent = ({ list, user }: MyBookShelfProps) => {
   const router = useRouter();
 
   const handleReturnBook = async (id: string) => {
@@ -70,4 +71,13 @@ export const MyBookShelf = memo(({ list, user }: MyBookShelfProps) => {
       })}
     </Flex>
   );
-});
+};
+
+const areEqual = (prevProps: MyBookShelfProps, nextProps: MyBookShelfProps) => {
+  return (
+    isEqual(prevProps.user, nextProps.user) &&
+    isEqual(prevProps.list, nextProps.list)
+  );
+};
+
+export const MyBookShelf = memo(MyBookShelfComponent, areEqual);

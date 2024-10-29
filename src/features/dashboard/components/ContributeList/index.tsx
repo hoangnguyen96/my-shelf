@@ -7,13 +7,14 @@ import { ArrowBackIcon } from "@chakra-ui/icons";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import isEqual from "react-fast-compare";
 
 interface ContributeListProps {
   user: User;
   list: BookType[];
 }
 
-export const ContributeList = memo(({ user, list }: ContributeListProps) => {
+const ContributeListComponent = ({ user, list }: ContributeListProps) => {
   const router = useRouter();
 
   const handleClickBack = () => {
@@ -77,4 +78,16 @@ export const ContributeList = memo(({ user, list }: ContributeListProps) => {
       </Flex>
     </Box>
   );
-});
+};
+
+const areEqual = (
+  prevProps: ContributeListProps,
+  nextProps: ContributeListProps
+) => {
+  return (
+    isEqual(prevProps.user, nextProps.user) &&
+    isEqual(prevProps.list, nextProps.list)
+  );
+};
+
+export const ContributeList = memo(ContributeListComponent, areEqual);
