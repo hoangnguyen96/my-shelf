@@ -30,7 +30,6 @@ const Avatar = ({
       <Image
         src={image || "https://i.ibb.co/SKHPQYq/avatar-default.webp"}
         layout="fill"
-        objectFit="cover"
         alt="Avatar user"
         fetchPriority="high"
         loading="lazy"
